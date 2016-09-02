@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7DFC1A81D754A3B007A6D0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1A71D754A3B007A6D0C /* main.m */; };
+		D7DFC1AB1D754A3B007A6D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1AA1D754A3B007A6D0C /* AppDelegate.m */; };
+		D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1AD1D754A3B007A6D0C /* ViewController.m */; };
+		D7DFC1B11D754A3B007A6D0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC1AF1D754A3B007A6D0C /* Main.storyboard */; };
+		D7DFC1B31D754A3B007A6D0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC1B21D754A3B007A6D0C /* Assets.xcassets */; };
+		D7DFC1B61D754A3B007A6D0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC1B41D754A3B007A6D0C /* LaunchScreen.storyboard */; };
+		D7DFC1C41D754B76007A6D0C /* AccelerometerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1C31D754B76007A6D0C /* AccelerometerManager.m */; };
+		D7DFC1C81D754CAA007A6D0C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1C61D754CAA007A6D0C /* BaseViewController.m */; };
+		D7DFC1E01D76D0F5007A6D0C /* NSArray+sortBy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1CF1D76D0F5007A6D0C /* NSArray+sortBy.m */; };
+		D7DFC1E11D76D0F5007A6D0C /* NSDate+TodayZeroClock.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1D11D76D0F5007A6D0C /* NSDate+TodayZeroClock.m */; };
+		D7DFC1E21D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1D31D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m */; };
+		D7DFC1E31D76D0F5007A6D0C /* NSString+Valid.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1D51D76D0F5007A6D0C /* NSString+Valid.m */; };
+		D7DFC1E41D76D0F5007A6D0C /* UIColor+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1D71D76D0F5007A6D0C /* UIColor+Custom.m */; };
+		D7DFC1E51D76D0F5007A6D0C /* UILabel+VerticalAlign.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1D91D76D0F5007A6D0C /* UILabel+VerticalAlign.m */; };
+		D7DFC1E61D76D0F5007A6D0C /* UITextField+PlaceholderText.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1DB1D76D0F5007A6D0C /* UITextField+PlaceholderText.m */; };
+		D7DFC1E71D76D0F5007A6D0C /* UIView+frameAdjust.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1DD1D76D0F5007A6D0C /* UIView+frameAdjust.m */; };
+		D7DFC1E81D76D0F5007A6D0C /* UIViewController+BackBtnHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1DF1D76D0F5007A6D0C /* UIViewController+BackBtnHandler.m */; };
+		D7DFC1F21D77ECAA007A6D0C /* FMSelectCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1F11D77ECAA007A6D0C /* FMSelectCarViewController.m */; };
+		D7DFC1F71D7954B4007A6D0C /* CustomTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1F61D7954B4007A6D0C /* CustomTabbarViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D7DFC1A31D754A3B007A6D0C /* LexusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DFC1A71D754A3B007A6D0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D7DFC1A91D754A3B007A6D0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D7DFC1AA1D754A3B007A6D0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D7DFC1AC1D754A3B007A6D0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D7DFC1AD1D754A3B007A6D0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D7DFC1B01D754A3B007A6D0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D7DFC1B21D754A3B007A6D0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7DFC1B51D754A3B007A6D0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7DFC1B71D754A3B007A6D0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7DFC1C21D754B76007A6D0C /* AccelerometerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerManager.h; sourceTree = "<group>"; };
+		D7DFC1C31D754B76007A6D0C /* AccelerometerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerManager.m; sourceTree = "<group>"; };
+		D7DFC1C51D754CAA007A6D0C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D7DFC1C61D754CAA007A6D0C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D7DFC1CA1D754EE9007A6D0C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D7DFC1CE1D76D0F5007A6D0C /* NSArray+sortBy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+sortBy.h"; sourceTree = "<group>"; };
+		D7DFC1CF1D76D0F5007A6D0C /* NSArray+sortBy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+sortBy.m"; sourceTree = "<group>"; };
+		D7DFC1D01D76D0F5007A6D0C /* NSDate+TodayZeroClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TodayZeroClock.h"; sourceTree = "<group>"; };
+		D7DFC1D11D76D0F5007A6D0C /* NSDate+TodayZeroClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TodayZeroClock.m"; sourceTree = "<group>"; };
+		D7DFC1D21D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ValueOfStringOrNull.h"; sourceTree = "<group>"; };
+		D7DFC1D31D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ValueOfStringOrNull.m"; sourceTree = "<group>"; };
+		D7DFC1D41D76D0F5007A6D0C /* NSString+Valid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Valid.h"; sourceTree = "<group>"; };
+		D7DFC1D51D76D0F5007A6D0C /* NSString+Valid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Valid.m"; sourceTree = "<group>"; };
+		D7DFC1D61D76D0F5007A6D0C /* UIColor+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Custom.h"; sourceTree = "<group>"; };
+		D7DFC1D71D76D0F5007A6D0C /* UIColor+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Custom.m"; sourceTree = "<group>"; };
+		D7DFC1D81D76D0F5007A6D0C /* UILabel+VerticalAlign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlign.h"; sourceTree = "<group>"; };
+		D7DFC1D91D76D0F5007A6D0C /* UILabel+VerticalAlign.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlign.m"; sourceTree = "<group>"; };
+		D7DFC1DA1D76D0F5007A6D0C /* UITextField+PlaceholderText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceholderText.h"; sourceTree = "<group>"; };
+		D7DFC1DB1D76D0F5007A6D0C /* UITextField+PlaceholderText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceholderText.m"; sourceTree = "<group>"; };
+		D7DFC1DC1D76D0F5007A6D0C /* UIView+frameAdjust.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frameAdjust.h"; sourceTree = "<group>"; };
+		D7DFC1DD1D76D0F5007A6D0C /* UIView+frameAdjust.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frameAdjust.m"; sourceTree = "<group>"; };
+		D7DFC1DE1D76D0F5007A6D0C /* UIViewController+BackBtnHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackBtnHandler.h"; sourceTree = "<group>"; };
+		D7DFC1DF1D76D0F5007A6D0C /* UIViewController+BackBtnHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackBtnHandler.m"; sourceTree = "<group>"; };
+		D7DFC1F01D77ECAA007A6D0C /* FMSelectCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSelectCarViewController.h; sourceTree = "<group>"; };
+		D7DFC1F11D77ECAA007A6D0C /* FMSelectCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectCarViewController.m; sourceTree = "<group>"; };
+		D7DFC1F51D7954B4007A6D0C /* CustomTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabbarViewController.h; sourceTree = "<group>"; };
+		D7DFC1F61D7954B4007A6D0C /* CustomTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabbarViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7DFC1A01D754A3B007A6D0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7DFC19A1D754A3A007A6D0C = {
+			isa = PBXGroup;
+			children = (
+				D7DFC1A51D754A3B007A6D0C /* LexusApp */,
+				D7DFC1A41D754A3B007A6D0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7DFC1A41D754A3B007A6D0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC1A31D754A3B007A6D0C /* LexusApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7DFC1A51D754A3B007A6D0C /* LexusApp */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC1F41D79548E007A6D0C /* 0.CustomTabbarViewController */,
+				D7DFC1E91D77EB82007A6D0C /* 1.Free_maintenance */,
+				D7DFC1EA1D77EBB6007A6D0C /* 2.Dealer_activities */,
+				D7DFC1EB1D77EBD8007A6D0C /* 3.Extended_warranty_policy */,
+				D7DFC1EC1D77EBE7007A6D0C /* 4.HEV_advatage */,
+				D7DFC1A91D754A3B007A6D0C /* AppDelegate.h */,
+				D7DFC1AA1D754A3B007A6D0C /* AppDelegate.m */,
+				D7DFC1AC1D754A3B007A6D0C /* ViewController.h */,
+				D7DFC1AD1D754A3B007A6D0C /* ViewController.m */,
+				D7DFC1AF1D754A3B007A6D0C /* Main.storyboard */,
+				D7DFC1B21D754A3B007A6D0C /* Assets.xcassets */,
+				D7DFC1B41D754A3B007A6D0C /* LaunchScreen.storyboard */,
+				D7DFC1B71D754A3B007A6D0C /* Info.plist */,
+				D7DFC1C11D754B53007A6D0C /* Common */,
+				D7DFC1CD1D76D0F5007A6D0C /* Category */,
+				D7DFC1A61D754A3B007A6D0C /* Supporting Files */,
+			);
+			path = LexusApp;
+			sourceTree = "<group>";
+		};
+		D7DFC1A61D754A3B007A6D0C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC1A71D754A3B007A6D0C /* main.m */,
+				D7DFC1CA1D754EE9007A6D0C /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7DFC1C11D754B53007A6D0C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC1C21D754B76007A6D0C /* AccelerometerManager.h */,
+				D7DFC1C31D754B76007A6D0C /* AccelerometerManager.m */,
+				D7DFC1C51D754CAA007A6D0C /* BaseViewController.h */,
+				D7DFC1C61D754CAA007A6D0C /* BaseViewController.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		D7DFC1CD1D76D0F5007A6D0C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC1CE1D76D0F5007A6D0C /* NSArray+sortBy.h */,
+				D7DFC1CF1D76D0F5007A6D0C /* NSArray+sortBy.m */,
+				D7DFC1D01D76D0F5007A6D0C /* NSDate+TodayZeroClock.h */,
+				D7DFC1D11D76D0F5007A6D0C /* NSDate+TodayZeroClock.m */,
+				D7DFC1D21D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.h */,
+				D7DFC1D31D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m */,
+				D7DFC1D41D76D0F5007A6D0C /* NSString+Valid.h */,
+				D7DFC1D51D76D0F5007A6D0C /* NSString+Valid.m */,
+				D7DFC1D61D76D0F5007A6D0C /* UIColor+Custom.h */,
+				D7DFC1D71D76D0F5007A6D0C /* UIColor+Custom.m */,
+				D7DFC1D81D76D0F5007A6D0C /* UILabel+VerticalAlign.h */,
+				D7DFC1D91D76D0F5007A6D0C /* UILabel+VerticalAlign.m */,
+				D7DFC1DA1D76D0F5007A6D0C /* UITextField+PlaceholderText.h */,
+				D7DFC1DB1D76D0F5007A6D0C /* UITextField+PlaceholderText.m */,
+				D7DFC1DC1D76D0F5007A6D0C /* UIView+frameAdjust.h */,
+				D7DFC1DD1D76D0F5007A6D0C /* UIView+frameAdjust.m */,
+				D7DFC1DE1D76D0F5007A6D0C /* UIViewController+BackBtnHandler.h */,
+				D7DFC1DF1D76D0F5007A6D0C /* UIViewController+BackBtnHandler.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D7DFC1E91D77EB82007A6D0C /* 1.Free_maintenance */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC1F31D77ECBA007A6D0C /* 1.1FMSelectCarViewController */,
+			);
+			name = 1.Free_maintenance;
+			sourceTree = "<group>";
+		};
+		D7DFC1EA1D77EBB6007A6D0C /* 2.Dealer_activities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 2.Dealer_activities;
+			sourceTree = "<group>";
+		};
+		D7DFC1EB1D77EBD8007A6D0C /* 3.Extended_warranty_policy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 3.Extended_warranty_policy;
+			sourceTree = "<group>";
+		};
+		D7DFC1EC1D77EBE7007A6D0C /* 4.HEV_advatage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 4.HEV_advatage;
+			sourceTree = "<group>";
+		};
+		D7DFC1F31D77ECBA007A6D0C /* 1.1FMSelectCarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC1F01D77ECAA007A6D0C /* FMSelectCarViewController.h */,
+				D7DFC1F11D77ECAA007A6D0C /* FMSelectCarViewController.m */,
+			);
+			name = 1.1FMSelectCarViewController;
+			sourceTree = "<group>";
+		};
+		D7DFC1F41D79548E007A6D0C /* 0.CustomTabbarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC1F51D7954B4007A6D0C /* CustomTabbarViewController.h */,
+				D7DFC1F61D7954B4007A6D0C /* CustomTabbarViewController.m */,
+			);
+			name = 0.CustomTabbarViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7DFC1A21D754A3B007A6D0C /* LexusApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7DFC1BA1D754A3B007A6D0C /* Build configuration list for PBXNativeTarget "LexusApp" */;
+			buildPhases = (
+				D7DFC19F1D754A3B007A6D0C /* Sources */,
+				D7DFC1A01D754A3B007A6D0C /* Frameworks */,
+				D7DFC1A11D754A3B007A6D0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LexusApp;
+			productName = LexusApp;
+			productReference = D7DFC1A31D754A3B007A6D0C /* LexusApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7DFC19B1D754A3A007A6D0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = zxl;
+				TargetAttributes = {
+					D7DFC1A21D754A3B007A6D0C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = D7DFC19E1D754A3A007A6D0C /* Build configuration list for PBXProject "LexusApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7DFC19A1D754A3A007A6D0C;
+			productRefGroup = D7DFC1A41D754A3B007A6D0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7DFC1A21D754A3B007A6D0C /* LexusApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7DFC1A11D754A3B007A6D0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DFC1B61D754A3B007A6D0C /* LaunchScreen.storyboard in Resources */,
+				D7DFC1B31D754A3B007A6D0C /* Assets.xcassets in Resources */,
+				D7DFC1B11D754A3B007A6D0C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7DFC19F1D754A3B007A6D0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */,
+				D7DFC1E21D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m in Sources */,
+				D7DFC1F21D77ECAA007A6D0C /* FMSelectCarViewController.m in Sources */,
+				D7DFC1C81D754CAA007A6D0C /* BaseViewController.m in Sources */,
+				D7DFC1AB1D754A3B007A6D0C /* AppDelegate.m in Sources */,
+				D7DFC1E51D76D0F5007A6D0C /* UILabel+VerticalAlign.m in Sources */,
+				D7DFC1E11D76D0F5007A6D0C /* NSDate+TodayZeroClock.m in Sources */,
+				D7DFC1E01D76D0F5007A6D0C /* NSArray+sortBy.m in Sources */,
+				D7DFC1E41D76D0F5007A6D0C /* UIColor+Custom.m in Sources */,
+				D7DFC1A81D754A3B007A6D0C /* main.m in Sources */,
+				D7DFC1E81D76D0F5007A6D0C /* UIViewController+BackBtnHandler.m in Sources */,
+				D7DFC1E31D76D0F5007A6D0C /* NSString+Valid.m in Sources */,
+				D7DFC1E61D76D0F5007A6D0C /* UITextField+PlaceholderText.m in Sources */,
+				D7DFC1F71D7954B4007A6D0C /* CustomTabbarViewController.m in Sources */,
+				D7DFC1E71D76D0F5007A6D0C /* UIView+frameAdjust.m in Sources */,
+				D7DFC1C41D754B76007A6D0C /* AccelerometerManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D7DFC1AF1D754A3B007A6D0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7DFC1B01D754A3B007A6D0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D7DFC1B41D754A3B007A6D0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7DFC1B51D754A3B007A6D0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7DFC1B81D754A3B007A6D0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LexusApp/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		D7DFC1B91D754A3B007A6D0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LexusApp/PrefixHeader.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7DFC1BB1D754A3B007A6D0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LexusApp/PrefixHeader.pch";
+				INFOPLIST_FILE = LexusApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxl.LexusApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D7DFC1BC1D754A3B007A6D0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LexusApp/PrefixHeader.pch";
+				INFOPLIST_FILE = LexusApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zxl.LexusApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7DFC19E1D754A3A007A6D0C /* Build configuration list for PBXProject "LexusApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DFC1B81D754A3B007A6D0C /* Debug */,
+				D7DFC1B91D754A3B007A6D0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7DFC1BA1D754A3B007A6D0C /* Build configuration list for PBXNativeTarget "LexusApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7DFC1BB1D754A3B007A6D0C /* Debug */,
+				D7DFC1BC1D754A3B007A6D0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7DFC19B1D754A3A007A6D0C /* Project object */;
+}
