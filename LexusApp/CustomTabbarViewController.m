@@ -11,6 +11,7 @@
 
 @interface CustomTabbarViewController ()
 @property (weak, nonatomic) UIViewController *selectedViewController;
+@property (strong, nonatomic) UIControl *bgMarkCtrl;
 @end
 
 @interface UIViewController (CustomTabbarViewControllerItemInternal)
@@ -49,6 +50,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIControl *)bgMarkCtrl {
+    if (nil == _bgMarkCtrl) {
+        _bgMarkCtrl = [[UIControl alloc] initWithFrame:self.view.bounds];
+        _bgMarkCtrl.alpha = 0.0;
+        _bgMarkCtrl.backgroundColor = [UIColor blackColor];
+        [_bgMarkCtrl addTarget:self action:@selector(onTapBgMarkCtrl:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_bgMarkCtrl];
+    }
+    
+    return _bgMarkCtrl;
+}
+
+- (void)onTapBgMarkCtrl:(UIControl *)ctrl {
+    [self dismissTabbarView:YES];
+}
+
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     if (selectedIndex >= self.viewControllersArr.count) {
         return;
@@ -81,22 +98,59 @@
     if (viewControllersArr && [viewControllersArr isKindOfClass:[NSArray class]]) {
         _viewControllersArr = [viewControllersArr copy];
         
-//        NSMutableArray *tabBarItems = [[NSMutableArray alloc] init];
-        
         for (UIViewController *viewController in viewControllersArr) {
-//            RDVTabBarItem *tabBarItem = [[RDVTabBarItem alloc] init];
-//            [tabBarItem setTitle:viewController.title];
-//            [tabBarItems addObject:tabBarItem];
             [viewController setCustomTabbarController:self];
         }
         
-//        [[self tabBar] setItems:tabBarItems];
+        [self dismissTabbarView:NO];
+        
     } else {
         for (UIViewController *viewController in _viewControllersArr) {
             [viewController setCustomTabbarController:nil];
         }
         
         _viewControllersArr = nil;
+    }
+}
+
+- (void)showTabbarView:(BOOL)isAnimated {
+    [self.view bringSubviewToFront:self.bgMarkCtrl];
+    [self.view bringSubviewToFront:self.tabbarView];
+    self.tabbarView.hidden = NO;
+    
+    __weak typeof(self) weakSelf = self;
+    void (^block)() = ^{
+        weakSelf.tabbarView.transform = CGAffineTransformIdentity;
+        weakSelf.bgMarkCtrl.alpha = .3;
+    };
+    
+    void (^completion)(BOOL) = ^(BOOL finished) {
+    };
+    
+    if (isAnimated) {
+        [UIView animateWithDuration:0.24 animations:block completion:completion];
+    } else {
+        block();
+        completion(YES);
+    }
+}
+
+- (void)dismissTabbarView:(BOOL)isAnimated {
+    __weak typeof(self) weakSelf = self;
+    void (^block)() = ^{
+        weakSelf.tabbarView.transform = CGAffineTransformMakeTranslation(CGRectGetWidth(weakSelf.tabbarView.bounds), 0);
+        weakSelf.bgMarkCtrl.alpha = .0;
+    };
+    
+    void (^completion)(BOOL) = ^(BOOL finished) {
+        weakSelf.tabbarView.hidden = YES;
+    };
+    
+    if (isAnimated) {
+        [UIView animateWithDuration:0.24 animations:block completion:completion];
+    } else {
+        block();
+        completion(YES);
     }
 }
 
@@ -109,6 +163,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - IBAction
+- (IBAction)onTapTabbarItems:(id)sender {
+    UIButton *btn = (UIButton *)sender;
+    self.selectedIndex = btn.tag;
+    
+    [self dismissTabbarView:NO];
+}
 
 
 @end

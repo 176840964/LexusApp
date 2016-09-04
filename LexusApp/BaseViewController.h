@@ -10,10 +10,12 @@
 
 @interface BaseViewController : UIViewController
 
+@property(strong, nonatomic) UILabel *titleLab;
 @property(strong, nonatomic) UIImageView *bgImgView;
 @property(assign, nonatomic) BOOL isBgCanShake;//背景图片是否可晃动，默认是NO
 
 @property(assign, nonatomic) BOOL isLogoBtnEnable;
 @property(assign, nonatomic) BOOL isShowHomeBtn;
+@property(assign, nonatomic) BOOL isShowBackBtn;
 
 @end

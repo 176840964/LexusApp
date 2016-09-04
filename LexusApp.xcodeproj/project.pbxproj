@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */; };
+		D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */; };
 		D7DFC1A81D754A3B007A6D0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1A71D754A3B007A6D0C /* main.m */; };
 		D7DFC1AB1D754A3B007A6D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1AA1D754A3B007A6D0C /* AppDelegate.m */; };
 		D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1AD1D754A3B007A6D0C /* ViewController.m */; };
@@ -29,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D75AE0631D7BE5DA006685AE /* FMSelectKmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSelectKmViewController.h; sourceTree = "<group>"; };
+		D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectKmViewController.m; sourceTree = "<group>"; };
+		D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDetailViewController.h; sourceTree = "<group>"; };
+		D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDetailViewController.m; sourceTree = "<group>"; };
 		D7DFC1A31D754A3B007A6D0C /* LexusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DFC1A71D754A3B007A6D0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7DFC1A91D754A3B007A6D0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,7 +172,12 @@
 		D7DFC1E91D77EB82007A6D0C /* 1.Free_maintenance */ = {
 			isa = PBXGroup;
 			children = (
-				D7DFC1F31D77ECBA007A6D0C /* 1.1FMSelectCarViewController */,
+				D7DFC1F01D77ECAA007A6D0C /* FMSelectCarViewController.h */,
+				D7DFC1F11D77ECAA007A6D0C /* FMSelectCarViewController.m */,
+				D75AE0631D7BE5DA006685AE /* FMSelectKmViewController.h */,
+				D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */,
+				D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */,
+				D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */,
 			);
 			name = 1.Free_maintenance;
 			sourceTree = "<group>";
@@ -190,15 +201,6 @@
 			children = (
 			);
 			name = 4.HEV_advatage;
-			sourceTree = "<group>";
-		};
-		D7DFC1F31D77ECBA007A6D0C /* 1.1FMSelectCarViewController */ = {
-			isa = PBXGroup;
-			children = (
-				D7DFC1F01D77ECAA007A6D0C /* FMSelectCarViewController.h */,
-				D7DFC1F11D77ECAA007A6D0C /* FMSelectCarViewController.m */,
-			);
-			name = 1.1FMSelectCarViewController;
 			sourceTree = "<group>";
 		};
 		D7DFC1F41D79548E007A6D0C /* 0.CustomTabbarViewController */ = {
@@ -280,9 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */,
 				D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */,
 				D7DFC1E21D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m in Sources */,
 				D7DFC1F21D77ECAA007A6D0C /* FMSelectCarViewController.m in Sources */,
+				D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */,
 				D7DFC1C81D754CAA007A6D0C /* BaseViewController.m in Sources */,
 				D7DFC1AB1D754A3B007A6D0C /* AppDelegate.m in Sources */,
 				D7DFC1E51D76D0F5007A6D0C /* UILabel+VerticalAlign.m in Sources */,
@@ -450,6 +454,7 @@
 				D7DFC1BC1D754A3B007A6D0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,8 +10,12 @@
 
 @interface CustomTabbarViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *tabbarView;
 @property (copy, nonatomic) NSArray* viewControllersArr;
 @property (assign, nonatomic) NSInteger selectedIndex;
+
+- (void)showTabbarView:(BOOL)isAnimated;
+- (void)dismissTabbarView:(BOOL)isAnimated;
 
 @end
 

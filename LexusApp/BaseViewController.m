@@ -12,11 +12,12 @@
 #define BgImageFrameDistance 10
 
 @interface BaseViewController () <UIAccelerometerDelegate>
-@property(strong, nonatomic) UIButton *logoBtn;
-@property(strong, nonatomic) UIButton *homeBtn;
-@property(strong, nonatomic) UIButton *loginBtn;
-@property(strong, nonatomic) UIButton *optionBtn;
-@property(strong, nonatomic) UIView *optionView;
+@property (strong, nonatomic) UIButton *logoBtn;
+@property (strong, nonatomic) UIButton *homeBtn;
+@property (strong, nonatomic) UIButton *loginBtn;
+@property (strong, nonatomic) UIButton *optionBtn;
+@property (strong, nonatomic) UIView *optionView;
+@property (strong, nonatomic) UIButton *backBtn;
 @end
 
 @implementation BaseViewController
@@ -25,11 +26,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self setupSubviews];
+    
     self.isBgCanShake = NO;
     self.isLogoBtnEnable = NO;
     self.isShowHomeBtn = YES;
+    self.isShowBackBtn = NO;
     
-    [self setupSubviews];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +57,11 @@
 - (void)setIsShowHomeBtn:(BOOL)isShowHomeBtn {
     _isShowHomeBtn = isShowHomeBtn;
     _homeBtn.hidden = !isShowHomeBtn;
+}
+
+- (void)setIsShowBackBtn:(BOOL)isShowBackBtn {
+    _isShowBackBtn = isShowBackBtn;
+    _backBtn.hidden = !isShowBackBtn;
 }
 
 #pragma mark - 
@@ -88,22 +96,16 @@
     [_homeBtn addTarget:self action:@selector(onTapHomeBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_homeBtn];
     
-    _optionView = [[UIView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.view.bounds) - 335, 63, 335, CGRectGetHeight(self.view.bounds) - 63)];
-    _optionView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:_optionView];
+    _titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, CGRectGetWidth(self.view.bounds), 50)];
+    _titleLab.textColor = [UIColor redColor];
+    _titleLab.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:_titleLab];
     
-    for (NSInteger index = 0; index < 3; index ++) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.tag = index + 1;
-        btn.frame = CGRectMake(0, CGRectGetHeight(_optionView.bounds) / 3.0 * index, CGRectGetWidth(_optionView.bounds), CGRectGetHeight(_optionView.bounds) / 3.0);
-        [btn setTitle:[NSString stringWithFormat:@"%zd", btn.tag] forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(onTapOptionViewBtn:) forControlEvents:UIControlEventTouchUpInside];
-        [_optionView addSubview:btn];
-    }
-}
-
-- (void)onTapOptionViewBtn:(UIButton *)btn {
-    self.customTabbarController.selectedIndex = btn.tag;
+    _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _backBtn.frame = CGRectMake(0, CGRectGetHeight(self.view.bounds) - 135, 81, 58);
+    _backBtn.backgroundColor = [UIColor grayColor];
+    [_backBtn addTarget:self action:@selector(onTapBackBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_backBtn];
 }
 
 - (void)onTapLogoBtn:(UIButton *)btn {
@@ -111,7 +113,11 @@
 }
 
 - (void)onTapOptionBtn:(UIButton *)btn {
-    
+    if (self.customTabbarController.tabbarView.hidden) {
+        [self.customTabbarController showTabbarView:YES];
+    } else {
+        [self.customTabbarController dismissTabbarView:YES];
+    }
 }
 
 - (void)onTapLoginBtn:(UIButton *)btn {
@@ -119,8 +125,14 @@
 }
 
 - (void)onTapHomeBtn:(UIButton *)btn {
+    UINavigationController *homeController = [self.customTabbarController.viewControllersArr firstObject];
+    [homeController popToRootViewControllerAnimated:NO];
     self.customTabbarController.selectedIndex = 0;
-//    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.customTabbarController dismissTabbarView:NO];
+}
+
+- (void)onTapBackBtn:(UIButton *)btn {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*
