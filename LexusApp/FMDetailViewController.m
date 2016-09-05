@@ -7,6 +7,8 @@
 //
 
 #import "FMDetailViewController.h"
+#import "FMDetailCheckView.h"
+#import "FMDetailChangeView.h"
 
 @interface FMDetailViewController ()
 
@@ -14,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *changeProjectBtn;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentWidth;
+@property (weak, nonatomic) IBOutlet FMDetailCheckView *checkView;
+@property (weak, nonatomic) IBOutlet FMDetailChangeView *changeView;
 
 @end
 
@@ -22,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.changeView setupSubviews];
 }
 
 - (void)didReceiveMemoryWarning {

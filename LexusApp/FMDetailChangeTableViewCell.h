@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface FMDetailChangeTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLab;
+@property (weak, nonatomic) IBOutlet UIImageView *typeImageView;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
+- (void)layoutChangeTableViewCell;
 @end

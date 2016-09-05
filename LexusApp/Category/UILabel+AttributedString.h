@@ -10,4 +10,6 @@
 
 @interface UILabel (AttributedString)
 
+- (void)setAttributedNumberStringInContentString:(NSString *)content attributesDic:(NSDictionary *)dic;
+
 @end

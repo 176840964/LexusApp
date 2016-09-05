@@ -21,4 +21,8 @@
     // Configure the view for the selected state
 }
 
+- (void)layoutChangeTableViewCell {
+    self.textView.text = @"-机油更换\n-排放螺旋垫片更换";
+}
+
 @end

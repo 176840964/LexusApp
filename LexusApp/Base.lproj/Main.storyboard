@@ -167,13 +167,120 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpW-60-ljc">
                                         <rect key="frame" x="0.0" y="0.0" width="1200" height="540"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EtN-wb-IcI">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EtN-wb-IcI" customClass="FMDetailCheckView">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xn4-8P-wpY">
+                                                        <rect key="frame" x="103" y="410" width="125" height="49"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="125" id="3kN-Q7-zdT"/>
+                                                            <constraint firstAttribute="height" constant="49" id="OQT-3x-1Mo"/>
+                                                        </constraints>
+                                                        <state key="normal" title="电器系列"/>
+                                                        <connections>
+                                                            <action selector="onTapSubviewBtn:" destination="EtN-wb-IcI" eventType="touchUpInside" id="Prc-4r-SIB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5p-Ny-Azt">
+                                                        <rect key="frame" x="373" y="410" width="125" height="49"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="49" id="FPl-d9-Tav"/>
+                                                            <constraint firstAttribute="width" constant="125" id="bCK-tE-ucb"/>
+                                                        </constraints>
+                                                        <state key="normal" title="轮胎"/>
+                                                        <connections>
+                                                            <action selector="onTapSubviewBtn:" destination="EtN-wb-IcI" eventType="touchUpInside" id="zHH-C6-6ek"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VK-rs-ufL">
+                                                        <rect key="frame" x="247" y="255" width="106" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="4dQ-no-hUi"/>
+                                                            <constraint firstAttribute="width" constant="106" id="Po3-XS-J5H"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jV-9L-pFS">
+                                                        <rect key="frame" x="238" y="410" width="125" height="49"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="49" id="HhS-qP-erT"/>
+                                                            <constraint firstAttribute="width" constant="125" id="KcH-E8-UnP"/>
+                                                        </constraints>
+                                                        <state key="normal" title="制动系列"/>
+                                                        <connections>
+                                                            <action selector="onTapSubviewBtn:" destination="EtN-wb-IcI" eventType="touchUpInside" id="LRk-EP-uan"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="1jV-9L-pFS" firstAttribute="leading" secondItem="xn4-8P-wpY" secondAttribute="trailing" constant="10" id="4dN-wf-GUZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xn4-8P-wpY" secondAttribute="bottom" constant="81" id="JkY-nY-kkS"/>
+                                                    <constraint firstItem="9VK-rs-ufL" firstAttribute="centerY" secondItem="EtN-wb-IcI" secondAttribute="centerY" id="XkH-bI-2AU"/>
+                                                    <constraint firstItem="1jV-9L-pFS" firstAttribute="centerX" secondItem="EtN-wb-IcI" secondAttribute="centerX" id="Yst-D9-6Gj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="B5p-Ny-Azt" secondAttribute="bottom" constant="81" id="aPZ-3e-sMt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="1jV-9L-pFS" secondAttribute="bottom" constant="81" id="acy-Jn-udU"/>
+                                                    <constraint firstItem="B5p-Ny-Azt" firstAttribute="leading" secondItem="1jV-9L-pFS" secondAttribute="trailing" constant="10" id="sst-1J-q84"/>
+                                                    <constraint firstItem="9VK-rs-ufL" firstAttribute="centerX" secondItem="EtN-wb-IcI" secondAttribute="centerX" id="yUz-Qw-a9R"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="testLab" destination="9VK-rs-ufL" id="rBP-Tz-pFd"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-ia-a6g">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-ia-a6g" customClass="FMDetailChangeView">
                                                 <rect key="frame" x="600" y="0.0" width="600" height="540"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3万公里保养，共检查3个项目，更换8种零件！ 零件费：80000元   工时费：53626元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAS-XY-ggZ">
+                                                        <rect key="frame" x="0.0" y="70" width="600" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="380" id="S8S-PP-JPA"/>
+                                                            <constraint firstAttribute="height" constant="21" id="WgO-zs-ZQS"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="S8S-PP-JPA"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="156" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="93x-3V-y8g">
+                                                        <rect key="frame" x="310" y="101" width="290" height="299"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="290" id="26k-Nf-vFd"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="Ac7-ia-a6g" id="r9F-Pl-6Ac"/>
+                                                            <outlet property="delegate" destination="Ac7-ia-a6g" id="nVG-KX-U51"/>
+                                                        </connections>
+                                                    </tableView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9t-mu-lfG" customClass="FMDetailChangeShowView">
+                                                        <rect key="frame" x="0.0" y="101" width="310" height="299"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </view>
+                                                </subviews>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="93x-3V-y8g" firstAttribute="leading" secondItem="D9t-mu-lfG" secondAttribute="trailing" id="25r-hg-P82"/>
+                                                    <constraint firstItem="IAS-XY-ggZ" firstAttribute="leading" secondItem="Ac7-ia-a6g" secondAttribute="leading" id="5V6-Hf-JfG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IAS-XY-ggZ" secondAttribute="trailing" id="FEQ-wc-dVV"/>
+                                                    <constraint firstAttribute="bottom" secondItem="93x-3V-y8g" secondAttribute="bottom" constant="140" id="NXa-XM-I42"/>
+                                                    <constraint firstItem="D9t-mu-lfG" firstAttribute="leading" secondItem="Ac7-ia-a6g" secondAttribute="leading" id="QxX-7r-DSs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="93x-3V-y8g" secondAttribute="trailing" id="SBd-FD-qY3"/>
+                                                    <constraint firstItem="D9t-mu-lfG" firstAttribute="top" secondItem="IAS-XY-ggZ" secondAttribute="bottom" constant="10" id="UgV-1y-svx"/>
+                                                    <constraint firstItem="IAS-XY-ggZ" firstAttribute="top" secondItem="Ac7-ia-a6g" secondAttribute="top" constant="70" id="Zkl-9d-ly8"/>
+                                                    <constraint firstItem="93x-3V-y8g" firstAttribute="top" secondItem="IAS-XY-ggZ" secondAttribute="bottom" constant="10" id="hFd-Ci-Lj4"/>
+                                                    <constraint firstAttribute="bottom" secondItem="D9t-mu-lfG" secondAttribute="bottom" constant="140" id="hye-7d-bqg"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="descriptionPriceLab" destination="IAS-XY-ggZ" id="X6d-Qk-QAp"/>
+                                                    <outlet property="showView" destination="D9t-mu-lfG" id="RnI-q3-tKK"/>
+                                                    <outlet property="tableView" destination="93x-3V-y8g" id="bbY-Ns-UJf"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,7 +326,9 @@
                     </view>
                     <connections>
                         <outlet property="changeProjectBtn" destination="Cez-2o-1aY" id="nC3-wq-4mk"/>
+                        <outlet property="changeView" destination="Ac7-ia-a6g" id="bII-Ms-CMw"/>
                         <outlet property="checkProjectBtn" destination="AsF-OV-H98" id="md3-xw-Rp8"/>
+                        <outlet property="checkView" destination="EtN-wb-IcI" id="81B-lO-mgX"/>
                         <outlet property="contentWidth" destination="sgJ-BS-epk" id="E1H-wR-Jxi"/>
                         <outlet property="scrollView" destination="YbH-1v-mKF" id="8oL-oj-Sv3"/>
                     </connections>

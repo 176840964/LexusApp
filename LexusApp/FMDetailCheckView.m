@@ -8,7 +8,17 @@
 
 #import "FMDetailCheckView.h"
 
+@interface FMDetailCheckView ()
+@property (weak, nonatomic) IBOutlet UILabel *testLab;
+@end
+
 @implementation FMDetailCheckView
+
+#pragma mark - IBAction
+- (IBAction)onTapSubviewBtn:(id)sender {
+    UIButton * btn = (UIButton *)sender;
+    self.testLab.text = btn.titleLabel.text;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

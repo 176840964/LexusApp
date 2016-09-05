@@ -10,4 +10,6 @@
 
 @interface FMDetailChangeView : UIView
 
+- (void)setupSubviews;
+
 @end
