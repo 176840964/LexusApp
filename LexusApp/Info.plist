@@ -39,5 +39,12 @@
 	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Lexus_jiancuhei.TTF</string>
+		<string>Lexus_jianhei.TTF</string>
+		<string>Lexus_jianzhengxian.TTF</string>
+		<string>Lexus_jianzhonghei.TTF</string>
+	</array>
 </dict>
 </plist>

@@ -154,6 +154,10 @@
     }
 }
 
+- (void)showLoginViewController {
+    [self performSegueWithIdentifier:@"showLgoinViewController" sender:self];
+}
+
 /*
 #pragma mark - Navigation
 

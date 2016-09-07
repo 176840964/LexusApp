@@ -121,7 +121,7 @@
 }
 
 - (void)onTapLoginBtn:(UIButton *)btn {
-    
+    [self.customTabbarController showLoginViewController];
 }
 
 - (void)onTapHomeBtn:(UIButton *)btn {

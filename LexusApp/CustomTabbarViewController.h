@@ -17,6 +17,8 @@
 - (void)showTabbarView:(BOOL)isAnimated;
 - (void)dismissTabbarView:(BOOL)isAnimated;
 
+- (void)showLoginViewController;
+
 @end
 
 @interface UIViewController (CustomTabbarControllerItem)

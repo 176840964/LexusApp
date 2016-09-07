@@ -17,5 +17,6 @@
 
 #import "UIView+frameAdjust.h"
 #import "UILabel+AttributedString.h"
+#import "UILabel+ChangeDefaultFont.h"
 
 #endif /* PrefixHeader_pch */
