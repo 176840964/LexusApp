@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lexus_jianzhengxian.TTF">
+            <string>LEXUS-HeiS-Light-U</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudyListTableViewCell" rowHeight="50" id="KGk-i7-Jjw" customClass="StudyListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="study_num1" translatesAutoresizingMaskIntoConstraints="NO" id="kQU-86-aeK">
+                        <rect key="frame" x="25" y="2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Aj6-sh-sex"/>
+                            <constraint firstAttribute="height" constant="40" id="m0y-LB-KCQ"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="manIcon" translatesAutoresizingMaskIntoConstraints="NO" id="16G-d0-o3d">
+                        <rect key="frame" x="94" y="2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="pSi-20-QPh"/>
+                            <constraint firstAttribute="width" constant="40" id="x22-bm-WIm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESn-Od-bk5">
+                        <rect key="frame" x="165" y="11" width="70" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="LYp-4S-8ve"/>
+                            <constraint firstAttribute="height" constant="21" id="TUL-BJ-1Kc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="LEXUS-HeiS-Light-U" family="MHeiGB" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgB-zb-0Ce">
+                        <rect key="frame" x="265" y="11" width="25" height="22"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="66f-NG-nSb"/>
+                            <constraint firstAttribute="width" constant="25" id="fjc-VK-eow"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="onTapPlayBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="k6q-bF-9cx"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ESn-Od-bk5" firstAttribute="leading" secondItem="16G-d0-o3d" secondAttribute="trailing" constant="31" id="BFR-bK-VFG"/>
+                    <constraint firstItem="ESn-Od-bk5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BZT-8S-5Vg"/>
+                    <constraint firstAttribute="trailing" secondItem="PgB-zb-0Ce" secondAttribute="trailing" constant="30" id="RMx-pn-LSb"/>
+                    <constraint firstItem="PgB-zb-0Ce" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WMD-R3-4Ys"/>
+                    <constraint firstItem="kQU-86-aeK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Yid-bR-zNn"/>
+                    <constraint firstItem="16G-d0-o3d" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qTB-Tk-L25"/>
+                    <constraint firstItem="kQU-86-aeK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="rZX-nT-Ac5"/>
+                    <constraint firstItem="16G-d0-o3d" firstAttribute="leading" secondItem="kQU-86-aeK" secondAttribute="trailing" constant="29" id="xT0-vW-1U2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="numImageView" destination="kQU-86-aeK" id="lEO-Xq-iKT"/>
+                <outlet property="playBtn" destination="PgB-zb-0Ce" id="hBK-6K-qEa"/>
+                <outlet property="userIconImageView" destination="16G-d0-o3d" id="T0C-D6-1Q5"/>
+                <outlet property="userNameLab" destination="ESn-Od-bk5" id="qbL-PT-5M9"/>
+            </connections>
+            <point key="canvasLocation" x="570" y="336"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="manIcon" width="120" height="120"/>
+        <image name="study_num1" width="40" height="40"/>
+    </resources>
+</document>
