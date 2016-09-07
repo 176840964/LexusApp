@@ -67,8 +67,6 @@
 
 #pragma mark - 
 - (void)setupSubviews {
-    NSLog(@"%@", NSStringFromCGRect(self.view.bounds));
-    
     _bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(-BgImageFrameDistance, -BgImageFrameDistance, CGRectGetWidth(self.view.bounds) + BgImageFrameDistance * 2, CGRectGetHeight(self.view.bounds) + BgImageFrameDistance * 2)];
     [self.view addSubview:_bgImgView];
     [self.view sendSubviewToBack:_bgImgView];
@@ -154,7 +152,6 @@
 
 #pragma mark - UIAccelerometerDelegate
 - (void)accelerometerManager:(AccelerometerManager *)accelerometerManager withX:(NSNumber*)x withY:(NSNumber*)y withZ:(NSNumber*)z withTimeInterval:(NSTimeInterval)timeInterval {
-//    NSLog(@"x:%@, y:%@", x, y);
     
     //DeviceOrientationIsLandscape，设备方式水平方向，x和y互换
     NSNumber *accelerometer_x = y;

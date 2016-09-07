@@ -17,27 +17,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="7Yf-6M-W3A">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="1G7-NM-Nma" sceneMemberID="viewController">
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lz1-GG-ej2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="NOY-Mb-de2" kind="relationship" relationship="rootViewController" id="6A0-xX-Vsh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q3e-Q5-9Ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="922" y="-1764"/>
-        </scene>
-        <!--Study View Controller-->
+        <!--Study Unlock View Controller-->
         <scene sceneID="pc1-3q-BU9">
             <objects>
-                <viewController id="NOY-Mb-de2" customClass="StudyViewController" sceneMemberID="viewController">
+                <viewController id="NOY-Mb-de2" customClass="StudyUnlockViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nv6-Jd-h77"/>
                         <viewControllerLayoutGuide type="bottom" id="QiK-ya-qf9"/>
@@ -85,13 +68,27 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TOk-cO-KBx"/>
-                    <connections>
-                        <segue destination="Pub-CI-r13" kind="show" identifier="showStudyDetailViewController" id="Sgi-2x-TME"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bc-iZ-bZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="-1764"/>
+            <point key="canvasLocation" x="1543" y="-1741"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XcQ-DR-zcW">
+            <objects>
+                <navigationController storyboardIdentifier="StudyNaviController" navigationBarHidden="YES" id="4tm-MQ-Zfi" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AVe-jI-wUM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Pub-CI-r13" kind="relationship" relationship="rootViewController" id="VBM-PM-swZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0V-F1-kg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2232" y="-1714"/>
         </scene>
         <!--Study Detail View Controller-->
         <scene sceneID="vTw-pT-8l4">
@@ -106,10 +103,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fi5-b3-aUm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmu-b1-YWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2252" y="-1764"/>
+            <point key="canvasLocation" x="2989" y="-1714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wZU-sG-FXR">
@@ -717,7 +715,7 @@
                     <connections>
                         <outlet property="tabbarView" destination="kaN-Uk-JF4" id="lCi-Og-XFn"/>
                         <segue destination="BLR-MY-wbm" kind="presentation" identifier="presentLgoinViewController" id="mSf-8j-Wvb"/>
-                        <segue destination="1G7-NM-Nma" kind="presentation" identifier="presentStudyViewController" id="Q94-wX-Bsr"/>
+                        <segue destination="NOY-Mb-de2" kind="presentation" identifier="presentStudyViewController" id="ECr-Ss-Ajs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRg-11-EHv" userLabel="First Responder" sceneMemberID="firstResponder"/>

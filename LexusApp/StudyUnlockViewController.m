@@ -6,14 +6,14 @@
 //  Copyright © 2016年 zxl. All rights reserved.
 //
 
-#import "StudyViewController.h"
+#import "StudyUnlockViewController.h"
 #import "GestureUnlockView.h"
 
-@interface StudyViewController () <GestureUnlockViewDelegate>
+@interface StudyUnlockViewController () <GestureUnlockViewDelegate>
 @property (strong, nonatomic) GestureUnlockView *gestureUnlockView;
 @end
 
-@implementation StudyViewController
+@implementation StudyUnlockViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +29,9 @@
 
 #pragma mark - <GestureUnlockViewDelegate>
 - (void)gestureViewUnlockSuccess:(GestureUnlockView *)gestureView {
-    [self performSegueWithIdentifier:@"showStudyDetailViewController" sender:self];
+    [UserManager shareUserManager].isLoginStudy = YES;
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
 }
 
 @end

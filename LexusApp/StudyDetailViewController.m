@@ -14,6 +14,8 @@
     [super viewDidLoad];
     
     self.titleLab.text = @"学习平台";
+    
+    [UserManager shareUserManager].isLoginStudy = NO;
 }
 
 @end

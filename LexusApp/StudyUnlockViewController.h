@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface StudyViewController : BaseViewController
+@interface StudyUnlockViewController : BaseViewController
 
 @end

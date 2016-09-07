@@ -40,9 +40,19 @@
     
     UINavigationController *fouthNaviController = [self.storyboard instantiateViewControllerWithIdentifier:@"HEVANaviController"];
     
-    self.viewControllersArr = @[firstNaviController, secondNaviController, thirdNaviController, fouthNaviController];
+    UINavigationController *fifthNaviController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudyNaviController"];
     
-    self.selectedIndex = 0;
+    self.viewControllersArr = @[firstNaviController, secondNaviController, thirdNaviController, fouthNaviController, fifthNaviController];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if ([UserManager shareUserManager].isLoginStudy) {
+        self.selectedIndex = 4;
+    } else {
+        self.selectedIndex = 0;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

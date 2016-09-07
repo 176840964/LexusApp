@@ -14,6 +14,7 @@
 
 #import "CustomTabbarViewController.h"
 #import "BaseViewController.h"
+#import "UserManager.h"
 
 #import "UIView+frameAdjust.h"
 #import "UILabel+AttributedString.h"
