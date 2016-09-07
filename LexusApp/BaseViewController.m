@@ -12,6 +12,7 @@
 #define BgImageFrameDistance 10
 
 @interface BaseViewController () <UIAccelerometerDelegate>
+@property (strong, nonatomic) UIImageView *markImgView;
 @property (strong, nonatomic) UIButton *logoBtn;
 @property (strong, nonatomic) UIButton *homeBtn;
 @property (strong, nonatomic) UIButton *loginBtn;
@@ -66,33 +67,39 @@
 
 #pragma mark - 
 - (void)setupSubviews {
+    NSLog(@"%@", NSStringFromCGRect(self.view.bounds));
+    
     _bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(-BgImageFrameDistance, -BgImageFrameDistance, CGRectGetWidth(self.view.bounds) + BgImageFrameDistance * 2, CGRectGetHeight(self.view.bounds) + BgImageFrameDistance * 2)];
     [self.view addSubview:_bgImgView];
     [self.view sendSubviewToBack:_bgImgView];
     
+    _markImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bgMark"]];
+    _markImgView.frame = CGRectMake(0, 64, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 64);
+    [self.view addSubview:_markImgView];
+    
     _logoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _logoBtn.frame = CGRectMake(5, 5, 200, 50);
-    _logoBtn.backgroundColor = [UIColor redColor];
-    [_logoBtn setTitle:@"LEXUS" forState:UIControlStateNormal];
-    [_logoBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _logoBtn.frame = CGRectMake(10, 20, 136, 25);
+    [_logoBtn setImage:[UIImage imageNamed:@"logo"] forState:UIControlStateNormal];
     [_logoBtn addTarget:self action:@selector(onTapLogoBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_logoBtn];
     
     _optionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _optionBtn.frame = CGRectMake(CGRectGetWidth(self.view.bounds) - 55, 5, 50, 50);
-    _optionBtn.backgroundColor = [UIColor redColor];
+    _optionBtn.frame = CGRectMake(CGRectGetWidth(self.view.bounds) - 19 - 28, 18, 28, 28);
+    [_optionBtn setImage:[UIImage imageNamed:@"option_btn_normal"] forState:UIControlStateNormal];
+    [_optionBtn setImage:[UIImage imageNamed:@"option_btn_highlight"] forState:UIControlStateHighlighted];
     [_optionBtn addTarget:self action:@selector(onTapOptionBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_optionBtn];
     
     _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _loginBtn.frame = CGRectMake(CGRectGetMinX(_optionBtn.frame) - 10 - 200, 5, 200, 50);
+    _loginBtn.frame = CGRectMake(CGRectGetMinX(_optionBtn.frame) - 10 - 200, 18, 200, 28);
     _loginBtn.backgroundColor = [UIColor redColor];
     [_loginBtn addTarget:self action:@selector(onTapLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_loginBtn];
     
     _homeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _homeBtn.frame = CGRectMake(CGRectGetMinX(_loginBtn.frame) - 50 - 10, 5, 50, 50);
-    _homeBtn.backgroundColor = [UIColor redColor];
+    _homeBtn.frame = CGRectMake(CGRectGetMinX(_loginBtn.frame) - 28 - 10, 18, 28, 28);
+    [_homeBtn setImage:[UIImage imageNamed:@"home_btn_normal"] forState:UIControlStateNormal];
+    [_homeBtn setImage:[UIImage imageNamed:@"home_btn_highlight"] forState:UIControlStateHighlighted];
     [_homeBtn addTarget:self action:@selector(onTapHomeBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_homeBtn];
     
@@ -109,7 +116,7 @@
 }
 
 - (void)onTapLogoBtn:(UIButton *)btn {
-    
+    [self.customTabbarController showStudyViewController];
 }
 
 - (void)onTapOptionBtn:(UIButton *)btn {

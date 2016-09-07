@@ -155,7 +155,11 @@
 }
 
 - (void)showLoginViewController {
-    [self performSegueWithIdentifier:@"showLgoinViewController" sender:self];
+    [self performSegueWithIdentifier:@"presentLgoinViewController" sender:self];
+}
+
+- (void)showStudyViewController {
+    [self performSegueWithIdentifier:@"presentStudyViewController" sender:self];
 }
 
 /*

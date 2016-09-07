@@ -27,6 +27,10 @@
 		D75AE0A31D7EAA4D006685AE /* Lexus_jianzhonghei.TTF in Sources */ = {isa = PBXBuildFile; fileRef = D75AE09B1D7EAA3C006685AE /* Lexus_jianzhonghei.TTF */; };
 		D75AE0A61D7EBD60006685AE /* UserIconItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0A51D7EBD60006685AE /* UserIconItemView.m */; };
 		D75AE0AA1D7EC098006685AE /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0A91D7EC098006685AE /* UserModel.m */; };
+		D75AE0AE1D7FE2F6006685AE /* StudyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0AD1D7FE2F6006685AE /* StudyViewController.m */; };
+		D75AE0B11D7FE5B6006685AE /* GestureUnlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0B01D7FE5B6006685AE /* GestureUnlockView.m */; };
+		D75AE0B71D7FE89C006685AE /* GestureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0B61D7FE89C006685AE /* GestureModel.m */; };
+		D75AE0BA1D800BF1006685AE /* StudyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0B91D800BF1006685AE /* StudyDetailViewController.m */; };
 		D7DFC1A81D754A3B007A6D0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1A71D754A3B007A6D0C /* main.m */; };
 		D7DFC1AB1D754A3B007A6D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1AA1D754A3B007A6D0C /* AppDelegate.m */; };
 		D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1AD1D754A3B007A6D0C /* ViewController.m */; };
@@ -76,6 +80,14 @@
 		D75AE0A51D7EBD60006685AE /* UserIconItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserIconItemView.m; sourceTree = "<group>"; };
 		D75AE0A81D7EC098006685AE /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		D75AE0A91D7EC098006685AE /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		D75AE0AC1D7FE2F6006685AE /* StudyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyViewController.h; sourceTree = "<group>"; };
+		D75AE0AD1D7FE2F6006685AE /* StudyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyViewController.m; sourceTree = "<group>"; };
+		D75AE0AF1D7FE5B6006685AE /* GestureUnlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureUnlockView.h; sourceTree = "<group>"; };
+		D75AE0B01D7FE5B6006685AE /* GestureUnlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureUnlockView.m; sourceTree = "<group>"; };
+		D75AE0B51D7FE89C006685AE /* GestureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureModel.h; sourceTree = "<group>"; };
+		D75AE0B61D7FE89C006685AE /* GestureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureModel.m; sourceTree = "<group>"; };
+		D75AE0B81D800BF1006685AE /* StudyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyDetailViewController.h; sourceTree = "<group>"; };
+		D75AE0B91D800BF1006685AE /* StudyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyDetailViewController.m; sourceTree = "<group>"; };
 		D7DFC1A31D754A3B007A6D0C /* LexusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DFC1A71D754A3B007A6D0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7DFC1A91D754A3B007A6D0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -177,8 +189,21 @@
 			children = (
 				D75AE0A81D7EC098006685AE /* UserModel.h */,
 				D75AE0A91D7EC098006685AE /* UserModel.m */,
+				D75AE0B51D7FE89C006685AE /* GestureModel.h */,
+				D75AE0B61D7FE89C006685AE /* GestureModel.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D75AE0AB1D7FE2B5006685AE /* 6.StudyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D75AE0AC1D7FE2F6006685AE /* StudyViewController.h */,
+				D75AE0AD1D7FE2F6006685AE /* StudyViewController.m */,
+				D75AE0B81D800BF1006685AE /* StudyDetailViewController.h */,
+				D75AE0B91D800BF1006685AE /* StudyDetailViewController.m */,
+			);
+			name = 6.StudyViewController;
 			sourceTree = "<group>";
 		};
 		D7DFC19A1D754A3A007A6D0C = {
@@ -206,6 +231,7 @@
 				D7DFC1EB1D77EBD8007A6D0C /* 3.Extended_warranty_policy */,
 				D7DFC1EC1D77EBE7007A6D0C /* 4.HEV_advatage */,
 				D75AE07B1D7D87F5006685AE /* 5.LoginViewController */,
+				D75AE0AB1D7FE2B5006685AE /* 6.StudyViewController */,
 				D7DFC1A91D754A3B007A6D0C /* AppDelegate.h */,
 				D7DFC1AA1D754A3B007A6D0C /* AppDelegate.m */,
 				D7DFC1AC1D754A3B007A6D0C /* ViewController.h */,
@@ -239,6 +265,8 @@
 				D7DFC1C31D754B76007A6D0C /* AccelerometerManager.m */,
 				D7DFC1C51D754CAA007A6D0C /* BaseViewController.h */,
 				D7DFC1C61D754CAA007A6D0C /* BaseViewController.m */,
+				D75AE0AF1D7FE5B6006685AE /* GestureUnlockView.h */,
+				D75AE0B01D7FE5B6006685AE /* GestureUnlockView.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -392,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75AE0BA1D800BF1006685AE /* StudyDetailViewController.m in Sources */,
 				D75AE0A01D7EAA4D006685AE /* Lexus_jiancuhei.TTF in Sources */,
 				D75AE0A11D7EAA4D006685AE /* Lexus_jianhei.TTF in Sources */,
 				D75AE0A21D7EAA4D006685AE /* Lexus_jianzhengxian.TTF in Sources */,
@@ -399,7 +428,9 @@
 				D75AE0A31D7EAA4D006685AE /* Lexus_jianzhonghei.TTF in Sources */,
 				D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */,
 				D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */,
+				D75AE0B71D7FE89C006685AE /* GestureModel.m in Sources */,
 				D7DFC1E21D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m in Sources */,
+				D75AE0AE1D7FE2F6006685AE /* StudyViewController.m in Sources */,
 				D75AE0931D7EA83D006685AE /* UILabel+ChangeDefaultFont.m in Sources */,
 				D7DFC1F21D77ECAA007A6D0C /* FMSelectCarViewController.m in Sources */,
 				D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */,
@@ -420,6 +451,7 @@
 				D7DFC1E31D76D0F5007A6D0C /* NSString+Valid.m in Sources */,
 				D7DFC1E61D76D0F5007A6D0C /* UITextField+PlaceholderText.m in Sources */,
 				D7DFC1F71D7954B4007A6D0C /* CustomTabbarViewController.m in Sources */,
+				D75AE0B11D7FE5B6006685AE /* GestureUnlockView.m in Sources */,
 				D7DFC1E71D76D0F5007A6D0C /* UIView+frameAdjust.m in Sources */,
 				D7DFC1C41D754B76007A6D0C /* AccelerometerManager.m in Sources */,
 				D75AE07A1D7D4A43006685AE /* UILabel+AttributedString.m in Sources */,

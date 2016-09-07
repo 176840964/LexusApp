@@ -18,6 +18,7 @@
 - (void)dismissTabbarView:(BOOL)isAnimated;
 
 - (void)showLoginViewController;
+- (void)showStudyViewController;
 
 @end
 
