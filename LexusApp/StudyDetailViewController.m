@@ -8,10 +8,12 @@
 
 #import "StudyDetailViewController.h"
 #import "StudyListTableViewCell.h"
+#import "StudyMainView.h"
 
 @interface StudyDetailViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *mainScrollViewWidth;
+@property (weak, nonatomic) IBOutlet StudyMainView *studyMainView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *listScrollView;
 @property (weak, nonatomic) IBOutlet UILabel *listTitleLab;
@@ -24,6 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.studyMainView sutupSubviews];
     
     self.titleLab.text = @"学习平台";
     

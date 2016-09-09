@@ -153,7 +153,7 @@
                                                     <constraint firstItem="42l-Ba-Lyt" firstAttribute="centerY" secondItem="mHD-UC-lIr" secondAttribute="centerY" id="pfm-6N-scY"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnp-4t-E6l">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnp-4t-E6l" customClass="StudyMainView">
                                                 <rect key="frame" x="530" y="0.0" width="265" height="494"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goI-Lg-JF1">
@@ -176,6 +176,9 @@
                                                                 <include reference="L8u-oQ-Gdu"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <action selector="onTapRecordBtn:" destination="vnp-4t-E6l" eventType="touchUpInside" id="Bx0-zi-Lge"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jii-Kh-Sub">
                                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -199,6 +202,9 @@
                                                                 <include reference="bL2-t6-MzU"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <action selector="onTapUploadRecordBtn:" destination="vnp-4t-E6l" eventType="touchUpInside" id="du8-os-hx4"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wat-aU-DG3">
                                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -220,6 +226,9 @@
                                                                 <include reference="PAe-k2-mu2"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <action selector="onTapDelRecordBtn:" destination="vnp-4t-E6l" eventType="touchUpInside" id="KTT-Ib-WhT"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Da-Nf-UWT">
                                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -241,6 +250,9 @@
                                                                 <include reference="QTO-oP-d3o"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <action selector="onTapTryListenBtn:" destination="vnp-4t-E6l" eventType="touchUpInside" id="9Iv-xu-lQy"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adD-1c-g3I">
                                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -262,6 +274,9 @@
                                                                 <include reference="kck-gv-irY"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <action selector="onTapRecordCompleteBtn:" destination="vnp-4t-E6l" eventType="touchUpInside" id="Ncr-EP-B5P"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="240-6b-YkB">
                                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -357,6 +372,9 @@
                                                         <include reference="tjH-bs-wgi"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <outlet property="recordTimeLab" destination="240-6b-YkB" id="lQJ-fY-34D"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -542,6 +560,7 @@
                         <outlet property="listTitleLab" destination="r9y-FH-EXs" id="ziA-QD-T5a"/>
                         <outlet property="mainScrollView" destination="VgU-Te-mSJ" id="iVJ-6X-VwG"/>
                         <outlet property="mainScrollViewWidth" destination="tQT-3i-y7X" id="YJT-Wy-F3k"/>
+                        <outlet property="studyMainView" destination="vnp-4t-E6l" id="6Sl-MV-DMT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmu-b1-YWS" userLabel="First Responder" sceneMemberID="firstResponder"/>

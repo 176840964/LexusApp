@@ -35,6 +35,7 @@
 		D75AE0C01D806297006685AE /* StudyListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0BF1D806297006685AE /* StudyListModel.m */; };
 		D75AE0C71D80634F006685AE /* StudyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0C51D80634F006685AE /* StudyListTableViewCell.m */; };
 		D75AE0C81D80634F006685AE /* StudyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75AE0C61D80634F006685AE /* StudyListTableViewCell.xib */; };
+		D75AE0CB1D817E22006685AE /* StudyMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0CA1D817E21006685AE /* StudyMainView.m */; };
 		D7DFC1A81D754A3B007A6D0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1A71D754A3B007A6D0C /* main.m */; };
 		D7DFC1AB1D754A3B007A6D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1AA1D754A3B007A6D0C /* AppDelegate.m */; };
 		D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1AD1D754A3B007A6D0C /* ViewController.m */; };
@@ -99,6 +100,8 @@
 		D75AE0C41D80634F006685AE /* StudyListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyListTableViewCell.h; sourceTree = "<group>"; };
 		D75AE0C51D80634F006685AE /* StudyListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyListTableViewCell.m; sourceTree = "<group>"; };
 		D75AE0C61D80634F006685AE /* StudyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudyListTableViewCell.xib; sourceTree = "<group>"; };
+		D75AE0C91D817E21006685AE /* StudyMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyMainView.h; sourceTree = "<group>"; };
+		D75AE0CA1D817E21006685AE /* StudyMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyMainView.m; sourceTree = "<group>"; };
 		D7DFC1A31D754A3B007A6D0C /* LexusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DFC1A71D754A3B007A6D0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7DFC1A91D754A3B007A6D0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 				D75AE0C41D80634F006685AE /* StudyListTableViewCell.h */,
 				D75AE0C51D80634F006685AE /* StudyListTableViewCell.m */,
 				D75AE0C61D80634F006685AE /* StudyListTableViewCell.xib */,
+				D75AE0C91D817E21006685AE /* StudyMainView.h */,
+				D75AE0CA1D817E21006685AE /* StudyMainView.m */,
 			);
 			name = 6.StudyViewController;
 			sourceTree = "<group>";
@@ -439,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75AE0CB1D817E22006685AE /* StudyMainView.m in Sources */,
 				D75AE0BA1D800BF1006685AE /* StudyDetailViewController.m in Sources */,
 				D75AE0A01D7EAA4D006685AE /* Lexus_jiancuhei.TTF in Sources */,
 				D75AE0A11D7EAA4D006685AE /* Lexus_jianhei.TTF in Sources */,
