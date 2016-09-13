@@ -278,7 +278,7 @@
                                                             <action selector="onTapRecordCompleteBtn:" destination="vnp-4t-E6l" eventType="touchUpInside" id="Ncr-EP-B5P"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="240-6b-YkB">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长：00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="240-6b-YkB">
                                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -373,7 +373,12 @@
                                                     </mask>
                                                 </variation>
                                                 <connections>
+                                                    <outlet property="completeBtn" destination="adD-1c-g3I" id="6Yq-OT-X1i"/>
+                                                    <outlet property="delBtn" destination="Wat-aU-DG3" id="KCQ-GL-c9l"/>
+                                                    <outlet property="recordBtn" destination="goI-Lg-JF1" id="Rcx-Hm-2OH"/>
                                                     <outlet property="recordTimeLab" destination="240-6b-YkB" id="lQJ-fY-34D"/>
+                                                    <outlet property="tryListenBtn" destination="3Da-Nf-UWT" id="hMr-ar-CLi"/>
+                                                    <outlet property="uploadBtn" destination="Jii-Kh-Sub" id="wnf-nj-T0l"/>
                                                 </connections>
                                             </view>
                                         </subviews>

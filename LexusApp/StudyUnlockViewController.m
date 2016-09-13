@@ -19,7 +19,8 @@
     [super viewDidLoad];
     
     GestureModel * gestureModel = [[GestureModel alloc] init];
-    gestureModel.gesturePasswordStr = @"56985";
+    gestureModel.gesturePasswordStr = @"123";
+//    gestureModel.gesturePasswordStr = @"56985";
     
     _gestureUnlockView = [[GestureUnlockView alloc] initWithFrame:CGRectMake((CGRectGetWidth(self.view.bounds) - 302) / 2.0, 394 + 64, 302, 223)];
     _gestureUnlockView.gestureModel = gestureModel;

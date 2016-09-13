@@ -11,18 +11,35 @@
 
 #define kRecordAudioFile @"myRecord.caf"
 
-@interface StudyMainView () <AVAudioRecorderDelegate>
+
+typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
+    StudyMainViewRecorderTypeDefault,
+    StudyMainViewRecorderTypeRecording,
+    StudyMainViewRecorderTypePause,
+    StudyMainViewRecorderTypeComplete,
+    StudyMainViewRecorderTypeListening
+};
+
+@interface StudyMainView () <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *recordBtn;
 @property (weak, nonatomic) IBOutlet UILabel *recordTimeLab;
+@property (weak, nonatomic) IBOutlet UIButton *completeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *tryListenBtn;
+@property (weak, nonatomic) IBOutlet UIButton *delBtn;
+@property (weak, nonatomic) IBOutlet UIButton *uploadBtn;
 
 @property (nonatomic,strong) AVAudioRecorder *audioRecorder;//音频录音机
 @property (nonatomic,strong) AVAudioPlayer *audioPlayer;//音频播放器，用于播放录音文件
 @property (nonatomic,strong) NSTimer *timer;//录音声波监控（注意这里暂时不对播放进行监控）
+@property (assign, nonatomic) StudyMainViewRecorderType recordType;
+@property (assign, nonatomic) CGFloat recordTime;
 @end
 
 @implementation StudyMainView
 
 - (void)sutupSubviews {
     [self setAudioSession];
+    self.recordType = StudyMainViewRecorderTypeDefault;
 }
 
 /*
@@ -34,6 +51,68 @@
 */
 
 #pragma mark -
+- (void)setRecordType:(StudyMainViewRecorderType)recordType {
+    _recordType = recordType;
+    switch (recordType) {
+        case StudyMainViewRecorderTypeDefault:
+            self.recordBtn.enabled = YES;
+            [self.recordBtn setTitle:@"record" forState:UIControlStateNormal];
+            
+            self.completeBtn.enabled = NO;
+            self.tryListenBtn.enabled = NO;
+            [self.tryListenBtn setTitle:@"try" forState:UIControlStateNormal];
+            self.delBtn.enabled = NO;
+            self.uploadBtn.enabled = NO;
+            
+            self.recordTime = 0;
+            self.recordTimeLab.text = @"时长：00:00";
+            
+            break;
+        case StudyMainViewRecorderTypeRecording:
+            self.recordBtn.enabled = YES;
+            [self.recordBtn setTitle:@"pause" forState:UIControlStateNormal];
+            
+            self.completeBtn.enabled = YES;
+            self.tryListenBtn.enabled = NO;
+            [self.tryListenBtn setTitle:@"try" forState:UIControlStateNormal];
+            self.delBtn.enabled = NO;
+            self.uploadBtn.enabled = NO;
+            
+            break;
+        case StudyMainViewRecorderTypePause:
+            self.recordBtn.enabled = YES;
+            [self.recordBtn setTitle:@"record" forState:UIControlStateNormal];
+            
+            self.completeBtn.enabled = YES;
+            self.tryListenBtn.enabled = NO;
+            [self.tryListenBtn setTitle:@"try" forState:UIControlStateNormal];
+            self.delBtn.enabled = NO;
+            self.uploadBtn.enabled = NO;
+            break;
+        case StudyMainViewRecorderTypeComplete:
+            self.recordBtn.enabled = NO;
+            [self.recordBtn setTitle:@"record" forState:UIControlStateNormal];
+            
+            self.completeBtn.enabled = NO;
+            self.tryListenBtn.enabled = YES;
+            [self.tryListenBtn setTitle:@"try" forState:UIControlStateNormal];
+            self.delBtn.enabled = YES;
+            self.uploadBtn.enabled = YES;
+            break;
+        case StudyMainViewRecorderTypeListening:
+            self.recordBtn.enabled = NO;
+            self.completeBtn.enabled = NO;
+            self.tryListenBtn.enabled = NO;
+            [self.tryListenBtn setTitle:@"listening" forState:UIControlStateNormal];
+            self.delBtn.enabled = YES;
+            self.uploadBtn.enabled = YES;
+            break;
+            
+        default:
+            break;
+    }
+}
+
 -(void)setAudioSession{
     AVAudioSession *audioSession=[AVAudioSession sharedInstance];
     //设置为播放和录音状态，以便可以在录制完之后播放录音
@@ -105,6 +184,7 @@
         NSURL *url=[self getSavePath];
         NSError *error=nil;
         _audioPlayer=[[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
+        _audioPlayer.delegate = self;
         _audioPlayer.numberOfLoops=0;
         [_audioPlayer prepareToPlay];
         if (error) {
@@ -122,7 +202,7 @@
  */
 -(NSTimer *)timer{
     if (!_timer) {
-        _timer=[NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(audioPowerChange) userInfo:nil repeats:YES];
+        _timer=[NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(audioPowerChange) userInfo:nil repeats:YES];
     }
     return _timer;
 }
@@ -131,36 +211,50 @@
  *  录音声波状态设置
  */
 -(void)audioPowerChange{
-    [self.audioRecorder updateMeters];//更新测量值
-    float power= [self.audioRecorder averagePowerForChannel:0];//取得第一个通道的音频，注意音频强度范围时-160到0
-    CGFloat progress=(1.0/160.0)*(power+160.0);
-//    [self.audioPower setProgress:progress];
-    self.recordTimeLab.text = [NSString stringWithFormat:@"%f", progress];
+//    [self.audioRecorder updateMeters];//更新测量值
+//    float power= [self.audioRecorder averagePowerForChannel:0];//取得第一个通道的音频，注意音频强度范围时-160到0
+//    CGFloat progress=(1.0/160.0)*(power+160.0);
+    self.recordTime += self.timer.timeInterval;
+    CGFloat min = (NSInteger)self.recordTime / 60;
+    CGFloat second = (NSInteger)self.recordTime % 60;
+    self.recordTimeLab.text = [NSString stringWithFormat:@"时长：%02.0f:%02.0f", min, second];
+    
+    if (self.recordTime >= 30.0) {
+        [self onTapRecordCompleteBtn:nil];
+    }
 }
 
 #pragma mark - IBAction
-
 - (IBAction)onTapRecordBtn:(id)sender {
     if (![self.audioRecorder isRecording]) {
         [self.audioRecorder record];//首次使用应用时如果调用record方法会询问用户是否允许使用麦克风
-        self.timer.fireDate=[NSDate distantPast];
+        self.timer.fireDate = [NSDate distantPast];
+        self.recordType = StudyMainViewRecorderTypeRecording;
+    } else {
+        [self.audioRecorder pause];
+        self.timer.fireDate = [NSDate distantFuture];
+        self.recordType = StudyMainViewRecorderTypePause;
     }
 }
 
 - (IBAction)onTapRecordCompleteBtn:(id)sender {
     [self.audioRecorder stop];
-    self.timer.fireDate=[NSDate distantFuture];
-//    self.audioPower.progress=0.0;
+    self.timer.fireDate = [NSDate distantFuture];
+    self.recordType = StudyMainViewRecorderTypeComplete;
 }
 
 - (IBAction)onTapTryListenBtn:(id)sender {
     if (![self.audioPlayer isPlaying]) {
         [self.audioPlayer play];
+        self.recordType = StudyMainViewRecorderTypeListening;
     }
 }
 
 - (IBAction)onTapDelRecordBtn:(id)sender {
-    
+    if ([self.audioRecorder deleteRecording]) {
+        self.recordType = StudyMainViewRecorderTypeDefault;
+        self.audioPlayer = nil;
+    }
 }
 
 - (IBAction)onTapUploadRecordBtn:(id)sender {
@@ -177,8 +271,14 @@
 -(void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag{
     if (![self.audioPlayer isPlaying]) {
         [self.audioPlayer play];
+        self.recordType = StudyMainViewRecorderTypeListening;
     }
     NSLog(@"录音完成!");
+}
+
+#pragma mark - AVAudioPlayerDelegate
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+    self.recordType = StudyMainViewRecorderTypeComplete;
 }
 
 @end
