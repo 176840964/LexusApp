@@ -12,7 +12,7 @@
 
 @interface StudyDetailViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *mainScrollViewWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *mainScrollViewWidth1;
 @property (weak, nonatomic) IBOutlet StudyMainView *studyMainView;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *listScrollView;
@@ -58,7 +58,7 @@
 
 - (void)updateViewConstraints {
     [super updateViewConstraints];
-    self.mainScrollViewWidth.constant = (CGRectGetWidth(self.view.bounds) - CGRectGetWidth(self.listScrollView.bounds)) * 3;
+    self.mainScrollViewWidth1.constant = (CGRectGetWidth(self.view.bounds) - 335) * 3;
 }
 
 #pragma mark - IBAction

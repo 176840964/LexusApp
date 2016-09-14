@@ -36,6 +36,7 @@
 		D75AE0C71D80634F006685AE /* StudyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0C51D80634F006685AE /* StudyListTableViewCell.m */; };
 		D75AE0C81D80634F006685AE /* StudyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75AE0C61D80634F006685AE /* StudyListTableViewCell.xib */; };
 		D75AE0CB1D817E22006685AE /* StudyMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0CA1D817E21006685AE /* StudyMainView.m */; };
+		D77C9CCB1D89354A00DE0C32 /* CarSelectedItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D77C9CCA1D89354A00DE0C32 /* CarSelectedItemView.m */; };
 		D7DFC1A81D754A3B007A6D0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1A71D754A3B007A6D0C /* main.m */; };
 		D7DFC1AB1D754A3B007A6D0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1AA1D754A3B007A6D0C /* AppDelegate.m */; };
 		D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1AD1D754A3B007A6D0C /* ViewController.m */; };
@@ -102,6 +103,8 @@
 		D75AE0C61D80634F006685AE /* StudyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudyListTableViewCell.xib; sourceTree = "<group>"; };
 		D75AE0C91D817E21006685AE /* StudyMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyMainView.h; sourceTree = "<group>"; };
 		D75AE0CA1D817E21006685AE /* StudyMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyMainView.m; sourceTree = "<group>"; };
+		D77C9CC91D89354A00DE0C32 /* CarSelectedItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarSelectedItemView.h; sourceTree = "<group>"; };
+		D77C9CCA1D89354A00DE0C32 /* CarSelectedItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarSelectedItemView.m; sourceTree = "<group>"; };
 		D7DFC1A31D754A3B007A6D0C /* LexusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DFC1A71D754A3B007A6D0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D7DFC1A91D754A3B007A6D0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 				D75AE0B01D7FE5B6006685AE /* GestureUnlockView.m */,
 				D75AE0BB1D8047E8006685AE /* UserManager.h */,
 				D75AE0BC1D8047E8006685AE /* UserManager.m */,
+				D77C9CC91D89354A00DE0C32 /* CarSelectedItemView.h */,
+				D77C9CCA1D89354A00DE0C32 /* CarSelectedItemView.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -393,7 +398,7 @@
 		D7DFC19B1D754A3A007A6D0C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = zxl;
 				TargetAttributes = {
 					D7DFC1A21D754A3B007A6D0C = {
@@ -453,6 +458,7 @@
 				D75AE0A31D7EAA4D006685AE /* Lexus_jianzhonghei.TTF in Sources */,
 				D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */,
 				D75AE0C71D80634F006685AE /* StudyListTableViewCell.m in Sources */,
+				D77C9CCB1D89354A00DE0C32 /* CarSelectedItemView.m in Sources */,
 				D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */,
 				D75AE0B71D7FE89C006685AE /* GestureModel.m in Sources */,
 				D7DFC1E21D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m in Sources */,
@@ -522,8 +528,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -568,8 +576,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -600,6 +610,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 68Q9UNJFRU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LexusApp/PrefixHeader.pch";
 				INFOPLIST_FILE = LexusApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -615,6 +626,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 68Q9UNJFRU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LexusApp/PrefixHeader.pch";
 				INFOPLIST_FILE = LexusApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
