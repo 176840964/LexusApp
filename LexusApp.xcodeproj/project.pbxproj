@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6B9BC790F8A96142E9C1CA /* Pods_LexusApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C19653DC28963C1222D433F /* Pods_LexusApp.framework */; };
 		D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */; };
 		D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */; };
 		D75AE06C1D7D2223006685AE /* FMDetailCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE06B1D7D2223006685AE /* FMDetailCheckView.m */; };
@@ -59,6 +60,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BE3A304765095CA6778724A /* Pods-LexusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexusApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LexusApp/Pods-LexusApp.debug.xcconfig"; sourceTree = "<group>"; };
+		39F2875D6C2EFF83963AD488 /* Pods-LexusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexusApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LexusApp/Pods-LexusApp.release.xcconfig"; sourceTree = "<group>"; };
+		6C19653DC28963C1222D433F /* Pods_LexusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LexusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75AE0631D7BE5DA006685AE /* FMSelectKmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSelectKmViewController.h; sourceTree = "<group>"; };
 		D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectKmViewController.m; sourceTree = "<group>"; };
 		D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDetailViewController.h; sourceTree = "<group>"; };
@@ -149,12 +153,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6B9BC790F8A96142E9C1CA /* Pods_LexusApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B8030AA9C107204D527B57F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C19653DC28963C1222D433F /* Pods_LexusApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D75AE0691D7D21E4006685AE /* FMDetailViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +248,8 @@
 			children = (
 				D7DFC1A51D754A3B007A6D0C /* LexusApp */,
 				D7DFC1A41D754A3B007A6D0C /* Products */,
+				EE4905701FB04AEC04DD6B13 /* Pods */,
+				0B8030AA9C107204D527B57F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -372,6 +387,15 @@
 			name = 0.CustomTabbarViewController;
 			sourceTree = "<group>";
 		};
+		EE4905701FB04AEC04DD6B13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BE3A304765095CA6778724A /* Pods-LexusApp.debug.xcconfig */,
+				39F2875D6C2EFF83963AD488 /* Pods-LexusApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -379,9 +403,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7DFC1BA1D754A3B007A6D0C /* Build configuration list for PBXNativeTarget "LexusApp" */;
 			buildPhases = (
+				709B3C11819B84968CA06DC0 /* [CP] Check Pods Manifest.lock */,
 				D7DFC19F1D754A3B007A6D0C /* Sources */,
 				D7DFC1A01D754A3B007A6D0C /* Frameworks */,
 				D7DFC1A11D754A3B007A6D0C /* Resources */,
+				3306C50F13D24E503691EAF8 /* [CP] Embed Pods Frameworks */,
+				FB8B4322B9F38E22C1481B8F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -404,6 +431,7 @@
 					D7DFC1A21D754A3B007A6D0C = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 68Q9UNJFRU;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -443,6 +471,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3306C50F13D24E503691EAF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LexusApp/Pods-LexusApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		709B3C11819B84968CA06DC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FB8B4322B9F38E22C1481B8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LexusApp/Pods-LexusApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D7DFC19F1D754A3B007A6D0C /* Sources */ = {
@@ -606,6 +682,7 @@
 		};
 		D7DFC1BB1D754A3B007A6D0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BE3A304765095CA6778724A /* Pods-LexusApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -613,15 +690,18 @@
 				DEVELOPMENT_TEAM = 68Q9UNJFRU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LexusApp/PrefixHeader.pch";
 				INFOPLIST_FILE = LexusApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxl.LexusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		D7DFC1BC1D754A3B007A6D0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39F2875D6C2EFF83963AD488 /* Pods-LexusApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -629,10 +709,12 @@
 				DEVELOPMENT_TEAM = 68Q9UNJFRU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LexusApp/PrefixHeader.pch";
 				INFOPLIST_FILE = LexusApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxl.LexusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
