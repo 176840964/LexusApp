@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F6B9BC790F8A96142E9C1CA /* Pods_LexusApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C19653DC28963C1222D433F /* Pods_LexusApp.framework */; };
+		D71A4FCB1D8AE9950053E98C /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A4FCA1D8AE9950053E98C /* NetworkingManager.m */; };
+		D71A4FCE1D8AF02F0053E98C /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A4FCD1D8AF02F0053E98C /* BaseModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D71A4FD11D8AF4930053E98C /* HintView.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A4FD01D8AF4930053E98C /* HintView.m */; };
 		D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */; };
 		D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */; };
 		D75AE06C1D7D2223006685AE /* FMDetailCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE06B1D7D2223006685AE /* FMDetailCheckView.m */; };
@@ -63,6 +66,12 @@
 		2BE3A304765095CA6778724A /* Pods-LexusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexusApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LexusApp/Pods-LexusApp.debug.xcconfig"; sourceTree = "<group>"; };
 		39F2875D6C2EFF83963AD488 /* Pods-LexusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexusApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LexusApp/Pods-LexusApp.release.xcconfig"; sourceTree = "<group>"; };
 		6C19653DC28963C1222D433F /* Pods_LexusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LexusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D71A4FC91D8AE9950053E98C /* NetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingManager.h; sourceTree = "<group>"; };
+		D71A4FCA1D8AE9950053E98C /* NetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingManager.m; sourceTree = "<group>"; };
+		D71A4FCC1D8AF02F0053E98C /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		D71A4FCD1D8AF02F0053E98C /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		D71A4FCF1D8AF4930053E98C /* HintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HintView.h; sourceTree = "<group>"; };
+		D71A4FD01D8AF4930053E98C /* HintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintView.m; sourceTree = "<group>"; };
 		D75AE0631D7BE5DA006685AE /* FMSelectKmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSelectKmViewController.h; sourceTree = "<group>"; };
 		D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectKmViewController.m; sourceTree = "<group>"; };
 		D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDetailViewController.h; sourceTree = "<group>"; };
@@ -168,6 +177,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D71A4FC81D8AE9730053E98C /* NetworkingManager */ = {
+			isa = PBXGroup;
+			children = (
+				D71A4FC91D8AE9950053E98C /* NetworkingManager.h */,
+				D71A4FCA1D8AE9950053E98C /* NetworkingManager.m */,
+			);
+			name = NetworkingManager;
+			sourceTree = "<group>";
+		};
+		D71A4FD21D8AF4990053E98C /* HintView */ = {
+			isa = PBXGroup;
+			children = (
+				D71A4FCF1D8AF4930053E98C /* HintView.h */,
+				D71A4FD01D8AF4930053E98C /* HintView.m */,
+			);
+			name = HintView;
+			sourceTree = "<group>";
+		};
 		D75AE0691D7D21E4006685AE /* FMDetailViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +250,8 @@
 				D75AE0B61D7FE89C006685AE /* GestureModel.m */,
 				D75AE0BE1D806297006685AE /* StudyListModel.h */,
 				D75AE0BF1D806297006685AE /* StudyListModel.m */,
+				D71A4FCC1D8AF02F0053E98C /* BaseModel.h */,
+				D71A4FCD1D8AF02F0053E98C /* BaseModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -300,6 +329,8 @@
 		D7DFC1C11D754B53007A6D0C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D71A4FD21D8AF4990053E98C /* HintView */,
+				D71A4FC81D8AE9730053E98C /* NetworkingManager */,
 				D7DFC1C21D754B76007A6D0C /* AccelerometerManager.h */,
 				D7DFC1C31D754B76007A6D0C /* AccelerometerManager.m */,
 				D7DFC1C51D754CAA007A6D0C /* BaseViewController.h */,
@@ -541,6 +572,7 @@
 				D75AE0BD1D8047E8006685AE /* UserManager.m in Sources */,
 				D75AE0AE1D7FE2F6006685AE /* StudyUnlockViewController.m in Sources */,
 				D75AE0931D7EA83D006685AE /* UILabel+ChangeDefaultFont.m in Sources */,
+				D71A4FCB1D8AE9950053E98C /* NetworkingManager.m in Sources */,
 				D7DFC1F21D77ECAA007A6D0C /* FMSelectCarViewController.m in Sources */,
 				D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */,
 				D7DFC1C81D754CAA007A6D0C /* BaseViewController.m in Sources */,
@@ -548,6 +580,7 @@
 				D75AE0761D7D3F58006685AE /* FMDetailChangeTableViewCell.m in Sources */,
 				D75AE0AA1D7EC098006685AE /* UserModel.m in Sources */,
 				D75AE07E1D7D8825006685AE /* LoginViewController.m in Sources */,
+				D71A4FCE1D8AF02F0053E98C /* BaseModel.m in Sources */,
 				D7DFC1E51D76D0F5007A6D0C /* UILabel+VerticalAlign.m in Sources */,
 				D7DFC1E11D76D0F5007A6D0C /* NSDate+TodayZeroClock.m in Sources */,
 				D7DFC1E01D76D0F5007A6D0C /* NSArray+sortBy.m in Sources */,
@@ -559,6 +592,7 @@
 				D75AE06C1D7D2223006685AE /* FMDetailCheckView.m in Sources */,
 				D7DFC1E31D76D0F5007A6D0C /* NSString+Valid.m in Sources */,
 				D7DFC1E61D76D0F5007A6D0C /* UITextField+PlaceholderText.m in Sources */,
+				D71A4FD11D8AF4930053E98C /* HintView.m in Sources */,
 				D7DFC1F71D7954B4007A6D0C /* CustomTabbarViewController.m in Sources */,
 				D75AE0B11D7FE5B6006685AE /* GestureUnlockView.m in Sources */,
 				D7DFC1E71D76D0F5007A6D0C /* UIView+frameAdjust.m in Sources */,

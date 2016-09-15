@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseModel.h"
 
-@interface UserModel : NSObject
-@property (strong, nonatomic) NSString *nameStr;
-@property (strong, nonatomic) NSString *iconStr;
+@interface UserModel : BaseModel
+@property (copy, nonatomic) NSString *name;
+@property (copy, nonatomic) NSString *iconStr;
 
 @end

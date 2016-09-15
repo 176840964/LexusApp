@@ -37,7 +37,7 @@
 
 - (void)setupUserIconItemByUserModel:(UserModel *)model {
     [self.iconBtn setImage:[UIImage imageNamed:model.iconStr] forState:UIControlStateNormal];
-    self.nameLab.text = model.nameStr;
+    self.nameLab.text = model.name;
     self.userModel = model;
 }
 

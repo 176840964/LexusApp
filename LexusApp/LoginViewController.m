@@ -38,7 +38,7 @@ typedef NS_ENUM(NSUInteger, LoginViewControllerType) {
     self.usersArr = [NSMutableArray new];
     for (NSInteger index = 0; index < 7; index++) {
         UserModel *model = [[UserModel alloc] init];
-        model.nameStr = @"zxl";
+        model.name = @"zxl";
         
         [self.usersArr addObject:model];
     }
@@ -135,8 +135,24 @@ typedef NS_ENUM(NSUInteger, LoginViewControllerType) {
 }
 
 - (IBAction)onTapLoginBtn:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
+    [self.usernameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+    
+    [[NetworkingManager shareManager] networkingWithGetMethodPath:@"client/login?" params:@{@"name": self.usernameTextField.text, @"password": self.passwordTextField.text} success:^(id responseObject) {
+        NSString *status = [responseObject objectForKey:@"status"];
+        if ([status isEqualToString:@"1"]) {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[HintView getInstance] presentMessage:@"登录成功" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                }];
+            });
+        } else if ([status isEqualToString:@"0"]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[HintView getInstance] presentMessage:@"密码错误" isAutoDismiss:NO dismissTimeInterval:1 dismissBlock:^{
+                }];
+            });
+        }
     }];
 }
 
