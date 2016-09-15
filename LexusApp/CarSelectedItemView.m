@@ -18,4 +18,17 @@
 }
 */
 
+- (UIImageView *)imgView {
+    if (nil == _imgView) {
+        _imgView = [UIImageView newAutoLayoutView];
+        [self addSubview:_imgView];
+        [_imgView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
+        [_imgView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:0];
+        [_imgView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
+        [_imgView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:0];
+    }
+    
+    return _imgView;
+}
+
 @end
