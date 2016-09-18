@@ -193,6 +193,7 @@ typedef NS_ENUM(NSUInteger, LoginViewControllerType) {
                 
                 NSDictionary *userInfoDic = [responseObject objectForKey:@"userinfo"];
                 UserModel *userModel = [[UserModel alloc] initWithDic:userInfoDic];
+                [LocalUserManager shareManager].curLoginUserModel = userModel;
                 if (LoginTypeByUsername == self.type) {
                     [[LocalUserManager shareManager] AddLocalUser:userModel];
                 }

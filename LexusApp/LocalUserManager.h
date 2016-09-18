@@ -12,6 +12,7 @@
 @interface LocalUserManager : NSObject <NSCoding>
 
 @property (strong, nonatomic) NSMutableArray *localUsersArr;
+@property (strong, nonatomic) UserModel *curLoginUserModel;
 
 + (instancetype)shareManager;
 

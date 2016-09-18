@@ -17,6 +17,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         s_instance = [[NetworkingManager alloc] initWithBaseURL:[NSURL URLWithString:BaseURLString]];
+        s_instance.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     });
     
     return s_instance;
@@ -27,6 +28,25 @@
                                                params:(NSDictionary *)parames
                                               success:(void (^)(id responseObject))success {
     return [self GET:path parameters:parames progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"error:%@", error);
+            [[HintView getInstance] presentMessage:@"无网络连接" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:nil];
+        });
+    }];
+}
+
+- (NSURLSessionDataTask*)networkingWithPostMethodPath:(NSString*)path
+                                            paramsDic:(NSDictionary *)paramsDic
+                                            soundDate:(NSData *)soundDate
+                                              success:(void (^)(id responseObject))success {
+    self.requestSerializer = [AFJSONRequestSerializer serializer];//申明请求的数据是json类型
+    return [self POST:path parameters:paramsDic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFormData:soundDate name:@"song"];
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);

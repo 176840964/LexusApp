@@ -17,4 +17,8 @@
                                                params:(NSDictionary *)parames
                                               success:(void (^)(id responseObject))success;
 
+- (NSURLSessionDataTask*)networkingWithPostMethodPath:(NSString*)path
+                                            paramsDic:(NSDictionary *)paramsDic
+                                            soundDate:(NSData *)soundDate
+                                              success:(void (^)(id responseObject))success;
 @end
