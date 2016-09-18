@@ -15,9 +15,10 @@
 
 @property (strong, nonatomic) UserModel *userModel;
 @property (copy, nonatomic) void(^tapUserIconHandler)(UserModel*);
-//@property (copy, nonatomic) void(^longPressHandler)();
+@property (copy, nonatomic) void(^longPressHandler)();
+@property (copy, nonatomic) void(^tapUserIconDelHandler)(UserIconItemView*);
+
+@property (assign, nonatomic) BOOL isShake;
 
 - (void)setupUserIconItemByUserModel:(UserModel *)model;
-
-//- (void)shakeAnimation;
 @end

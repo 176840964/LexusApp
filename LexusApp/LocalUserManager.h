@@ -1,0 +1,21 @@
+//
+//  LocalUserManager.h
+//  LexusApp
+//
+//  Created by Dragonet on 16/9/18.
+//  Copyright © 2016年 zxl. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "UserModel.h"
+
+@interface LocalUserManager : NSObject <NSCoding>
+
+@property (strong, nonatomic) NSMutableArray *localUsersArr;
+
++ (instancetype)shareManager;
+
+- (void)AddLocalUser:(UserModel *)model;
+- (void)removeLocalUser:(UserModel *)model;
+
+@end

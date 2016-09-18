@@ -11,6 +11,7 @@
 		D71A4FCB1D8AE9950053E98C /* NetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A4FCA1D8AE9950053E98C /* NetworkingManager.m */; };
 		D71A4FCE1D8AF02F0053E98C /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A4FCD1D8AF02F0053E98C /* BaseModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D71A4FD11D8AF4930053E98C /* HintView.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A4FD01D8AF4930053E98C /* HintView.m */; };
+		D71A4FD61D8E91B70053E98C /* LocalUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A4FD51D8E91B70053E98C /* LocalUserManager.m */; };
 		D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */; };
 		D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */; };
 		D75AE06C1D7D2223006685AE /* FMDetailCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE06B1D7D2223006685AE /* FMDetailCheckView.m */; };
@@ -72,6 +73,8 @@
 		D71A4FCD1D8AF02F0053E98C /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		D71A4FCF1D8AF4930053E98C /* HintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HintView.h; sourceTree = "<group>"; };
 		D71A4FD01D8AF4930053E98C /* HintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintView.m; sourceTree = "<group>"; };
+		D71A4FD41D8E91B70053E98C /* LocalUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalUserManager.h; sourceTree = "<group>"; };
+		D71A4FD51D8E91B70053E98C /* LocalUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalUserManager.m; sourceTree = "<group>"; };
 		D75AE0631D7BE5DA006685AE /* FMSelectKmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSelectKmViewController.h; sourceTree = "<group>"; };
 		D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectKmViewController.m; sourceTree = "<group>"; };
 		D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDetailViewController.h; sourceTree = "<group>"; };
@@ -193,6 +196,15 @@
 				D71A4FD01D8AF4930053E98C /* HintView.m */,
 			);
 			name = HintView;
+			sourceTree = "<group>";
+		};
+		D71A4FD31D8E91860053E98C /* LocalUserManager */ = {
+			isa = PBXGroup;
+			children = (
+				D71A4FD41D8E91B70053E98C /* LocalUserManager.h */,
+				D71A4FD51D8E91B70053E98C /* LocalUserManager.m */,
+			);
+			name = LocalUserManager;
 			sourceTree = "<group>";
 		};
 		D75AE0691D7D21E4006685AE /* FMDetailViews */ = {
@@ -329,6 +341,7 @@
 		D7DFC1C11D754B53007A6D0C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D71A4FD31D8E91860053E98C /* LocalUserManager */,
 				D71A4FD21D8AF4990053E98C /* HintView */,
 				D71A4FC81D8AE9730053E98C /* NetworkingManager */,
 				D7DFC1C21D754B76007A6D0C /* AccelerometerManager.h */,
@@ -594,6 +607,7 @@
 				D7DFC1E61D76D0F5007A6D0C /* UITextField+PlaceholderText.m in Sources */,
 				D71A4FD11D8AF4930053E98C /* HintView.m in Sources */,
 				D7DFC1F71D7954B4007A6D0C /* CustomTabbarViewController.m in Sources */,
+				D71A4FD61D8E91B70053E98C /* LocalUserManager.m in Sources */,
 				D75AE0B11D7FE5B6006685AE /* GestureUnlockView.m in Sources */,
 				D7DFC1E71D76D0F5007A6D0C /* UIView+frameAdjust.m in Sources */,
 				D75AE0C01D806297006685AE /* StudyListModel.m in Sources */,

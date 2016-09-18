@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "BaseModel.h"
 
-@interface UserModel : BaseModel
+@interface UserModel : BaseModel <NSCoding>
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *iconStr;
+@property (strong, nonatomic) NSNumber *uid;
 
 @end
