@@ -85,6 +85,10 @@
     _selectedIndex = selectedIndex;
     
     UIViewController *controller = [_viewControllersArr objectAtIndex:_selectedIndex];
+    if ([controller isEqual:self.selectedViewController]) {
+        return;
+    }
+    
     controller.view.frame = CGRectMake(CGRectGetWidth(self.view.bounds), 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
     [self addChildViewController:controller];
     [self.view addSubview:controller.view];

@@ -16,6 +16,8 @@
     static NetworkingManager *s_instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        [NSURLCache setSharedURLCache:[[NSURLCache alloc] initWithMemoryCapacity:8 * 1024 * 1024 diskCapacity:40 * 1024 * 1024 diskPath:nil]];
+        
         s_instance = [[NetworkingManager alloc] initWithBaseURL:[NSURL URLWithString:BaseURLString]];
         s_instance.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     });
@@ -44,6 +46,7 @@
                                             soundDate:(NSData *)soundDate
                                               success:(void (^)(id responseObject))success {
     self.requestSerializer = [AFJSONRequestSerializer serializer];//申明请求的数据是json类型
+    self.responseSerializer = [AFHTTPResponseSerializer serializer];
     return [self POST:path parameters:paramsDic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFormData:soundDate name:@"song"];
     } progress:^(NSProgress * _Nonnull uploadProgress) {

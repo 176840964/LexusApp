@@ -9,6 +9,8 @@
 #import "StudyDetailViewController.h"
 #import "StudyListTableViewCell.h"
 #import "StudyMainView.h"
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface StudyDetailViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
@@ -20,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *listTableView;
 
 @property (strong, nonatomic) NSMutableArray *listDataArr;
+@property (strong, nonatomic) AVPlayerViewController *playerController;
 @end
 
 @implementation StudyDetailViewController
@@ -43,6 +46,20 @@
         
         [self.listDataArr addObject:model];
     }
+    
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    NSString *urlStr = [[NSBundle mainBundle] pathForResource:@"testVideo.mp4" ofType:nil];
+    AVPlayer *player = [AVPlayer playerWithURL:[NSURL fileURLWithPath:urlStr]];
+    _playerController = [[AVPlayerViewController alloc] init];
+    _playerController.player = player;
+    _playerController.videoGravity = AVLayerVideoGravityResizeAspect;
+    _playerController.allowsPictureInPicturePlayback = YES;    //画中画，iPad可用
+    _playerController.showsPlaybackControls = YES;
+    
+    [self addChildViewController:_playerController];
+    [self.studyMainView.videoView addSubview:_playerController.view];
+    _playerController.view.frame = self.studyMainView.videoView.bounds;
+//    [_playerController.player play];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

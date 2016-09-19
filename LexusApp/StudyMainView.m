@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
 
 @property (nonatomic,strong) AVAudioRecorder *audioRecorder;//音频录音机
 @property (nonatomic,strong) AVAudioPlayer *audioPlayer;//音频播放器，用于播放录音文件
-@property (nonatomic,strong) NSTimer *timer;//录音声波监控（注意这里暂时不对播放进行监控）
+@property (nonatomic,strong) NSTimer *timer;//录音时间监控（注意这里暂时不对播放进行监控）
 @property (assign, nonatomic) StudyMainViewRecorderType recordType;
 @property (assign, nonatomic) CGFloat recordTime;
 @end
@@ -114,12 +114,11 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
 }
 
 -(void)setAudioSession{
-    AVAudioSession *audioSession=[AVAudioSession sharedInstance];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     //设置为播放和录音状态，以便可以在录制完之后播放录音
     [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
     [audioSession setActive:YES error:nil];
 }
-
 
 -(NSURL *)getSavePath{
     NSString *urlStr=[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
@@ -260,8 +259,17 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
 - (IBAction)onTapUploadRecordBtn:(id)sender {
     NSData *data = [NSData dataWithContentsOfURL:[self getSavePath]];
     [[NetworkingManager shareManager] networkingWithPostMethodPath:@"song/addSong?" paramsDic:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"car_type": @"ext220", @"car_distince": @"1000"} soundDate:data success:^(id responseObject) {
-        [[HintView getInstance] presentMessage:@"上传成功" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
-        }];
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSString *status = [dic objectForKey:@"status"];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([status isEqualToString:@"1"]) {
+                [[HintView getInstance] presentMessage:@"上传成功" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
+                }];
+            } else {
+                [[HintView getInstance] presentMessage:@"上传失败" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
+                }];
+            }
+        });
     }];
 }
 

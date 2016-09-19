@@ -10,6 +10,8 @@
 
 @interface StudyMainView : UIView
 
+@property (weak, nonatomic) IBOutlet UIView *videoView;
+
 - (void)sutupSubviews;
 
 @end

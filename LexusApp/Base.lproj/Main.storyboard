@@ -276,20 +276,27 @@
                                                             </mask>
                                                         </variation>
                                                     </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUD-e0-4XN">
+                                                        <color key="backgroundColor" red="0.27058823529999998" green="0.59215686270000001" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="240-6b-YkB" firstAttribute="leading" secondItem="goI-Lg-JF1" secondAttribute="trailing" constant="13" id="0i0-fJ-wMT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xUD-e0-4XN" secondAttribute="trailing" id="CJm-JW-v6t"/>
                                                     <constraint firstAttribute="trailing" secondItem="Jii-Kh-Sub" secondAttribute="trailing" constant="20" id="FPW-Pm-nQi"/>
                                                     <constraint firstItem="goI-Lg-JF1" firstAttribute="leading" secondItem="vnp-4t-E6l" secondAttribute="leading" constant="20" id="Icm-NP-7LX"/>
+                                                    <constraint firstItem="xUD-e0-4XN" firstAttribute="leading" secondItem="vnp-4t-E6l" secondAttribute="leading" id="LY9-dt-G5v"/>
                                                     <constraint firstItem="Jii-Kh-Sub" firstAttribute="centerY" secondItem="goI-Lg-JF1" secondAttribute="centerY" id="Lry-OP-EV7"/>
                                                     <constraint firstAttribute="bottom" secondItem="Wat-aU-DG3" secondAttribute="bottom" constant="15" id="RWg-N6-IAk"/>
+                                                    <constraint firstItem="xUD-e0-4XN" firstAttribute="top" secondItem="vnp-4t-E6l" secondAttribute="top" id="RpW-WO-RRM"/>
                                                     <constraint firstItem="Wat-aU-DG3" firstAttribute="leading" secondItem="3Da-Nf-UWT" secondAttribute="trailing" constant="13" id="TS5-a1-2Lu"/>
                                                     <constraint firstAttribute="bottom" secondItem="3Da-Nf-UWT" secondAttribute="bottom" constant="15" id="VJ3-KS-Fgc"/>
                                                     <constraint firstAttribute="bottom" secondItem="Jii-Kh-Sub" secondAttribute="bottom" constant="15" id="ZHG-mM-Et3"/>
                                                     <constraint firstAttribute="bottom" secondItem="240-6b-YkB" secondAttribute="bottom" constant="15" id="aA2-le-39K">
                                                         <variation key="heightClass=regular-widthClass=regular" constant="29"/>
                                                     </constraint>
+                                                    <constraint firstItem="adD-1c-g3I" firstAttribute="top" secondItem="xUD-e0-4XN" secondAttribute="bottom" constant="14" id="bjG-7E-qPk"/>
                                                     <constraint firstAttribute="bottom" secondItem="goI-Lg-JF1" secondAttribute="bottom" constant="15" id="f2I-bh-v8V"/>
                                                     <constraint firstAttribute="bottom" secondItem="adD-1c-g3I" secondAttribute="bottom" constant="15" id="jhB-ap-FoW"/>
                                                     <constraint firstItem="adD-1c-g3I" firstAttribute="leading" secondItem="240-6b-YkB" secondAttribute="trailing" constant="13" id="oUZ-Dn-wGa"/>
@@ -306,20 +313,20 @@
                                                         <exclude reference="240-6b-YkB"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <exclude reference="Icm-NP-7LX"/>
+                                                        <exclude reference="f2I-bh-v8V"/>
                                                         <exclude reference="0i0-fJ-wMT"/>
                                                         <exclude reference="aA2-le-39K"/>
+                                                        <exclude reference="jhB-ap-FoW"/>
+                                                        <exclude reference="oUZ-Dn-wGa"/>
                                                         <exclude reference="VJ3-KS-Fgc"/>
                                                         <exclude reference="zce-xp-Qq7"/>
+                                                        <exclude reference="RWg-N6-IAk"/>
+                                                        <exclude reference="TS5-a1-2Lu"/>
                                                         <exclude reference="FPW-Pm-nQi"/>
                                                         <exclude reference="Lry-OP-EV7"/>
                                                         <exclude reference="ZHG-mM-Et3"/>
                                                         <exclude reference="tjH-bs-wgi"/>
-                                                        <exclude reference="RWg-N6-IAk"/>
-                                                        <exclude reference="TS5-a1-2Lu"/>
-                                                        <exclude reference="jhB-ap-FoW"/>
-                                                        <exclude reference="oUZ-Dn-wGa"/>
-                                                        <exclude reference="Icm-NP-7LX"/>
-                                                        <exclude reference="f2I-bh-v8V"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
@@ -332,20 +339,20 @@
                                                         <include reference="240-6b-YkB"/>
                                                     </mask>
                                                     <mask key="constraints">
+                                                        <include reference="Icm-NP-7LX"/>
+                                                        <include reference="f2I-bh-v8V"/>
                                                         <include reference="0i0-fJ-wMT"/>
                                                         <include reference="aA2-le-39K"/>
+                                                        <include reference="jhB-ap-FoW"/>
+                                                        <include reference="oUZ-Dn-wGa"/>
                                                         <include reference="VJ3-KS-Fgc"/>
                                                         <include reference="zce-xp-Qq7"/>
+                                                        <include reference="RWg-N6-IAk"/>
+                                                        <include reference="TS5-a1-2Lu"/>
                                                         <include reference="FPW-Pm-nQi"/>
                                                         <exclude reference="Lry-OP-EV7"/>
                                                         <include reference="ZHG-mM-Et3"/>
                                                         <include reference="tjH-bs-wgi"/>
-                                                        <include reference="RWg-N6-IAk"/>
-                                                        <include reference="TS5-a1-2Lu"/>
-                                                        <include reference="jhB-ap-FoW"/>
-                                                        <include reference="oUZ-Dn-wGa"/>
-                                                        <include reference="Icm-NP-7LX"/>
-                                                        <include reference="f2I-bh-v8V"/>
                                                     </mask>
                                                 </variation>
                                                 <connections>
@@ -355,6 +362,7 @@
                                                     <outlet property="recordTimeLab" destination="240-6b-YkB" id="lQJ-fY-34D"/>
                                                     <outlet property="tryListenBtn" destination="3Da-Nf-UWT" id="hMr-ar-CLi"/>
                                                     <outlet property="uploadBtn" destination="Jii-Kh-Sub" id="wnf-nj-T0l"/>
+                                                    <outlet property="videoView" destination="xUD-e0-4XN" id="PIj-X7-1ol"/>
                                                 </connections>
                                             </view>
                                         </subviews>
