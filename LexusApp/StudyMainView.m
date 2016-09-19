@@ -259,7 +259,7 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
 
 - (IBAction)onTapUploadRecordBtn:(id)sender {
     NSData *data = [NSData dataWithContentsOfURL:[self getSavePath]];
-    [[NetworkingManager shareManager] networkingWithPostMethodPath:@"song/addsong?" paramsDic:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"car_type": @"ext220", @"car_distince": @"1000"} soundDate:data success:^(id responseObject) {
+    [[NetworkingManager shareManager] networkingWithPostMethodPath:@"song/addSong?" paramsDic:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"car_type": @"ext220", @"car_distince": @"1000"} soundDate:data success:^(id responseObject) {
         [[HintView getInstance] presentMessage:@"上传成功" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
         }];
     }];

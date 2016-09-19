@@ -130,7 +130,7 @@
 }
 
 - (void)onTapHomeBtn:(UIButton *)btn {
-    self.customTabbarController.selectedIndex = 0;
+    [self.customTabbarController setSelectedIndex:0 isAnimated:NO];
     UINavigationController *homeController = [self.customTabbarController.viewControllersArr firstObject];
     [homeController popToRootViewControllerAnimated:NO];
     [self.customTabbarController dismissTabbarView:NO];

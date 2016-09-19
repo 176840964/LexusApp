@@ -12,6 +12,7 @@
 @interface CustomTabbarViewController ()
 @property (weak, nonatomic) UIViewController *selectedViewController;
 @property (strong, nonatomic) UIControl *bgMarkCtrl;
+@property (assign, nonatomic) NSInteger selectedIndex;
 @end
 
 @interface UIViewController (CustomTabbarViewControllerItemInternal)
@@ -49,9 +50,9 @@
     [super viewDidAppear:animated];
     
     if ([UserManager shareUserManager].isLoginStudy) {
-        self.selectedIndex = 4;
+        [self setSelectedIndex:4 isAnimated:NO];
     } else {
-        self.selectedIndex = 0;
+        [self setSelectedIndex:0 isAnimated:NO];
     }
 }
 
@@ -76,24 +77,40 @@
     [self dismissTabbarView:YES];
 }
 
-- (void)setSelectedIndex:(NSInteger)selectedIndex {
+- (void)setSelectedIndex:(NSInteger)selectedIndex isAnimated:(BOOL)isAnimated {
     if (selectedIndex >= self.viewControllersArr.count) {
         return;
     }
     
-    if (_selectedViewController) {
-        [_selectedViewController willMoveToParentViewController:nil];
-        [_selectedViewController.view removeFromSuperview];
-        [_selectedViewController removeFromParentViewController];
-    }
-    
     _selectedIndex = selectedIndex;
     
-    _selectedViewController = [_viewControllersArr objectAtIndex:_selectedIndex];
-    [self addChildViewController:_selectedViewController];
-    _selectedViewController.view.frame = self.view.bounds;
-    [self.view addSubview:_selectedViewController.view];
-    [_selectedViewController didMoveToParentViewController:self];
+    UIViewController *controller = [_viewControllersArr objectAtIndex:_selectedIndex];
+    controller.view.frame = CGRectMake(CGRectGetWidth(self.view.bounds), 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
+    [self addChildViewController:controller];
+    [self.view addSubview:controller.view];
+    [controller didMoveToParentViewController:self];
+    
+    __weak typeof(self) weakSelf = self;
+    void (^block)() = ^{
+        weakSelf.selectedViewController.view.frame = CGRectMake(-CGRectGetWidth(weakSelf.view.bounds), 0, CGRectGetWidth(weakSelf.view.bounds), CGRectGetHeight(weakSelf.view.bounds));
+        controller.view.frame = weakSelf.view.bounds;
+    };
+    
+    void (^completion)(BOOL) = ^(BOOL isCompletion) {
+        if (weakSelf.selectedViewController) {
+            [weakSelf.selectedViewController willMoveToParentViewController:nil];
+            [weakSelf.selectedViewController.view removeFromSuperview];
+            [weakSelf.selectedViewController removeFromParentViewController];
+        }
+        weakSelf.selectedViewController = controller;
+    };
+    
+    if (isAnimated && _selectedViewController) {
+        [UIView animateWithDuration:.5 animations:block completion:completion];
+    } else {
+        block();
+        completion(YES);
+    }
 }
 
 - (void)setViewControllersArr:(NSArray *)viewControllersArr {
@@ -185,7 +202,7 @@
 #pragma mark - IBAction
 - (IBAction)onTapTabbarItems:(id)sender {
     UIButton *btn = (UIButton *)sender;
-    self.selectedIndex = btn.tag;
+    [self setSelectedIndex:btn.tag isAnimated:YES];
     
     [self dismissTabbarView:NO];
 }
