@@ -199,13 +199,13 @@ typedef NS_ENUM(NSUInteger, LoginViewControllerType) {
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [[HintView getInstance] presentMessage:@"登录成功" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
+                    [[CustomHintViewController getInstance] presentMessage:@"登录成功" parentController:self isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
                         [self dismissViewControllerAnimated:YES completion:nil];
                     }];
                 });
             } else if ([status isEqualToString:@"0"]) {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [[HintView getInstance] presentMessage:@"密码错误" isAutoDismiss:NO dismissTimeInterval:1 dismissBlock:^{
+                    [[CustomHintViewController getInstance] presentMessage:@"密码错误" parentController:self isAutoDismiss:NO dismissTimeInterval:1 dismissBlock:^{
                     }];
                 });
             }

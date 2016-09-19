@@ -11,6 +11,8 @@
 
 @interface NetworkingManager : AFHTTPSessionManager
 
+@property (weak, nonatomic) UIViewController *viewController;
+
 + (NetworkingManager *)shareManager;
 
 - (NSURLSessionDataTask *)networkingWithGetMethodPath:(NSString *)path

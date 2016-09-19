@@ -34,9 +34,10 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        __weak typeof(self) weakSelf = self;
         dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"error:%@", error);
-            [[HintView getInstance] presentMessage:@"无网络连接" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:nil];
+            [[CustomHintViewController getInstance] presentMessage:@"无网络连接" parentController:weakSelf.viewController isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:nil];
         });
     }];
 }
@@ -54,9 +55,10 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        __weak typeof(self) weakSelf = self;
         dispatch_async(dispatch_get_main_queue(), ^{
             NSLog(@"error:%@", error);
-            [[HintView getInstance] presentMessage:@"无网络连接" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:nil];
+            [[CustomHintViewController getInstance] presentMessage:@"无网络连接" parentController:weakSelf.viewController isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:nil];
         });
     }];
 }

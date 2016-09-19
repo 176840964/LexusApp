@@ -20,13 +20,14 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
     StudyMainViewRecorderTypeListening
 };
 
-@interface StudyMainView () <AVAudioRecorderDelegate, AVAudioPlayerDelegate>
+@interface StudyMainView () <AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *recordBtn;
 @property (weak, nonatomic) IBOutlet UILabel *recordTimeLab;
 @property (weak, nonatomic) IBOutlet UIButton *completeBtn;
 @property (weak, nonatomic) IBOutlet UIButton *tryListenBtn;
 @property (weak, nonatomic) IBOutlet UIButton *delBtn;
 @property (weak, nonatomic) IBOutlet UIButton *uploadBtn;
+@property (weak, nonatomic) IBOutlet UIViewController *parentController;
 
 @property (nonatomic,strong) AVAudioRecorder *audioRecorder;//音频录音机
 @property (nonatomic,strong) AVAudioPlayer *audioPlayer;//音频播放器，用于播放录音文件
@@ -157,14 +158,13 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
 -(AVAudioRecorder *)audioRecorder{
     if (!_audioRecorder) {
         //创建录音文件保存路径
-        NSURL *url=[self getSavePath];
+        NSURL *url = [self getSavePath];
         //创建录音格式设置
-        NSDictionary *setting=[self getAudioSetting];
+        NSDictionary *setting = [self getAudioSetting];
         //创建录音机
-        NSError *error=nil;
-        _audioRecorder=[[AVAudioRecorder alloc]initWithURL:url settings:setting error:&error];
-        _audioRecorder.delegate=self;
-        _audioRecorder.meteringEnabled=YES;//如果要监控声波则必须设置为YES
+        NSError *error = nil;
+        _audioRecorder = [[AVAudioRecorder alloc]initWithURL:url settings:setting error:&error];
+        _audioRecorder.meteringEnabled = YES;//如果要监控声波则必须设置为YES
         if (error) {
             NSLog(@"创建录音机对象时发生错误，错误信息：%@",error.localizedDescription);
             return nil;
@@ -263,29 +263,16 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
         NSString *status = [dic objectForKey:@"status"];
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([status isEqualToString:@"1"]) {
-                [[HintView getInstance] presentMessage:@"上传成功" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
+                [[CustomHintViewController getInstance] presentMessage:@"上传成功" parentController:self.parentController isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
+                    [self onTapDelRecordBtn:nil];
                 }];
             } else {
-                [[HintView getInstance] presentMessage:@"上传失败" isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
+                [[CustomHintViewController getInstance] presentMessage:@"上传失败" parentController:self.parentController isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
+                    [self onTapDelRecordBtn:nil];
                 }];
             }
         });
     }];
-}
-
-#pragma mark - AVAudioRecorderDelegate
-/**
- *  录音完成，录音完成后播放录音
- *
- *  @param recorder 录音机对象
- *  @param flag     是否成功
- */
--(void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag{
-    if (![self.audioPlayer isPlaying]) {
-        [self.audioPlayer play];
-        self.recordType = StudyMainViewRecorderTypeListening;
-    }
-    NSLog(@"录音完成!");
 }
 
 #pragma mark - AVAudioPlayerDelegate

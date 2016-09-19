@@ -81,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="2232" y="-1714"/>
         </scene>
-        <!--Study Detail View Controller-->
+        <!--Parent Controller-->
         <scene sceneID="vTw-pT-8l4">
             <objects>
                 <viewController id="Pub-CI-r13" customClass="StudyDetailViewController" sceneMemberID="viewController">
@@ -358,6 +358,7 @@
                                                 <connections>
                                                     <outlet property="completeBtn" destination="adD-1c-g3I" id="6Yq-OT-X1i"/>
                                                     <outlet property="delBtn" destination="Wat-aU-DG3" id="KCQ-GL-c9l"/>
+                                                    <outlet property="parentController" destination="Pub-CI-r13" id="Tva-D2-02o"/>
                                                     <outlet property="recordBtn" destination="goI-Lg-JF1" id="Rcx-Hm-2OH"/>
                                                     <outlet property="recordTimeLab" destination="240-6b-YkB" id="lQJ-fY-34D"/>
                                                     <outlet property="tryListenBtn" destination="3Da-Nf-UWT" id="hMr-ar-CLi"/>

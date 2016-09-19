@@ -16,8 +16,8 @@
 #import "BaseViewController.h"
 #import "UserManager.h"
 #import "NetworkingManager.h"
-#import "HintView.h"
 #import "LocalUserManager.h"
+#import "CustomHintViewController.h"
 
 #import "UIView+frameAdjust.h"
 #import "UILabel+AttributedString.h"
