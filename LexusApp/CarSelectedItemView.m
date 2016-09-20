@@ -18,6 +18,18 @@
 }
 */
 
+- (UILabel *)carNameLab {
+    if (nil == _carNameLab) {
+        _carNameLab = [UILabel newAutoLayoutView];
+        [self addSubview:_carNameLab];
+        [_carNameLab autoSetDimensionsToSize:CGSizeMake(100, 100)];
+        [_carNameLab autoAlignAxisToSuperviewAxis:ALAxisVertical];
+        [_carNameLab autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+    }
+    
+    return _carNameLab;
+}
+
 - (UIImageView *)imgView {
     if (nil == _imgView) {
         _imgView = [UIImageView newAutoLayoutView];

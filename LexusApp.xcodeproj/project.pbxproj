@@ -15,6 +15,8 @@
 		D728D6281D8FF577000C2203 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D728D6271D8FF577000C2203 /* testVideo.mp4 */; };
 		D728D62C1D9043DC000C2203 /* CustomHintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D62A1D9043DC000C2203 /* CustomHintViewController.m */; };
 		D728D62D1D9043DC000C2203 /* CustomHintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D728D62B1D9043DC000C2203 /* CustomHintViewController.xib */; };
+		D728D62F1D905991000C2203 /* CarCategoreRes.plist in Resources */ = {isa = PBXBuildFile; fileRef = D728D62E1D905991000C2203 /* CarCategoreRes.plist */; };
+		D728D6801D90E501000C2203 /* CarCategoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D67F1D90E501000C2203 /* CarCategoreManager.m */; };
 		D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */; };
 		D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */; };
 		D75AE06C1D7D2223006685AE /* FMDetailCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE06B1D7D2223006685AE /* FMDetailCheckView.m */; };
@@ -82,6 +84,9 @@
 		D728D6291D9043DC000C2203 /* CustomHintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHintViewController.h; sourceTree = "<group>"; };
 		D728D62A1D9043DC000C2203 /* CustomHintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHintViewController.m; sourceTree = "<group>"; };
 		D728D62B1D9043DC000C2203 /* CustomHintViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHintViewController.xib; sourceTree = "<group>"; };
+		D728D62E1D905991000C2203 /* CarCategoreRes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarCategoreRes.plist; sourceTree = "<group>"; };
+		D728D67E1D90E500000C2203 /* CarCategoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCategoreManager.h; sourceTree = "<group>"; };
+		D728D67F1D90E501000C2203 /* CarCategoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCategoreManager.m; sourceTree = "<group>"; };
 		D75AE0631D7BE5DA006685AE /* FMSelectKmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSelectKmViewController.h; sourceTree = "<group>"; };
 		D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectKmViewController.m; sourceTree = "<group>"; };
 		D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDetailViewController.h; sourceTree = "<group>"; };
@@ -225,6 +230,15 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
+		D728D67D1D90E4D5000C2203 /* CarCategoreManager */ = {
+			isa = PBXGroup;
+			children = (
+				D728D67E1D90E500000C2203 /* CarCategoreManager.h */,
+				D728D67F1D90E501000C2203 /* CarCategoreManager.m */,
+			);
+			name = CarCategoreManager;
+			sourceTree = "<group>";
+		};
 		D75AE0691D7D21E4006685AE /* FMDetailViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +271,7 @@
 			children = (
 				D728D6261D8FF577000C2203 /* Video */,
 				D75AE0801D7E913B006685AE /* Font */,
+				D728D62E1D905991000C2203 /* CarCategoreRes.plist */,
 			);
 			path = resouce;
 			sourceTree = "<group>";
@@ -360,6 +375,7 @@
 		D7DFC1C11D754B53007A6D0C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D728D67D1D90E4D5000C2203 /* CarCategoreManager */,
 				D71A4FD31D8E91860053E98C /* LocalUserManager */,
 				D71A4FD21D8AF4990053E98C /* HintView */,
 				D71A4FC81D8AE9730053E98C /* NetworkingManager */,
@@ -529,6 +545,7 @@
 				D75AE09E1D7EAA3C006685AE /* Lexus_jianzhengxian.TTF in Resources */,
 				D7DFC1B31D754A3B007A6D0C /* Assets.xcassets in Resources */,
 				D75AE09C1D7EAA3C006685AE /* Lexus_jiancuhei.TTF in Resources */,
+				D728D62F1D905991000C2203 /* CarCategoreRes.plist in Resources */,
 				D7DFC1B11D754A3B007A6D0C /* Main.storyboard in Resources */,
 				D75AE0771D7D3F58006685AE /* FMDetailChangeTableViewCell.xib in Resources */,
 				D75AE09D1D7EAA3C006685AE /* Lexus_jianhei.TTF in Resources */,
@@ -602,6 +619,7 @@
 				D77C9CCB1D89354A00DE0C32 /* CarSelectedItemView.m in Sources */,
 				D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */,
 				D75AE0B71D7FE89C006685AE /* GestureModel.m in Sources */,
+				D728D6801D90E501000C2203 /* CarCategoreManager.m in Sources */,
 				D7DFC1E21D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m in Sources */,
 				D75AE0BD1D8047E8006685AE /* UserManager.m in Sources */,
 				D75AE0AE1D7FE2F6006685AE /* StudyUnlockViewController.m in Sources */,
