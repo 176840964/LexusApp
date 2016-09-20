@@ -44,6 +44,8 @@
     UINavigationController *fifthNaviController = [self.storyboard instantiateViewControllerWithIdentifier:@"StudyNaviController"];
     
     self.viewControllersArr = @[firstNaviController, secondNaviController, thirdNaviController, fouthNaviController, fifthNaviController];
+    
+    _selectedIndex = NSIntegerMax;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -78,7 +80,7 @@
 }
 
 - (void)setSelectedIndex:(NSInteger)selectedIndex isAnimated:(BOOL)isAnimated {
-    if (selectedIndex >= self.viewControllersArr.count) {
+    if (selectedIndex >= self.viewControllersArr.count || _selectedIndex == selectedIndex) {
         return;
     }
     
@@ -206,7 +208,7 @@
 #pragma mark - IBAction
 - (IBAction)onTapTabbarItems:(id)sender {
     UIButton *btn = (UIButton *)sender;
-    [self setSelectedIndex:btn.tag isAnimated:YES];
+    [self setSelectedIndex:btn.tag isAnimated:NO];
     
     [self dismissTabbarView:NO];
 }

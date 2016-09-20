@@ -769,23 +769,7 @@
                     <view key="view" contentMode="scaleToFill" id="vA3-m8-oCn">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwf-zY-lX2">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="gTI-bb-nQ7"/>
-                                    <constraint firstAttribute="width" constant="82" id="zNk-RM-yQU"/>
-                                </constraints>
-                                <state key="normal" title="NX 200t"/>
-                                <connections>
-                                    <action selector="onTapSelectedCar:" destination="TkR-SK-rGF" eventType="touchUpInside" id="dTz-c5-gxQ"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="cwf-zY-lX2" firstAttribute="centerY" secondItem="vA3-m8-oCn" secondAttribute="centerY" id="ju4-ea-OVo"/>
-                            <constraint firstItem="cwf-zY-lX2" firstAttribute="centerX" secondItem="vA3-m8-oCn" secondAttribute="centerX" id="xJq-Zr-IP4"/>
-                        </constraints>
                     </view>
                     <connections>
                         <segue destination="9V5-bD-Dig" kind="show" identifier="showFMSelectKmViewController" id="FFR-AO-7rf"/>
@@ -806,23 +790,7 @@
                     <view key="view" contentMode="scaleToFill" id="JKU-W3-Cte">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iau-Ri-qTw">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="G1W-2C-NK2"/>
-                                    <constraint firstAttribute="width" constant="46" id="Gdw-gH-6Re"/>
-                                </constraints>
-                                <state key="normal" title="3万"/>
-                                <connections>
-                                    <action selector="onTapSelectedKmBtn:" destination="9V5-bD-Dig" eventType="touchUpInside" id="vbY-S0-2fl"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="iau-Ri-qTw" firstAttribute="centerY" secondItem="JKU-W3-Cte" secondAttribute="centerY" id="9bS-PI-OCe"/>
-                            <constraint firstItem="iau-Ri-qTw" firstAttribute="centerX" secondItem="JKU-W3-Cte" secondAttribute="centerX" id="H7E-ZH-45H"/>
-                        </constraints>
                     </view>
                     <connections>
                         <segue destination="44l-JX-EdG" kind="show" identifier="showFMDetailViewController" id="9va-Kz-Kr6"/>
@@ -1005,6 +973,7 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="YbH-1v-mKF" firstAttribute="leading" secondItem="0cj-g1-C2S" secondAttribute="leading" id="0Si-YG-a5X"/>
                             <constraint firstItem="AsF-OV-H98" firstAttribute="centerX" secondItem="0cj-g1-C2S" secondAttribute="centerX" constant="-61" id="FEv-be-0nc"/>
@@ -1015,6 +984,9 @@
                             <constraint firstItem="Cez-2o-1aY" firstAttribute="top" secondItem="Uga-rb-AAG" secondAttribute="bottom" constant="8" id="o56-BW-UZU"/>
                             <constraint firstItem="AsF-OV-H98" firstAttribute="top" secondItem="Uga-rb-AAG" secondAttribute="bottom" constant="8" id="tAz-A4-N2X"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xw3-4U-3i2" appends="YES" id="e4W-XB-xj2"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="changeProjectBtn" destination="Cez-2o-1aY" id="nC3-wq-4mk"/>
@@ -1026,6 +998,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fL-no-QHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="xw3-4U-3i2">
+                    <rectEdge key="edges" right="YES"/>
+                    <connections>
+                        <action selector="rightScreenEdgePanGestureRecognizer:" destination="44l-JX-EdG" id="cRp-Hz-iM7"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2917" y="-332"/>
         </scene>

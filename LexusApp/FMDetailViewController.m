@@ -27,6 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.isShowBackBtn = YES;
     [self.changeView setupSubviews];
 }
 
@@ -47,6 +48,10 @@
 
 - (IBAction)onTapChangeProjectBtn:(id)sender {
     [self.scrollView setContentOffset:CGPointMake(CGRectGetWidth(self.scrollView.bounds), 0) animated:NO];
+}
+
+- (IBAction)rightScreenEdgePanGestureRecognizer:(id)sender {
+    [self.customTabbarController setSelectedIndex:1 isAnimated:YES];
 }
 
 /*

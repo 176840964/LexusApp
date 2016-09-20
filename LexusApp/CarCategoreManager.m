@@ -36,7 +36,6 @@
 }
 
 - (NSArray*)getAllCarsName {
-    NSLog(@"%@", self.carsInfoDic.allKeys);
     return self.carsInfoDic.allKeys;
 }
 

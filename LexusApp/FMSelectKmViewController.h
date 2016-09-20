@@ -10,4 +10,7 @@
 
 @interface FMSelectKmViewController : BaseViewController
 
+@property (copy, nonatomic) NSString *carNameStr;
+@property (copy, nonatomic) NSString *carModelStr;
+
 @end

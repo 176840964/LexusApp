@@ -8,6 +8,7 @@
 
 #import "FMSelectCarViewController.h"
 #import "CarSelectedItemView.h"
+#import "FMSelectKmViewController.h"
 
 @interface FMSelectCarViewController ()
 @property (strong, nonatomic) CarSelectedItemView *curCarItemView;
@@ -15,6 +16,8 @@
 @property (strong, nonatomic) NSArray *carsNameArr;
 @property (assign, nonatomic) NSInteger curSelectedIndex;
 @property (strong, nonatomic) NSMutableArray *carModelBtnArr;
+@property (copy, nonatomic) NSString *selectedCarNameStr;
+@property (copy, nonatomic) NSString *selectedCarModelStr;
 @end
 
 @implementation FMSelectCarViewController
@@ -73,11 +76,8 @@
 #pragma mark - 
 - (void)panCarSelectedItemView:(UIPanGestureRecognizer *)pan {
     CGFloat limit = 30;
-    
     CGPoint point = [pan translationInView:pan.view];
-    
     CGFloat tx = point.x / 10.0;
-    NSLog(@"tx:%f", tx);
     
     NSInteger nextIndex;
     if (tx >= 0) {
@@ -85,7 +85,6 @@
         if (nextIndex == self.carsNameArr.count) {
             nextIndex = nextIndex % self.carsNameArr.count;
         }
-        
     } else {
         nextIndex = self.curSelectedIndex - 1;
         if (nextIndex < 0) {
@@ -124,20 +123,22 @@
     }
     [self.carModelBtnArr removeAllObjects];
     
-    NSString *carName = [self.carsNameArr objectAtIndex:curSelectedIndex];
-    NSArray *carModelsArr = [[CarCategoreManager shareManager] getAllCarModelsByCarName:carName];
+    self.selectedCarNameStr = [self.carsNameArr objectAtIndex:curSelectedIndex];
+    NSArray *carModelsArr = [[CarCategoreManager shareManager] getAllCarModelsByCarName:self.selectedCarNameStr];
     
     NSInteger x = (CGRectGetWidth(self.view.bounds) - (70 * carModelsArr.count + 35 * (carModelsArr.count - 1))) / 2.0;
     for (NSInteger index = 0; index < carModelsArr.count; index ++) {
         NSString *carModel = [carModelsArr objectAtIndex:index];
-        
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(x + (70 + 35) * index, 400, 70, 70);
-        [btn setTitle:carModel forState:UIControlStateNormal];
+        btn.tag = index;
+        btn.frame = CGRectMake(x + (70 + 35) * index, CGRectGetHeight(self.view.bounds) - 400, 70, 70);
+        btn.titleLabel.numberOfLines = 2;
+        [btn setTitle:[NSString stringWithFormat:@" %@\n%@", self.selectedCarNameStr, carModel] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor colorWithHexString:@"#89939c"] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor colorWithHexString:@"#383838"] forState:UIControlStateHighlighted];
         [btn setBackgroundImage:[UIImage imageNamed:@"car_normal"] forState:UIControlStateNormal];
         [btn setBackgroundImage:[UIImage imageNamed:@"car_highlight"] forState:UIControlStateHighlighted];
+        [btn addTarget:self action:@selector(onTapSelectedCar:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn];
         [self.carModelBtnArr addObject:btn];
     }
@@ -147,24 +148,22 @@
     if (nil == _carModelBtnArr) {
         _carModelBtnArr = [[NSMutableArray alloc] init];
     }
-    
     return _carModelBtnArr;
 }
 
-#pragma makr - IBAction
-- (IBAction)onTapSelectedCar:(id)sender {
+- (void)onTapSelectedCar:(UIButton *)btn {
+    NSArray *arr = [[CarCategoreManager shareManager] getAllCarModelsByCarName:self.selectedCarNameStr];
+    self.selectedCarModelStr = [arr objectAtIndex:btn.tag];
     [self performSegueWithIdentifier:@"showFMSelectKmViewController" sender:self];
 }
 
 #pragma mark - Navigation
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
     if ([segue.identifier isEqualToString:@"showFMSelectKmViewController"]) {
-        UIViewController *vc = segue.destinationViewController;
-        vc.title = @"NX200";
+        FMSelectKmViewController *vc = segue.destinationViewController;
+        vc.title = [NSString stringWithFormat:@"%@%@", self.selectedCarNameStr, self.selectedCarModelStr];
+        vc.carNameStr = self.selectedCarNameStr;
+        vc.carModelStr = self.selectedCarModelStr;
     }
 }
 
