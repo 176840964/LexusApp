@@ -17,6 +17,7 @@
 		D728D62D1D9043DC000C2203 /* CustomHintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D728D62B1D9043DC000C2203 /* CustomHintViewController.xib */; };
 		D728D62F1D905991000C2203 /* CarCategoreRes.plist in Resources */ = {isa = PBXBuildFile; fileRef = D728D62E1D905991000C2203 /* CarCategoreRes.plist */; };
 		D728D6801D90E501000C2203 /* CarCategoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D67F1D90E501000C2203 /* CarCategoreManager.m */; };
+		D728D6A51D919100000C2203 /* CarCategore.plist in Resources */ = {isa = PBXBuildFile; fileRef = D728D6A41D919100000C2203 /* CarCategore.plist */; };
 		D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */; };
 		D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */; };
 		D75AE06C1D7D2223006685AE /* FMDetailCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE06B1D7D2223006685AE /* FMDetailCheckView.m */; };
@@ -87,6 +88,7 @@
 		D728D62E1D905991000C2203 /* CarCategoreRes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarCategoreRes.plist; sourceTree = "<group>"; };
 		D728D67E1D90E500000C2203 /* CarCategoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCategoreManager.h; sourceTree = "<group>"; };
 		D728D67F1D90E501000C2203 /* CarCategoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCategoreManager.m; sourceTree = "<group>"; };
+		D728D6A41D919100000C2203 /* CarCategore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarCategore.plist; sourceTree = "<group>"; };
 		D75AE0631D7BE5DA006685AE /* FMSelectKmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSelectKmViewController.h; sourceTree = "<group>"; };
 		D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectKmViewController.m; sourceTree = "<group>"; };
 		D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDetailViewController.h; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				D728D6261D8FF577000C2203 /* Video */,
 				D75AE0801D7E913B006685AE /* Font */,
 				D728D62E1D905991000C2203 /* CarCategoreRes.plist */,
+				D728D6A41D919100000C2203 /* CarCategore.plist */,
 			);
 			path = resouce;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 			files = (
 				D75AE09F1D7EAA3C006685AE /* Lexus_jianzhonghei.TTF in Resources */,
 				D7DFC1B61D754A3B007A6D0C /* LaunchScreen.storyboard in Resources */,
+				D728D6A51D919100000C2203 /* CarCategore.plist in Resources */,
 				D75AE0C81D80634F006685AE /* StudyListTableViewCell.xib in Resources */,
 				D728D62D1D9043DC000C2203 /* CustomHintViewController.xib in Resources */,
 				D728D6281D8FF577000C2203 /* testVideo.mp4 in Resources */,

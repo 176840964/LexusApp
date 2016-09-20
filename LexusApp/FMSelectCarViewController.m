@@ -13,10 +13,10 @@
 @interface FMSelectCarViewController ()
 @property (strong, nonatomic) CarSelectedItemView *curCarItemView;
 @property (strong, nonatomic) CarSelectedItemView *nextCarItemView;
-@property (strong, nonatomic) NSArray *carsNameArr;
 @property (assign, nonatomic) NSInteger curSelectedIndex;
 @property (strong, nonatomic) NSMutableArray *carModelBtnArr;
 @property (copy, nonatomic) NSString *selectedCarNameStr;
+@property (strong, nonatomic) NSArray *carModelsArr;
 @property (copy, nonatomic) NSString *selectedCarModelStr;
 @end
 
@@ -25,8 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.carsNameArr = [[CarCategoreManager shareManager] getAllCarsName];
     
 //    self.bgImgView.image = [UIImage imageNamed:@"test"];
     self.isBgCanShake = YES;
@@ -52,7 +50,6 @@
     [self autoChangeBgColor:self.curCarItemView];
     [self setPanGestureRecognizerOnCarSelectedItemView:self.curCarItemView];
     
-    self.curCarItemView.carNameLab.text = [self.carsNameArr firstObject];
     self.curSelectedIndex = 0;
 }
 
@@ -79,19 +76,20 @@
     CGPoint point = [pan translationInView:pan.view];
     CGFloat tx = point.x / 10.0;
     
+    NSInteger count = [CarCategoreManager shareManager].carsCount;
     NSInteger nextIndex;
     if (tx >= 0) {
         nextIndex = self.curSelectedIndex + 1;
-        if (nextIndex == self.carsNameArr.count) {
-            nextIndex = nextIndex % self.carsNameArr.count;
+        if (nextIndex == count) {
+            nextIndex = nextIndex % count;
         }
     } else {
         nextIndex = self.curSelectedIndex - 1;
         if (nextIndex < 0) {
-            nextIndex = self.carsNameArr.count + nextIndex;
+            nextIndex = count + nextIndex;
         }
     }
-    self.nextCarItemView.carNameLab.text = [self.carsNameArr objectAtIndex:nextIndex];
+    self.nextCarItemView.carNameLab.text = [[[CarCategoreManager shareManager] getCarInfoDicByIndex:nextIndex] objectForKey:@"name"];
     
     if (limit < fabs(tx)) {
         pan.view.alpha = (limit - (fabs(tx) - limit)) / limit;
@@ -123,17 +121,20 @@
     }
     [self.carModelBtnArr removeAllObjects];
     
-    self.selectedCarNameStr = [self.carsNameArr objectAtIndex:curSelectedIndex];
-    NSArray *carModelsArr = [[CarCategoreManager shareManager] getAllCarModelsByCarName:self.selectedCarNameStr];
+    NSDictionary *carInfo = [[CarCategoreManager shareManager] getCarInfoDicByIndex:_curSelectedIndex];
+    self.selectedCarNameStr = [carInfo objectForKey:@"name"];
+    self.carModelsArr = [[CarCategoreManager shareManager] getCarModelsByCarName:self.selectedCarNameStr];
+    self.curCarItemView.carNameLab.text = self.selectedCarNameStr;
     
-    NSInteger x = (CGRectGetWidth(self.view.bounds) - (70 * carModelsArr.count + 35 * (carModelsArr.count - 1))) / 2.0;
-    for (NSInteger index = 0; index < carModelsArr.count; index ++) {
-        NSString *carModel = [carModelsArr objectAtIndex:index];
+    NSInteger x = (CGRectGetWidth(self.view.bounds) - (70 * self.carModelsArr.count + 35 * (self.carModelsArr.count - 1))) / 2.0;
+    for (NSInteger index = 0; index < self.carModelsArr.count; index ++) {
+        NSString *carModel = [self.carModelsArr objectAtIndex:index];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = index;
         btn.frame = CGRectMake(x + (70 + 35) * index, CGRectGetHeight(self.view.bounds) - 400, 70, 70);
         btn.titleLabel.numberOfLines = 2;
-        [btn setTitle:[NSString stringWithFormat:@" %@\n%@", self.selectedCarNameStr, carModel] forState:UIControlStateNormal];
+        btn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        [btn setTitle:[NSString stringWithFormat:@"%@\n%@", self.selectedCarNameStr, carModel] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor colorWithHexString:@"#89939c"] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor colorWithHexString:@"#383838"] forState:UIControlStateHighlighted];
         [btn setBackgroundImage:[UIImage imageNamed:@"car_normal"] forState:UIControlStateNormal];
@@ -152,8 +153,7 @@
 }
 
 - (void)onTapSelectedCar:(UIButton *)btn {
-    NSArray *arr = [[CarCategoreManager shareManager] getAllCarModelsByCarName:self.selectedCarNameStr];
-    self.selectedCarModelStr = [arr objectAtIndex:btn.tag];
+    self.selectedCarModelStr = [self.carModelsArr objectAtIndex:btn.tag];
     [self performSegueWithIdentifier:@"showFMSelectKmViewController" sender:self];
 }
 
@@ -162,8 +162,7 @@
     if ([segue.identifier isEqualToString:@"showFMSelectKmViewController"]) {
         FMSelectKmViewController *vc = segue.destinationViewController;
         vc.title = [NSString stringWithFormat:@"%@%@", self.selectedCarNameStr, self.selectedCarModelStr];
-        vc.carNameStr = self.selectedCarNameStr;
-        vc.carModelStr = self.selectedCarModelStr;
+        vc.kmArr = [[CarCategoreManager shareManager] getCarKMByCarName:self.selectedCarNameStr carModel:self.selectedCarModelStr];
     }
 }
 

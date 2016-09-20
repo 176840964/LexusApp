@@ -10,7 +10,6 @@
 
 @interface FMSelectKmViewController : BaseViewController
 
-@property (copy, nonatomic) NSString *carNameStr;
-@property (copy, nonatomic) NSString *carModelStr;
+@property (strong, nonatomic) NSArray *kmArr;
 
 @end

@@ -9,7 +9,7 @@
 #import "CarCategoreManager.h"
 
 @interface CarCategoreManager ()
-@property (strong, nonatomic) NSDictionary *carsInfoDic;
+@property (strong, nonatomic) NSArray *carsInfoArr;
 @end
 
 @implementation CarCategoreManager
@@ -28,25 +28,46 @@
 {
     self = [super init];
     if (self) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"CarCategoreRes.plist" ofType:nil];
-        self.carsInfoDic = [NSDictionary dictionaryWithContentsOfFile:path];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"CarCategore.plist" ofType:nil];
+        self.carsInfoArr = [NSArray arrayWithContentsOfFile:path];
     }
     
     return self;
 }
 
-- (NSArray*)getAllCarsName {
-    return self.carsInfoDic.allKeys;
+- (NSInteger)carsCount {
+    return self.carsInfoArr.count;
 }
 
-- (NSArray*)getAllCarModelsByCarName:(NSString *)carName {
-    NSDictionary* carModelsDic = [self.carsInfoDic objectForKey:carName];
-    return carModelsDic.allKeys;
+- (NSDictionary*)getCarInfoDicByIndex:(NSInteger)index {
+    return [self.carsInfoArr objectAtIndex:index];
 }
 
-- (NSArray*)getAllCarKmByCarName:(NSString *)carName carModel:(NSString *)carModel {
-    NSDictionary * carKmDic = [[self.carsInfoDic objectForKey:carName] objectForKey:carModel];
-    return carKmDic.allKeys;
+- (NSArray*)getCarModelsByCarName:(NSString *)carName {
+    return [self getInfoArrByCarName:carName carModel:nil];
+}
+
+- (NSArray*)getCarKMByCarName:(NSString *)carName carModel:(NSString *)carModel {
+    return [self getInfoArrByCarName:carName carModel:carModel];
+}
+
+#pragma mark - 
+- (NSArray*)getInfoArrByCarName:(NSString*)carName carModel:(NSString *)carModel {
+    for (NSDictionary *dic in self.carsInfoArr) {
+        NSString *name = [dic objectForKey:@"name"];
+        if ([name isEqualToString:carName]) {
+            NSDictionary *modelsDic = [dic objectForKey:@"models"];
+            if ([carModel isValid]) {
+                return [modelsDic objectForKey:carModel];
+            } else {
+                return [modelsDic.allKeys sortedArrayUsingComparator:^NSComparisonResult(NSString *obj1, NSString *obj2) {
+                    return (obj1.integerValue < obj2.integerValue) ? NSOrderedAscending : (obj1.integerValue > obj2.integerValue) ? NSOrderedDescending : NSOrderedSame;
+                }];
+            }
+        }
+    }
+    
+    return nil;
 }
 
 @end

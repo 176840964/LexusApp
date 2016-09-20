@@ -14,9 +14,27 @@
 
 @implementation FMDetailCheckView
 
-#pragma mark - IBAction
-- (IBAction)onTapSubviewBtn:(id)sender {
-    UIButton * btn = (UIButton *)sender;
+- (void)setupSubviewsByCheckArr:(NSArray *)arr {
+    CGFloat x = ((CGRectGetWidth(self.bounds) - 80) - (125 * arr.count + 8 * (arr.count - 1))) / 2.0 + 80;
+    for (NSInteger index = 0; index < arr.count; index++) {
+        NSString *str = [arr objectAtIndex:index];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.tag = index;
+        btn.backgroundColor = [UIColor clearColor];
+        btn.frame = CGRectMake(x + index * (125 + 8), CGRectGetHeight(self.bounds) - 128, 125, 49);
+        btn.cornerRadius = 4.0;
+        btn.borderColor = [UIColor colorWithHexString:@"#7c7c7c"];
+        btn.borderWidth = 2.0;
+        [btn setTitleColor:[UIColor colorWithHexString:@"#7c7c7c"] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor colorWithHexString:@"#000000"] forState:UIControlStateHighlighted];
+        [btn setTitle:str forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(onTapSelectedCheckBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:btn];
+    }
+}
+
+#pragma mark -
+- (void)onTapSelectedCheckBtn:(UIButton*)btn {
     self.testLab.text = btn.titleLabel.text;
 }
 

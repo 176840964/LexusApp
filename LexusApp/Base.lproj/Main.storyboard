@@ -838,26 +838,6 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EtN-wb-IcI" customClass="FMDetailCheckView">
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xn4-8P-wpY">
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="125" id="3kN-Q7-zdT"/>
-                                                            <constraint firstAttribute="height" constant="49" id="OQT-3x-1Mo"/>
-                                                        </constraints>
-                                                        <state key="normal" title="电器系列"/>
-                                                        <connections>
-                                                            <action selector="onTapSubviewBtn:" destination="EtN-wb-IcI" eventType="touchUpInside" id="Prc-4r-SIB"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5p-Ny-Azt">
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="49" id="FPl-d9-Tav"/>
-                                                            <constraint firstAttribute="width" constant="125" id="bCK-tE-ucb"/>
-                                                        </constraints>
-                                                        <state key="normal" title="轮胎"/>
-                                                        <connections>
-                                                            <action selector="onTapSubviewBtn:" destination="EtN-wb-IcI" eventType="touchUpInside" id="zHH-C6-6ek"/>
-                                                        </connections>
-                                                    </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VK-rs-ufL">
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="4dQ-no-hUi"/>
@@ -867,26 +847,10 @@
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jV-9L-pFS">
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="49" id="HhS-qP-erT"/>
-                                                            <constraint firstAttribute="width" constant="125" id="KcH-E8-UnP"/>
-                                                        </constraints>
-                                                        <state key="normal" title="制动系列"/>
-                                                        <connections>
-                                                            <action selector="onTapSubviewBtn:" destination="EtN-wb-IcI" eventType="touchUpInside" id="LRk-EP-uan"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="1jV-9L-pFS" firstAttribute="leading" secondItem="xn4-8P-wpY" secondAttribute="trailing" constant="10" id="4dN-wf-GUZ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="xn4-8P-wpY" secondAttribute="bottom" constant="81" id="JkY-nY-kkS"/>
                                                     <constraint firstItem="9VK-rs-ufL" firstAttribute="centerY" secondItem="EtN-wb-IcI" secondAttribute="centerY" id="XkH-bI-2AU"/>
-                                                    <constraint firstItem="1jV-9L-pFS" firstAttribute="centerX" secondItem="EtN-wb-IcI" secondAttribute="centerX" id="Yst-D9-6Gj"/>
-                                                    <constraint firstAttribute="bottom" secondItem="B5p-Ny-Azt" secondAttribute="bottom" constant="81" id="aPZ-3e-sMt"/>
-                                                    <constraint firstAttribute="bottom" secondItem="1jV-9L-pFS" secondAttribute="bottom" constant="81" id="acy-Jn-udU"/>
-                                                    <constraint firstItem="B5p-Ny-Azt" firstAttribute="leading" secondItem="1jV-9L-pFS" secondAttribute="trailing" constant="10" id="sst-1J-q84"/>
                                                     <constraint firstItem="9VK-rs-ufL" firstAttribute="centerX" secondItem="EtN-wb-IcI" secondAttribute="centerX" id="yUz-Qw-a9R"/>
                                                 </constraints>
                                                 <connections>

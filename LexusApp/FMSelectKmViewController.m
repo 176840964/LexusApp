@@ -7,9 +7,10 @@
 //
 
 #import "FMSelectKmViewController.h"
+#import "FMDetailViewController.h"
 
 @interface FMSelectKmViewController ()
-@property (strong, nonatomic) NSArray *kmArr;
+@property (assign, nonatomic) NSInteger selectedKM;
 @end
 
 @implementation FMSelectKmViewController
@@ -23,15 +24,11 @@
     
     self.titleLab.text = self.title;
     
-    NSArray *arr = [[CarCategoreManager shareManager] getAllCarKmByCarName:self.carNameStr carModel:self.carModelStr];
-    self.kmArr = [arr sortedArrayUsingComparator:^NSComparisonResult(NSString *obj1, NSString *obj2) {
-        return (obj1.integerValue < obj2.integerValue) ? NSOrderedAscending : (obj1.integerValue > obj2.integerValue) ? NSOrderedDescending : NSOrderedSame;
-    }];
-    
     CGFloat x = ((CGRectGetWidth(self.view.bounds) - 80) - (50 * self.kmArr.count + 12 * (self.kmArr.count - 1))) / 2.0 + 80;
     for (NSInteger index = 0; index < self.kmArr.count; index++) {
-        NSString *str = [NSString stringWithFormat:@"%@万", [self.kmArr objectAtIndex:index]];
+        NSString *str = [NSString stringWithFormat:@"%zd万", index + 1];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.tag = index;
         btn.backgroundColor = [UIColor redColor];
         btn.frame = CGRectMake(x + index * (50 + 12), CGRectGetHeight(self.view.bounds) - 132, 50, 50);
         [btn setTitleColor:[UIColor colorWithHexString:@"#5f5f5f"] forState:UIControlStateNormal];
@@ -48,6 +45,8 @@
 }
 
 - (void)onTapSelectedKmBtn:(UIButton *)sender {
+    UIButton *btn = (UIButton*)sender;
+    self.selectedKM = btn.tag + 1;
     [self performSegueWithIdentifier:@"showFMDetailViewController" sender:self];
 }
 
@@ -55,8 +54,10 @@
 #pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showFMDetailViewController"]) {
+        FMDetailViewController *vc = segue.destinationViewController;
+        vc.detailDic = [self.kmArr objectAtIndex:self.selectedKM];
+    }
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface FMDetailCheckView : UIView
 
+- (void)setupSubviewsByCheckArr:(NSArray *)arr;
+
 @end

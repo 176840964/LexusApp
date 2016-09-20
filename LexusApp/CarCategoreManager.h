@@ -10,9 +10,12 @@
 
 @interface CarCategoreManager : NSObject
 
+@property (assign, nonatomic) NSInteger carsCount;
+
 + (instancetype)shareManager;
-- (NSArray*)getAllCarsName;
-- (NSArray*)getAllCarModelsByCarName:(NSString *)carName;
-- (NSArray*)getAllCarKmByCarName:(NSString *)carName carModel:(NSString *)carModel;
+
+- (NSDictionary*)getCarInfoDicByIndex:(NSInteger)index;
+- (NSArray*)getCarModelsByCarName:(NSString *)carName;
+- (NSArray*)getCarKMByCarName:(NSString *)carName carModel:(NSString *)carModel;
 
 @end

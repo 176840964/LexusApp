@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface FMDetailViewController : BaseViewController
+@property (strong, nonatomic) NSDictionary *detailDic;
 
 @end

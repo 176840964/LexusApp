@@ -41,6 +41,13 @@
     self.contentWidth.constant = CGRectGetWidth(self.view.bounds) * 2;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    NSArray *checkArr = [self.detailDic objectForKey:@"check"];
+    [self.checkView setupSubviewsByCheckArr:checkArr];
+}
+
 #pragma mark - IBAction
 - (IBAction)onTapCheckProjectBtn:(id)sender {
     [self.scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
