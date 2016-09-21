@@ -10,14 +10,4 @@
 
 @implementation StudyListModel
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        self.userIconStr = @"manIcon";
-        self.userNameStr = @"test";
-    }
-    return self;
-}
-
 @end

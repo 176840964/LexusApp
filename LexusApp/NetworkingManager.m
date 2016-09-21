@@ -29,8 +29,25 @@
 - (NSURLSessionDataTask *)networkingWithGetMethodPath:(NSString *)path
                                                params:(NSDictionary *)parames
                                               success:(void (^)(id responseObject))success {
+    
     return [self GET:path parameters:parames progress:^(NSProgress * _Nonnull downloadProgress) {
-        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"error:%@", error);
+            [[CustomHintViewController getInstance] presentMessage:@"无网络连接" parentController:weakSelf.viewController isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:nil];
+        });
+    }];
+}
+
+- (NSURLSessionDataTask *)testNetworkingWithGetMethodPath:(NSString *)path
+                                                   params:(NSDictionary *)parames
+                                                  success:(void (^)(id responseObject))success {
+    
+//    self.responseSerializer = [AFHTTPResponseSerializer serializer];
+    return [self GET:path parameters:parames progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

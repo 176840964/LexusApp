@@ -38,15 +38,6 @@
     
     [self.listTableView registerNib:[UINib nibWithNibName:@"StudyListTableViewCell" bundle:nil] forCellReuseIdentifier:@"StudyListTableViewCell"];
     
-    for (NSInteger index = 0; index < 20; index++) {
-        StudyListModel *model = [[StudyListModel alloc] init];
-        model.numIconStr = @"study_num1";
-        model.userNameStr = @"test";
-        model.userIconStr = @"manIcon";
-        
-        [self.listDataArr addObject:model];
-    }
-    
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
     NSString *urlStr = [[NSBundle mainBundle] pathForResource:@"testVideo.mp4" ofType:nil];
     AVPlayer *player = [AVPlayer playerWithURL:[NSURL fileURLWithPath:urlStr]];
@@ -88,8 +79,13 @@
 }
 
 - (IBAction)onTapBestListCtrl:(id)sender {
-    self.listTitleLab.text = @"优 秀 榜";
-    [self.listScrollView setContentOffset:CGPointMake(335, 0) animated:YES];
+    [[NetworkingManager shareManager] testNetworkingWithGetMethodPath:@"song/getSongNumByPage?" params:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"page": @(0), @"limit": @(10)} success:^(id responseObject) {
+        NSArray *arr = responseObject;
+        NSLog(@"%@", arr);
+    }];
+    
+//    self.listTitleLab.text = @"优 秀 榜";
+//    [self.listScrollView setContentOffset:CGPointMake(335, 0) animated:YES];
 }
 
 - (IBAction)onTapUpdateListCtrl:(id)sender {

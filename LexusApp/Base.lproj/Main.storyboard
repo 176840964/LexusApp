@@ -105,7 +105,7 @@
             <objects>
                 <navigationController storyboardIdentifier="StudyNaviController" navigationBarHidden="YES" id="4tm-MQ-Zfi" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AVe-jI-wUM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AVe-jI-wUM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -638,7 +638,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="BLR-MY-wbm" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="709-za-Azb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="709-za-Azb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1302,7 +1302,7 @@
                 <navigationController storyboardIdentifier="FMNaviController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Msa-Fr-Gls" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VIq-H6-Zht">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VIq-H6-Zht">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1320,7 +1320,7 @@
             <objects>
                 <navigationController storyboardIdentifier="EWPNaviController" navigationBarHidden="YES" id="lcZ-xP-6hA" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OCX-Xo-YPq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OCX-Xo-YPq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1371,7 +1371,7 @@
             <objects>
                 <navigationController storyboardIdentifier="HEVANaviController" navigationBarHidden="YES" id="5bg-6N-JJG" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dBI-4s-jKv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBI-4s-jKv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1422,7 +1422,7 @@
             <objects>
                 <navigationController storyboardIdentifier="DANaviController" navigationBarHidden="YES" id="DEH-gv-tvf" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0QB-gH-ajN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0QB-gH-ajN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

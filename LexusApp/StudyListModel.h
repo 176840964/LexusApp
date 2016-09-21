@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StudyListModel : NSObject
+@interface StudyListModel : BaseModel
 
-@property (copy, nonatomic) NSString *numIconStr;
-@property (copy, nonatomic) NSString *userIconStr;
-@property (copy, nonatomic) NSString *userNameStr;
+@property (copy, nonatomic) NSString *car_distince;
+@property (copy, nonatomic) NSString *car_type;
+@property (strong, nonatomic) NSNumber *csid;
+@property (strong, nonatomic) NSNumber *date;
+@property (strong, nonatomic) NSNumber *num;
+@property (copy, nonatomic) NSString *song_url;
+@property (strong, nonatomic) NSNumber *status;
+@property (strong, nonatomic) NSNumber *update_date;
+@property (strong, nonatomic) NSNumber *userid;
+@property (copy, nonatomic) NSString *username;
 
 @end

@@ -40,8 +40,8 @@
         self.numLab.highlighted = NO;
         self.numLab.text = [NSString stringWithFormat:@"%zd", index + 1];
     }
-    self.userIconImageView.image = [UIImage imageNamed:model.userIconStr];
-    self.userNameLab.text = model.userNameStr;
+//    self.userIconImageView.image = [UIImage imageNamed:model.userIconStr];
+//    self.userNameLab.text = model.userNameStr;
 }
 
 #pragma mark - IBAciton

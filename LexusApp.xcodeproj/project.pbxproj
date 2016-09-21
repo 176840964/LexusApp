@@ -299,12 +299,11 @@
 		D75AE0A71D7EC07A006685AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D772AE8A1D92F5B400CB026F /* StudyListModel */,
 				D75AE0A81D7EC098006685AE /* UserModel.h */,
 				D75AE0A91D7EC098006685AE /* UserModel.m */,
 				D75AE0B51D7FE89C006685AE /* GestureModel.h */,
 				D75AE0B61D7FE89C006685AE /* GestureModel.m */,
-				D75AE0BE1D806297006685AE /* StudyListModel.h */,
-				D75AE0BF1D806297006685AE /* StudyListModel.m */,
 				D71A4FCC1D8AF02F0053E98C /* BaseModel.h */,
 				D71A4FCD1D8AF02F0053E98C /* BaseModel.m */,
 			);
@@ -325,6 +324,15 @@
 				D75AE0CA1D817E21006685AE /* StudyMainView.m */,
 			);
 			name = 6.StudyViewController;
+			sourceTree = "<group>";
+		};
+		D772AE8A1D92F5B400CB026F /* StudyListModel */ = {
+			isa = PBXGroup;
+			children = (
+				D75AE0BE1D806297006685AE /* StudyListModel.h */,
+				D75AE0BF1D806297006685AE /* StudyListModel.m */,
+			);
+			name = StudyListModel;
 			sourceTree = "<group>";
 		};
 		D7DFC19A1D754A3A007A6D0C = {
