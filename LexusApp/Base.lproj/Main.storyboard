@@ -566,12 +566,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npF-zy-IDm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npF-zy-IDm">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="kzJ-Oh-yw9"/>
-                                    <constraint firstAttribute="width" constant="46" id="pEp-VI-R76"/>
+                                    <constraint firstAttribute="height" constant="28" id="kzJ-Oh-yw9"/>
+                                    <constraint firstAttribute="width" constant="112" id="pEp-VI-R76"/>
                                 </constraints>
-                                <state key="normal" title="关闭"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="5" minY="6" maxX="15" maxY="6"/>
+                                <state key="normal" title="关闭" image="login_btn_normal">
+                                    <color key="titleColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="login_btn_highlight"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onTapCloseBtn:" destination="gOH-69-gPJ" eventType="touchUpInside" id="2NV-dy-V5t"/>
                                 </connections>
@@ -1239,6 +1257,8 @@
     <resources>
         <image name="car_highlight" width="70" height="70"/>
         <image name="car_normal" width="70" height="70"/>
+        <image name="login_btn_highlight" width="20" height="16"/>
+        <image name="login_btn_normal" width="20" height="16"/>
         <image name="manIcon" width="120" height="120"/>
     </resources>
 </document>

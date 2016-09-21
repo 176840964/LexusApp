@@ -8,14 +8,15 @@
 
 #import "BaseViewController.h"
 #import "AccelerometerManager.h"
+#import "CustomLoginCtrl.h"
 
 #define BgImageFrameDistance 10
 
-@interface BaseViewController () <UIAccelerometerDelegate>
+@interface BaseViewController () <UIAccelerometerDelegate, UIAlertViewDelegate>
 @property (strong, nonatomic) UIImageView *markImgView;
 @property (strong, nonatomic) UIButton *logoBtn;
 @property (strong, nonatomic) UIButton *homeBtn;
-@property (strong, nonatomic) UIButton *loginBtn;
+@property (strong, nonatomic) CustomLoginCtrl *loginCtrl;
 @property (strong, nonatomic) UIButton *optionBtn;
 @property (strong, nonatomic) UIView *optionView;
 @property (strong, nonatomic) UIButton *backBtn;
@@ -34,6 +35,16 @@
     self.isShowHomeBtn = YES;
     self.isShowBackBtn = NO;
     
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if ([LocalUserManager shareManager].isLogin) {
+        NSString *iconStr = [LocalUserManager shareManager].curLoginUserModel.iconStr;
+        _loginCtrl.isLogin = YES;
+        _loginCtrl.imgView.image = [UIImage imageNamed:iconStr];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -88,14 +99,13 @@
     [_optionBtn addTarget:self action:@selector(onTapOptionBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_optionBtn];
     
-    _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _loginBtn.frame = CGRectMake(CGRectGetMinX(_optionBtn.frame) - 10 - 200, 18, 200, 28);
-    _loginBtn.backgroundColor = [UIColor redColor];
-    [_loginBtn addTarget:self action:@selector(onTapLoginBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_loginBtn];
+    _loginCtrl = [[CustomLoginCtrl alloc] initWithFrame:CGRectMake(CGRectGetMinX(_optionBtn.frame) - 10 - 114, 18, 114, 28)];
+    _loginCtrl.isLogin = NO;
+    [_loginCtrl addTarget:self action:@selector(onTapLoginCtrl:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_loginCtrl];
     
     _homeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _homeBtn.frame = CGRectMake(CGRectGetMinX(_loginBtn.frame) - 28 - 10, 18, 28, 28);
+    _homeBtn.frame = CGRectMake(CGRectGetMinX(_loginCtrl.frame) - 28 - 10, 18, 28, 28);
     [_homeBtn setImage:[UIImage imageNamed:@"home_btn_normal"] forState:UIControlStateNormal];
     [_homeBtn setImage:[UIImage imageNamed:@"home_btn_highlight"] forState:UIControlStateHighlighted];
     [_homeBtn addTarget:self action:@selector(onTapHomeBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -125,8 +135,12 @@
     }
 }
 
-- (void)onTapLoginBtn:(UIButton *)btn {
-    [self.customTabbarController showLoginViewController];
+- (void)onTapLoginCtrl:(CustomLoginCtrl *)ctrl {
+    if (ctrl.isLogin) {
+        [CustomTools alertShow:@"退出登录" content:@"确定要退出么？" cancelBtnTitle:@"稍后" okBtnTitle:@"退出" container:self];
+    } else {
+        [self.customTabbarController showLoginViewController];
+    }
 }
 
 - (void)onTapHomeBtn:(UIButton *)btn {
@@ -228,6 +242,16 @@
     }
     
     self.bgImgView.center = pos;
+}
+
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex != alertView.cancelButtonIndex) {
+        [[LocalUserManager shareManager] logout];
+        [self onTapHomeBtn:nil];
+        
+        _loginCtrl.isLogin = NO;
+    }
 }
 
 @end

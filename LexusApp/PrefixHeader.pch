@@ -19,6 +19,7 @@
 #import "LocalUserManager.h"
 #import "CustomHintViewController.h"
 #import "CarCategoreManager.h"
+#import "CustomTools.h"
 
 #import "UIView+frameAdjust.h"
 #import "UILabel+AttributedString.h"

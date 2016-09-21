@@ -18,6 +18,8 @@
 		D728D62F1D905991000C2203 /* CarCategoreRes.plist in Resources */ = {isa = PBXBuildFile; fileRef = D728D62E1D905991000C2203 /* CarCategoreRes.plist */; };
 		D728D6801D90E501000C2203 /* CarCategoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D67F1D90E501000C2203 /* CarCategoreManager.m */; };
 		D728D6A51D919100000C2203 /* CarCategore.plist in Resources */ = {isa = PBXBuildFile; fileRef = D728D6A41D919100000C2203 /* CarCategore.plist */; };
+		D728D6A81D922DBE000C2203 /* CustomTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D6A71D922DBE000C2203 /* CustomTools.m */; };
+		D728D6AB1D9232DD000C2203 /* CustomLoginCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D6AA1D9232DD000C2203 /* CustomLoginCtrl.m */; };
 		D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */; };
 		D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */; };
 		D75AE06C1D7D2223006685AE /* FMDetailCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE06B1D7D2223006685AE /* FMDetailCheckView.m */; };
@@ -89,6 +91,10 @@
 		D728D67E1D90E500000C2203 /* CarCategoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCategoreManager.h; sourceTree = "<group>"; };
 		D728D67F1D90E501000C2203 /* CarCategoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCategoreManager.m; sourceTree = "<group>"; };
 		D728D6A41D919100000C2203 /* CarCategore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarCategore.plist; sourceTree = "<group>"; };
+		D728D6A61D922DBE000C2203 /* CustomTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTools.h; sourceTree = "<group>"; };
+		D728D6A71D922DBE000C2203 /* CustomTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTools.m; sourceTree = "<group>"; };
+		D728D6A91D9232DD000C2203 /* CustomLoginCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLoginCtrl.h; sourceTree = "<group>"; };
+		D728D6AA1D9232DD000C2203 /* CustomLoginCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLoginCtrl.m; sourceTree = "<group>"; };
 		D75AE0631D7BE5DA006685AE /* FMSelectKmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSelectKmViewController.h; sourceTree = "<group>"; };
 		D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectKmViewController.m; sourceTree = "<group>"; };
 		D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDetailViewController.h; sourceTree = "<group>"; };
@@ -378,6 +384,8 @@
 		D7DFC1C11D754B53007A6D0C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D728D6A61D922DBE000C2203 /* CustomTools.h */,
+				D728D6A71D922DBE000C2203 /* CustomTools.m */,
 				D728D67D1D90E4D5000C2203 /* CarCategoreManager */,
 				D71A4FD31D8E91860053E98C /* LocalUserManager */,
 				D71A4FD21D8AF4990053E98C /* HintView */,
@@ -392,6 +400,8 @@
 				D75AE0BC1D8047E8006685AE /* UserManager.m */,
 				D77C9CC91D89354A00DE0C32 /* CarSelectedItemView.h */,
 				D77C9CCA1D89354A00DE0C32 /* CarSelectedItemView.m */,
+				D728D6A91D9232DD000C2203 /* CustomLoginCtrl.h */,
+				D728D6AA1D9232DD000C2203 /* CustomLoginCtrl.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -616,7 +626,9 @@
 				D75AE0A01D7EAA4D006685AE /* Lexus_jiancuhei.TTF in Sources */,
 				D75AE0A11D7EAA4D006685AE /* Lexus_jianhei.TTF in Sources */,
 				D75AE0A21D7EAA4D006685AE /* Lexus_jianzhengxian.TTF in Sources */,
+				D728D6AB1D9232DD000C2203 /* CustomLoginCtrl.m in Sources */,
 				D75AE0A61D7EBD60006685AE /* UserIconItemView.m in Sources */,
+				D728D6A81D922DBE000C2203 /* CustomTools.m in Sources */,
 				D75AE0A31D7EAA4D006685AE /* Lexus_jianzhonghei.TTF in Sources */,
 				D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */,
 				D75AE0C71D80634F006685AE /* StudyListTableViewCell.m in Sources */,

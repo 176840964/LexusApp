@@ -65,6 +65,14 @@
     [self synchronize];
 }
 
+- (BOOL)isLogin {
+    return (nil != self.curLoginUserModel);
+}
+
+- (void)logout {
+    self.curLoginUserModel = nil;
+}
+
 #pragma mark -
 - (void)synchronize {
     [NSKeyedArchiver archiveRootObject:self toFile:[self.class pathOfDataFile]];
