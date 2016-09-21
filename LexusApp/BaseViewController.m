@@ -12,13 +12,7 @@
 
 #define BgImageFrameDistance 10
 
-@interface BaseViewController () <UIAccelerometerDelegate, UIAlertViewDelegate>
-@property (strong, nonatomic) UIImageView *markImgView;
-@property (strong, nonatomic) UIButton *logoBtn;
-@property (strong, nonatomic) UIButton *homeBtn;
-@property (strong, nonatomic) CustomLoginCtrl *loginCtrl;
-@property (strong, nonatomic) UIButton *optionBtn;
-@property (strong, nonatomic) UIView *optionView;
+@interface BaseViewController () <UIAccelerometerDelegate>
 @property (strong, nonatomic) UIButton *backBtn;
 @end
 
@@ -31,20 +25,12 @@
     [self setupSubviews];
     
     self.isBgCanShake = NO;
-    self.isLogoBtnEnable = NO;
-    self.isShowHomeBtn = YES;
     self.isShowBackBtn = NO;
     
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    if ([LocalUserManager shareManager].isLogin) {
-        NSString *iconStr = [LocalUserManager shareManager].curLoginUserModel.iconStr;
-        _loginCtrl.isLogin = YES;
-        _loginCtrl.imgView.image = [UIImage imageNamed:iconStr];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,16 +47,6 @@
     }
 }
 
-- (void)setIsLogoBtnEnable:(BOOL)isLogoBtnEnable {
-    _isLogoBtnEnable = isLogoBtnEnable;
-    _logoBtn.enabled = isLogoBtnEnable;
-}
-
-- (void)setIsShowHomeBtn:(BOOL)isShowHomeBtn {
-    _isShowHomeBtn = isShowHomeBtn;
-    _homeBtn.hidden = !isShowHomeBtn;
-}
-
 - (void)setIsShowBackBtn:(BOOL)isShowBackBtn {
     _isShowBackBtn = isShowBackBtn;
     _backBtn.hidden = !isShowBackBtn;
@@ -82,35 +58,6 @@
     [self.view addSubview:_bgImgView];
     [self.view sendSubviewToBack:_bgImgView];
     
-    _markImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bgMark"]];
-    _markImgView.frame = CGRectMake(0, 64, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 64);
-    [self.view addSubview:_markImgView];
-    
-    _logoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _logoBtn.frame = CGRectMake(10, 20, 136, 25);
-    [_logoBtn setImage:[UIImage imageNamed:@"logo"] forState:UIControlStateNormal];
-    [_logoBtn addTarget:self action:@selector(onTapLogoBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_logoBtn];
-    
-    _optionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _optionBtn.frame = CGRectMake(CGRectGetWidth(self.view.bounds) - 19 - 28, 18, 28, 28);
-    [_optionBtn setImage:[UIImage imageNamed:@"option_btn_normal"] forState:UIControlStateNormal];
-    [_optionBtn setImage:[UIImage imageNamed:@"option_btn_highlight"] forState:UIControlStateHighlighted];
-    [_optionBtn addTarget:self action:@selector(onTapOptionBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_optionBtn];
-    
-    _loginCtrl = [[CustomLoginCtrl alloc] initWithFrame:CGRectMake(CGRectGetMinX(_optionBtn.frame) - 10 - 114, 18, 114, 28)];
-    _loginCtrl.isLogin = NO;
-    [_loginCtrl addTarget:self action:@selector(onTapLoginCtrl:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_loginCtrl];
-    
-    _homeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _homeBtn.frame = CGRectMake(CGRectGetMinX(_loginCtrl.frame) - 28 - 10, 18, 28, 28);
-    [_homeBtn setImage:[UIImage imageNamed:@"home_btn_normal"] forState:UIControlStateNormal];
-    [_homeBtn setImage:[UIImage imageNamed:@"home_btn_highlight"] forState:UIControlStateHighlighted];
-    [_homeBtn addTarget:self action:@selector(onTapHomeBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_homeBtn];
-    
     _titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, CGRectGetWidth(self.view.bounds), 50)];
     _titleLab.textColor = [UIColor redColor];
     _titleLab.textAlignment = NSTextAlignmentCenter;
@@ -121,33 +68,6 @@
     _backBtn.backgroundColor = [UIColor grayColor];
     [_backBtn addTarget:self action:@selector(onTapBackBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_backBtn];
-}
-
-- (void)onTapLogoBtn:(UIButton *)btn {
-    [self.customTabbarController showStudyViewController];
-}
-
-- (void)onTapOptionBtn:(UIButton *)btn {
-    if (self.customTabbarController.tabbarView.hidden) {
-        [self.customTabbarController showTabbarView:YES];
-    } else {
-        [self.customTabbarController dismissTabbarView:YES];
-    }
-}
-
-- (void)onTapLoginCtrl:(CustomLoginCtrl *)ctrl {
-    if (ctrl.isLogin) {
-        [CustomTools alertShow:@"退出登录" content:@"确定要退出么？" cancelBtnTitle:@"稍后" okBtnTitle:@"退出" container:self];
-    } else {
-        [self.customTabbarController showLoginViewController];
-    }
-}
-
-- (void)onTapHomeBtn:(UIButton *)btn {
-    [self.customTabbarController setSelectedIndex:0 isAnimated:NO];
-    UINavigationController *homeController = [self.customTabbarController.viewControllersArr firstObject];
-    [homeController popToRootViewControllerAnimated:NO];
-    [self.customTabbarController dismissTabbarView:NO];
 }
 
 - (void)onTapBackBtn:(UIButton *)btn {
@@ -242,16 +162,6 @@
     }
     
     self.bgImgView.center = pos;
-}
-
-#pragma mark - UIAlertViewDelegate
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex != alertView.cancelButtonIndex) {
-        [[LocalUserManager shareManager] logout];
-        [self onTapHomeBtn:nil];
-        
-        _loginCtrl.isLogin = NO;
-    }
 }
 
 @end

@@ -9,10 +9,13 @@
 #import "CustomTabbarViewController.h"
 #import <objc/runtime.h>
 
-@interface CustomTabbarViewController ()
+@interface CustomTabbarViewController () <UIAlertViewDelegate>
 @property (weak, nonatomic) UIViewController *selectedViewController;
 @property (strong, nonatomic) UIControl *bgMarkCtrl;
 @property (assign, nonatomic) NSInteger selectedIndex;
+
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UIButton *optionBtn;
 @end
 
 @interface UIViewController (CustomTabbarViewControllerItemInternal)
@@ -56,6 +59,9 @@
     } else {
         [self setSelectedIndex:0 isAnimated:NO];
     }
+    
+    self.loginCtrl.isLogin = [LocalUserManager shareManager].isLogin;
+    self.optionBtn.hidden = ![LocalUserManager shareManager].isLogin;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -93,7 +99,8 @@
     
     controller.view.frame = CGRectMake(CGRectGetWidth(self.view.bounds), 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
     [self addChildViewController:controller];
-    [self.view addSubview:controller.view];
+//    [self.view addSubview:controller.view];
+    [self.view insertSubview:controller.view belowSubview:self.headerView];
     [controller didMoveToParentViewController:self];
     
     __weak typeof(self) weakSelf = self;
@@ -213,6 +220,44 @@
     [self dismissTabbarView:NO];
 }
 
+- (IBAction)onTapLogoBtn:(id)sender {
+    if (self.homeBtn.hidden) {
+        [self performSegueWithIdentifier:@"presentStudyViewController" sender:self];
+    }
+}
+
+- (IBAction)onTapHomeBtn:(id)sender {
+    [self setSelectedIndex:0 isAnimated:NO];
+    UINavigationController *homeController = [self.viewControllersArr firstObject];
+    [homeController popToRootViewControllerAnimated:NO];
+    [self dismissTabbarView:NO];
+}
+
+- (IBAction)onTapOptionBtn:(id)sender {
+    if (self.tabbarView.hidden) {
+        [self showTabbarView:YES];
+    } else {
+        [self dismissTabbarView:YES];
+    }
+}
+
+- (IBAction)onTapLoginCtrl:(id)sender {
+    if (self.loginCtrl.isLogin) {
+        [CustomTools alertShow:@"退出登录" content:@"确定要退出么？" cancelBtnTitle:@"稍后" okBtnTitle:@"退出" container:self];
+    } else {
+        [self performSegueWithIdentifier:@"presentLgoinViewController" sender:self];
+    }
+}
+
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex != alertView.cancelButtonIndex) {
+        [[LocalUserManager shareManager] logout];
+        [self onTapHomeBtn:nil];
+        
+        self.loginCtrl.isLogin = NO;
+    }
+}
 
 @end
 

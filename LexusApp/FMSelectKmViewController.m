@@ -19,7 +19,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.isShowHomeBtn = YES;
     self.isShowBackBtn = YES;
     
     self.titleLab.text = self.title;

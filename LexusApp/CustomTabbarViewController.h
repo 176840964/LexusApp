@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomLoginCtrl.h"
 
 @interface CustomTabbarViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *tabbarView;
 @property (copy, nonatomic) NSArray* viewControllersArr;
+
+@property (weak, nonatomic) IBOutlet CustomLoginCtrl *loginCtrl;
+@property (weak, nonatomic) IBOutlet UIButton *homeBtn;
 
 - (void)showTabbarView:(BOOL)isAnimated;
 - (void)dismissTabbarView:(BOOL)isAnimated;

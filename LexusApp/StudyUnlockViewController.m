@@ -28,6 +28,13 @@
     [self.view addSubview:_gestureUnlockView];
 }
 
+#pragma mark - IBAction
+- (IBAction)onTapHomeBtn:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
 #pragma mark - <GestureUnlockViewDelegate>
 - (void)gestureViewUnlockSuccess:(GestureUnlockView *)gestureView {
     [UserManager shareUserManager].isLoginStudy = YES;

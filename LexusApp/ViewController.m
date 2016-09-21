@@ -20,8 +20,12 @@
     
     self.bgImgView.image = [UIImage imageNamed:@"test"];
     self.isBgCanShake = YES;
-    self.isLogoBtnEnable = YES;
-    self.isShowHomeBtn = NO;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.customTabbarController.homeBtn.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {

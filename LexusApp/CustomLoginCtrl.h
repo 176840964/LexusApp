@@ -10,8 +10,8 @@
 
 @interface CustomLoginCtrl : UIControl
 
-@property (strong, nonatomic) UIImageView *imgView;
-@property (strong, nonatomic) UILabel *titleLab;
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLab;
 @property (assign, nonatomic) BOOL isLogin;
 
 @end
