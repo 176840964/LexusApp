@@ -14,7 +14,6 @@
 @property (strong, nonatomic) UIControl *bgMarkCtrl;
 @property (assign, nonatomic) NSInteger selectedIndex;
 
-@property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIButton *optionBtn;
 @end
 
@@ -92,6 +91,8 @@
     
     _selectedIndex = selectedIndex;
     
+    self.homeBtn.hidden = (0 == _selectedIndex);
+    
     UIViewController *controller = [_viewControllersArr objectAtIndex:_selectedIndex];
     if ([controller isEqual:self.selectedViewController]) {
         return;
@@ -100,7 +101,7 @@
     controller.view.frame = CGRectMake(CGRectGetWidth(self.view.bounds), 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
     [self addChildViewController:controller];
 //    [self.view addSubview:controller.view];
-    [self.view insertSubview:controller.view belowSubview:self.headerView];
+    [self.view insertSubview:controller.view belowSubview:self.homeBtn];
     [controller didMoveToParentViewController:self];
     
     __weak typeof(self) weakSelf = self;
@@ -194,14 +195,6 @@
     }
 }
 
-- (void)showLoginViewController {
-    [self performSegueWithIdentifier:@"presentLgoinViewController" sender:self];
-}
-
-- (void)showStudyViewController {
-    [self performSegueWithIdentifier:@"presentStudyViewController" sender:self];
-}
-
 /*
 #pragma mark - Navigation
 
@@ -221,7 +214,7 @@
 }
 
 - (IBAction)onTapLogoBtn:(id)sender {
-    if (self.homeBtn.hidden) {
+    if (self.homeBtn.hidden && [LocalUserManager shareManager].isLogin) {
         [self performSegueWithIdentifier:@"presentStudyViewController" sender:self];
     }
 }

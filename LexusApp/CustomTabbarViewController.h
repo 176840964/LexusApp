@@ -20,9 +20,6 @@
 - (void)showTabbarView:(BOOL)isAnimated;
 - (void)dismissTabbarView:(BOOL)isAnimated;
 
-- (void)showLoginViewController;
-- (void)showStudyViewController;
-
 - (void)setSelectedIndex:(NSInteger)selectedIndex isAnimated:(BOOL)isAnimated;
 
 @end

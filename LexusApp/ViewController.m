@@ -33,4 +33,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onTapFMBtn:(id)sender {
+    if ([LocalUserManager shareManager].isLogin) {
+        [self performSegueWithIdentifier:@"showSelectCarViewController" sender:self];
+    } else {
+        [self.customTabbarController.loginCtrl sendActionsForControlEvents:UIControlEventTouchUpInside];
+    }
+}
+
 @end

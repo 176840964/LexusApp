@@ -49,6 +49,7 @@ typedef NS_ENUM(NSUInteger, LoginViewControllerType) {
             
             __weak typeof(self) weakSelf = self;
             itemView.tapUserIconHandler = ^(UserModel * model) {
+                [weakSelf.passwordTextField becomeFirstResponder];
                 weakSelf.selectedUserNameStr = model.name;
                 [weakSelf selectUserViewHighlightSelectedItemByUserModel:model];
                 [weakSelf setType:LoginTypeBySelectUser isAnimation:YES];

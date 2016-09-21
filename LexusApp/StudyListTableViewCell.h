@@ -11,6 +11,6 @@
 
 @interface StudyListTableViewCell : UITableViewCell
 
-- (void)layoutSubViewsByStudyListModel:(StudyListModel*)model;
+- (void)layoutSubViewsByStudyListModel:(StudyListModel*)model andIndex:(NSInteger)index;
 
 @end

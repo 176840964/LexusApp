@@ -87,9 +87,13 @@
     [self.mainScrollView setContentOffset:CGPointMake((CGRectGetWidth(self.view.bounds) - CGRectGetWidth(self.listScrollView.bounds)) * 2, 0) animated:YES];
 }
 
-- (IBAction)onTapListBtn:(id)sender {
-    UIButton *btn = (UIButton *)sender;
-    self.listTitleLab.text = btn.titleLabel.text;
+- (IBAction)onTapBestListCtrl:(id)sender {
+    self.listTitleLab.text = @"优 秀 榜";
+    [self.listScrollView setContentOffset:CGPointMake(335, 0) animated:YES];
+}
+
+- (IBAction)onTapUpdateListCtrl:(id)sender {
+    self.listTitleLab.text = @"更 新 榜";
     [self.listScrollView setContentOffset:CGPointMake(335, 0) animated:YES];
 }
 
@@ -106,7 +110,7 @@
     StudyListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StudyListTableViewCell"];
     StudyListModel *model = [self.listDataArr objectAtIndex:indexPath.row];
     
-    [cell layoutSubViewsByStudyListModel:model];
+    [cell layoutSubViewsByStudyListModel:model andIndex:indexPath.row];
     
     return cell;
 }
