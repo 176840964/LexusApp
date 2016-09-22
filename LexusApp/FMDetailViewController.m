@@ -29,6 +29,9 @@
     
     self.isShowBackBtn = YES;
     [self.changeView setupSubviews];
+    
+    self.checkProjectBtn.backgroundColor = [UIColor whiteColor];
+    self.changeProjectBtn.backgroundColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,10 +53,14 @@
 
 #pragma mark - IBAction
 - (IBAction)onTapCheckProjectBtn:(id)sender {
+    self.checkProjectBtn.backgroundColor = [UIColor whiteColor];
+    self.changeProjectBtn.backgroundColor = [UIColor clearColor];
     [self.scrollView setContentOffset:CGPointMake(0, 0) animated:NO];
 }
 
 - (IBAction)onTapChangeProjectBtn:(id)sender {
+    self.checkProjectBtn.backgroundColor = [UIColor clearColor];
+    self.changeProjectBtn.backgroundColor = [UIColor whiteColor];
     [self.scrollView setContentOffset:CGPointMake(CGRectGetWidth(self.scrollView.bounds), 0) animated:NO];
 }
 

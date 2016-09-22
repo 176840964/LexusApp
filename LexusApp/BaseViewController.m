@@ -58,8 +58,9 @@
     [self.view addSubview:_bgImgView];
     [self.view sendSubviewToBack:_bgImgView];
     
-    _titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, CGRectGetWidth(self.view.bounds), 50)];
-    _titleLab.textColor = [UIColor redColor];
+    _titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 19, CGRectGetWidth(self.view.bounds), 28)];
+    _titleLab.textColor = [UIColor colorWithHexString:@"7c7c7c"];
+    _titleLab.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:20];
     _titleLab.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_titleLab];
     

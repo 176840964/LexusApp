@@ -25,6 +25,7 @@
         btn.cornerRadius = 4.0;
         btn.borderColor = [UIColor colorWithHexString:@"#7c7c7c"];
         btn.borderWidth = 2.0;
+        btn.titleLabel.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:17];
         [btn setTitleColor:[UIColor colorWithHexString:@"#7c7c7c"] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor colorWithHexString:@"#000000"] forState:UIControlStateHighlighted];
         [btn setTitle:str forState:UIControlStateNormal];

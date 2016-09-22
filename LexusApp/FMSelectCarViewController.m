@@ -134,6 +134,7 @@
         btn.frame = CGRectMake(x + (70 + 35) * index, CGRectGetHeight(self.view.bounds) - 400, 70, 70);
         btn.titleLabel.numberOfLines = 2;
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        btn.titleLabel.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:13];
         [btn setTitle:[NSString stringWithFormat:@"%@\n%@", self.selectedCarNameStr, carModel] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor colorWithHexString:@"#89939c"] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor colorWithHexString:@"#383838"] forState:UIControlStateHighlighted];

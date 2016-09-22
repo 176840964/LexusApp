@@ -30,6 +30,7 @@
         btn.tag = index;
         btn.backgroundColor = [UIColor redColor];
         btn.frame = CGRectMake(x + index * (50 + 12), CGRectGetHeight(self.view.bounds) - 132, 50, 50);
+        btn.titleLabel.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:17];
         [btn setTitleColor:[UIColor colorWithHexString:@"#5f5f5f"] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor colorWithHexString:@"#050608"] forState:UIControlStateHighlighted];
         [btn setTitle:str forState:UIControlStateNormal];

@@ -69,6 +69,9 @@
 		D7DFC1E81D76D0F5007A6D0C /* UIViewController+BackBtnHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1DF1D76D0F5007A6D0C /* UIViewController+BackBtnHandler.m */; };
 		D7DFC1F21D77ECAA007A6D0C /* FMSelectCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1F11D77ECAA007A6D0C /* FMSelectCarViewController.m */; };
 		D7DFC1F71D7954B4007A6D0C /* CustomTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1F61D7954B4007A6D0C /* CustomTabbarViewController.m */; };
+		D7ED6ABC1D944847003C5E20 /* EWPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6ABB1D944847003C5E20 /* EWPViewController.m */; };
+		D7ED6ABF1D944858003C5E20 /* HEVAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6ABE1D944858003C5E20 /* HEVAViewController.m */; };
+		D7ED6AC21D944869003C5E20 /* DAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6AC11D944869003C5E20 /* DAViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +181,12 @@
 		D7DFC1F11D77ECAA007A6D0C /* FMSelectCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectCarViewController.m; sourceTree = "<group>"; };
 		D7DFC1F51D7954B4007A6D0C /* CustomTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabbarViewController.h; sourceTree = "<group>"; };
 		D7DFC1F61D7954B4007A6D0C /* CustomTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabbarViewController.m; sourceTree = "<group>"; };
+		D7ED6ABA1D944847003C5E20 /* EWPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWPViewController.h; sourceTree = "<group>"; };
+		D7ED6ABB1D944847003C5E20 /* EWPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWPViewController.m; sourceTree = "<group>"; };
+		D7ED6ABD1D944858003C5E20 /* HEVAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEVAViewController.h; sourceTree = "<group>"; };
+		D7ED6ABE1D944858003C5E20 /* HEVAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEVAViewController.m; sourceTree = "<group>"; };
+		D7ED6AC01D944869003C5E20 /* DAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAViewController.h; sourceTree = "<group>"; };
+		D7ED6AC11D944869003C5E20 /* DAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,6 +469,8 @@
 		D7DFC1EA1D77EBB6007A6D0C /* 2.Dealer_activities */ = {
 			isa = PBXGroup;
 			children = (
+				D7ED6AC01D944869003C5E20 /* DAViewController.h */,
+				D7ED6AC11D944869003C5E20 /* DAViewController.m */,
 			);
 			name = 2.Dealer_activities;
 			sourceTree = "<group>";
@@ -467,6 +478,8 @@
 		D7DFC1EB1D77EBD8007A6D0C /* 3.Extended_warranty_policy */ = {
 			isa = PBXGroup;
 			children = (
+				D7ED6ABA1D944847003C5E20 /* EWPViewController.h */,
+				D7ED6ABB1D944847003C5E20 /* EWPViewController.m */,
 			);
 			name = 3.Extended_warranty_policy;
 			sourceTree = "<group>";
@@ -474,6 +487,8 @@
 		D7DFC1EC1D77EBE7007A6D0C /* 4.HEV_advatage */ = {
 			isa = PBXGroup;
 			children = (
+				D7ED6ABD1D944858003C5E20 /* HEVAViewController.h */,
+				D7ED6ABE1D944858003C5E20 /* HEVAViewController.m */,
 			);
 			name = 4.HEV_advatage;
 			sourceTree = "<group>";
@@ -645,6 +660,7 @@
 				D75AE0B71D7FE89C006685AE /* GestureModel.m in Sources */,
 				D728D6801D90E501000C2203 /* CarCategoreManager.m in Sources */,
 				D7DFC1E21D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m in Sources */,
+				D7ED6AC21D944869003C5E20 /* DAViewController.m in Sources */,
 				D75AE0BD1D8047E8006685AE /* UserManager.m in Sources */,
 				D75AE0AE1D7FE2F6006685AE /* StudyUnlockViewController.m in Sources */,
 				D75AE0931D7EA83D006685AE /* UILabel+ChangeDefaultFont.m in Sources */,
@@ -661,11 +677,13 @@
 				D7DFC1E11D76D0F5007A6D0C /* NSDate+TodayZeroClock.m in Sources */,
 				D7DFC1E01D76D0F5007A6D0C /* NSArray+sortBy.m in Sources */,
 				D75AE0721D7D3CE8006685AE /* FMDetailChangeShowView.m in Sources */,
+				D7ED6ABC1D944847003C5E20 /* EWPViewController.m in Sources */,
 				D75AE06F1D7D223C006685AE /* FMDetailChangeView.m in Sources */,
 				D728D62C1D9043DC000C2203 /* CustomHintViewController.m in Sources */,
 				D7DFC1E41D76D0F5007A6D0C /* UIColor+Custom.m in Sources */,
 				D7DFC1A81D754A3B007A6D0C /* main.m in Sources */,
 				D7DFC1E81D76D0F5007A6D0C /* UIViewController+BackBtnHandler.m in Sources */,
+				D7ED6ABF1D944858003C5E20 /* HEVAViewController.m in Sources */,
 				D75AE06C1D7D2223006685AE /* FMDetailCheckView.m in Sources */,
 				D7DFC1E31D76D0F5007A6D0C /* NSString+Valid.m in Sources */,
 				D7DFC1E61D76D0F5007A6D0C /* UITextField+PlaceholderText.m in Sources */,
@@ -802,7 +820,7 @@
 				DEVELOPMENT_TEAM = 68Q9UNJFRU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LexusApp/PrefixHeader.pch";
 				INFOPLIST_FILE = LexusApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxl.LexusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -821,7 +839,7 @@
 				DEVELOPMENT_TEAM = 68Q9UNJFRU;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LexusApp/PrefixHeader.pch";
 				INFOPLIST_FILE = LexusApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zxl.LexusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

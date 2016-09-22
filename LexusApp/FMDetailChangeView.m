@@ -23,6 +23,7 @@
     [self.tableView registerNib:[UINib nibWithNibName:@"FMDetailChangeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FMDetailChangeTableViewCell"];
     
     NSString *string = @"3万公里保养，共检查3个项目，更换8种零件！ 零件费：80000元   工时费：53626元";
+    self.descriptionPriceLab.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:20];
     [self.descriptionPriceLab setAttributedNumberStringInContentString:string attributesDic:@{NSForegroundColorAttributeName:[UIColor blueColor], NSFontAttributeName:[UIFont systemFontOfSize:25]}];
 }
 
