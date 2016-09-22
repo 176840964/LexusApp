@@ -46,7 +46,7 @@
                                                    params:(NSDictionary *)parames
                                                   success:(void (^)(id responseObject))success {
     
-//    self.responseSerializer = [AFHTTPResponseSerializer serializer];
+    self.responseSerializer = [AFHTTPResponseSerializer serializer];
     return [self GET:path parameters:parames progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         success(responseObject);

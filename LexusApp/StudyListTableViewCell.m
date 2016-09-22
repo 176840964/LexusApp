@@ -31,6 +31,7 @@
 }
 
 - (void)layoutSubViewsByStudyListModel:(StudyListModel*)model andIndex:(NSInteger)index {
+    self.studyModel = model;
     if (index < 3) {
         self.numImageView.hidden = NO;
         self.numLab.hidden = YES;
@@ -40,8 +41,8 @@
         self.numLab.highlighted = NO;
         self.numLab.text = [NSString stringWithFormat:@"%zd", index + 1];
     }
-//    self.userIconImageView.image = [UIImage imageNamed:model.userIconStr];
-//    self.userNameLab.text = model.userNameStr;
+    self.userIconImageView.image = [UIImage imageNamed:@"manIcon"];
+    self.userNameLab.text = model.username;
 }
 
 #pragma mark - IBAciton

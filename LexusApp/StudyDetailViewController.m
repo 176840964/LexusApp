@@ -23,6 +23,7 @@
 
 @property (strong, nonatomic) NSMutableArray *listDataArr;
 @property (strong, nonatomic) AVPlayerViewController *playerController;
+@property (strong, nonatomic) AVPlayer *songPlayer;
 @end
 
 @implementation StudyDetailViewController
@@ -38,19 +39,7 @@
     
     [self.listTableView registerNib:[UINib nibWithNibName:@"StudyListTableViewCell" bundle:nil] forCellReuseIdentifier:@"StudyListTableViewCell"];
     
-    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
-    NSString *urlStr = [[NSBundle mainBundle] pathForResource:@"testVideo.mp4" ofType:nil];
-    AVPlayer *player = [AVPlayer playerWithURL:[NSURL fileURLWithPath:urlStr]];
-    _playerController = [[AVPlayerViewController alloc] init];
-    _playerController.player = player;
-    _playerController.videoGravity = AVLayerVideoGravityResizeAspect;
-    _playerController.allowsPictureInPicturePlayback = YES;    //画中画，iPad可用
-    _playerController.showsPlaybackControls = YES;
-    
-    [self addChildViewController:_playerController];
-    [self.studyMainView.videoView addSubview:_playerController.view];
-    _playerController.view.frame = self.studyMainView.videoView.bounds;
-//    [_playerController.player play];
+    [self createPlayerControllerWithResource:@"testVideo.mp4"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -69,6 +58,35 @@
     self.mainScrollViewWidth1.constant = (CGRectGetWidth(self.view.bounds) - 335) * 3;
 }
 
+#pragma mark -
+- (void)createPlayerControllerWithResource:(NSString *)resUrlStr {
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    NSString *urlStr = [[NSBundle mainBundle] pathForResource:resUrlStr ofType:nil];
+    AVPlayer *player = [AVPlayer playerWithURL:[NSURL fileURLWithPath:urlStr]];
+    _playerController = [[AVPlayerViewController alloc] init];
+    _playerController.player = player;
+    _playerController.videoGravity = AVLayerVideoGravityResizeAspect;
+    _playerController.allowsPictureInPicturePlayback = YES;    //画中画，iPad可用
+    _playerController.showsPlaybackControls = YES;
+    
+    [self addChildViewController:_playerController];
+    [self.studyMainView.videoView addSubview:_playerController.view];
+    _playerController.view.frame = self.studyMainView.videoView.bounds;
+}
+
+- (void)createSondPlayerWithResource:(NSString *)resUrlStr {
+    _songPlayer = [[AVPlayer alloc] initWithPlayerItem:[[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:resUrlStr]]];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationForPlayeDidEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    
+    [_songPlayer play];
+}
+
+- (void)notificationForPlayeDidEnd:(NSNotification*)notify {
+    NSLog(@"play did end");
+    self.songPlayer = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+}
+
 #pragma mark - IBAction
 - (IBAction)onTapSelectedCarModelBtn:(id)sender {
     [self.mainScrollView setContentOffset:CGPointMake(CGRectGetWidth(self.view.bounds) - CGRectGetWidth(self.listScrollView.bounds), 0) animated:YES];
@@ -80,20 +98,49 @@
 
 - (IBAction)onTapBestListCtrl:(id)sender {
     [[NetworkingManager shareManager] testNetworkingWithGetMethodPath:@"song/getSongNumByPage?" params:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"page": @(0), @"limit": @(10)} success:^(id responseObject) {
-        NSArray *arr = responseObject;
-        NSLog(@"%@", arr);
+        
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSArray *arr = [dic objectForKey:@"listSong"];
+        
+        for (NSDictionary *songDic in arr) {
+            StudyListModel *model = [[StudyListModel alloc] initWithDic:songDic];
+            [self.listDataArr addObject:model];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.listTitleLab.text = @"优 秀 榜";
+            [self.listScrollView setContentOffset:CGPointMake(335, 0) animated:YES];
+            [self.listTableView reloadData];
+        });
     }];
     
-//    self.listTitleLab.text = @"优 秀 榜";
-//    [self.listScrollView setContentOffset:CGPointMake(335, 0) animated:YES];
 }
 
 - (IBAction)onTapUpdateListCtrl:(id)sender {
+    
+    [[NetworkingManager shareManager] testNetworkingWithGetMethodPath:@"song/getSongUpdateByPage?" params:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"page": @(0), @"limit": @(10)} success:^(id responseObject) {
+        
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSArray *arr = [dic objectForKey:@"listSong"];
+        
+        for (NSDictionary *songDic in arr) {
+            StudyListModel *model = [[StudyListModel alloc] initWithDic:songDic];
+            [self.listDataArr addObject:model];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.listTitleLab.text = @"更 新 榜";
+            [self.listScrollView setContentOffset:CGPointMake(335, 0) animated:YES];
+            [self.listTableView reloadData];
+        });
+    }];
+    
     self.listTitleLab.text = @"更 新 榜";
     [self.listScrollView setContentOffset:CGPointMake(335, 0) animated:YES];
 }
 
 - (IBAction)onTapListBackBtn:(id)sender {
+    [self.listDataArr removeAllObjects];
     [self.listScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 }
 
@@ -112,5 +159,11 @@
 }
 
 #pragma mark - UITableViewDelegate
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    StudyListTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    NSString *urlStr = [NSString stringWithFormat:@"http://114.55.235.176/lkss/%@", cell.studyModel.song_url];
+//    [self createSondPlayerWithResource:urlStr];
+    [self createSondPlayerWithResource:@"http://127.0.0.1/myRecord.mp3"];
+}
 @end

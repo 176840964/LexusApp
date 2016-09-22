@@ -182,7 +182,7 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
     if (!_audioPlayer) {
         NSURL *url=[self getSavePath];
         NSError *error=nil;
-        _audioPlayer=[[AVAudioPlayer alloc]initWithContentsOfURL:url error:&error];
+        _audioPlayer=[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
         _audioPlayer.delegate = self;
         _audioPlayer.numberOfLoops=0;
         [_audioPlayer prepareToPlay];
