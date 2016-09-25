@@ -27,7 +27,7 @@
     // Do any additional setup after loading the view.
     self.customTabbarController.homeBtn.hidden = NO;
     
-//    self.bgImgView.image = [UIImage imageNamed:@"test"];
+    self.bgImgView.image = [UIImage imageNamed:@"bg2"];
     self.isBgCanShake = YES;
     
     self.nextCarItemView = [CarSelectedItemView newAutoLayoutView];

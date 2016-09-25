@@ -55,6 +55,7 @@
 #pragma mark - 
 - (void)setupSubviews {
     _bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(-BgImageFrameDistance, -BgImageFrameDistance, CGRectGetWidth(self.view.bounds) + BgImageFrameDistance * 2, CGRectGetHeight(self.view.bounds) + BgImageFrameDistance * 2)];
+    _bgImgView.contentMode = UIViewContentModeScaleAspectFill;
     [self.view addSubview:_bgImgView];
     [self.view sendSubviewToBack:_bgImgView];
     
@@ -66,7 +67,9 @@
     
     _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _backBtn.frame = CGRectMake(0, CGRectGetHeight(self.view.bounds) - 135, 81, 58);
-    _backBtn.backgroundColor = [UIColor grayColor];
+    _backBtn.backgroundColor = [UIColor clearColor];
+    [_backBtn setImage:[UIImage imageNamed:@"backBtn_normal"] forState:UIControlStateNormal];
+    [_backBtn setImage:[UIImage imageNamed:@"backBtn_highlight"] forState:UIControlStateHighlighted];
     [_backBtn addTarget:self action:@selector(onTapBackBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_backBtn];
 }

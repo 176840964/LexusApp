@@ -434,6 +434,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="504-Pf-DAv">
                                                 <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bestBg" translatesAutoresizingMaskIntoConstraints="NO" id="Nf3-97-xQI"/>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bS3-cf-jTu" customClass="UIControl">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="优 秀 榜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luq-8h-kSd">
@@ -478,12 +479,17 @@
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="bS3-cf-jTu" secondAttribute="bottom" constant="8" id="GAz-Aj-5gx"/>
+                                                    <constraint firstItem="Nf3-97-xQI" firstAttribute="top" secondItem="504-Pf-DAv" secondAttribute="top" id="Myf-lI-9Qc"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Nf3-97-xQI" secondAttribute="bottom" id="Qy3-Qd-6Zt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Nf3-97-xQI" secondAttribute="trailing" id="akj-Ar-Qxh"/>
                                                     <constraint firstAttribute="width" constant="335" id="b1t-kN-dJc"/>
                                                     <constraint firstItem="bS3-cf-jTu" firstAttribute="centerX" secondItem="504-Pf-DAv" secondAttribute="centerX" id="rX4-3f-NJO"/>
+                                                    <constraint firstItem="Nf3-97-xQI" firstAttribute="leading" secondItem="504-Pf-DAv" secondAttribute="leading" id="rul-Bm-Kbk"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T16-LT-Kqh">
                                                 <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="updateBg" translatesAutoresizingMaskIntoConstraints="NO" id="dA4-bg-jrD"/>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlr-e4-mKG" customClass="UIControl">
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更 新 榜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3p-Re-tsk">
@@ -528,8 +534,12 @@
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="zlr-e4-mKG" secondAttribute="bottom" constant="8" id="OmQ-HH-Hqd"/>
+                                                    <constraint firstItem="dA4-bg-jrD" firstAttribute="top" secondItem="T16-LT-Kqh" secondAttribute="top" id="Yob-Cb-uw5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dA4-bg-jrD" secondAttribute="bottom" id="aZ3-bE-PwV"/>
+                                                    <constraint firstItem="dA4-bg-jrD" firstAttribute="leading" secondItem="T16-LT-Kqh" secondAttribute="leading" id="g5p-3k-W5Z"/>
                                                     <constraint firstItem="zlr-e4-mKG" firstAttribute="centerX" secondItem="T16-LT-Kqh" secondAttribute="centerX" id="jFd-qA-lfY"/>
                                                     <constraint firstAttribute="width" constant="335" id="sCJ-Iy-MI7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dA4-bg-jrD" secondAttribute="trailing" id="xwQ-yW-Xaq"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-0O-16v">
@@ -1227,7 +1237,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLu-af-LBF">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SMH-A6-6hh"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jxshd" translatesAutoresizingMaskIntoConstraints="NO" id="SMH-A6-6hh"/>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifj-qW-ZaL" customClass="UIControl">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经 销 商 活 动" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXk-09-6KL">
@@ -1284,7 +1294,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7q-Bd-5Xm">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2uw-R5-bLb"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ybzc" translatesAutoresizingMaskIntoConstraints="NO" id="2uw-R5-bLb"/>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTV-kd-Qgm" customClass="UIControl">
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arx-05-12I">
@@ -1342,7 +1352,7 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tse-bn-Xo9">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tIy-LY-zwL"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HEVys" translatesAutoresizingMaskIntoConstraints="NO" id="tIy-LY-zwL"/>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGq-ya-ohw" customClass="UIControl">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H E V 优 势" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyw-rG-0Mt">
@@ -1632,6 +1642,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HEVys" width="335" height="234"/>
+        <image name="bestBg" width="335" height="330"/>
         <image name="bgMark" width="1024" height="704"/>
         <image name="car_highlight" width="70" height="70"/>
         <image name="car_normal" width="70" height="70"/>
@@ -1639,11 +1651,14 @@
         <image name="checkIcon" width="10" height="10"/>
         <image name="home_btn_highlight" width="28" height="28"/>
         <image name="home_btn_normal" width="28" height="28"/>
+        <image name="jxshd" width="335" height="234"/>
         <image name="login_btn_highlight" width="20" height="16"/>
         <image name="login_btn_normal" width="20" height="16"/>
         <image name="logo" width="136" height="25"/>
         <image name="manIcon" width="120" height="120"/>
         <image name="option_btn_highlight" width="28" height="28"/>
         <image name="option_btn_normal" width="28" height="28"/>
+        <image name="updateBg" width="335" height="330"/>
+        <image name="ybzc" width="335" height="234"/>
     </resources>
 </document>

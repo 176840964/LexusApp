@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.bgImgView.image = [UIImage imageNamed:@"test"];
+    self.bgImgView.image = [UIImage imageNamed:@"bg1"];
     self.isBgCanShake = YES;
     
 }
