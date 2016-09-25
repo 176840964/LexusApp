@@ -10,6 +10,8 @@
 
 @interface FMDetailChangeView : UIView
 
-- (void)setupSubviews;
+@property (copy, nonatomic) void(^didSelectedChangeItem)(NSDictionary *dic);
+
+- (void)setupSubviewsWithDataArr:(NSArray*)dataArr;
 
 @end

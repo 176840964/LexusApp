@@ -21,8 +21,9 @@
     // Configure the view for the selected state
 }
 
-- (void)layoutChangeTableViewCell {
-    self.textView.text = @"-机油更换\n-排放螺旋垫片更换";
+- (void)layoutChangeTableViewCellWithDataDic:(NSDictionary *)dic {
+    NSString *thumbnailStr = [NSString stringWithFormat:@"changeThumb%@", [dic objectForKey:@"thumbnail"]];
+    self.imageView.image = [UIImage imageNamed:thumbnailStr];
 }
 
 @end

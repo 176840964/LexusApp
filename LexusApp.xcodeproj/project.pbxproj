@@ -15,7 +15,6 @@
 		D728D6281D8FF577000C2203 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D728D6271D8FF577000C2203 /* testVideo.mp4 */; };
 		D728D62C1D9043DC000C2203 /* CustomHintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D62A1D9043DC000C2203 /* CustomHintViewController.m */; };
 		D728D62D1D9043DC000C2203 /* CustomHintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D728D62B1D9043DC000C2203 /* CustomHintViewController.xib */; };
-		D728D62F1D905991000C2203 /* CarCategoreRes.plist in Resources */ = {isa = PBXBuildFile; fileRef = D728D62E1D905991000C2203 /* CarCategoreRes.plist */; };
 		D728D6801D90E501000C2203 /* CarCategoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D67F1D90E501000C2203 /* CarCategoreManager.m */; };
 		D728D6A51D919100000C2203 /* CarCategore.plist in Resources */ = {isa = PBXBuildFile; fileRef = D728D6A41D919100000C2203 /* CarCategore.plist */; };
 		D728D6A81D922DBE000C2203 /* CustomTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D6A71D922DBE000C2203 /* CustomTools.m */; };
@@ -69,6 +68,7 @@
 		D7DFC1E81D76D0F5007A6D0C /* UIViewController+BackBtnHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1DF1D76D0F5007A6D0C /* UIViewController+BackBtnHandler.m */; };
 		D7DFC1F21D77ECAA007A6D0C /* FMSelectCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1F11D77ECAA007A6D0C /* FMSelectCarViewController.m */; };
 		D7DFC1F71D7954B4007A6D0C /* CustomTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1F61D7954B4007A6D0C /* CustomTabbarViewController.m */; };
+		D7ECB1551D97C618004BD11F /* ChangeImageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7ECB1541D97C618004BD11F /* ChangeImageList.plist */; };
 		D7ED6ABC1D944847003C5E20 /* EWPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6ABB1D944847003C5E20 /* EWPViewController.m */; };
 		D7ED6ABF1D944858003C5E20 /* HEVAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6ABE1D944858003C5E20 /* HEVAViewController.m */; };
 		D7ED6AC21D944869003C5E20 /* DAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6AC11D944869003C5E20 /* DAViewController.m */; };
@@ -90,7 +90,6 @@
 		D728D6291D9043DC000C2203 /* CustomHintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHintViewController.h; sourceTree = "<group>"; };
 		D728D62A1D9043DC000C2203 /* CustomHintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHintViewController.m; sourceTree = "<group>"; };
 		D728D62B1D9043DC000C2203 /* CustomHintViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomHintViewController.xib; sourceTree = "<group>"; };
-		D728D62E1D905991000C2203 /* CarCategoreRes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarCategoreRes.plist; sourceTree = "<group>"; };
 		D728D67E1D90E500000C2203 /* CarCategoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCategoreManager.h; sourceTree = "<group>"; };
 		D728D67F1D90E501000C2203 /* CarCategoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCategoreManager.m; sourceTree = "<group>"; };
 		D728D6A41D919100000C2203 /* CarCategore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarCategore.plist; sourceTree = "<group>"; };
@@ -181,6 +180,7 @@
 		D7DFC1F11D77ECAA007A6D0C /* FMSelectCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectCarViewController.m; sourceTree = "<group>"; };
 		D7DFC1F51D7954B4007A6D0C /* CustomTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabbarViewController.h; sourceTree = "<group>"; };
 		D7DFC1F61D7954B4007A6D0C /* CustomTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabbarViewController.m; sourceTree = "<group>"; };
+		D7ECB1541D97C618004BD11F /* ChangeImageList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChangeImageList.plist; sourceTree = "<group>"; };
 		D7ED6ABA1D944847003C5E20 /* EWPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWPViewController.h; sourceTree = "<group>"; };
 		D7ED6ABB1D944847003C5E20 /* EWPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWPViewController.m; sourceTree = "<group>"; };
 		D7ED6ABD1D944858003C5E20 /* HEVAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEVAViewController.h; sourceTree = "<group>"; };
@@ -286,10 +286,11 @@
 		D75AE07F1D7E913B006685AE /* resouce */ = {
 			isa = PBXGroup;
 			children = (
+				D7ECB1531D97BEF6004BD11F /* Cars */,
 				D728D6261D8FF577000C2203 /* Video */,
 				D75AE0801D7E913B006685AE /* Font */,
-				D728D62E1D905991000C2203 /* CarCategoreRes.plist */,
 				D728D6A41D919100000C2203 /* CarCategore.plist */,
+				D7ECB1541D97C618004BD11F /* ChangeImageList.plist */,
 			);
 			path = resouce;
 			sourceTree = "<group>";
@@ -502,6 +503,13 @@
 			name = 0.CustomTabbarViewController;
 			sourceTree = "<group>";
 		};
+		D7ECB1531D97BEF6004BD11F /* Cars */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cars;
+			sourceTree = "<group>";
+		};
 		EE4905701FB04AEC04DD6B13 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D75AE09F1D7EAA3C006685AE /* Lexus_jianzhonghei.TTF in Resources */,
+				D7ECB1551D97C618004BD11F /* ChangeImageList.plist in Resources */,
 				D7DFC1B61D754A3B007A6D0C /* LaunchScreen.storyboard in Resources */,
 				D728D6A51D919100000C2203 /* CarCategore.plist in Resources */,
 				D75AE0C81D80634F006685AE /* StudyListTableViewCell.xib in Resources */,
@@ -582,7 +591,6 @@
 				D75AE09E1D7EAA3C006685AE /* Lexus_jianzhengxian.TTF in Resources */,
 				D7DFC1B31D754A3B007A6D0C /* Assets.xcassets in Resources */,
 				D75AE09C1D7EAA3C006685AE /* Lexus_jiancuhei.TTF in Resources */,
-				D728D62F1D905991000C2203 /* CarCategoreRes.plist in Resources */,
 				D7DFC1B11D754A3B007A6D0C /* Main.storyboard in Resources */,
 				D75AE0771D7D3F58006685AE /* FMDetailChangeTableViewCell.xib in Resources */,
 				D75AE09D1D7EAA3C006685AE /* Lexus_jianhei.TTF in Resources */,

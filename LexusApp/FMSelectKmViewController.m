@@ -56,7 +56,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showFMDetailViewController"]) {
         FMDetailViewController *vc = segue.destinationViewController;
-        vc.detailDic = [self.kmArr objectAtIndex:self.selectedKM];
+        vc.detailDic = [self.kmArr objectAtIndex:self.selectedKM - 1];
     }
 }
 

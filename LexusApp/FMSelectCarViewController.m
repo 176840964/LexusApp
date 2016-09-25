@@ -154,8 +154,15 @@
 }
 
 - (void)onTapSelectedCar:(UIButton *)btn {
-    self.selectedCarModelStr = [self.carModelsArr objectAtIndex:btn.tag];
-    [self performSegueWithIdentifier:@"showFMSelectKmViewController" sender:self];
+    NSArray *arr = @[@"RX"];
+    if ([arr containsObject:self.selectedCarNameStr]) {
+        self.selectedCarModelStr = [self.carModelsArr objectAtIndex:btn.tag];
+        [self performSegueWithIdentifier:@"showFMSelectKmViewController" sender:self];
+    } else {
+        [[CustomHintViewController getInstance] presentMessage:@"暂无此车数据信息，敬请期待" parentController:self isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
+            
+        }];
+    }
 }
 
 #pragma mark - Navigation

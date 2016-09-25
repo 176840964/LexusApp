@@ -9,15 +9,18 @@
 #import "FMDetailCheckView.h"
 
 @interface FMDetailCheckView ()
-@property (weak, nonatomic) IBOutlet UILabel *testLab;
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (strong, nonatomic) NSArray *dataArr;
 @end
 
 @implementation FMDetailCheckView
 
 - (void)setupSubviewsByCheckArr:(NSArray *)arr {
+    self.dataArr = arr;
     CGFloat x = ((CGRectGetWidth(self.bounds) - 80) - (125 * arr.count + 8 * (arr.count - 1))) / 2.0 + 80;
     for (NSInteger index = 0; index < arr.count; index++) {
-        NSString *str = [arr objectAtIndex:index];
+        NSDictionary *dic = [arr objectAtIndex:index];
+        NSString *str = [dic objectForKey:@"name"];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = index;
         btn.backgroundColor = [UIColor clearColor];
@@ -32,11 +35,19 @@
         [btn addTarget:self action:@selector(onTapSelectedCheckBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
     }
+    
+    [self setImageByIndex:0];
 }
 
 #pragma mark -
 - (void)onTapSelectedCheckBtn:(UIButton*)btn {
-    self.testLab.text = btn.titleLabel.text;
+    [self setImageByIndex:btn.tag];
+}
+
+- (void)setImageByIndex:(NSInteger)index {
+    NSDictionary *dic = [self.dataArr objectAtIndex:index];
+    NSString *picStr = [dic objectForKey:@"pic"];
+    self.imgView.image = [UIImage imageNamed:picStr];
 }
 
 /*

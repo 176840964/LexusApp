@@ -26,9 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSArray *arr = [self.detailDic objectForKey:@"change"];
     
     self.isShowBackBtn = YES;
-    [self.changeView setupSubviews];
+    [self.changeView setupSubviewsWithDataArr:arr];
     
     self.checkProjectBtn.backgroundColor = [UIColor whiteColor];
     self.changeProjectBtn.backgroundColor = [UIColor clearColor];

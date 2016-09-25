@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FMDetailChangeShowView : UIView
-
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @end

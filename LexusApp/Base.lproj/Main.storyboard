@@ -1013,26 +1013,21 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EtN-wb-IcI" customClass="FMDetailCheckView">
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VK-rs-ufL">
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="4dQ-no-hUi"/>
-                                                            <constraint firstAttribute="width" constant="106" id="Po3-XS-J5H"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="elB-6J-Kks"/>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="9VK-rs-ufL" firstAttribute="centerY" secondItem="EtN-wb-IcI" secondAttribute="centerY" id="XkH-bI-2AU"/>
-                                                    <constraint firstItem="9VK-rs-ufL" firstAttribute="centerX" secondItem="EtN-wb-IcI" secondAttribute="centerX" id="yUz-Qw-a9R"/>
+                                                    <constraint firstAttribute="trailing" secondItem="elB-6J-Kks" secondAttribute="trailing" id="GB3-Mw-2aj"/>
+                                                    <constraint firstItem="elB-6J-Kks" firstAttribute="top" secondItem="EtN-wb-IcI" secondAttribute="top" id="NCa-MH-t66"/>
+                                                    <constraint firstItem="elB-6J-Kks" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="leading" id="WWe-TC-4sD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="elB-6J-Kks" secondAttribute="bottom" constant="128" id="drd-wx-Gc5"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outlet property="testLab" destination="9VK-rs-ufL" id="rBP-Tz-pFd"/>
+                                                    <outlet property="imgView" destination="elB-6J-Kks" id="DsV-xZ-dei"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-ia-a6g" customClass="FMDetailChangeView">
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-ia-a6g" customClass="FMDetailChangeView">
+                                                <frame key="frameInset" width="1024" height="708"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3万公里保养，共检查3个项目，更换8种零件！ 零件费：80000元   工时费：53626元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAS-XY-ggZ">
                                                         <constraints>
@@ -1048,10 +1043,10 @@
                                                             </mask>
                                                         </variation>
                                                     </label>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="156" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="93x-3V-y8g">
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="158" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="93x-3V-y8g">
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="290" id="26k-Nf-vFd"/>
+                                                            <constraint firstAttribute="width" constant="289" id="0k5-5e-BRV"/>
                                                         </constraints>
                                                         <connections>
                                                             <outlet property="dataSource" destination="Ac7-ia-a6g" id="r9F-Pl-6Ac"/>
@@ -1059,21 +1054,33 @@
                                                         </connections>
                                                     </tableView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9t-mu-lfG" customClass="FMDetailChangeShowView">
+                                                        <subviews>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-lb-hKw"/>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="Esr-lb-hKw" firstAttribute="top" secondItem="D9t-mu-lfG" secondAttribute="top" id="TgF-Y1-zEF"/>
+                                                            <constraint firstItem="Esr-lb-hKw" firstAttribute="leading" secondItem="D9t-mu-lfG" secondAttribute="leading" id="jqi-Xg-9gm"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Esr-lb-hKw" secondAttribute="trailing" id="nS9-V7-S3n"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Esr-lb-hKw" secondAttribute="bottom" id="znG-5G-A7a"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="imgView" destination="Esr-lb-hKw" id="q8j-2j-QMD"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="93x-3V-y8g" firstAttribute="leading" secondItem="D9t-mu-lfG" secondAttribute="trailing" id="25r-hg-P82"/>
                                                     <constraint firstItem="IAS-XY-ggZ" firstAttribute="leading" secondItem="Ac7-ia-a6g" secondAttribute="leading" id="5V6-Hf-JfG"/>
+                                                    <constraint firstItem="93x-3V-y8g" firstAttribute="top" secondItem="IAS-XY-ggZ" secondAttribute="bottom" constant="10" id="6lu-Qq-h2w"/>
                                                     <constraint firstAttribute="trailing" secondItem="IAS-XY-ggZ" secondAttribute="trailing" id="FEQ-wc-dVV"/>
-                                                    <constraint firstAttribute="bottom" secondItem="93x-3V-y8g" secondAttribute="bottom" constant="140" id="NXa-XM-I42"/>
                                                     <constraint firstItem="D9t-mu-lfG" firstAttribute="leading" secondItem="Ac7-ia-a6g" secondAttribute="leading" id="QxX-7r-DSs"/>
-                                                    <constraint firstAttribute="trailing" secondItem="93x-3V-y8g" secondAttribute="trailing" id="SBd-FD-qY3"/>
                                                     <constraint firstItem="D9t-mu-lfG" firstAttribute="top" secondItem="IAS-XY-ggZ" secondAttribute="bottom" constant="10" id="UgV-1y-svx"/>
                                                     <constraint firstItem="IAS-XY-ggZ" firstAttribute="top" secondItem="Ac7-ia-a6g" secondAttribute="top" constant="70" id="Zkl-9d-ly8"/>
-                                                    <constraint firstItem="93x-3V-y8g" firstAttribute="top" secondItem="IAS-XY-ggZ" secondAttribute="bottom" constant="10" id="hFd-Ci-Lj4"/>
                                                     <constraint firstAttribute="bottom" secondItem="D9t-mu-lfG" secondAttribute="bottom" constant="140" id="hye-7d-bqg"/>
+                                                    <constraint firstItem="93x-3V-y8g" firstAttribute="leading" secondItem="D9t-mu-lfG" secondAttribute="trailing" id="ivr-8V-dbI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="93x-3V-y8g" secondAttribute="trailing" id="s7M-f7-L1g"/>
+                                                    <constraint firstAttribute="bottom" secondItem="93x-3V-y8g" secondAttribute="bottom" constant="140" id="uyU-AK-Adh"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="descriptionPriceLab" destination="IAS-XY-ggZ" id="X6d-Qk-QAp"/>
@@ -1082,7 +1089,7 @@
                                                 </connections>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Ac7-ia-a6g" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="trailing" id="3bb-0d-CS0"/>
                                             <constraint firstItem="EtN-wb-IcI" firstAttribute="leading" secondItem="CpW-60-ljc" secondAttribute="leading" id="Cce-c3-l8x"/>
@@ -1091,7 +1098,7 @@
                                             <constraint firstItem="Ac7-ia-a6g" firstAttribute="top" secondItem="CpW-60-ljc" secondAttribute="top" id="cTs-3N-tLB"/>
                                             <constraint firstAttribute="trailing" secondItem="Ac7-ia-a6g" secondAttribute="trailing" id="oZf-x8-ojM"/>
                                             <constraint firstAttribute="bottom" secondItem="EtN-wb-IcI" secondAttribute="bottom" id="pLp-UL-C3O"/>
-                                            <constraint firstAttribute="width" constant="1200" id="sgJ-BS-epk"/>
+                                            <constraint firstAttribute="width" constant="2048" id="sgJ-BS-epk"/>
                                             <constraint firstItem="EtN-wb-IcI" firstAttribute="top" secondItem="CpW-60-ljc" secondAttribute="top" id="yiG-rB-jTR"/>
                                         </constraints>
                                     </view>
