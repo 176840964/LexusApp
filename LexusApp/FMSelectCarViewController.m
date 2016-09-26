@@ -11,6 +11,8 @@
 #import "FMSelectKmViewController.h"
 
 @interface FMSelectCarViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *carImgView;
+
 @property (strong, nonatomic) CarSelectedItemView *curCarItemView;
 @property (strong, nonatomic) CarSelectedItemView *nextCarItemView;
 @property (assign, nonatomic) NSInteger curSelectedIndex;
@@ -80,7 +82,6 @@
             nextIndex = count + nextIndex;
         }
     }
-    self.nextCarItemView.carNameLab.text = [[[CarCategoreManager shareManager] getCarInfoDicByIndex:nextIndex] objectForKey:@"name"];
     self.nextCarItemView.imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"car%zd", nextIndex]];
     
     if (limit < fabs(tx)) {
@@ -116,7 +117,7 @@
     NSDictionary *carInfo = [[CarCategoreManager shareManager] getCarInfoDicByIndex:_curSelectedIndex];
     self.selectedCarNameStr = [carInfo objectForKey:@"name"];
     self.carModelsArr = [[CarCategoreManager shareManager] getCarModelsByCarName:self.selectedCarNameStr];
-    self.curCarItemView.carNameLab.text = self.selectedCarNameStr;
+    self.carImgView.image = [UIImage imageNamed:self.selectedCarNameStr];
     self.curCarItemView.imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"car%zd", _curSelectedIndex]];
     
     NSInteger x = (CGRectGetWidth(self.view.bounds) - (70 * self.carModelsArr.count + 35 * (self.carModelsArr.count - 1))) / 2.0;
@@ -124,7 +125,7 @@
         NSString *carModel = [self.carModelsArr objectAtIndex:index];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = index;
-        btn.frame = CGRectMake(x + (70 + 35) * index, CGRectGetHeight(self.view.bounds) - 400, 70, 70);
+        btn.frame = CGRectMake(x + (70 + 35) * index, self.view.center.y + 102 + 5, 70, 70);
         btn.titleLabel.numberOfLines = 2;
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
         btn.titleLabel.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:13];
@@ -147,7 +148,7 @@
 }
 
 - (void)onTapSelectedCar:(UIButton *)btn {
-    NSArray *arr = @[@"RX"];
+    NSArray *arr = @[@"RX", @"ES"];
     if ([arr containsObject:self.selectedCarNameStr]) {
         self.selectedCarModelStr = [self.carModelsArr objectAtIndex:btn.tag];
         [self performSegueWithIdentifier:@"showFMSelectKmViewController" sender:self];

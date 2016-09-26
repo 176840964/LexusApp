@@ -11,6 +11,5 @@
 @interface CarSelectedItemView : UIView
 
 @property (strong, nonatomic) UIImageView *imgView;
-@property (strong, nonatomic) UILabel *carNameLab;
 
 @end

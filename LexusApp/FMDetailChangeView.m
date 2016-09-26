@@ -59,7 +59,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSDictionary *dic = [self.dataArr objectAtIndex:indexPath.row];
     
-    NSString *thumbnailStr = [NSString stringWithFormat:@"changeThumb%@", [dic objectForKey:@"thumbnail"]];
+    NSString *thumbnailStr = [NSString stringWithFormat:@"change%@", [dic objectForKey:@"thumbnail"]];
     self.showView.imgView.image = [UIImage imageNamed:thumbnailStr];
 }
 

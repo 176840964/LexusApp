@@ -38,6 +38,7 @@
     [super viewDidAppear:animated];
 
     self.scrollView.contentOffset = CGPointZero;
+    [self setupLeftArrowBtnAndRightArrowBtnEnable];
     
     if (_dataArr) {
         return;

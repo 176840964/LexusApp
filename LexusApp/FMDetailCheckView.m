@@ -36,7 +36,9 @@
         [self addSubview:btn];
     }
     
-    [self setImageByIndex:0];
+    if (0 != self.dataArr.count) {
+        [self setImageByIndex:0];
+    }
 }
 
 #pragma mark -
