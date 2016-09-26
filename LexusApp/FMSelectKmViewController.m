@@ -28,14 +28,24 @@
         NSString *str = [NSString stringWithFormat:@"%zd万", index + 1];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = index;
-        btn.backgroundColor = [UIColor redColor];
+        btn.backgroundColor = [UIColor clearColor];
         btn.frame = CGRectMake(x + index * (50 + 12), CGRectGetHeight(self.view.bounds) - 132, 50, 50);
         btn.titleLabel.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:17];
         [btn setTitleColor:[UIColor colorWithHexString:@"#5f5f5f"] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor colorWithHexString:@"#050608"] forState:UIControlStateHighlighted];
+        [btn setBackgroundImage:[UIImage imageNamed:@"kmBtn_normal"] forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"kmBtn_highlight"] forState:UIControlStateHighlighted];
         [btn setTitle:str forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(onTapSelectedKmBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn];
+        
+        if (index != self.kmArr.count - 1) {
+            UIImageView *pointImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"kmSpacingDian"]];
+            pointImgView.frame = CGRectMake(0, 0, 4.5, 4.5);
+            pointImgView.center = CGPointMake(btn.center.x + btn.width / 2.0 + 6, btn.center.y);
+            [self.view addSubview:pointImgView];
+        }
+        
     }
 }
 

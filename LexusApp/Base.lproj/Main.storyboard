@@ -1026,16 +1026,15 @@
                                                     <outlet property="imgView" destination="elB-6J-Kks" id="DsV-xZ-dei"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-ia-a6g" customClass="FMDetailChangeView">
-                                                <frame key="frameInset" width="1024" height="708"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-ia-a6g" customClass="FMDetailChangeView">
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3万公里保养，共检查3个项目，更换8种零件！ 零件费：80000元   工时费：53626元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAS-XY-ggZ">
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="380" id="S8S-PP-JPA"/>
                                                             <constraint firstAttribute="height" constant="21" id="WgO-zs-ZQS"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <color key="textColor" red="0.37251365184783936" green="0.37257164716720581" blue="0.37250098586082458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                         <variation key="default">
                                                             <mask key="constraints">
@@ -1069,7 +1068,7 @@
                                                         </connections>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="IAS-XY-ggZ" firstAttribute="leading" secondItem="Ac7-ia-a6g" secondAttribute="leading" id="5V6-Hf-JfG"/>
                                                     <constraint firstItem="93x-3V-y8g" firstAttribute="top" secondItem="IAS-XY-ggZ" secondAttribute="bottom" constant="10" id="6lu-Qq-h2w"/>

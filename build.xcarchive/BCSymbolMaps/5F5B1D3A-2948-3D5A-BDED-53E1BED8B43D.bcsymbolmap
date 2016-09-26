@@ -1,0 +1,1089 @@
+BCSymbolMap Version: 2.0
+-[StudyMainView sutupSubviews]
+-[StudyMainView setRecordType:]
+-[StudyMainView setAudioSession]
+-[StudyMainView getSavePath]
+-[StudyMainView getAudioSetting]
+-[StudyMainView audioRecorder]
+-[StudyMainView audioPlayer]
+-[StudyMainView timer]
+-[StudyMainView audioPowerChange]
+-[StudyMainView onTapRecordBtn:]
+-[StudyMainView onTapRecordCompleteBtn:]
+-[StudyMainView onTapTryListenBtn:]
+-[StudyMainView onTapDelRecordBtn:]
+-[StudyMainView onTapUploadRecordBtn:]
+___38-[StudyMainView onTapUploadRecordBtn:]_block_invoke
+___38-[StudyMainView onTapUploadRecordBtn:]_block_invoke_2
+___38-[StudyMainView onTapUploadRecordBtn:]_block_invoke_3
+___copy_helper_block_
+___destroy_helper_block_
+___38-[StudyMainView onTapUploadRecordBtn:]_block_invoke.182
+___copy_helper_block_.183
+___destroy_helper_block_.184
+___copy_helper_block_.186
+___destroy_helper_block_.187
+___copy_helper_block_.189
+___destroy_helper_block_.190
+-[StudyMainView audioPlayerDidFinishPlaying:successfully:]
+-[StudyMainView videoView]
+-[StudyMainView setVideoView:]
+-[StudyMainView recordBtn]
+-[StudyMainView setRecordBtn:]
+-[StudyMainView recordTimeLab]
+-[StudyMainView setRecordTimeLab:]
+-[StudyMainView completeBtn]
+-[StudyMainView setCompleteBtn:]
+-[StudyMainView tryListenBtn]
+-[StudyMainView setTryListenBtn:]
+-[StudyMainView delBtn]
+-[StudyMainView setDelBtn:]
+-[StudyMainView uploadBtn]
+-[StudyMainView setUploadBtn:]
+-[StudyMainView parentController]
+-[StudyMainView setParentController:]
+-[StudyMainView setAudioRecorder:]
+-[StudyMainView setAudioPlayer:]
+-[StudyMainView setTimer:]
+-[StudyMainView recordType]
+-[StudyMainView recordTime]
+-[StudyMainView setRecordTime:]
+-[StudyMainView .cxx_destruct]
+_OBJC_IVAR_$_StudyMainView._recordType
+_OBJC_IVAR_$_StudyMainView._audioRecorder
+_OBJC_IVAR_$_StudyMainView._audioPlayer
+_OBJC_IVAR_$_StudyMainView._timer
+_OBJC_CLASS_$_NetworkingManager
+_OBJC_CLASS_$_LocalUserManager
+_OBJC_CLASS_$_CustomHintViewController
+___block_descriptor_tmp
+___block_descriptor_tmp.185
+___block_descriptor_tmp.188
+___block_descriptor_tmp.192
+_OBJC_IVAR_$_StudyMainView._videoView
+_OBJC_IVAR_$_StudyMainView._recordBtn
+_OBJC_IVAR_$_StudyMainView._recordTimeLab
+_OBJC_IVAR_$_StudyMainView._completeBtn
+_OBJC_IVAR_$_StudyMainView._tryListenBtn
+_OBJC_IVAR_$_StudyMainView._delBtn
+_OBJC_IVAR_$_StudyMainView._uploadBtn
+_OBJC_IVAR_$_StudyMainView._parentController
+_OBJC_IVAR_$_StudyMainView._recordTime
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_AVAudioPlayerDelegate
+l_OBJC_LABEL_PROTOCOL_$_AVAudioPlayerDelegate
+_OBJC_METACLASS_$_StudyMainView
+_OBJC_CLASS_$_StudyMainView
+Apple LLVM version 8.0.0 (clang-800.0.38)
+/Users/zxl/ios/LexusApp/LexusApp/StudyMainView.m
+/Users/zxl/ios/LexusApp
+/Users/zxl/ios/LexusApp/LexusApp/StudyMainView.h
+__destroy_helper_block_
+__copy_helper_block_
+__38-[StudyMainView onTapUploadRecordBtn:]_block_invoke.182
+__38-[StudyMainView onTapUploadRecordBtn:]_block_invoke_3
+__38-[StudyMainView onTapUploadRecordBtn:]_block_invoke_2
+__38-[StudyMainView onTapUploadRecordBtn:]_block_invoke
+-[StudyDetailViewController viewDidLoad]
+-[StudyDetailViewController viewDidAppear:]
+-[StudyDetailViewController viewWillDisappear:]
+-[StudyDetailViewController updateViewConstraints]
+-[StudyDetailViewController createPlayerControllerWithResource:]
+-[StudyDetailViewController createSondPlayerWithResource:]
+-[StudyDetailViewController notificationForPlayeDidEnd:]
+-[StudyDetailViewController onTapSelectedCarModelBtn:]
+-[StudyDetailViewController onTapSelectedKmBtn:]
+-[StudyDetailViewController onTapBestListCtrl:]
+___47-[StudyDetailViewController onTapBestListCtrl:]_block_invoke
+___47-[StudyDetailViewController onTapBestListCtrl:]_block_invoke_2
+___copy_helper_block_.153
+___destroy_helper_block_.154
+-[StudyDetailViewController onTapUpdateListCtrl:]
+___49-[StudyDetailViewController onTapUpdateListCtrl:]_block_invoke
+___49-[StudyDetailViewController onTapUpdateListCtrl:]_block_invoke_2
+___copy_helper_block_.163
+___destroy_helper_block_.164
+___copy_helper_block_.166
+___destroy_helper_block_.167
+-[StudyDetailViewController onTapListBackBtn:]
+-[StudyDetailViewController tableView:numberOfRowsInSection:]
+-[StudyDetailViewController tableView:cellForRowAtIndexPath:]
+-[StudyDetailViewController tableView:didSelectRowAtIndexPath:]
+-[StudyDetailViewController mainScrollView]
+-[StudyDetailViewController setMainScrollView:]
+-[StudyDetailViewController mainScrollViewWidth1]
+-[StudyDetailViewController setMainScrollViewWidth1:]
+-[StudyDetailViewController studyMainView]
+-[StudyDetailViewController setStudyMainView:]
+-[StudyDetailViewController listScrollView]
+-[StudyDetailViewController setListScrollView:]
+-[StudyDetailViewController listTitleLab]
+-[StudyDetailViewController setListTitleLab:]
+-[StudyDetailViewController listTableView]
+-[StudyDetailViewController setListTableView:]
+-[StudyDetailViewController listDataArr]
+-[StudyDetailViewController setListDataArr:]
+-[StudyDetailViewController playerController]
+-[StudyDetailViewController setPlayerController:]
+-[StudyDetailViewController songPlayer]
+-[StudyDetailViewController setSongPlayer:]
+-[StudyDetailViewController .cxx_destruct]
+_OBJC_CLASS_$_StudyDetailViewController
+_OBJC_CLASS_$_UserManager
+_OBJC_IVAR_$_StudyDetailViewController._playerController
+_OBJC_IVAR_$_StudyDetailViewController._songPlayer
+_OBJC_CLASS_$_StudyListModel
+___block_descriptor_tmp.156
+___block_descriptor_tmp.165
+___block_descriptor_tmp.168
+_OBJC_IVAR_$_StudyDetailViewController._mainScrollView
+_OBJC_IVAR_$_StudyDetailViewController._mainScrollViewWidth1
+_OBJC_IVAR_$_StudyDetailViewController._studyMainView
+_OBJC_IVAR_$_StudyDetailViewController._listScrollView
+_OBJC_IVAR_$_StudyDetailViewController._listTitleLab
+_OBJC_IVAR_$_StudyDetailViewController._listTableView
+_OBJC_IVAR_$_StudyDetailViewController._listDataArr
+_OBJC_METACLASS_$_BaseViewController
+l_OBJC_PROTOCOL_$_UIScrollViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIScrollViewDelegate
+l_OBJC_PROTOCOL_$_UITableViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UITableViewDelegate
+l_OBJC_PROTOCOL_$_UITableViewDataSource
+l_OBJC_LABEL_PROTOCOL_$_UITableViewDataSource
+_OBJC_METACLASS_$_StudyDetailViewController
+_OBJC_CLASS_$_BaseViewController
+/Users/zxl/ios/LexusApp/LexusApp/StudyDetailViewController.m
+__49-[StudyDetailViewController onTapUpdateListCtrl:]_block_invoke_2
+__49-[StudyDetailViewController onTapUpdateListCtrl:]_block_invoke
+__47-[StudyDetailViewController onTapBestListCtrl:]_block_invoke_2
+__47-[StudyDetailViewController onTapBestListCtrl:]_block_invoke
+-[CustomLoginCtrl isLogin]
+-[CustomLoginCtrl setIsLogin:]
+-[CustomLoginCtrl imgView]
+-[CustomLoginCtrl setImgView:]
+-[CustomLoginCtrl titleLab]
+-[CustomLoginCtrl setTitleLab:]
+-[CustomLoginCtrl .cxx_destruct]
+_OBJC_IVAR_$_CustomLoginCtrl._isLogin
+_OBJC_IVAR_$_CustomLoginCtrl._imgView
+_OBJC_IVAR_$_CustomLoginCtrl._titleLab
+_OBJC_METACLASS_$_CustomLoginCtrl
+_OBJC_CLASS_$_CustomLoginCtrl
+/Users/zxl/ios/LexusApp/LexusApp/CustomLoginCtrl.m
+/Users/zxl/ios/LexusApp/LexusApp/CustomLoginCtrl.h
+-[UserIconItemView initWithFrame:]
+-[UserIconItemView setIsShake:]
+-[UserIconItemView setupUserIconItemByUserModel:]
+-[UserIconItemView shakeAnimation]
+-[UserIconItemView earthquakeEnded:finished:context:]
+-[UserIconItemView onTapIconBtn:]
+-[UserIconItemView longPressGestureRecognizer:]
+-[UserIconItemView onTapDelBtn:]
+-[UserIconItemView iconBtn]
+-[UserIconItemView setIconBtn:]
+-[UserIconItemView nameLab]
+-[UserIconItemView setNameLab:]
+-[UserIconItemView userModel]
+-[UserIconItemView setUserModel:]
+-[UserIconItemView tapUserIconHandler]
+-[UserIconItemView setTapUserIconHandler:]
+-[UserIconItemView longPressHandler]
+-[UserIconItemView setLongPressHandler:]
+-[UserIconItemView tapUserIconDelHandler]
+-[UserIconItemView setTapUserIconDelHandler:]
+-[UserIconItemView isShake]
+-[UserIconItemView delBtn]
+-[UserIconItemView setDelBtn:]
+-[UserIconItemView .cxx_destruct]
+_OBJC_CLASS_$_UserIconItemView
+_OBJC_IVAR_$_UserIconItemView._isShake
+_OBJC_IVAR_$_UserIconItemView._iconBtn
+_OBJC_IVAR_$_UserIconItemView._nameLab
+_OBJC_IVAR_$_UserIconItemView._userModel
+_OBJC_IVAR_$_UserIconItemView._tapUserIconHandler
+_OBJC_IVAR_$_UserIconItemView._longPressHandler
+_OBJC_IVAR_$_UserIconItemView._tapUserIconDelHandler
+_OBJC_IVAR_$_UserIconItemView._delBtn
+_OBJC_METACLASS_$_UserIconItemView
+/Users/zxl/ios/LexusApp/LexusApp/UserIconItemView.m
+/Users/zxl/ios/LexusApp/LexusApp/UserIconItemView.h
++[CustomTools md5:]
++[CustomTools is11DigitNumber:]
++[CustomTools isValidPassword:]
++[CustomTools isValidMessageCode:]
++[CustomTools simpleAlertShow:content:container:]
++[CustomTools alertShow:content:cancelBtnTitle:okBtnTitle:container:]
++[CustomTools dateStringFromUnixTimestamp:withFormatString:]
++[CustomTools weekStringFormIndex:]
++[CustomTools dateStringFromTodayUnixTimestamp:andOtherTimestamp:]
+_OBJC_METACLASS_$_CustomTools
+_OBJC_CLASS_$_CustomTools
+/Users/zxl/ios/LexusApp/LexusApp/CustomTools.m
+-[FMSelectKmViewController viewDidLoad]
+-[FMSelectKmViewController didReceiveMemoryWarning]
+-[FMSelectKmViewController onTapSelectedKmBtn:]
+-[FMSelectKmViewController prepareForSegue:sender:]
+-[FMSelectKmViewController kmArr]
+-[FMSelectKmViewController setKmArr:]
+-[FMSelectKmViewController selectedKM]
+-[FMSelectKmViewController setSelectedKM:]
+-[FMSelectKmViewController .cxx_destruct]
+_OBJC_CLASS_$_FMSelectKmViewController
+_OBJC_IVAR_$_FMSelectKmViewController._kmArr
+_OBJC_IVAR_$_FMSelectKmViewController._selectedKM
+_OBJC_METACLASS_$_FMSelectKmViewController
+/Users/zxl/ios/LexusApp/LexusApp/FMSelectKmViewController.m
+/Users/zxl/ios/LexusApp/LexusApp/FMSelectKmViewController.h
+-[StudyListTableViewCell awakeFromNib]
+-[StudyListTableViewCell setSelected:animated:]
+-[StudyListTableViewCell layoutSubViewsByStudyListModel:andIndex:]
+-[StudyListTableViewCell onTapPlayBtn:]
+-[StudyListTableViewCell studyModel]
+-[StudyListTableViewCell setStudyModel:]
+-[StudyListTableViewCell numImageView]
+-[StudyListTableViewCell setNumImageView:]
+-[StudyListTableViewCell numLab]
+-[StudyListTableViewCell setNumLab:]
+-[StudyListTableViewCell userIconImageView]
+-[StudyListTableViewCell setUserIconImageView:]
+-[StudyListTableViewCell userNameLab]
+-[StudyListTableViewCell setUserNameLab:]
+-[StudyListTableViewCell playBtn]
+-[StudyListTableViewCell setPlayBtn:]
+-[StudyListTableViewCell .cxx_destruct]
+_OBJC_CLASS_$_StudyListTableViewCell
+_OBJC_IVAR_$_StudyListTableViewCell._studyModel
+_OBJC_IVAR_$_StudyListTableViewCell._numImageView
+_OBJC_IVAR_$_StudyListTableViewCell._numLab
+_OBJC_IVAR_$_StudyListTableViewCell._userIconImageView
+_OBJC_IVAR_$_StudyListTableViewCell._userNameLab
+_OBJC_IVAR_$_StudyListTableViewCell._playBtn
+_OBJC_METACLASS_$_StudyListTableViewCell
+/Users/zxl/ios/LexusApp/LexusApp/StudyListTableViewCell.m
+/Users/zxl/ios/LexusApp/LexusApp/StudyListTableViewCell.h
+-[CarSelectedItemView carNameLab]
+-[CarSelectedItemView imgView]
+-[CarSelectedItemView setImgView:]
+-[CarSelectedItemView setCarNameLab:]
+-[CarSelectedItemView .cxx_destruct]
+_OBJC_IVAR_$_CarSelectedItemView._carNameLab
+_OBJC_IVAR_$_CarSelectedItemView._imgView
+_OBJC_METACLASS_$_CarSelectedItemView
+_OBJC_CLASS_$_CarSelectedItemView
+/Users/zxl/ios/LexusApp/LexusApp/CarSelectedItemView.m
+/Users/zxl/ios/LexusApp/LexusApp/CarSelectedItemView.h
+-[ViewController viewDidLoad]
+-[ViewController viewWillAppear:]
+-[ViewController didReceiveMemoryWarning]
+-[ViewController onTapFMBtn:]
+_OBJC_CLASS_$_ViewController
+_OBJC_METACLASS_$_ViewController
+/Users/zxl/ios/LexusApp/LexusApp/ViewController.m
+-[GestureModel gesturePasswordStr]
+-[GestureModel setGesturePasswordStr:]
+-[GestureModel .cxx_destruct]
+_OBJC_IVAR_$_GestureModel._gesturePasswordStr
+_OBJC_METACLASS_$_GestureModel
+_OBJC_CLASS_$_GestureModel
+/Users/zxl/ios/LexusApp/LexusApp/GestureModel.m
+/Users/zxl/ios/LexusApp/LexusApp/GestureModel.h
++[CarCategoreManager shareManager]
+___34+[CarCategoreManager shareManager]_block_invoke
+-[CarCategoreManager init]
+-[CarCategoreManager carsCount]
+-[CarCategoreManager getCarInfoDicByIndex:]
+-[CarCategoreManager getCarModelsByCarName:]
+-[CarCategoreManager getCarKMByCarName:carModel:]
+-[CarCategoreManager getInfoArrByCarName:carModel:]
+___51-[CarCategoreManager getInfoArrByCarName:carModel:]_block_invoke
+-[CarCategoreManager setCarsCount:]
+-[CarCategoreManager carsInfoArr]
+-[CarCategoreManager setCarsInfoArr:]
+-[CarCategoreManager .cxx_destruct]
+_shareManager.s_instance
+_shareManager.onceToken
+_OBJC_CLASS_$_CarCategoreManager
+___block_literal_global
+___block_descriptor_tmp.39
+___block_literal_global.40
+_OBJC_IVAR_$_CarCategoreManager._carsCount
+_OBJC_IVAR_$_CarCategoreManager._carsInfoArr
+_OBJC_METACLASS_$_CarCategoreManager
+/Users/zxl/ios/LexusApp/LexusApp/CarCategoreManager.m
+/Users/zxl/ios/LexusApp/LexusApp/CarCategoreManager.h
+__51-[CarCategoreManager getInfoArrByCarName:carModel:]_block_invoke
+__34+[CarCategoreManager shareManager]_block_invoke
+_dispatch_once
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/usr/include/dispatch/once.h
+-[NSObject(ValueOfStringOrNull) stringValue]
+-[NSObject(ValueOfStringOrNull) stringValueIsNullReplaceString:]
+/Users/zxl/ios/LexusApp/LexusApp/Category/NSObject+ValueOfStringOrNull.m
+-[DAViewController viewDidLoad]
+-[DAViewController didReceiveMemoryWarning]
+_OBJC_CLASS_$_DAViewController
+_OBJC_METACLASS_$_DAViewController
+/Users/zxl/ios/LexusApp/LexusApp/DAViewController.m
++[UserManager shareUserManager]
+___31+[UserManager shareUserManager]_block_invoke
+-[UserManager init]
+-[UserManager isLoginStudy]
+-[UserManager setIsLoginStudy:]
+_shareUserManager.s_instance
+_shareUserManager.onceToken
+_OBJC_IVAR_$_UserManager._isLoginStudy
+_OBJC_METACLASS_$_UserManager
+/Users/zxl/ios/LexusApp/LexusApp/UserManager.m
+/Users/zxl/ios/LexusApp/LexusApp/UserManager.h
+__31+[UserManager shareUserManager]_block_invoke
+-[StudyUnlockViewController viewDidLoad]
+-[StudyUnlockViewController onTapHomeBtn:]
+___42-[StudyUnlockViewController onTapHomeBtn:]_block_invoke
+-[StudyUnlockViewController gestureViewUnlockSuccess:]
+___54-[StudyUnlockViewController gestureViewUnlockSuccess:]_block_invoke
+-[StudyUnlockViewController gestureUnlockView]
+-[StudyUnlockViewController setGestureUnlockView:]
+-[StudyUnlockViewController .cxx_destruct]
+_OBJC_CLASS_$_StudyUnlockViewController
+_OBJC_CLASS_$_GestureUnlockView
+_OBJC_IVAR_$_StudyUnlockViewController._gestureUnlockView
+___block_descriptor_tmp.28
+___block_literal_global.29
+l_OBJC_PROTOCOL_$_GestureUnlockViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_GestureUnlockViewDelegate
+_OBJC_METACLASS_$_StudyUnlockViewController
+/Users/zxl/ios/LexusApp/LexusApp/StudyUnlockViewController.m
+__54-[StudyUnlockViewController gestureViewUnlockSuccess:]_block_invoke
+__42-[StudyUnlockViewController onTapHomeBtn:]_block_invoke
++[UILabel(ChangeDefaultFont) load]
+___34+[UILabel(ChangeDefaultFont) load]_block_invoke
+-[UILabel(ChangeDefaultFont) YHBaseInit]
+-[UILabel(ChangeDefaultFont) YHBaseInitWithFrame:]
+-[UILabel(ChangeDefaultFont) YHBaseAwakeFromNib]
+_load.onceToken
+/Users/zxl/ios/LexusApp/LexusApp/Category/UILabel+ChangeDefaultFont.m
+__34+[UILabel(ChangeDefaultFont) load]_block_invoke
++[NetworkingManager shareManager]
+___33+[NetworkingManager shareManager]_block_invoke
+-[NetworkingManager networkingWithGetMethodPath:params:success:]
+___64-[NetworkingManager networkingWithGetMethodPath:params:success:]_block_invoke
+___64-[NetworkingManager networkingWithGetMethodPath:params:success:]_block_invoke_2
+___64-[NetworkingManager networkingWithGetMethodPath:params:success:]_block_invoke.22
+___64-[NetworkingManager networkingWithGetMethodPath:params:success:]_block_invoke_2.23
+___copy_helper_block_.35
+___destroy_helper_block_.36
+___copy_helper_block_.38
+___destroy_helper_block_.39
+-[NetworkingManager testNetworkingWithGetMethodPath:params:success:]
+___68-[NetworkingManager testNetworkingWithGetMethodPath:params:success:]_block_invoke
+___68-[NetworkingManager testNetworkingWithGetMethodPath:params:success:]_block_invoke_2
+___copy_helper_block_.51
+___destroy_helper_block_.52
+___68-[NetworkingManager testNetworkingWithGetMethodPath:params:success:]_block_invoke.54
+___68-[NetworkingManager testNetworkingWithGetMethodPath:params:success:]_block_invoke_2.55
+___copy_helper_block_.56
+___destroy_helper_block_.57
+___copy_helper_block_.59
+___destroy_helper_block_.60
+-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]
+___78-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]_block_invoke
+___copy_helper_block_.69
+___destroy_helper_block_.70
+___78-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]_block_invoke.73
+___78-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]_block_invoke_2
+___copy_helper_block_.76
+___destroy_helper_block_.77
+___78-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]_block_invoke.79
+___78-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]_block_invoke_2.80
+___copy_helper_block_.81
+___destroy_helper_block_.82
+___copy_helper_block_.84
+___destroy_helper_block_.85
+-[NetworkingManager viewController]
+-[NetworkingManager setViewController:]
+-[NetworkingManager .cxx_destruct]
+___block_descriptor_tmp.18
+___block_literal_global.19
+___block_descriptor_tmp.21
+___block_descriptor_tmp.37
+___block_descriptor_tmp.41
+___block_descriptor_tmp.49
+___block_literal_global.50
+___block_descriptor_tmp.53
+___block_descriptor_tmp.58
+___block_descriptor_tmp.61
+___block_descriptor_tmp.72
+___block_descriptor_tmp.74
+___block_literal_global.75
+___block_descriptor_tmp.78
+___block_descriptor_tmp.83
+___block_descriptor_tmp.86
+_OBJC_IVAR_$_NetworkingManager._viewController
+_OBJC_METACLASS_$_NetworkingManager
+/Users/zxl/ios/LexusApp/LexusApp/NetworkingManager.m
+/Users/zxl/ios/LexusApp/LexusApp/NetworkingManager.h
+__78-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]_block_invoke_2.80
+__78-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]_block_invoke.79
+__78-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]_block_invoke_2
+__78-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]_block_invoke.73
+__78-[NetworkingManager networkingWithPostMethodPath:paramsDic:soundDate:success:]_block_invoke
+__68-[NetworkingManager testNetworkingWithGetMethodPath:params:success:]_block_invoke_2.55
+__68-[NetworkingManager testNetworkingWithGetMethodPath:params:success:]_block_invoke.54
+__68-[NetworkingManager testNetworkingWithGetMethodPath:params:success:]_block_invoke_2
+__68-[NetworkingManager testNetworkingWithGetMethodPath:params:success:]_block_invoke
+__64-[NetworkingManager networkingWithGetMethodPath:params:success:]_block_invoke_2.23
+__64-[NetworkingManager networkingWithGetMethodPath:params:success:]_block_invoke.22
+__64-[NetworkingManager networkingWithGetMethodPath:params:success:]_block_invoke_2
+__64-[NetworkingManager networkingWithGetMethodPath:params:success:]_block_invoke
+__33+[NetworkingManager shareManager]_block_invoke
+-[FMSelectCarViewController viewDidLoad]
+-[FMSelectCarViewController didReceiveMemoryWarning]
+-[FMSelectCarViewController autoChangeBgColor:]
+-[FMSelectCarViewController setPanGestureRecognizerOnCarSelectedItemView:]
+-[FMSelectCarViewController panCarSelectedItemView:]
+___52-[FMSelectCarViewController panCarSelectedItemView:]_block_invoke
+___52-[FMSelectCarViewController panCarSelectedItemView:]_block_invoke.83
+___copy_helper_block_.88
+___destroy_helper_block_.89
+-[FMSelectCarViewController setCurSelectedIndex:]
+-[FMSelectCarViewController carModelBtnArr]
+-[FMSelectCarViewController onTapSelectedCar:]
+___46-[FMSelectCarViewController onTapSelectedCar:]_block_invoke
+-[FMSelectCarViewController prepareForSegue:sender:]
+-[FMSelectCarViewController curCarItemView]
+-[FMSelectCarViewController setCurCarItemView:]
+-[FMSelectCarViewController nextCarItemView]
+-[FMSelectCarViewController setNextCarItemView:]
+-[FMSelectCarViewController curSelectedIndex]
+-[FMSelectCarViewController setCarModelBtnArr:]
+-[FMSelectCarViewController selectedCarNameStr]
+-[FMSelectCarViewController setSelectedCarNameStr:]
+-[FMSelectCarViewController carModelsArr]
+-[FMSelectCarViewController setCarModelsArr:]
+-[FMSelectCarViewController selectedCarModelStr]
+-[FMSelectCarViewController setSelectedCarModelStr:]
+-[FMSelectCarViewController .cxx_destruct]
+_OBJC_CLASS_$_FMSelectCarViewController
+___block_descriptor_tmp.91
+_OBJC_IVAR_$_FMSelectCarViewController._curSelectedIndex
+_OBJC_IVAR_$_FMSelectCarViewController._carModelBtnArr
+_OBJC_IVAR_$_FMSelectCarViewController._curCarItemView
+_OBJC_IVAR_$_FMSelectCarViewController._nextCarItemView
+_OBJC_IVAR_$_FMSelectCarViewController._selectedCarNameStr
+_OBJC_IVAR_$_FMSelectCarViewController._carModelsArr
+_OBJC_IVAR_$_FMSelectCarViewController._selectedCarModelStr
+_OBJC_METACLASS_$_FMSelectCarViewController
+/Users/zxl/ios/LexusApp/LexusApp/FMSelectCarViewController.m
+__46-[FMSelectCarViewController onTapSelectedCar:]_block_invoke
+__52-[FMSelectCarViewController panCarSelectedItemView:]_block_invoke.83
+__52-[FMSelectCarViewController panCarSelectedItemView:]_block_invoke
+-[FMDetailViewController viewDidLoad]
+-[FMDetailViewController didReceiveMemoryWarning]
+-[FMDetailViewController updateViewConstraints]
+-[FMDetailViewController viewDidAppear:]
+-[FMDetailViewController onTapCheckProjectBtn:]
+-[FMDetailViewController onTapChangeProjectBtn:]
+-[FMDetailViewController rightScreenEdgePanGestureRecognizer:]
+-[FMDetailViewController detailDic]
+-[FMDetailViewController setDetailDic:]
+-[FMDetailViewController checkProjectBtn]
+-[FMDetailViewController setCheckProjectBtn:]
+-[FMDetailViewController changeProjectBtn]
+-[FMDetailViewController setChangeProjectBtn:]
+-[FMDetailViewController scrollView]
+-[FMDetailViewController setScrollView:]
+-[FMDetailViewController contentWidth]
+-[FMDetailViewController setContentWidth:]
+-[FMDetailViewController checkView]
+-[FMDetailViewController setCheckView:]
+-[FMDetailViewController changeView]
+-[FMDetailViewController setChangeView:]
+-[FMDetailViewController .cxx_destruct]
+_OBJC_CLASS_$_FMDetailViewController
+_OBJC_IVAR_$_FMDetailViewController._detailDic
+_OBJC_IVAR_$_FMDetailViewController._checkProjectBtn
+_OBJC_IVAR_$_FMDetailViewController._changeProjectBtn
+_OBJC_IVAR_$_FMDetailViewController._scrollView
+_OBJC_IVAR_$_FMDetailViewController._contentWidth
+_OBJC_IVAR_$_FMDetailViewController._checkView
+_OBJC_IVAR_$_FMDetailViewController._changeView
+_OBJC_METACLASS_$_FMDetailViewController
+/Users/zxl/ios/LexusApp/LexusApp/FMDetailViewController.m
+/Users/zxl/ios/LexusApp/LexusApp/FMDetailViewController.h
+-[BaseViewController viewDidLoad]
+-[BaseViewController viewDidAppear:]
+-[BaseViewController didReceiveMemoryWarning]
+-[BaseViewController setIsBgCanShake:]
+-[BaseViewController setIsShowBackBtn:]
+-[BaseViewController setupSubviews]
+-[BaseViewController onTapBackBtn:]
+-[BaseViewController accelerometerManager:withX:withY:withZ:withTimeInterval:]
+-[BaseViewController titleLab]
+-[BaseViewController setTitleLab:]
+-[BaseViewController bgImgView]
+-[BaseViewController setBgImgView:]
+-[BaseViewController isBgCanShake]
+-[BaseViewController isShowBackBtn]
+-[BaseViewController backBtn]
+-[BaseViewController setBackBtn:]
+-[BaseViewController .cxx_destruct]
+_OBJC_IVAR_$_BaseViewController._isBgCanShake
+_OBJC_CLASS_$_AccelerometerManager
+_OBJC_IVAR_$_BaseViewController._isShowBackBtn
+_OBJC_IVAR_$_BaseViewController._backBtn
+_OBJC_IVAR_$_BaseViewController._bgImgView
+_OBJC_IVAR_$_BaseViewController._titleLab
+l_OBJC_PROTOCOL_$_UIAccelerometerDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIAccelerometerDelegate
+/Users/zxl/ios/LexusApp/LexusApp/BaseViewController.m
+/Users/zxl/ios/LexusApp/LexusApp/BaseViewController.h
+-[AppDelegate application:didFinishLaunchingWithOptions:]
+-[AppDelegate applicationWillResignActive:]
+-[AppDelegate applicationDidEnterBackground:]
+-[AppDelegate applicationWillEnterForeground:]
+-[AppDelegate applicationDidBecomeActive:]
+-[AppDelegate applicationWillTerminate:]
+-[AppDelegate window]
+-[AppDelegate setWindow:]
+-[AppDelegate .cxx_destruct]
+_OBJC_IVAR_$_AppDelegate._window
+l_OBJC_PROTOCOL_$_UIApplicationDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIApplicationDelegate
+_OBJC_METACLASS_$_AppDelegate
+_OBJC_CLASS_$_AppDelegate
+/Users/zxl/ios/LexusApp/LexusApp/AppDelegate.m
+/Users/zxl/ios/LexusApp/LexusApp/AppDelegate.h
+-[FMDetailChangeTableViewCell awakeFromNib]
+-[FMDetailChangeTableViewCell setSelected:animated:]
+-[FMDetailChangeTableViewCell layoutChangeTableViewCellWithDataDic:]
+-[FMDetailChangeTableViewCell imgView]
+-[FMDetailChangeTableViewCell setImgView:]
+-[FMDetailChangeTableViewCell .cxx_destruct]
+_OBJC_CLASS_$_FMDetailChangeTableViewCell
+_OBJC_IVAR_$_FMDetailChangeTableViewCell._imgView
+_OBJC_METACLASS_$_FMDetailChangeTableViewCell
+/Users/zxl/ios/LexusApp/LexusApp/FMDetailChangeTableViewCell.m
+/Users/zxl/ios/LexusApp/LexusApp/FMDetailChangeTableViewCell.h
+-[UserModel initWithDic:]
+-[UserModel encodeWithCoder:]
+-[UserModel initWithCoder:]
+-[UserModel name]
+-[UserModel setName:]
+-[UserModel iconStr]
+-[UserModel setIconStr:]
+-[UserModel uid]
+-[UserModel setUid:]
+-[UserModel .cxx_destruct]
+_OBJC_CLASS_$_UserModel
+_OBJC_IVAR_$_UserModel._name
+_OBJC_IVAR_$_UserModel._iconStr
+_OBJC_IVAR_$_UserModel._uid
+_OBJC_METACLASS_$_BaseModel
+l_OBJC_PROTOCOL_$_NSCoding
+l_OBJC_LABEL_PROTOCOL_$_NSCoding
+_OBJC_METACLASS_$_UserModel
+_OBJC_CLASS_$_BaseModel
+/Users/zxl/ios/LexusApp/LexusApp/UserModel.m
+/Users/zxl/ios/LexusApp/LexusApp/UserModel.h
+-[LoginViewController viewDidLoad]
+___34-[LoginViewController viewDidLoad]_block_invoke
+___34-[LoginViewController viewDidLoad]_block_invoke.42
+___copy_helper_block_.45
+___destroy_helper_block_.46
+___34-[LoginViewController viewDidLoad]_block_invoke.51
+___copy_helper_block_.65
+___destroy_helper_block_.66
+-[LoginViewController setType:isAnimation:]
+___43-[LoginViewController setType:isAnimation:]_block_invoke
+___43-[LoginViewController setType:isAnimation:]_block_invoke_2
+___copy_helper_block_.80
+___destroy_helper_block_.81
+___43-[LoginViewController setType:isAnimation:]_block_invoke.83
+___43-[LoginViewController setType:isAnimation:]_block_invoke.87
+-[LoginViewController setupUserIconItemViewsFrame]
+___50-[LoginViewController setupUserIconItemViewsFrame]_block_invoke
+___copy_helper_block_.104
+___destroy_helper_block_.105
+-[LoginViewController selectUserViewHighlightSelectedItemByUserModel:]
+-[LoginViewController selectViewShakeAllItem]
+-[LoginViewController onTapCloseBtn:]
+___37-[LoginViewController onTapCloseBtn:]_block_invoke
+-[LoginViewController onTapLoginBtn:]
+___37-[LoginViewController onTapLoginBtn:]_block_invoke
+___37-[LoginViewController onTapLoginBtn:]_block_invoke_2
+___37-[LoginViewController onTapLoginBtn:]_block_invoke_3
+___copy_helper_block_.167
+___destroy_helper_block_.168
+___copy_helper_block_.172
+___destroy_helper_block_.173
+___37-[LoginViewController onTapLoginBtn:]_block_invoke.177
+___37-[LoginViewController onTapLoginBtn:]_block_invoke_2.180
+-[LoginViewController textFieldShouldBeginEditing:]
+-[LoginViewController textFieldShouldReturn:]
+-[LoginViewController usernameView]
+-[LoginViewController setUsernameView:]
+-[LoginViewController usernameTextField]
+-[LoginViewController setUsernameTextField:]
+-[LoginViewController loginBtn]
+-[LoginViewController setLoginBtn:]
+-[LoginViewController selectUserView]
+-[LoginViewController setSelectUserView:]
+-[LoginViewController passwordView]
+-[LoginViewController setPasswordView:]
+-[LoginViewController passwordTextField]
+-[LoginViewController setPasswordTextField:]
+-[LoginViewController type]
+-[LoginViewController setType:]
+-[LoginViewController usersArr]
+-[LoginViewController setUsersArr:]
+-[LoginViewController selectedUserNameStr]
+-[LoginViewController setSelectedUserNameStr:]
+-[LoginViewController .cxx_destruct]
+_OBJC_CLASS_$_LoginViewController
+___block_descriptor_tmp.48
+___block_descriptor_tmp.68
+_OBJC_IVAR_$_LoginViewController._type
+___block_descriptor_tmp.77
+___block_descriptor_tmp.82
+___block_descriptor_tmp.89
+___block_literal_global.90
+___block_descriptor_tmp.106
+___block_descriptor_tmp.121
+___block_literal_global.122
+___block_descriptor_tmp.169
+___block_descriptor_tmp.174
+___block_descriptor_tmp.181
+___block_literal_global.182
+___block_descriptor_tmp.189
+_OBJC_IVAR_$_LoginViewController._usernameView
+_OBJC_IVAR_$_LoginViewController._usernameTextField
+_OBJC_IVAR_$_LoginViewController._loginBtn
+_OBJC_IVAR_$_LoginViewController._selectUserView
+_OBJC_IVAR_$_LoginViewController._passwordView
+_OBJC_IVAR_$_LoginViewController._passwordTextField
+_OBJC_IVAR_$_LoginViewController._usersArr
+_OBJC_IVAR_$_LoginViewController._selectedUserNameStr
+l_OBJC_PROTOCOL_$_UITextFieldDelegate
+l_OBJC_LABEL_PROTOCOL_$_UITextFieldDelegate
+_OBJC_METACLASS_$_LoginViewController
+/Users/zxl/ios/LexusApp/LexusApp/LoginViewController.m
+__37-[LoginViewController onTapLoginBtn:]_block_invoke_2.180
+__37-[LoginViewController onTapLoginBtn:]_block_invoke.177
+__37-[LoginViewController onTapLoginBtn:]_block_invoke_3
+__37-[LoginViewController onTapLoginBtn:]_block_invoke_2
+__37-[LoginViewController onTapLoginBtn:]_block_invoke
+__37-[LoginViewController onTapCloseBtn:]_block_invoke
+__50-[LoginViewController setupUserIconItemViewsFrame]_block_invoke
+__43-[LoginViewController setType:isAnimation:]_block_invoke.87
+__43-[LoginViewController setType:isAnimation:]_block_invoke.83
+__43-[LoginViewController setType:isAnimation:]_block_invoke_2
+__43-[LoginViewController setType:isAnimation:]_block_invoke
+__34-[LoginViewController viewDidLoad]_block_invoke.51
+__34-[LoginViewController viewDidLoad]_block_invoke.42
+__34-[LoginViewController viewDidLoad]_block_invoke
+-[BaseModel initWithDic:]
+/Users/zxl/ios/LexusApp/LexusApp/BaseModel.m
+-[UILabel(VerticalAlign) alignTop]
+-[UILabel(VerticalAlign) alignBottom]
+/Users/zxl/ios/LexusApp/LexusApp/Category/UILabel+VerticalAlign.m
++[NSDate(TodayZeroClock) todayZeroClock]
+/Users/zxl/ios/LexusApp/LexusApp/Category/NSDate+TodayZeroClock.m
+-[NSArray(sortBy) sortByObjectTag]
+___34-[NSArray(sortBy) sortByObjectTag]_block_invoke
+-[NSArray(sortBy) sortByUIViewOriginX]
+___38-[NSArray(sortBy) sortByUIViewOriginX]_block_invoke
+-[NSArray(sortBy) sortByUIViewOriginY]
+___38-[NSArray(sortBy) sortByUIViewOriginY]_block_invoke
+___block_descriptor_tmp.5
+___block_literal_global.6
+___block_descriptor_tmp.7
+___block_literal_global.8
+/Users/zxl/ios/LexusApp/LexusApp/Category/NSArray+sortBy.m
+__38-[NSArray(sortBy) sortByUIViewOriginY]_block_invoke
+__38-[NSArray(sortBy) sortByUIViewOriginX]_block_invoke
+__34-[NSArray(sortBy) sortByObjectTag]_block_invoke
+-[FMDetailChangeShowView imgView]
+-[FMDetailChangeShowView setImgView:]
+-[FMDetailChangeShowView .cxx_destruct]
+_OBJC_IVAR_$_FMDetailChangeShowView._imgView
+_OBJC_METACLASS_$_FMDetailChangeShowView
+_OBJC_CLASS_$_FMDetailChangeShowView
+/Users/zxl/ios/LexusApp/LexusApp/FMDetailChangeShowView.m
+/Users/zxl/ios/LexusApp/LexusApp/FMDetailChangeShowView.h
+-[EWPViewController viewDidLoad]
+-[EWPViewController didReceiveMemoryWarning]
+_OBJC_CLASS_$_EWPViewController
+_OBJC_METACLASS_$_EWPViewController
+/Users/zxl/ios/LexusApp/LexusApp/EWPViewController.m
+-[FMDetailChangeView setupSubviewsWithDataArr:]
+-[FMDetailChangeView tableView:numberOfRowsInSection:]
+-[FMDetailChangeView tableView:cellForRowAtIndexPath:]
+-[FMDetailChangeView tableView:didSelectRowAtIndexPath:]
+-[FMDetailChangeView didSelectedChangeItem]
+-[FMDetailChangeView setDidSelectedChangeItem:]
+-[FMDetailChangeView descriptionPriceLab]
+-[FMDetailChangeView setDescriptionPriceLab:]
+-[FMDetailChangeView tableView]
+-[FMDetailChangeView setTableView:]
+-[FMDetailChangeView showView]
+-[FMDetailChangeView setShowView:]
+-[FMDetailChangeView dataArr]
+-[FMDetailChangeView setDataArr:]
+-[FMDetailChangeView .cxx_destruct]
+_OBJC_IVAR_$_FMDetailChangeView._didSelectedChangeItem
+_OBJC_IVAR_$_FMDetailChangeView._descriptionPriceLab
+_OBJC_IVAR_$_FMDetailChangeView._tableView
+_OBJC_IVAR_$_FMDetailChangeView._showView
+_OBJC_IVAR_$_FMDetailChangeView._dataArr
+_OBJC_METACLASS_$_FMDetailChangeView
+_OBJC_CLASS_$_FMDetailChangeView
+/Users/zxl/ios/LexusApp/LexusApp/FMDetailChangeView.m
+/Users/zxl/ios/LexusApp/LexusApp/FMDetailChangeView.h
++[CustomHintViewController getInstance]
+___39+[CustomHintViewController getInstance]_block_invoke
+-[CustomHintViewController viewDidLoad]
+-[CustomHintViewController didReceiveMemoryWarning]
+-[CustomHintViewController presentMessage:parentController:isAutoDismiss:dismissTimeInterval:dismissBlock:]
+___107-[CustomHintViewController presentMessage:parentController:isAutoDismiss:dismissTimeInterval:dismissBlock:]_block_invoke
+___107-[CustomHintViewController presentMessage:parentController:isAutoDismiss:dismissTimeInterval:dismissBlock:]_block_invoke.29
+-[CustomHintViewController startLoadingMessage:parentController:]
+___65-[CustomHintViewController startLoadingMessage:parentController:]_block_invoke
+___copy_helper_block_.55
+___destroy_helper_block_.56
+-[CustomHintViewController endLoadingMessage:dismissTimeInterval:dismissBlock:]
+-[CustomHintViewController dismissMessage]
+___42-[CustomHintViewController dismissMessage]_block_invoke
+___copy_helper_block_.62
+___destroy_helper_block_.63
+___42-[CustomHintViewController dismissMessage]_block_invoke.65
+-[CustomHintViewController showSimpleLoading:]
+-[CustomHintViewController endSimpleLoading]
+-[CustomHintViewController becomeChildrenControllerAddToParentController:]
+-[CustomHintViewController removeFromParentController]
+-[CustomHintViewController onTapCloseBtn:]
+-[CustomHintViewController closeBtn]
+-[CustomHintViewController setCloseBtn:]
+-[CustomHintViewController messageLab]
+-[CustomHintViewController setMessageLab:]
+-[CustomHintViewController activityBg]
+-[CustomHintViewController setActivityBg:]
+-[CustomHintViewController activityView]
+-[CustomHintViewController setActivityView:]
+-[CustomHintViewController dismissBlock]
+-[CustomHintViewController setDismissBlock:]
+-[CustomHintViewController presentTimer]
+-[CustomHintViewController setPresentTimer:]
+-[CustomHintViewController .cxx_destruct]
+_getInstance.s_instance
+_getInstance.onceToken
+___block_descriptor_tmp.31
+___block_literal_global.32
+___block_descriptor_tmp.57
+___block_descriptor_tmp.64
+_OBJC_IVAR_$_CustomHintViewController._closeBtn
+_OBJC_IVAR_$_CustomHintViewController._messageLab
+_OBJC_IVAR_$_CustomHintViewController._activityBg
+_OBJC_IVAR_$_CustomHintViewController._activityView
+_OBJC_IVAR_$_CustomHintViewController._dismissBlock
+_OBJC_IVAR_$_CustomHintViewController._presentTimer
+_OBJC_METACLASS_$_CustomHintViewController
+/Users/zxl/ios/LexusApp/LexusApp/CustomHintViewController.m
+__42-[CustomHintViewController dismissMessage]_block_invoke.65
+__42-[CustomHintViewController dismissMessage]_block_invoke
+__65-[CustomHintViewController startLoadingMessage:parentController:]_block_invoke
+__107-[CustomHintViewController presentMessage:parentController:isAutoDismiss:dismissTimeInterval:dismissBlock:]_block_invoke.29
+__107-[CustomHintViewController presentMessage:parentController:isAutoDismiss:dismissTimeInterval:dismissBlock:]_block_invoke
+__39+[CustomHintViewController getInstance]_block_invoke
++[UIColor(Custom) colorWithHexString:]
++[UIColor(Custom) colorWithR:g:b:]
+/Users/zxl/ios/LexusApp/LexusApp/Category/UIColor+Custom.m
+/Users/zxl/ios/LexusApp/LexusApp/main.m
+main
+-[UINavigationController(ShouldPopOnBackBtn) navigationBar:shouldPopItem:]
+___74-[UINavigationController(ShouldPopOnBackBtn) navigationBar:shouldPopItem:]_block_invoke
+___74-[UINavigationController(ShouldPopOnBackBtn) navigationBar:shouldPopItem:]_block_invoke.59
+l_OBJC_PROTOCOL_$_BackBtnHandlerProtocol
+l_OBJC_LABEL_PROTOCOL_$_BackBtnHandlerProtocol
+/Users/zxl/ios/LexusApp/LexusApp/Category/UIViewController+BackBtnHandler.m
+__74-[UINavigationController(ShouldPopOnBackBtn) navigationBar:shouldPopItem:]_block_invoke.59
+__74-[UINavigationController(ShouldPopOnBackBtn) navigationBar:shouldPopItem:]_block_invoke
+-[HEVAViewController viewDidLoad]
+-[HEVAViewController didReceiveMemoryWarning]
+_OBJC_CLASS_$_HEVAViewController
+_OBJC_METACLASS_$_HEVAViewController
+/Users/zxl/ios/LexusApp/LexusApp/HEVAViewController.m
+-[FMDetailCheckView setupSubviewsByCheckArr:]
+-[FMDetailCheckView onTapSelectedCheckBtn:]
+-[FMDetailCheckView setImageByIndex:]
+-[FMDetailCheckView imgView]
+-[FMDetailCheckView setImgView:]
+-[FMDetailCheckView dataArr]
+-[FMDetailCheckView setDataArr:]
+-[FMDetailCheckView .cxx_destruct]
+_OBJC_IVAR_$_FMDetailCheckView._imgView
+_OBJC_IVAR_$_FMDetailCheckView._dataArr
+_OBJC_METACLASS_$_FMDetailCheckView
+_OBJC_CLASS_$_FMDetailCheckView
+/Users/zxl/ios/LexusApp/LexusApp/FMDetailCheckView.m
+-[NSString(Valid) isValid]
+/Users/zxl/ios/LexusApp/LexusApp/Category/NSString+Valid.m
+-[UITextField(PlaceholderText) placeholderTextColor]
+-[UITextField(PlaceholderText) setPlaceholderTextColor:]
+-[UITextField(PlaceholderText) placeholderFont]
+-[UITextField(PlaceholderText) setPlaceholderFont:]
+/Users/zxl/ios/LexusApp/LexusApp/Category/UITextField+PlaceholderText.m
++[HintView getInstance]
+___23+[HintView getInstance]_block_invoke
+-[HintView initWithFrame:]
+-[HintView presentMessage:isAutoDismiss:dismissTimeInterval:dismissBlock:]
+___74-[HintView presentMessage:isAutoDismiss:dismissTimeInterval:dismissBlock:]_block_invoke
+___74-[HintView presentMessage:isAutoDismiss:dismissTimeInterval:dismissBlock:]_block_invoke.67
+-[HintView startLoadingMessage:]
+___32-[HintView startLoadingMessage:]_block_invoke
+___copy_helper_block_.89
+___destroy_helper_block_.90
+-[HintView endLoadingMessage:dismissTimeInterval:dismissBlock:]
+-[HintView dismissMessage]
+___26-[HintView dismissMessage]_block_invoke
+___copy_helper_block_.96
+___destroy_helper_block_.97
+___26-[HintView dismissMessage]_block_invoke.99
+___copy_helper_block_.107
+___destroy_helper_block_.108
+-[HintView showSimpleLoading]
+-[HintView endSimpleLoading]
+-[HintView closeCtrl]
+-[HintView setCloseCtrl:]
+-[HintView messageLab]
+-[HintView setMessageLab:]
+-[HintView presentTimer]
+-[HintView setPresentTimer:]
+-[HintView dismissBlock]
+-[HintView setDismissBlock:]
+-[HintView activityBg]
+-[HintView setActivityBg:]
+-[HintView activityView]
+-[HintView setActivityView:]
+-[HintView .cxx_destruct]
+_OBJC_CLASS_$_HintView
+_OBJC_IVAR_$_HintView._closeCtrl
+_OBJC_IVAR_$_HintView._messageLab
+_OBJC_IVAR_$_HintView._activityBg
+_OBJC_IVAR_$_HintView._activityView
+___block_descriptor_tmp.66
+___block_descriptor_tmp.69
+___block_literal_global.70
+___block_descriptor_tmp.98
+___block_descriptor_tmp.109
+_OBJC_IVAR_$_HintView._presentTimer
+_OBJC_IVAR_$_HintView._dismissBlock
+_OBJC_METACLASS_$_HintView
+/Users/zxl/ios/LexusApp/LexusApp/HintView.m
+__26-[HintView dismissMessage]_block_invoke.99
+__26-[HintView dismissMessage]_block_invoke
+__32-[HintView startLoadingMessage:]_block_invoke
+__74-[HintView presentMessage:isAutoDismiss:dismissTimeInterval:dismissBlock:]_block_invoke.67
+__74-[HintView presentMessage:isAutoDismiss:dismissTimeInterval:dismissBlock:]_block_invoke
+__23+[HintView getInstance]_block_invoke
+-[UIViewController(CustomTabbarViewControllerItemInternal) setCustomTabbarController:]
+-[CustomTabbarViewController viewDidLoad]
+-[CustomTabbarViewController viewDidAppear:]
+-[CustomTabbarViewController didReceiveMemoryWarning]
+-[CustomTabbarViewController bgMarkCtrl]
+-[CustomTabbarViewController onTapBgMarkCtrl:]
+-[CustomTabbarViewController setSelectedIndex:isAnimated:]
+___58-[CustomTabbarViewController setSelectedIndex:isAnimated:]_block_invoke
+___58-[CustomTabbarViewController setSelectedIndex:isAnimated:]_block_invoke.89
+___copy_helper_block_.98
+___destroy_helper_block_.99
+-[CustomTabbarViewController setViewControllersArr:]
+-[CustomTabbarViewController showTabbarView:]
+___45-[CustomTabbarViewController showTabbarView:]_block_invoke
+___copy_helper_block_.122
+___destroy_helper_block_.123
+___45-[CustomTabbarViewController showTabbarView:]_block_invoke.125
+-[CustomTabbarViewController dismissTabbarView:]
+___48-[CustomTabbarViewController dismissTabbarView:]_block_invoke
+___copy_helper_block_.127
+___destroy_helper_block_.128
+___48-[CustomTabbarViewController dismissTabbarView:]_block_invoke.130
+___copy_helper_block_.131
+___destroy_helper_block_.132
+-[CustomTabbarViewController onTapTabbarItems:]
+-[CustomTabbarViewController onTapLogoBtn:]
+-[CustomTabbarViewController onTapHomeBtn:]
+-[CustomTabbarViewController onTapOptionBtn:]
+-[CustomTabbarViewController onTapLoginCtrl:]
+-[CustomTabbarViewController alertView:clickedButtonAtIndex:]
+-[CustomTabbarViewController tabbarView]
+-[CustomTabbarViewController setTabbarView:]
+-[CustomTabbarViewController viewControllersArr]
+-[CustomTabbarViewController loginCtrl]
+-[CustomTabbarViewController setLoginCtrl:]
+-[CustomTabbarViewController homeBtn]
+-[CustomTabbarViewController setHomeBtn:]
+-[CustomTabbarViewController selectedViewController]
+-[CustomTabbarViewController setSelectedViewController:]
+-[CustomTabbarViewController setBgMarkCtrl:]
+-[CustomTabbarViewController selectedIndex]
+-[CustomTabbarViewController setSelectedIndex:]
+-[CustomTabbarViewController optionBtn]
+-[CustomTabbarViewController setOptionBtn:]
+-[CustomTabbarViewController .cxx_destruct]
+-[UIViewController(CustomTabbarControllerItem) customTabbarController]
+_OBJC_CLASS_$_CustomTabbarViewController
+_OBJC_IVAR_$_CustomTabbarViewController._selectedIndex
+_OBJC_IVAR_$_CustomTabbarViewController._bgMarkCtrl
+_OBJC_IVAR_$_CustomTabbarViewController._viewControllersArr
+___block_descriptor_tmp.101
+_OBJC_IVAR_$_CustomTabbarViewController._selectedViewController
+___block_descriptor_tmp.124
+___block_descriptor_tmp.126
+___block_descriptor_tmp.129
+___block_descriptor_tmp.133
+_OBJC_IVAR_$_CustomTabbarViewController._tabbarView
+_OBJC_IVAR_$_CustomTabbarViewController._loginCtrl
+_OBJC_IVAR_$_CustomTabbarViewController._homeBtn
+_OBJC_IVAR_$_CustomTabbarViewController._optionBtn
+l_OBJC_PROTOCOL_$_UIAlertViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIAlertViewDelegate
+_OBJC_METACLASS_$_CustomTabbarViewController
+/Users/zxl/ios/LexusApp/LexusApp/CustomTabbarViewController.m
+/Users/zxl/ios/LexusApp/LexusApp/CustomTabbarViewController.h
+__48-[CustomTabbarViewController dismissTabbarView:]_block_invoke.130
+__48-[CustomTabbarViewController dismissTabbarView:]_block_invoke
+__45-[CustomTabbarViewController showTabbarView:]_block_invoke.125
+__45-[CustomTabbarViewController showTabbarView:]_block_invoke
+__58-[CustomTabbarViewController setSelectedIndex:isAnimated:]_block_invoke.89
+__58-[CustomTabbarViewController setSelectedIndex:isAnimated:]_block_invoke
++[LocalUserManager pathOfDataFile]
+___34+[LocalUserManager pathOfDataFile]_block_invoke
++[LocalUserManager shareManager]
+___32+[LocalUserManager shareManager]_block_invoke
+-[LocalUserManager init]
+-[LocalUserManager AddLocalUser:]
+-[LocalUserManager removeLocalUser:]
+-[LocalUserManager isLogin]
+-[LocalUserManager logout]
+-[LocalUserManager synchronize]
+-[LocalUserManager isContainsUserModel:]
+-[LocalUserManager encodeWithCoder:]
+-[LocalUserManager initWithCoder:]
+-[LocalUserManager localUsersArr]
+-[LocalUserManager setLocalUsersArr:]
+-[LocalUserManager curLoginUserModel]
+-[LocalUserManager setCurLoginUserModel:]
+-[LocalUserManager setIsLogin:]
+-[LocalUserManager .cxx_destruct]
+_pathOfDataFile.s_pathOfDataFile
+_pathOfDataFile.onceToken
+_OBJC_IVAR_$_LocalUserManager._localUsersArr
+_OBJC_IVAR_$_LocalUserManager._curLoginUserModel
+_OBJC_IVAR_$_LocalUserManager._isLogin
+_OBJC_METACLASS_$_LocalUserManager
+/Users/zxl/ios/LexusApp/LexusApp/LocalUserManager.m
+/Users/zxl/ios/LexusApp/LexusApp/LocalUserManager.h
+__32+[LocalUserManager shareManager]_block_invoke
+__34+[LocalUserManager pathOfDataFile]_block_invoke
+-[GestureUnlockView initWithFrame:]
+-[GestureUnlockView drawRect:]
+-[GestureUnlockView touchesBegan:withEvent:]
+-[GestureUnlockView selectedBtnsTagArr]
+-[GestureUnlockView checkGestureResult]
+-[GestureUnlockView pan:]
+-[GestureUnlockView gestureModel]
+-[GestureUnlockView setGestureModel:]
+-[GestureUnlockView delegate]
+-[GestureUnlockView setDelegate:]
+-[GestureUnlockView setSelectedBtnsTagArr:]
+-[GestureUnlockView curPoint]
+-[GestureUnlockView setCurPoint:]
+-[GestureUnlockView isFinished]
+-[GestureUnlockView setIsFinished:]
+-[GestureUnlockView .cxx_destruct]
+_OBJC_IVAR_$_GestureUnlockView._selectedBtnsTagArr
+_OBJC_IVAR_$_GestureUnlockView._gestureModel
+_OBJC_IVAR_$_GestureUnlockView._delegate
+_OBJC_IVAR_$_GestureUnlockView._curPoint
+_OBJC_IVAR_$_GestureUnlockView._isFinished
+_OBJC_METACLASS_$_GestureUnlockView
+/Users/zxl/ios/LexusApp/LexusApp/GestureUnlockView.m
+/Users/zxl/ios/LexusApp/LexusApp/GestureUnlockView.h
+-[UIView(frameAdjust) x]
+-[UIView(frameAdjust) setX:]
+-[UIView(frameAdjust) y]
+-[UIView(frameAdjust) setY:]
+-[UIView(frameAdjust) width]
+-[UIView(frameAdjust) setWidth:]
+-[UIView(frameAdjust) height]
+-[UIView(frameAdjust) setHeight:]
+-[UIView(frameAdjust) cornerRadius]
+-[UIView(frameAdjust) setCornerRadius:]
+-[UIView(frameAdjust) borderWidth]
+-[UIView(frameAdjust) setBorderWidth:]
+-[UIView(frameAdjust) borderColor]
+-[UIView(frameAdjust) setBorderColor:]
+/Users/zxl/ios/LexusApp/LexusApp/Category/UIView+frameAdjust.m
+-[StudyListModel car_distince]
+-[StudyListModel setCar_distince:]
+-[StudyListModel car_type]
+-[StudyListModel setCar_type:]
+-[StudyListModel csid]
+-[StudyListModel setCsid:]
+-[StudyListModel date]
+-[StudyListModel setDate:]
+-[StudyListModel num]
+-[StudyListModel setNum:]
+-[StudyListModel song_url]
+-[StudyListModel setSong_url:]
+-[StudyListModel status]
+-[StudyListModel setStatus:]
+-[StudyListModel update_date]
+-[StudyListModel setUpdate_date:]
+-[StudyListModel userid]
+-[StudyListModel setUserid:]
+-[StudyListModel username]
+-[StudyListModel setUsername:]
+-[StudyListModel .cxx_destruct]
+_OBJC_IVAR_$_StudyListModel._car_distince
+_OBJC_IVAR_$_StudyListModel._car_type
+_OBJC_IVAR_$_StudyListModel._csid
+_OBJC_IVAR_$_StudyListModel._date
+_OBJC_IVAR_$_StudyListModel._num
+_OBJC_IVAR_$_StudyListModel._song_url
+_OBJC_IVAR_$_StudyListModel._status
+_OBJC_IVAR_$_StudyListModel._update_date
+_OBJC_IVAR_$_StudyListModel._userid
+_OBJC_IVAR_$_StudyListModel._username
+_OBJC_METACLASS_$_StudyListModel
+/Users/zxl/ios/LexusApp/LexusApp/StudyListModel.m
+/Users/zxl/ios/LexusApp/LexusApp/StudyListModel.h
++[AccelerometerManager shareAccelerometerManager]
+___49+[AccelerometerManager shareAccelerometerManager]_block_invoke
+-[AccelerometerManager init]
+___28-[AccelerometerManager init]_block_invoke
+-[AccelerometerManager addOberser:]
+-[AccelerometerManager removeObserver]
+-[AccelerometerManager accelerometer:didAccelerate:]
+-[AccelerometerManager delegate]
+-[AccelerometerManager setDelegate:]
+-[AccelerometerManager accelerometer]
+-[AccelerometerManager setAccelerometer:]
+-[AccelerometerManager motionManager]
+-[AccelerometerManager setMotionManager:]
+-[AccelerometerManager .cxx_destruct]
+_shareAccelerometerManager.s_instance
+_shareAccelerometerManager.onceToken
+_OBJC_IVAR_$_AccelerometerManager._motionManager
+_OBJC_IVAR_$_AccelerometerManager._delegate
+___block_descriptor_tmp.23
+_OBJC_IVAR_$_AccelerometerManager._accelerometer
+_OBJC_METACLASS_$_AccelerometerManager
+/Users/zxl/ios/LexusApp/LexusApp/AccelerometerManager.m
+/Users/zxl/ios/LexusApp/LexusApp/AccelerometerManager.h
+__28-[AccelerometerManager init]_block_invoke
+__49+[AccelerometerManager shareAccelerometerManager]_block_invoke
+-[UILabel(AttributedString) setAttributedNumberStringInContentString:attributesDic:]
+/Users/zxl/ios/LexusApp/LexusApp/Category/UILabel+AttributedString.m
+NSMakeRange
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
