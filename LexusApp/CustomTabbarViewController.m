@@ -158,6 +158,7 @@
     [self.view bringSubviewToFront:self.bgMarkCtrl];
     [self.view bringSubviewToFront:self.tabbarView];
     self.tabbarView.hidden = NO;
+    self.optionBtn.highlighted = YES;
     
     __weak typeof(self) weakSelf = self;
     void (^block)() = ^{
@@ -185,6 +186,7 @@
     
     void (^completion)(BOOL) = ^(BOOL finished) {
         weakSelf.tabbarView.hidden = YES;
+        weakSelf.optionBtn.highlighted = NO;
     };
     
     if (isAnimated) {

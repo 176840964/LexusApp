@@ -33,21 +33,19 @@
     self.nextCarItemView = [CarSelectedItemView newAutoLayoutView];
     self.nextCarItemView.alpha = 0.0;
     [self.view addSubview:self.nextCarItemView];
-    [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:5];
-    [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:5];
-    [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:5];
-    [self.nextCarItemView autoSetDimension:ALDimensionHeight toSize:200];
-    [self autoChangeBgColor:self.nextCarItemView];
+    [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:30];
+    [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:30];
+    [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:90];
+    [self.nextCarItemView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.nextCarItemView withMultiplier:977 / 163.0];
     [self setPanGestureRecognizerOnCarSelectedItemView:self.nextCarItemView];
     
     self.curCarItemView = [CarSelectedItemView newAutoLayoutView];
     self.curCarItemView.alpha = 1.0;
     [self.view addSubview:self.curCarItemView];
-    [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:5];
-    [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:5];
-    [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:5];
-    [self.curCarItemView autoSetDimension:ALDimensionHeight toSize:200];
-    [self autoChangeBgColor:self.curCarItemView];
+    [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:30];
+    [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:30];
+    [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:90];
+    [self.curCarItemView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.curCarItemView withMultiplier:977 / 163.0];
     [self setPanGestureRecognizerOnCarSelectedItemView:self.curCarItemView];
     
     self.curSelectedIndex = 0;
@@ -56,13 +54,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)autoChangeBgColor:(CarSelectedItemView *)itemView {
-    CGFloat red = arc4random() % 255 / 255.0;
-    CGFloat green = arc4random() % 255 / 255.0;
-    CGFloat blue = arc4random() % 255 / 255.0;
-    itemView.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
 }
 
 - (void)setPanGestureRecognizerOnCarSelectedItemView:(CarSelectedItemView *)itemView {
@@ -78,7 +69,7 @@
     
     NSInteger count = [CarCategoreManager shareManager].carsCount;
     NSInteger nextIndex;
-    if (tx >= 0) {
+    if (tx <= 0) {
         nextIndex = self.curSelectedIndex + 1;
         if (nextIndex == count) {
             nextIndex = nextIndex % count;
@@ -90,6 +81,7 @@
         }
     }
     self.nextCarItemView.carNameLab.text = [[[CarCategoreManager shareManager] getCarInfoDicByIndex:nextIndex] objectForKey:@"name"];
+    self.nextCarItemView.imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"car%zd", nextIndex]];
     
     if (limit < fabs(tx)) {
         pan.view.alpha = (limit - (fabs(tx) - limit)) / limit;
@@ -125,6 +117,7 @@
     self.selectedCarNameStr = [carInfo objectForKey:@"name"];
     self.carModelsArr = [[CarCategoreManager shareManager] getCarModelsByCarName:self.selectedCarNameStr];
     self.curCarItemView.carNameLab.text = self.selectedCarNameStr;
+    self.curCarItemView.imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"car%zd", _curSelectedIndex]];
     
     NSInteger x = (CGRectGetWidth(self.view.bounds) - (70 * self.carModelsArr.count + 35 * (self.carModelsArr.count - 1))) / 2.0;
     for (NSInteger index = 0; index < self.carModelsArr.count; index ++) {
