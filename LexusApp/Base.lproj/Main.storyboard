@@ -1088,7 +1088,7 @@
                                                 </connections>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Ac7-ia-a6g" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="trailing" id="3bb-0d-CS0"/>
                                             <constraint firstItem="EtN-wb-IcI" firstAttribute="leading" secondItem="CpW-60-ljc" secondAttribute="leading" id="Cce-c3-l8x"/>
@@ -1522,23 +1522,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="延保政策" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlE-fv-od7">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQo-7o-BTd">
+                                <connections>
+                                    <outlet property="delegate" destination="674-Od-uGt" id="dd0-9d-Gwg"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uyu-Xt-kWF">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Ii2-jS-BtA"/>
-                                    <constraint firstAttribute="width" constant="77" id="wDo-70-Sp1"/>
+                                    <constraint firstAttribute="height" constant="56" id="6Tx-X5-LSY"/>
+                                    <constraint firstAttribute="width" constant="54" id="cD8-M5-o02"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button" image="leftArrow_normal"/>
+                                <state key="highlighted" image="leftArrow_highlight"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xej-nR-x4M">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="HA2-Mm-rf7"/>
+                                    <constraint firstAttribute="height" constant="56" id="a5O-ve-xms"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="rightArrow_normal"/>
+                                <state key="highlighted" image="rightArrow_highlight"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FlE-fv-od7" firstAttribute="centerX" secondItem="KMq-hW-3aV" secondAttribute="centerX" id="9fV-W1-mqK"/>
-                            <constraint firstItem="FlE-fv-od7" firstAttribute="centerY" secondItem="KMq-hW-3aV" secondAttribute="centerY" id="cdf-QN-WHt"/>
+                            <constraint firstAttribute="trailing" secondItem="vQo-7o-BTd" secondAttribute="trailing" id="9lG-qC-hLJ"/>
+                            <constraint firstItem="Uyu-Xt-kWF" firstAttribute="leading" secondItem="KMq-hW-3aV" secondAttribute="leading" id="E0j-Xi-1MH"/>
+                            <constraint firstItem="xej-nR-x4M" firstAttribute="centerY" secondItem="KMq-hW-3aV" secondAttribute="centerY" id="EON-XI-Unx"/>
+                            <constraint firstItem="vQo-7o-BTd" firstAttribute="leading" secondItem="KMq-hW-3aV" secondAttribute="leading" id="EOg-9j-GqL"/>
+                            <constraint firstItem="vQo-7o-BTd" firstAttribute="top" secondItem="hL6-eh-54f" secondAttribute="bottom" constant="64" id="Iwt-wP-nE9"/>
+                            <constraint firstAttribute="trailing" secondItem="xej-nR-x4M" secondAttribute="trailing" id="Zk2-bJ-LRj"/>
+                            <constraint firstItem="5yJ-NX-ad5" firstAttribute="top" secondItem="vQo-7o-BTd" secondAttribute="bottom" constant="168" id="aOl-Mz-iCJ"/>
+                            <constraint firstItem="Uyu-Xt-kWF" firstAttribute="centerY" secondItem="KMq-hW-3aV" secondAttribute="centerY" id="fNQ-Ra-5ju"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jdh-XM-Z8i"/>
+                    <connections>
+                        <outlet property="scrollView" destination="vQo-7o-BTd" id="wkl-e2-nWH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1O-Yb-6ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1573,23 +1594,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEV优势" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A10-Ox-ygg">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DnB-4b-vw4">
+                                <connections>
+                                    <outlet property="delegate" destination="B9m-Wz-BCb" id="n2s-Nb-YrH"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3K-oc-U4p">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="9zv-G4-fhP"/>
-                                    <constraint firstAttribute="height" constant="21" id="tl7-Ch-ys7"/>
+                                    <constraint firstAttribute="width" constant="54" id="SSQ-Sl-KYq"/>
+                                    <constraint firstAttribute="height" constant="56" id="wE8-4o-Fyd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button" image="leftArrow_normal"/>
+                                <state key="highlighted" image="leftArrow_highlight"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIQ-iN-gNJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Jbj-Gd-bIV"/>
+                                    <constraint firstAttribute="width" constant="54" id="XaS-Ak-feJ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="rightArrow_normal"/>
+                                <state key="highlighted" image="rightArrow_highlight"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="A10-Ox-ygg" firstAttribute="centerX" secondItem="7cs-8a-aaS" secondAttribute="centerX" id="Gk1-M9-JTX"/>
-                            <constraint firstItem="A10-Ox-ygg" firstAttribute="centerY" secondItem="7cs-8a-aaS" secondAttribute="centerY" id="iUW-hO-5Ck"/>
+                            <constraint firstItem="YIQ-iN-gNJ" firstAttribute="centerY" secondItem="7cs-8a-aaS" secondAttribute="centerY" id="FJR-Gc-nVv"/>
+                            <constraint firstAttribute="trailing" secondItem="YIQ-iN-gNJ" secondAttribute="trailing" id="Igg-2J-o5u"/>
+                            <constraint firstAttribute="trailing" secondItem="DnB-4b-vw4" secondAttribute="trailing" id="Ntq-5P-tRa"/>
+                            <constraint firstItem="DnB-4b-vw4" firstAttribute="leading" secondItem="7cs-8a-aaS" secondAttribute="leading" id="dBR-wU-c8Q"/>
+                            <constraint firstItem="O3K-oc-U4p" firstAttribute="centerY" secondItem="7cs-8a-aaS" secondAttribute="centerY" id="jsI-qX-zni"/>
+                            <constraint firstItem="DnB-4b-vw4" firstAttribute="top" secondItem="Oh5-C6-KmE" secondAttribute="bottom" constant="64" id="rMG-3o-GQK"/>
+                            <constraint firstItem="P4a-sQ-E6r" firstAttribute="top" secondItem="DnB-4b-vw4" secondAttribute="bottom" constant="168" id="t4p-sZ-Y1J"/>
+                            <constraint firstItem="O3K-oc-U4p" firstAttribute="leading" secondItem="7cs-8a-aaS" secondAttribute="leading" id="zeN-8C-lbK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GnG-US-bdN"/>
+                    <connections>
+                        <outlet property="scrollView" destination="DnB-4b-vw4" id="w72-c9-wm6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZJ-c0-Jkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1624,23 +1666,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经销商活动" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCF-tL-tjs">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRn-cl-JdA">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="grB-4h-Z9C" id="p8w-MQ-zev"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpv-nf-eb3">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="96" id="lD2-tY-2MG"/>
-                                    <constraint firstAttribute="height" constant="21" id="mg7-ks-Kcr"/>
+                                    <constraint firstAttribute="width" constant="54" id="7xt-1t-TW7"/>
+                                    <constraint firstAttribute="height" constant="56" id="CgA-x7-Ocf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" image="leftArrow_normal"/>
+                                <state key="highlighted" image="leftArrow_highlight"/>
+                                <connections>
+                                    <action selector="onTapLeftArrowBtn:" destination="grB-4h-Z9C" eventType="touchUpInside" id="5Hs-2J-dCb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5s-RL-ofn">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="F0l-Jn-viv"/>
+                                    <constraint firstAttribute="height" constant="56" id="OvN-dH-DNC"/>
+                                </constraints>
+                                <state key="normal" image="rightArrow_normal"/>
+                                <state key="highlighted" image="rightArrow_highlight"/>
+                                <connections>
+                                    <action selector="onTapRightArrowBtn:" destination="grB-4h-Z9C" eventType="touchUpInside" id="za1-jK-gAd"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fnV-Pu-g2a"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MCF-tL-tjs" firstAttribute="centerX" secondItem="7da-hj-S1c" secondAttribute="centerX" id="ZZI-Ko-qMX"/>
-                            <constraint firstItem="MCF-tL-tjs" firstAttribute="centerY" secondItem="7da-hj-S1c" secondAttribute="centerY" id="drX-Nt-X7e"/>
+                            <constraint firstItem="XRn-cl-JdA" firstAttribute="top" secondItem="XxD-Uo-u7c" secondAttribute="bottom" constant="64" id="15Y-EH-LFY"/>
+                            <constraint firstItem="C5s-RL-ofn" firstAttribute="centerY" secondItem="7da-hj-S1c" secondAttribute="centerY" id="3jE-kw-2vW"/>
+                            <constraint firstItem="Tpv-nf-eb3" firstAttribute="centerY" secondItem="7da-hj-S1c" secondAttribute="centerY" id="A2J-mz-opk"/>
+                            <constraint firstAttribute="trailing" secondItem="C5s-RL-ofn" secondAttribute="trailing" id="Ebr-7q-qQc"/>
+                            <constraint firstItem="XRn-cl-JdA" firstAttribute="leading" secondItem="7da-hj-S1c" secondAttribute="leading" id="NQe-mi-BEW"/>
+                            <constraint firstItem="fnV-Pu-g2a" firstAttribute="leading" secondItem="7da-hj-S1c" secondAttribute="leading" id="RDP-RD-Wt1"/>
+                            <constraint firstItem="Tpv-nf-eb3" firstAttribute="leading" secondItem="7da-hj-S1c" secondAttribute="leading" id="Xe6-cH-wYn"/>
+                            <constraint firstItem="fnV-Pu-g2a" firstAttribute="top" secondItem="XRn-cl-JdA" secondAttribute="bottom" constant="66" id="dv3-sz-GdI"/>
+                            <constraint firstAttribute="trailing" secondItem="XRn-cl-JdA" secondAttribute="trailing" id="mi8-Yx-0q3"/>
+                            <constraint firstItem="s97-VO-h67" firstAttribute="top" secondItem="XRn-cl-JdA" secondAttribute="bottom" constant="168" id="tUB-sH-5gT"/>
+                            <constraint firstAttribute="trailing" secondItem="fnV-Pu-g2a" secondAttribute="trailing" id="wKF-eR-GSl"/>
+                            <constraint firstItem="s97-VO-h67" firstAttribute="top" secondItem="fnV-Pu-g2a" secondAttribute="bottom" constant="65" id="wcp-4E-uKB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GZJ-Sa-RQU"/>
+                    <connections>
+                        <outlet property="leftArrowBtn" destination="Tpv-nf-eb3" id="JVp-32-w9m"/>
+                        <outlet property="pageCtrl" destination="fnV-Pu-g2a" id="QF4-nH-aFN"/>
+                        <outlet property="rightArrowBtn" destination="C5s-RL-ofn" id="NPX-1w-pgA"/>
+                        <outlet property="scrollView" destination="XRn-cl-JdA" id="65Q-eh-mHK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rFa-hR-h0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1658,12 +1736,16 @@
         <image name="home_btn_highlight" width="28" height="28"/>
         <image name="home_btn_normal" width="28" height="28"/>
         <image name="jxshd" width="335" height="234"/>
+        <image name="leftArrow_highlight" width="54" height="56"/>
+        <image name="leftArrow_normal" width="54" height="56"/>
         <image name="login_btn_highlight" width="20" height="16"/>
         <image name="login_btn_normal" width="20" height="16"/>
         <image name="logo" width="136" height="25"/>
         <image name="manIcon" width="120" height="120"/>
         <image name="option_btn_highlight" width="28" height="28"/>
         <image name="option_btn_normal" width="28" height="28"/>
+        <image name="rightArrow_highlight" width="54" height="56"/>
+        <image name="rightArrow_normal" width="54" height="56"/>
         <image name="updateBg" width="335" height="330"/>
         <image name="ybzc" width="335" height="234"/>
     </resources>

@@ -8,8 +8,8 @@
 
 #import "EWPViewController.h"
 
-@interface EWPViewController ()
-
+@interface EWPViewController ()<UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
 @implementation EWPViewController
@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     self.titleLab.text = @"延保政策";
 }
 

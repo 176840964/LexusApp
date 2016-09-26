@@ -58,6 +58,7 @@
 - (void)setupSubviews {
     _bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(-BgImageFrameDistance, -BgImageFrameDistance, CGRectGetWidth(self.view.bounds) + BgImageFrameDistance * 2, CGRectGetHeight(self.view.bounds) + BgImageFrameDistance * 2)];
     _bgImgView.contentMode = UIViewContentModeScaleAspectFill;
+    _bgImgView.image = [UIImage imageNamed:@"bg1"];
     [self.view addSubview:_bgImgView];
     [self.view sendSubviewToBack:_bgImgView];
     

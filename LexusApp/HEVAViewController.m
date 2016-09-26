@@ -8,8 +8,8 @@
 
 #import "HEVAViewController.h"
 
-@interface HEVAViewController ()
-
+@interface HEVAViewController () <UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
 @implementation HEVAViewController
