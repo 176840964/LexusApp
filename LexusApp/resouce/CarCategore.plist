@@ -7,7 +7,7 @@
 		<string>CT</string>
 		<key>models</key>
 		<dict>
-			<key>200H</key>
+			<key>200h</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -227,7 +227,7 @@
 		<string>IS</string>
 		<key>models</key>
 		<dict>
-			<key>200T</key>
+			<key>200t</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -513,7 +513,7 @@
 					<array/>
 				</dict>
 			</array>
-			<key>250C</key>
+			<key>250c</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -1689,7 +1689,7 @@
 					</array>
 				</dict>
 			</array>
-			<key>300H</key>
+			<key>300h</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -2308,7 +2308,7 @@
 		<string>GS</string>
 		<key>models</key>
 		<dict>
-			<key>200T</key>
+			<key>200t</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -2594,7 +2594,7 @@
 					<array/>
 				</dict>
 			</array>
-			<key>300H</key>
+			<key>300h</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -3093,7 +3093,7 @@
 					<array/>
 				</dict>
 			</array>
-			<key>450H</key>
+			<key>450h</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -3456,7 +3456,7 @@
 					<array/>
 				</dict>
 			</array>
-			<key>600HL</key>
+			<key>600hl</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -3819,7 +3819,7 @@
 					<array/>
 				</dict>
 			</array>
-			<key>200T</key>
+			<key>200t</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -4182,7 +4182,7 @@
 		<string>RX</string>
 		<key>models</key>
 		<dict>
-			<key>200T</key>
+			<key>200t</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -6757,7 +6757,7 @@
 					</array>
 				</dict>
 			</array>
-			<key>450H</key>
+			<key>450h</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -8371,7 +8371,7 @@
 		<string>RC</string>
 		<key>models</key>
 		<dict>
-			<key>200T</key>
+			<key>200t</key>
 			<array>
 				<dict>
 					<key>check</key>

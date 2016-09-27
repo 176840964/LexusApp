@@ -30,19 +30,22 @@
         btn.borderWidth = 2.0;
         btn.titleLabel.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:17];
         [btn setTitleColor:[UIColor colorWithHexString:@"#7c7c7c"] forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor colorWithHexString:@"#000000"] forState:UIControlStateHighlighted];
+        [btn setTitleColor:[UIColor colorWithHexString:@"#000000"] forState:UIControlStateSelected];
         [btn setTitle:str forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(onTapSelectedCheckBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
-    }
-    
-    if (0 != self.dataArr.count) {
-        [self setImageByIndex:0];
+        
+        if (0 == index) {
+            [btn sendActionsForControlEvents:UIControlEventTouchUpInside];
+        }
     }
 }
 
 #pragma mark -
 - (void)onTapSelectedCheckBtn:(UIButton*)btn {
+    [self setAllBtnNormalState];
+    btn.backgroundColor = [UIColor whiteColor];
+    btn.selected = YES;
     [self setImageByIndex:btn.tag];
 }
 
@@ -50,6 +53,15 @@
     NSDictionary *dic = [self.dataArr objectAtIndex:index];
     NSString *picStr = [dic objectForKey:@"pic"];
     self.imgView.image = [UIImage imageNamed:picStr];
+}
+
+- (void)setAllBtnNormalState {
+    for (UIButton *btn in self.subviews) {
+        if ([btn isKindOfClass:[UIButton class]]) {
+            btn.backgroundColor = [UIColor clearColor];
+            btn.selected = NO;
+        }
+    }
 }
 
 /*

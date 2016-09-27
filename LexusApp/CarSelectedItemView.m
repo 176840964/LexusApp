@@ -18,6 +18,20 @@
 }
 */
 
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    CGPoint point = [touch locationInView:self];
+    
+    NSArray *arr = [CarPositionManager shareInstance].carPosArr;
+    for (CarPosItem *item in arr) {
+        CGRect rect = [item realRectByFatherViewWidth:self.width height:self.height];
+        if (CGRectContainsPoint(rect, point) && self.touchHotRangeHandle) {
+            self.touchHotRangeHandle(item.offset);
+            break;
+        }
+    }
+}
+
 - (UIImageView *)imgView {
     if (nil == _imgView) {
         _imgView = [UIImageView newAutoLayoutView];

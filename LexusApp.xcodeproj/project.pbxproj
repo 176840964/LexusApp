@@ -69,6 +69,9 @@
 		D7DFC1F21D77ECAA007A6D0C /* FMSelectCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1F11D77ECAA007A6D0C /* FMSelectCarViewController.m */; };
 		D7DFC1F71D7954B4007A6D0C /* CustomTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC1F61D7954B4007A6D0C /* CustomTabbarViewController.m */; };
 		D7ECB1551D97C618004BD11F /* ChangeImageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7ECB1541D97C618004BD11F /* ChangeImageList.plist */; };
+		D7ECB1571D9A9CFD004BD11F /* CarPosition.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7ECB1561D9A9CFD004BD11F /* CarPosition.plist */; };
+		D7ECB15B1D9AA46C004BD11F /* CarPositionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ECB15A1D9AA46C004BD11F /* CarPositionManager.m */; };
+		D7ECB15E1D9AA548004BD11F /* CarPosItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ECB15D1D9AA548004BD11F /* CarPosItem.m */; };
 		D7ED6ABC1D944847003C5E20 /* EWPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6ABB1D944847003C5E20 /* EWPViewController.m */; };
 		D7ED6ABF1D944858003C5E20 /* HEVAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6ABE1D944858003C5E20 /* HEVAViewController.m */; };
 		D7ED6AC21D944869003C5E20 /* DAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6AC11D944869003C5E20 /* DAViewController.m */; };
@@ -181,6 +184,11 @@
 		D7DFC1F51D7954B4007A6D0C /* CustomTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabbarViewController.h; sourceTree = "<group>"; };
 		D7DFC1F61D7954B4007A6D0C /* CustomTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabbarViewController.m; sourceTree = "<group>"; };
 		D7ECB1541D97C618004BD11F /* ChangeImageList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChangeImageList.plist; sourceTree = "<group>"; };
+		D7ECB1561D9A9CFD004BD11F /* CarPosition.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarPosition.plist; sourceTree = "<group>"; };
+		D7ECB1591D9AA46C004BD11F /* CarPositionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPositionManager.h; sourceTree = "<group>"; };
+		D7ECB15A1D9AA46C004BD11F /* CarPositionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPositionManager.m; sourceTree = "<group>"; };
+		D7ECB15C1D9AA548004BD11F /* CarPosItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPosItem.h; sourceTree = "<group>"; };
+		D7ECB15D1D9AA548004BD11F /* CarPosItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPosItem.m; sourceTree = "<group>"; };
 		D7ED6ABA1D944847003C5E20 /* EWPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EWPViewController.h; sourceTree = "<group>"; };
 		D7ED6ABB1D944847003C5E20 /* EWPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EWPViewController.m; sourceTree = "<group>"; };
 		D7ED6ABD1D944858003C5E20 /* HEVAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEVAViewController.h; sourceTree = "<group>"; };
@@ -291,6 +299,7 @@
 				D75AE0801D7E913B006685AE /* Font */,
 				D728D6A41D919100000C2203 /* CarCategore.plist */,
 				D7ECB1541D97C618004BD11F /* ChangeImageList.plist */,
+				D7ECB1561D9A9CFD004BD11F /* CarPosition.plist */,
 			);
 			path = resouce;
 			sourceTree = "<group>";
@@ -402,6 +411,7 @@
 		D7DFC1C11D754B53007A6D0C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D7ECB1581D9AA44B004BD11F /* CarPositionManager */,
 				D728D6A61D922DBE000C2203 /* CustomTools.h */,
 				D728D6A71D922DBE000C2203 /* CustomTools.m */,
 				D728D67D1D90E4D5000C2203 /* CarCategoreManager */,
@@ -510,6 +520,17 @@
 			path = Cars;
 			sourceTree = "<group>";
 		};
+		D7ECB1581D9AA44B004BD11F /* CarPositionManager */ = {
+			isa = PBXGroup;
+			children = (
+				D7ECB1591D9AA46C004BD11F /* CarPositionManager.h */,
+				D7ECB15A1D9AA46C004BD11F /* CarPositionManager.m */,
+				D7ECB15C1D9AA548004BD11F /* CarPosItem.h */,
+				D7ECB15D1D9AA548004BD11F /* CarPosItem.m */,
+			);
+			name = CarPositionManager;
+			sourceTree = "<group>";
+		};
 		EE4905701FB04AEC04DD6B13 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +613,7 @@
 				D75AE09E1D7EAA3C006685AE /* Lexus_jianzhengxian.TTF in Resources */,
 				D7DFC1B31D754A3B007A6D0C /* Assets.xcassets in Resources */,
 				D75AE09C1D7EAA3C006685AE /* Lexus_jiancuhei.TTF in Resources */,
+				D7ECB1571D9A9CFD004BD11F /* CarPosition.plist in Resources */,
 				D7DFC1B11D754A3B007A6D0C /* Main.storyboard in Resources */,
 				D75AE0771D7D3F58006685AE /* FMDetailChangeTableViewCell.xib in Resources */,
 				D75AE09D1D7EAA3C006685AE /* Lexus_jianhei.TTF in Resources */,
@@ -670,6 +692,8 @@
 				D728D6801D90E501000C2203 /* CarCategoreManager.m in Sources */,
 				D7DFC1E21D76D0F5007A6D0C /* NSObject+ValueOfStringOrNull.m in Sources */,
 				D7ED6AC21D944869003C5E20 /* DAViewController.m in Sources */,
+				D7ECB15B1D9AA46C004BD11F /* CarPositionManager.m in Sources */,
+				D7ECB15E1D9AA548004BD11F /* CarPosItem.m in Sources */,
 				D75AE0BD1D8047E8006685AE /* UserManager.m in Sources */,
 				D75AE0AE1D7FE2F6006685AE /* StudyUnlockViewController.m in Sources */,
 				D75AE0931D7EA83D006685AE /* UILabel+ChangeDefaultFont.m in Sources */,

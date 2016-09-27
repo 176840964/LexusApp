@@ -11,5 +11,6 @@
 @interface CarSelectedItemView : UIView
 
 @property (strong, nonatomic) UIImageView *imgView;
+@property (copy, nonatomic) void (^touchHotRangeHandle)(NSInteger);
 
 @end

@@ -32,6 +32,8 @@
     self.bgImgView.image = [UIImage imageNamed:@"bg2"];
     self.isBgCanShake = YES;
     
+    __weak typeof(self) weakSelf = self;
+    
     self.nextCarItemView = [CarSelectedItemView newAutoLayoutView];
     self.nextCarItemView.alpha = 0.0;
     [self.view addSubview:self.nextCarItemView];
@@ -39,7 +41,10 @@
     [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:30];
     [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:90];
     [self.nextCarItemView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.nextCarItemView withMultiplier:977 / 163.0];
-    [self setPanGestureRecognizerOnCarSelectedItemView:self.nextCarItemView];
+    self.nextCarItemView.touchHotRangeHandle = ^(NSInteger offset) {
+        [weakSelf showSpecifiedCarItemByOffset:offset];
+    };
+    [self setGestureRecognizerOnCarSelectedItemView:self.nextCarItemView];
     
     self.curCarItemView = [CarSelectedItemView newAutoLayoutView];
     self.curCarItemView.alpha = 1.0;
@@ -48,9 +53,25 @@
     [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:30];
     [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:90];
     [self.curCarItemView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.curCarItemView withMultiplier:977 / 163.0];
-    [self setPanGestureRecognizerOnCarSelectedItemView:self.curCarItemView];
+    self.curCarItemView.touchHotRangeHandle = ^(NSInteger offset) {
+        [weakSelf showSpecifiedCarItemByOffset:offset];
+    };
+    [self setGestureRecognizerOnCarSelectedItemView:self.curCarItemView];
     
     self.curSelectedIndex = 0;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//    NSLog(@"width:%f, height:%f", self.curCarItemView.width, self.curCarItemView.height);
+//    NSArray *arr = [CarPositionManager shareInstance].carPosArr;
+//    for (CarPosItem *item in arr) {
+//        CGRect rect = [item realRectByFatherViewWidth:self.curCarItemView.width height:self.curCarItemView.height];
+//        NSLog(@"rect:%@", NSStringFromCGRect(rect));
+//        UIView *view = [[UIView alloc] initWithFrame:rect];
+//        view.backgroundColor = [UIColor redColor];
+//        [self.curCarItemView addSubview:view];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,12 +79,36 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setPanGestureRecognizerOnCarSelectedItemView:(CarSelectedItemView *)itemView {
+- (void)setGestureRecognizerOnCarSelectedItemView:(CarSelectedItemView *)itemView {
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panCarSelectedItemView:)];
     [itemView addGestureRecognizer:pan];
 }
 
 #pragma mark - 
+- (void)showSpecifiedCarItemByOffset:(NSInteger)offset {
+    NSInteger count = [CarCategoreManager shareManager].carsCount;
+    NSInteger nextIndex = self.curSelectedIndex + offset;
+    if (nextIndex >= count) {
+        nextIndex = nextIndex % count;
+    } else if (nextIndex < 0) {
+        nextIndex = count + nextIndex;
+    }
+    self.nextCarItemView.imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"car%zd", nextIndex]];
+    
+    self.curSelectedIndex = nextIndex;
+    __weak typeof(self) weakSelf = self;
+    [UIView animateWithDuration:0.5 animations:^{
+        weakSelf.nextCarItemView.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        CarSelectedItemView *tmp = [CarSelectedItemView new];
+        tmp = weakSelf.curCarItemView;
+        weakSelf.curCarItemView = weakSelf.nextCarItemView;
+        weakSelf.nextCarItemView = tmp;
+        
+        [weakSelf.view bringSubviewToFront:weakSelf.curCarItemView];
+    }];
+}
+
 - (void)panCarSelectedItemView:(UIPanGestureRecognizer *)pan {
     CGFloat limit = 30;
     CGPoint point = [pan translationInView:pan.view];
@@ -116,22 +161,22 @@
     
     NSDictionary *carInfo = [[CarCategoreManager shareManager] getCarInfoDicByIndex:_curSelectedIndex];
     self.selectedCarNameStr = [carInfo objectForKey:@"name"];
+    self.titleLab.text = self.selectedCarNameStr;
     self.carModelsArr = [[CarCategoreManager shareManager] getCarModelsByCarName:self.selectedCarNameStr];
     self.carImgView.image = [UIImage imageNamed:self.selectedCarNameStr];
     self.curCarItemView.imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"car%zd", _curSelectedIndex]];
     
-    NSInteger x = (CGRectGetWidth(self.view.bounds) - (70 * self.carModelsArr.count + 35 * (self.carModelsArr.count - 1))) / 2.0;
+    NSInteger x = (CGRectGetWidth(self.view.bounds) - (100 * self.carModelsArr.count + 35 * (self.carModelsArr.count - 1))) / 2.0;
     for (NSInteger index = 0; index < self.carModelsArr.count; index ++) {
         NSString *carModel = [self.carModelsArr objectAtIndex:index];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = index;
-        btn.frame = CGRectMake(x + (70 + 35) * index, self.view.center.y + 102 + 5, 70, 70);
-        btn.titleLabel.numberOfLines = 2;
+        btn.frame = CGRectMake(x + (100 + 35) * index, self.view.center.y + 102 + 5, 100, 38);
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-        btn.titleLabel.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:13];
-        [btn setTitle:[NSString stringWithFormat:@"%@\n%@", self.selectedCarNameStr, carModel] forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:12];
+        [btn setTitle:[NSString stringWithFormat:@"%@%@", self.selectedCarNameStr, carModel] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor colorWithHexString:@"#89939c"] forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor colorWithHexString:@"#383838"] forState:UIControlStateHighlighted];
+        [btn setTitleColor:[UIColor colorWithHexString:@"#373737"] forState:UIControlStateHighlighted];
         [btn setBackgroundImage:[UIImage imageNamed:@"car_normal"] forState:UIControlStateNormal];
         [btn setBackgroundImage:[UIImage imageNamed:@"car_highlight"] forState:UIControlStateHighlighted];
         [btn addTarget:self action:@selector(onTapSelectedCar:) forControlEvents:UIControlEventTouchUpInside];

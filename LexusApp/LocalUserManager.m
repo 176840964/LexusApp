@@ -66,7 +66,17 @@
 }
 
 - (BOOL)isLogin {
-    return (nil != self.curLoginUserModel);
+#warning test
+    //start test
+    if (0 != self.localUsersArr.count) {
+        self.curLoginUserModel = self.localUsersArr.firstObject;
+        return YES;
+    } else {
+        return (nil != self.curLoginUserModel);
+    }
+    //end test
+    
+//    return (nil != self.curLoginUserModel);
 }
 
 - (void)logout {

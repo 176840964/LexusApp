@@ -31,7 +31,7 @@
 
 - (void)updateViewConstraints {
     [super updateViewConstraints];
-    self.mainViewWidth.constant = CGRectGetWidth(self.view.bounds) * 5;
+    self.mainViewWidth.constant = CGRectGetWidth(self.view.bounds) * 2;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -45,7 +45,7 @@
     if (0 == self.scrollView.contentOffset.x) {
         self.leftArrowBtn.enabled = NO;
         self.rightArrowBtn.enabled = YES;
-    } else if (4 * self.view.width == self.scrollView.contentOffset.x) {
+    } else if (1 * self.view.width == self.scrollView.contentOffset.x) {
         self.rightArrowBtn.enabled = NO;
         self.leftArrowBtn.enabled = YES;
     } else {
