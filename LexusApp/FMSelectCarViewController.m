@@ -171,7 +171,7 @@
         NSString *carModel = [self.carModelsArr objectAtIndex:index];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = index;
-        btn.frame = CGRectMake(x + (100 + 35) * index, self.view.center.y + 102 + 5, 100, 38);
+        btn.frame = CGRectMake(x + (100 + 35) * index, self.view.center.y + 127 + 5, 100, 38);
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
         btn.titleLabel.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:12];
         [btn setTitle:[NSString stringWithFormat:@"%@%@", self.selectedCarNameStr, carModel] forState:UIControlStateNormal];
