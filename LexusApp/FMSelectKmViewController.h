@@ -11,5 +11,6 @@
 @interface FMSelectKmViewController : BaseViewController
 
 @property (strong, nonatomic) NSArray *kmArr;
+@property (copy, nonatomic) NSString *carName;
 
 @end

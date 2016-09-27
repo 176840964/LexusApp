@@ -165,6 +165,7 @@
         FMSelectKmViewController *vc = segue.destinationViewController;
         vc.title = [NSString stringWithFormat:@"%@%@", self.selectedCarNameStr, self.selectedCarModelStr];
         vc.kmArr = [[CarCategoreManager shareManager] getCarKMByCarName:self.selectedCarNameStr carModel:self.selectedCarModelStr];
+        vc.carName = self.selectedCarNameStr;
     }
 }
 

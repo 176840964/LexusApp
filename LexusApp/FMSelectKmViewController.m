@@ -10,6 +10,7 @@
 #import "FMDetailViewController.h"
 
 @interface FMSelectKmViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *carImgView;
 @property (assign, nonatomic) NSInteger selectedKM;
 @end
 
@@ -45,8 +46,12 @@
             pointImgView.center = CGPointMake(btn.center.x + btn.width / 2.0 + 6, btn.center.y);
             [self.view addSubview:pointImgView];
         }
-        
     }
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self showAnimation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,12 +59,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - 
+- (void)showAnimation {
+    self.carImgView.transform = CGAffineTransformMakeTranslation(-self.view.center.x - self.carImgView.width, 0);
+    self.carImgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@KM", self.carName]];
+    [UIView animateWithDuration:.5 animations:^{
+        self.carImgView.transform = CGAffineTransformIdentity;
+    }];
+}
+
+- (void)dismissAnimation {
+    [UIView animateWithDuration:.5 animations:^{
+        self.carImgView.transform = CGAffineTransformMakeTranslation(self.view.center.x + self.carImgView.width / 2.0, 0);
+    } completion:^(BOOL finished) {
+        [self performSegueWithIdentifier:@"showFMDetailViewController" sender:self];
+    }];
+}
+
 - (void)onTapSelectedKmBtn:(UIButton *)sender {
     UIButton *btn = (UIButton*)sender;
     self.selectedKM = btn.tag + 1;
-    [self performSegueWithIdentifier:@"showFMDetailViewController" sender:self];
+    [self dismissAnimation];
 }
-
 
 #pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation
