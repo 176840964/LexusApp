@@ -39,7 +39,8 @@
     [self.view addSubview:self.nextCarItemView];
     [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:30];
     [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:30];
-    [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:90];
+//    [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:90];
+    [self.nextCarItemView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view withOffset:280];
     [self.nextCarItemView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.nextCarItemView withMultiplier:977 / 163.0];
     self.nextCarItemView.touchHotRangeHandle = ^(NSInteger offset) {
         [weakSelf showSpecifiedCarItemByOffset:offset];
@@ -51,7 +52,8 @@
     [self.view addSubview:self.curCarItemView];
     [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:30];
     [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:30];
-    [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:90];
+//    [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:90];
+    [self.curCarItemView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self.view withOffset:280];
     [self.curCarItemView autoMatchDimension:ALDimensionWidth toDimension:ALDimensionHeight ofView:self.curCarItemView withMultiplier:977 / 163.0];
     self.curCarItemView.touchHotRangeHandle = ^(NSInteger offset) {
         [weakSelf showSpecifiedCarItemByOffset:offset];
