@@ -19,6 +19,7 @@
 		D728D6A51D919100000C2203 /* CarCategore.plist in Resources */ = {isa = PBXBuildFile; fileRef = D728D6A41D919100000C2203 /* CarCategore.plist */; };
 		D728D6A81D922DBE000C2203 /* CustomTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D6A71D922DBE000C2203 /* CustomTools.m */; };
 		D728D6AB1D9232DD000C2203 /* CustomLoginCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D6AA1D9232DD000C2203 /* CustomLoginCtrl.m */; };
+		D75A97751D9D08BB00CBF111 /* CustomZoomScaleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75A97741D9D08BB00CBF111 /* CustomZoomScaleImageView.m */; };
 		D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */; };
 		D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */; };
 		D75AE06C1D7D2223006685AE /* FMDetailCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE06B1D7D2223006685AE /* FMDetailCheckView.m */; };
@@ -100,6 +101,8 @@
 		D728D6A71D922DBE000C2203 /* CustomTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTools.m; sourceTree = "<group>"; };
 		D728D6A91D9232DD000C2203 /* CustomLoginCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLoginCtrl.h; sourceTree = "<group>"; };
 		D728D6AA1D9232DD000C2203 /* CustomLoginCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLoginCtrl.m; sourceTree = "<group>"; };
+		D75A97731D9D08BB00CBF111 /* CustomZoomScaleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomZoomScaleImageView.h; sourceTree = "<group>"; };
+		D75A97741D9D08BB00CBF111 /* CustomZoomScaleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomZoomScaleImageView.m; sourceTree = "<group>"; };
 		D75AE0631D7BE5DA006685AE /* FMSelectKmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSelectKmViewController.h; sourceTree = "<group>"; };
 		D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectKmViewController.m; sourceTree = "<group>"; };
 		D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDetailViewController.h; sourceTree = "<group>"; };
@@ -264,6 +267,15 @@
 			name = CarCategoreManager;
 			sourceTree = "<group>";
 		};
+		D75A97721D9D086700CBF111 /* CustomZoomScaleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				D75A97731D9D08BB00CBF111 /* CustomZoomScaleImageView.h */,
+				D75A97741D9D08BB00CBF111 /* CustomZoomScaleImageView.m */,
+			);
+			name = CustomZoomScaleImageView;
+			sourceTree = "<group>";
+		};
 		D75AE0691D7D21E4006685AE /* FMDetailViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +423,7 @@
 		D7DFC1C11D754B53007A6D0C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D75A97721D9D086700CBF111 /* CustomZoomScaleImageView */,
 				D7ECB1581D9AA44B004BD11F /* CarPositionManager */,
 				D728D6A61D922DBE000C2203 /* CustomTools.h */,
 				D728D6A71D922DBE000C2203 /* CustomTools.m */,
@@ -704,6 +717,7 @@
 				D7DFC1AB1D754A3B007A6D0C /* AppDelegate.m in Sources */,
 				D75AE0761D7D3F58006685AE /* FMDetailChangeTableViewCell.m in Sources */,
 				D75AE0AA1D7EC098006685AE /* UserModel.m in Sources */,
+				D75A97751D9D08BB00CBF111 /* CustomZoomScaleImageView.m in Sources */,
 				D75AE07E1D7D8825006685AE /* LoginViewController.m in Sources */,
 				D71A4FCE1D8AF02F0053E98C /* BaseModel.m in Sources */,
 				D7DFC1E51D76D0F5007A6D0C /* UILabel+VerticalAlign.m in Sources */,

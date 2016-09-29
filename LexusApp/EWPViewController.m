@@ -10,6 +10,7 @@
 
 @interface EWPViewController ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutletCollection(CustomZoomScaleImageView) NSArray* zoomScaleViewsArr;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *mainViewWidth;
 @property (weak, nonatomic) IBOutlet UIPageControl *pageCtrl;
 @property (weak, nonatomic) IBOutlet UIButton *leftArrowBtn;
@@ -22,6 +23,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.titleLab.text = @"延保政策";
+    
+    self.zoomScaleViewsArr = [self.zoomScaleViewsArr sortByUIViewOriginX];
+    
+    NSInteger index = 0;
+    for (CustomZoomScaleImageView *view in self.zoomScaleViewsArr) {
+        [view layoutCustomZoomScaleImageView];
+        view.image = [UIImage imageNamed:[NSString stringWithFormat:@"EWP%zd", index + 1]];
+        index ++;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,11 +41,12 @@
 
 - (void)updateViewConstraints {
     [super updateViewConstraints];
-    self.mainViewWidth.constant = CGRectGetWidth(self.view.bounds) * 2;
+    self.mainViewWidth.constant = CGRectGetWidth(self.view.bounds) * self.zoomScaleViewsArr.count;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
     self.scrollView.contentOffset = CGPointZero;
     [self setupLeftArrowBtnAndRightArrowBtnEnable];
 }

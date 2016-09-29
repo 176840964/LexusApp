@@ -21,12 +21,14 @@
 #import "CarCategoreManager.h"
 #import "CustomTools.h"
 #import "CarPositionManager.h"
+#import "CustomZoomScaleImageView.h"
 
 #import "UIView+frameAdjust.h"
 #import "UILabel+AttributedString.h"
 #import "UILabel+ChangeDefaultFont.h"
 #import "NSString+Valid.h"
 #import "UIColor+Custom.h"
+#import "NSArray+sortBy.h"
 
 #import "PureLayout.h"
 

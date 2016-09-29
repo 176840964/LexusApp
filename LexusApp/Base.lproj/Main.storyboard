@@ -1559,58 +1559,32 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQo-7o-BTd">
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBC-Xv-ERi">
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vw-Q2-OdM">
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EWP1" translatesAutoresizingMaskIntoConstraints="NO" id="wo7-6C-vpy">
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="880" id="Kd8-yn-VKq"/>
-                                                            <constraint firstAttribute="height" constant="494" id="zEY-XG-Hyg"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstItem="wo7-6C-vpy" firstAttribute="centerX" secondItem="4vw-Q2-OdM" secondAttribute="centerX" id="HQj-kE-1RD"/>
-                                                    <constraint firstItem="wo7-6C-vpy" firstAttribute="centerY" secondItem="4vw-Q2-OdM" secondAttribute="centerY" id="xlv-Dt-wZP"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0v-Io-WN1">
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EWP2" translatesAutoresizingMaskIntoConstraints="NO" id="xhZ-ym-ghC">
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="880" id="1Iy-Py-DTI"/>
-                                                            <constraint firstAttribute="height" constant="494" id="EOz-xV-tIy"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstItem="xhZ-ym-ghC" firstAttribute="centerY" secondItem="O0v-Io-WN1" secondAttribute="centerY" id="ofd-4a-pEH"/>
-                                                    <constraint firstItem="xhZ-ym-ghC" firstAttribute="centerX" secondItem="O0v-Io-WN1" secondAttribute="centerX" id="z26-ef-jRu"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="4vw-Q2-OdM" firstAttribute="leading" secondItem="HBC-Xv-ERi" secondAttribute="leading" id="En8-ac-a1s"/>
-                                            <constraint firstAttribute="trailing" secondItem="O0v-Io-WN1" secondAttribute="trailing" id="Gsq-kD-Q4e"/>
-                                            <constraint firstItem="O0v-Io-WN1" firstAttribute="leading" secondItem="4vw-Q2-OdM" secondAttribute="trailing" id="KGZ-E2-TOE"/>
-                                            <constraint firstItem="4vw-Q2-OdM" firstAttribute="top" secondItem="HBC-Xv-ERi" secondAttribute="top" id="LPd-qC-JCU"/>
-                                            <constraint firstItem="O0v-Io-WN1" firstAttribute="top" secondItem="HBC-Xv-ERi" secondAttribute="top" id="ZEt-cZ-yrz"/>
-                                            <constraint firstAttribute="bottom" secondItem="4vw-Q2-OdM" secondAttribute="bottom" id="ak0-13-vsp"/>
-                                            <constraint firstItem="O0v-Io-WN1" firstAttribute="width" secondItem="4vw-Q2-OdM" secondAttribute="width" id="cX3-ig-Gd9"/>
-                                            <constraint firstAttribute="bottom" secondItem="O0v-Io-WN1" secondAttribute="bottom" id="lVG-mL-Bwh"/>
                                             <constraint firstAttribute="width" constant="2048" id="tO3-6q-Hlk"/>
                                         </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvF-VG-G1O" customClass="CustomZoomScaleImageView">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVu-ZK-5G9" customClass="CustomZoomScaleImageView">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="HBC-Xv-ERi" secondAttribute="trailing" id="0H5-eS-Xng"/>
+                                    <constraint firstItem="dVu-ZK-5G9" firstAttribute="width" secondItem="dvF-VG-G1O" secondAttribute="width" id="3UE-uu-SSK"/>
                                     <constraint firstItem="HBC-Xv-ERi" firstAttribute="top" secondItem="vQo-7o-BTd" secondAttribute="top" id="4An-NO-g8U"/>
                                     <constraint firstAttribute="bottom" secondItem="HBC-Xv-ERi" secondAttribute="bottom" id="6bM-Ql-Wi7"/>
+                                    <constraint firstAttribute="trailing" secondItem="dVu-ZK-5G9" secondAttribute="trailing" id="8nc-QK-3FC"/>
+                                    <constraint firstItem="dVu-ZK-5G9" firstAttribute="leading" secondItem="dvF-VG-G1O" secondAttribute="trailing" id="Evg-qk-4cw"/>
+                                    <constraint firstItem="dvF-VG-G1O" firstAttribute="leading" secondItem="vQo-7o-BTd" secondAttribute="leading" id="Iab-RX-dh9"/>
+                                    <constraint firstAttribute="bottom" secondItem="dVu-ZK-5G9" secondAttribute="bottom" id="Ur0-Ay-h5n"/>
+                                    <constraint firstItem="dVu-ZK-5G9" firstAttribute="top" secondItem="vQo-7o-BTd" secondAttribute="top" id="Xsy-ud-4Sp"/>
+                                    <constraint firstItem="dvF-VG-G1O" firstAttribute="top" secondItem="vQo-7o-BTd" secondAttribute="top" id="Zhw-ld-s5c"/>
                                     <constraint firstItem="HBC-Xv-ERi" firstAttribute="leading" secondItem="vQo-7o-BTd" secondAttribute="leading" id="bqG-x6-Aly"/>
                                     <constraint firstItem="HBC-Xv-ERi" firstAttribute="centerY" secondItem="vQo-7o-BTd" secondAttribute="centerY" id="x0N-Tr-lAr"/>
+                                    <constraint firstAttribute="bottom" secondItem="dvF-VG-G1O" secondAttribute="bottom" id="zGd-pS-jTq"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="674-Od-uGt" id="dd0-9d-Gwg"/>
@@ -1654,7 +1628,7 @@
                             <constraint firstAttribute="trailing" secondItem="8H3-Fe-JGY" secondAttribute="trailing" id="UsK-o5-n46"/>
                             <constraint firstItem="5yJ-NX-ad5" firstAttribute="top" secondItem="8H3-Fe-JGY" secondAttribute="bottom" constant="65" id="VRL-Bg-YQo"/>
                             <constraint firstAttribute="trailing" secondItem="xej-nR-x4M" secondAttribute="trailing" id="Zk2-bJ-LRj"/>
-                            <constraint firstItem="5yJ-NX-ad5" firstAttribute="top" secondItem="vQo-7o-BTd" secondAttribute="bottom" constant="168" id="aOl-Mz-iCJ"/>
+                            <constraint firstItem="5yJ-NX-ad5" firstAttribute="top" secondItem="vQo-7o-BTd" secondAttribute="bottom" id="aOl-Mz-iCJ"/>
                             <constraint firstItem="Uyu-Xt-kWF" firstAttribute="centerY" secondItem="KMq-hW-3aV" secondAttribute="centerY" id="fNQ-Ra-5ju"/>
                             <constraint firstItem="8H3-Fe-JGY" firstAttribute="leading" secondItem="KMq-hW-3aV" secondAttribute="leading" id="qOB-dK-qKZ"/>
                         </constraints>
@@ -1666,6 +1640,8 @@
                         <outlet property="pageCtrl" destination="8H3-Fe-JGY" id="zv2-VF-6jf"/>
                         <outlet property="rightArrowBtn" destination="xej-nR-x4M" id="B1Z-dQ-3yn"/>
                         <outlet property="scrollView" destination="vQo-7o-BTd" id="wkl-e2-nWH"/>
+                        <outletCollection property="zoomScaleViewsArr" destination="dvF-VG-G1O" id="gyk-bM-nlA"/>
+                        <outletCollection property="zoomScaleViewsArr" destination="dVu-ZK-5G9" id="F2d-NK-J0u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1O-Yb-6ld" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1705,17 +1681,8 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qG-QY-lGo">
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30e-tE-8TZ">
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HEV1" translatesAutoresizingMaskIntoConstraints="NO" id="pde-oY-JbJ"/>
-                                                </subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30e-tE-8TZ" customClass="CustomZoomScaleImageView">
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="pde-oY-JbJ" secondAttribute="bottom" id="1e5-3v-Qnb"/>
-                                                    <constraint firstAttribute="trailing" secondItem="pde-oY-JbJ" secondAttribute="trailing" id="F0O-gS-Geo"/>
-                                                    <constraint firstItem="pde-oY-JbJ" firstAttribute="leading" secondItem="30e-tE-8TZ" secondAttribute="leading" id="HaX-9d-BKh"/>
-                                                    <constraint firstItem="pde-oY-JbJ" firstAttribute="top" secondItem="30e-tE-8TZ" secondAttribute="top" id="bVv-Hz-FTH"/>
-                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Og5-X0-tGR">
                                                 <subviews>
@@ -1809,6 +1776,7 @@
                         <outlet property="rightArrowBtn" destination="YIQ-iN-gNJ" id="8Qe-a5-2L2"/>
                         <outlet property="scrollView" destination="DnB-4b-vw4" id="w72-c9-wm6"/>
                         <outlet property="videoView" destination="xN7-ZI-2Re" id="X81-sH-kYj"/>
+                        <outlet property="zoomScaleView" destination="30e-tE-8TZ" id="NKI-Vw-R2h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RZJ-c0-Jkp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1872,7 +1840,7 @@
                                     <action selector="onTapRightArrowBtn:" destination="grB-4h-Z9C" eventType="touchUpInside" id="za1-jK-gAd"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="fnV-Pu-g2a"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="fnV-Pu-g2a"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1902,25 +1870,8 @@
             </objects>
             <point key="canvasLocation" x="838" y="404"/>
         </scene>
-        <!--Player View Controller-->
-        <scene sceneID="Ksb-Pu-voc">
-            <objects>
-                <viewController id="6ba-VE-hkc" customClass="AVPlayerViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1I6-rp-NCa">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z44-Eb-hHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1206" y="2389"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="EWP1" width="879" height="494"/>
-        <image name="EWP2" width="879" height="494"/>
-        <image name="HEV1" width="1024" height="734"/>
         <image name="HEVys" width="335" height="234"/>
         <image name="bestBg" width="335" height="330"/>
         <image name="bgMark" width="1024" height="704"/>

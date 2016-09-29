@@ -59,8 +59,8 @@
 - (NSMutableArray*)dataArr {
     if (nil == _dataArr) {
         _dataArr = [[NSMutableArray alloc] init];
-        for (NSInteger index = 0; index < 5; index ++) {
-            NSString *str = [NSString stringWithFormat:@"testDA%zd", index + 1];
+        for (NSInteger index = 0; index < 6; index ++) {
+            NSString *str = [NSString stringWithFormat:@"testDA%zd", index];
             [_dataArr addObject:str];
         }
     }

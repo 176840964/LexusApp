@@ -13,6 +13,7 @@
 @interface HEVAViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *mainViewWidth;
+@property (weak, nonatomic) IBOutlet CustomZoomScaleImageView *zoomScaleView;
 @property (weak, nonatomic) IBOutlet UIView *videoView;
 @property (weak, nonatomic) IBOutlet UIButton *leftArrowBtn;
 @property (weak, nonatomic) IBOutlet UIButton *rightArrowBtn;
@@ -28,6 +29,8 @@
     // Do any additional setup after loading the view.
     
     self.titleLab.text = @"HEV优势";
+    [self.zoomScaleView layoutCustomZoomScaleImageView];
+    self.zoomScaleView.image = [UIImage imageNamed:@"HEV1"];
 }
 
 - (void)updateViewConstraints {
@@ -42,6 +45,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
     self.scrollView.contentOffset = CGPointZero;
     [self setupLeftArrowBtnAndRightArrowBtnEnable];
     
