@@ -294,11 +294,14 @@
         CGFloat alpha = 100.0;
 //    NSLog(@"%f, %f", CGRectGetMidX(rect), CGRectGetMinX(mainRect));
         if (CGRectGetMidX(rect) < CGRectGetMinX(mainRect)) {
-            font = 50 - (CGRectGetMinX(mainRect) - CGRectGetMidX(rect)) / self.view.center.x * 35;
-            alpha = 100 - (CGRectGetMinX(mainRect) - CGRectGetMidX(rect)) / self.view.center.x * 95;
+            font = 40 - (CGRectGetMinX(mainRect) - CGRectGetMidX(rect)) / self.view.center.x * 35;
+            alpha = 80 - (CGRectGetMinX(mainRect) - CGRectGetMidX(rect)) / self.view.center.x * 95;
         } else if (CGRectGetMidX(rect) > CGRectGetMaxX(mainRect)) {
-            font = 15 + (1 - (CGRectGetMidX(rect) - CGRectGetMaxX(mainRect)) / self.view.center.x) * 35;
-            alpha = 5 + (1 - (CGRectGetMidX(rect) - CGRectGetMaxX(mainRect)) / self.view.center.x) * 95;
+            font = 15 + (1 - (CGRectGetMidX(rect) - CGRectGetMaxX(mainRect)) / self.view.center.x) * 25;
+            alpha = 5 + (1 - (CGRectGetMidX(rect) - CGRectGetMaxX(mainRect)) / self.view.center.x) * 75;
+        } else {
+            font = 50;
+            alpha = 100;
         }
         btn.alpha = alpha / 100.0;
 //        btn.titleLabel.font = [UIFont systemFontOfSize:font];
