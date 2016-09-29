@@ -20,6 +20,8 @@
 		D728D6A81D922DBE000C2203 /* CustomTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D6A71D922DBE000C2203 /* CustomTools.m */; };
 		D728D6AB1D9232DD000C2203 /* CustomLoginCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D6AA1D9232DD000C2203 /* CustomLoginCtrl.m */; };
 		D75A97751D9D08BB00CBF111 /* CustomZoomScaleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75A97741D9D08BB00CBF111 /* CustomZoomScaleImageView.m */; };
+		D75A97801D9D9BE900CBF111 /* SelectCarCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D75A977F1D9D9BE900CBF111 /* SelectCarCollectionViewCell.m */; };
+		D75A97821D9DC87800CBF111 /* NOBL____.TTF in Resources */ = {isa = PBXBuildFile; fileRef = D75A97811D9DC87800CBF111 /* NOBL____.TTF */; };
 		D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */; };
 		D75AE0681D7BEF9B006685AE /* FMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */; };
 		D75AE06C1D7D2223006685AE /* FMDetailCheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75AE06B1D7D2223006685AE /* FMDetailCheckView.m */; };
@@ -103,6 +105,9 @@
 		D728D6AA1D9232DD000C2203 /* CustomLoginCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLoginCtrl.m; sourceTree = "<group>"; };
 		D75A97731D9D08BB00CBF111 /* CustomZoomScaleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomZoomScaleImageView.h; sourceTree = "<group>"; };
 		D75A97741D9D08BB00CBF111 /* CustomZoomScaleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomZoomScaleImageView.m; sourceTree = "<group>"; };
+		D75A977E1D9D9BE900CBF111 /* SelectCarCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCarCollectionViewCell.h; sourceTree = "<group>"; };
+		D75A977F1D9D9BE900CBF111 /* SelectCarCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCarCollectionViewCell.m; sourceTree = "<group>"; };
+		D75A97811D9DC87800CBF111 /* NOBL____.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NOBL____.TTF"; sourceTree = "<group>"; };
 		D75AE0631D7BE5DA006685AE /* FMSelectKmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSelectKmViewController.h; sourceTree = "<group>"; };
 		D75AE0641D7BE5DA006685AE /* FMSelectKmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSelectKmViewController.m; sourceTree = "<group>"; };
 		D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDetailViewController.h; sourceTree = "<group>"; };
@@ -319,6 +324,7 @@
 		D75AE0801D7E913B006685AE /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				D75A97811D9DC87800CBF111 /* NOBL____.TTF */,
 				D75AE0981D7EAA3C006685AE /* Lexus_jiancuhei.TTF */,
 				D75AE0991D7EAA3C006685AE /* Lexus_jianhei.TTF */,
 				D75AE09A1D7EAA3C006685AE /* Lexus_jianzhengxian.TTF */,
@@ -486,6 +492,8 @@
 				D75AE0661D7BEF9B006685AE /* FMDetailViewController.h */,
 				D75AE0671D7BEF9B006685AE /* FMDetailViewController.m */,
 				D75AE0691D7D21E4006685AE /* FMDetailViews */,
+				D75A977E1D9D9BE900CBF111 /* SelectCarCollectionViewCell.h */,
+				D75A977F1D9D9BE900CBF111 /* SelectCarCollectionViewCell.m */,
 			);
 			name = 1.Free_maintenance;
 			sourceTree = "<group>";
@@ -627,6 +635,7 @@
 				D7DFC1B31D754A3B007A6D0C /* Assets.xcassets in Resources */,
 				D75AE09C1D7EAA3C006685AE /* Lexus_jiancuhei.TTF in Resources */,
 				D7ECB1571D9A9CFD004BD11F /* CarPosition.plist in Resources */,
+				D75A97821D9DC87800CBF111 /* NOBL____.TTF in Resources */,
 				D7DFC1B11D754A3B007A6D0C /* Main.storyboard in Resources */,
 				D75AE0771D7D3F58006685AE /* FMDetailChangeTableViewCell.xib in Resources */,
 				D75AE09D1D7EAA3C006685AE /* Lexus_jianhei.TTF in Resources */,
@@ -720,6 +729,7 @@
 				D75A97751D9D08BB00CBF111 /* CustomZoomScaleImageView.m in Sources */,
 				D75AE07E1D7D8825006685AE /* LoginViewController.m in Sources */,
 				D71A4FCE1D8AF02F0053E98C /* BaseModel.m in Sources */,
+				D75A97801D9D9BE900CBF111 /* SelectCarCollectionViewCell.m in Sources */,
 				D7DFC1E51D76D0F5007A6D0C /* UILabel+VerticalAlign.m in Sources */,
 				D7DFC1E11D76D0F5007A6D0C /* NSDate+TodayZeroClock.m in Sources */,
 				D7DFC1E01D76D0F5007A6D0C /* NSArray+sortBy.m in Sources */,

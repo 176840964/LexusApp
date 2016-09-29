@@ -9,9 +9,13 @@
 #import "FMSelectCarViewController.h"
 #import "CarSelectedItemView.h"
 #import "FMSelectKmViewController.h"
+#import "SelectCarCollectionViewCell.h"
 
-@interface FMSelectCarViewController ()
+@interface FMSelectCarViewController () <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *carImgView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+@property (strong, nonatomic) NSMutableArray *btnsArr;
 
 @property (strong, nonatomic) CarSelectedItemView *curCarItemView;
 @property (strong, nonatomic) CarSelectedItemView *nextCarItemView;
@@ -33,8 +37,8 @@
     self.isBgCanShake = YES;
     
     __weak typeof(self) weakSelf = self;
-    
     self.nextCarItemView = [CarSelectedItemView newAutoLayoutView];
+    self.nextCarItemView.hidden = YES;
     self.nextCarItemView.alpha = 0.0;
     [self.view addSubview:self.nextCarItemView];
     [self.nextCarItemView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:30];
@@ -48,6 +52,7 @@
     [self setGestureRecognizerOnCarSelectedItemView:self.nextCarItemView];
     
     self.curCarItemView = [CarSelectedItemView newAutoLayoutView];
+    self.curCarItemView.hidden = YES;
     self.curCarItemView.alpha = 1.0;
     [self.view addSubview:self.curCarItemView];
     [self.curCarItemView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:30];
@@ -61,6 +66,8 @@
     [self setGestureRecognizerOnCarSelectedItemView:self.curCarItemView];
     
     self.curSelectedIndex = 0;
+    
+    self.btnsArr = [NSMutableArray new];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -74,6 +81,40 @@
 //        view.backgroundColor = [UIColor redColor];
 //        [self.curCarItemView addSubview:view];
 //    }
+    
+    self.scrollView.contentSize = CGSizeMake((CGRectGetWidth(self.view.bounds) - 60) * 2, CGRectGetHeight(self.scrollView.bounds));
+    
+    NSInteger count = [CarCategoreManager shareManager].carsCount;
+    CGFloat spacing = self.scrollView.width / count;
+    for (NSInteger index = 0; index < count ; index++) {
+        NSString *carName = [[[CarCategoreManager shareManager] getCarInfoDicByIndex:index] objectForKey:@"name"];
+        
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.tag = index;
+        btn.frame = CGRectMake(self.scrollView.center.x - spacing / 2.0 + spacing * index, (self.scrollView.height - 40) / 2.0, spacing, 40);
+        btn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        [btn setTitle:carName forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(onTapCarNameBtn:) forControlEvents:UIControlEventTouchUpInside];
+        [self.scrollView addSubview:btn];
+        [self.btnsArr addObject:btn];
+        
+        CGFloat font = 48;
+        CGFloat alpha = 1;
+        if (index < 4) {
+            font = index / 4.0 * 50;
+            alpha = index / 4.0 * 1.0;
+        } else if (index > 4) {
+            font =  4 / index * 50;
+            alpha = 4 / index * 1.0;
+        }
+        
+        btn.alpha = alpha;
+        btn.titleLabel.font = [UIFont fontWithName:@"Nobel-Black" size:font];
+    }
+    
+    UIButton *btn = [self.btnsArr objectAtIndex:4];
+    self.curSelectedIndex = btn.tag;
+    self.scrollView.contentOffset = CGPointMake(btn.center.x - self.scrollView.contentSize.width / 4.0, self.scrollView.contentOffset.y);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,7 +127,7 @@
     [itemView addGestureRecognizer:pan];
 }
 
-#pragma mark - 
+#pragma mark -
 - (void)showSpecifiedCarItemByOffset:(NSInteger)offset {
     NSInteger count = [CarCategoreManager shareManager].carsCount;
     NSInteger nextIndex = self.curSelectedIndex + offset;
@@ -206,6 +247,31 @@
     }
 }
 
+- (void)scrollViewEnd:(UIScrollView *)scrollView {
+    CGFloat min = self.view.width;
+    NSInteger tag = 0;
+    UIButton *button = nil;
+    for (UIButton *btn in self.btnsArr) {
+        CGRect rect = [scrollView convertRect:btn.frame toView:self.view];
+        CGFloat val = self.view.center.x - CGRectGetMidX(rect);
+//        NSLog(@"%f, %f", fabs(min), val);
+        if (fabs(min) > fabs(val)) {
+            min = val;
+            tag = btn.tag;
+            button = btn;
+        }
+    }
+    
+    scrollView.contentOffset = CGPointMake(button.center.x - scrollView.contentSize.width / 4.0, scrollView.contentOffset.y);
+    self.curSelectedIndex = tag;
+}
+
+- (void)onTapCarNameBtn:(UIButton *)btn {
+    self.curSelectedIndex = btn.tag;
+    self.scrollView.contentOffset = CGPointMake(btn.center.x - self.scrollView.contentSize.width / 4.0, self.scrollView.contentOffset.y);
+}
+
+
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showFMSelectKmViewController"]) {
@@ -214,6 +280,40 @@
         vc.kmArr = [[CarCategoreManager shareManager] getCarKMByCarName:self.selectedCarNameStr carModel:self.selectedCarModelStr];
         vc.carName = self.selectedCarNameStr;
     }
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSInteger count = [CarCategoreManager shareManager].carsCount;
+    CGFloat spacing = self.scrollView.width / count;
+    CGRect mainRect = CGRectMake((self.view.width - spacing) / 2.0, (self.scrollView.height - 40) / 2.0, spacing, 40);
+//    UIButton *btn = [self.btnsArr objectAtIndex:4];
+    for (UIButton *btn in self.btnsArr) {
+        CGRect rect = [self.scrollView convertRect:btn.frame toView:self.view];
+        CGFloat font = 50;
+        CGFloat alpha = 100.0;
+//    NSLog(@"%f, %f", CGRectGetMidX(rect), CGRectGetMinX(mainRect));
+        if (CGRectGetMidX(rect) < CGRectGetMinX(mainRect)) {
+            font = 50 - (CGRectGetMinX(mainRect) - CGRectGetMidX(rect)) / self.view.center.x * 35;
+            alpha = 100 - (CGRectGetMinX(mainRect) - CGRectGetMidX(rect)) / self.view.center.x * 95;
+        } else if (CGRectGetMidX(rect) > CGRectGetMaxX(mainRect)) {
+            font = 15 + (1 - (CGRectGetMidX(rect) - CGRectGetMaxX(mainRect)) / self.view.center.x) * 35;
+            alpha = 5 + (1 - (CGRectGetMidX(rect) - CGRectGetMaxX(mainRect)) / self.view.center.x) * 95;
+        }
+        btn.alpha = alpha / 100.0;
+//        btn.titleLabel.font = [UIFont systemFontOfSize:font];
+        btn.titleLabel.font = [UIFont fontWithName:@"Nobel-Black" size:font];
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (!decelerate) {
+        [self scrollViewEnd:scrollView];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self scrollViewEnd:scrollView];
 }
 
 @end
