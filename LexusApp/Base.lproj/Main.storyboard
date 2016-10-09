@@ -1066,38 +1066,38 @@
                                                             <constraint firstAttribute="height" constant="453" id="oRy-dq-5Sf"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyK-TR-Dke">
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vsd-ct-2pc">
+                                                        <gestureRecognizers/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="428" id="Gcu-XT-FvA"/>
-                                                            <constraint firstAttribute="width" constant="354" id="iY6-Ye-t0z"/>
+                                                            <constraint firstAttribute="width" constant="354" id="vDh-Pp-Vxp"/>
+                                                            <constraint firstAttribute="height" constant="428" id="yEa-6y-ycH"/>
                                                         </constraints>
                                                         <connections>
-                                                            <action selector="onTapThumbBtn:" destination="EtN-wb-IcI" eventType="touchUpInside" id="UqE-He-q55"/>
+                                                            <outletCollection property="gestureRecognizers" destination="9vY-Ld-L4z" appends="YES" id="smS-iD-TeO"/>
                                                         </connections>
-                                                    </button>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5n-YY-zmg">
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </imageView>
+                                                    <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jw0-76-Xt7">
+                                                        <gestureRecognizers/>
                                                         <connections>
-                                                            <action selector="onTapBigBtn:" destination="EtN-wb-IcI" eventType="touchUpInside" id="bAr-lj-xoD"/>
+                                                            <outletCollection property="gestureRecognizers" destination="yYR-oh-3aY" appends="YES" id="ASs-Yk-zDU"/>
                                                         </connections>
-                                                    </button>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="XyK-TR-Dke" firstAttribute="centerY" secondItem="elB-6J-Kks" secondAttribute="centerY" id="GDZ-nL-Ugt"/>
-                                                    <constraint firstAttribute="bottom" secondItem="d5n-YY-zmg" secondAttribute="bottom" id="O42-5Z-een"/>
-                                                    <constraint firstItem="d5n-YY-zmg" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="leading" id="SK8-5n-vAT"/>
-                                                    <constraint firstItem="d5n-YY-zmg" firstAttribute="top" secondItem="EtN-wb-IcI" secondAttribute="top" id="Ubn-L8-fgR"/>
-                                                    <constraint firstAttribute="trailing" secondItem="XyK-TR-Dke" secondAttribute="trailing" constant="20" id="bNY-jC-P8s"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vsd-ct-2pc" secondAttribute="trailing" constant="20" id="Cf2-HN-PJr"/>
+                                                    <constraint firstAttribute="bottom" secondItem="jw0-76-Xt7" secondAttribute="bottom" id="YeB-eP-n9C"/>
+                                                    <constraint firstItem="jw0-76-Xt7" firstAttribute="top" secondItem="EtN-wb-IcI" secondAttribute="top" id="bOq-78-S1J"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jw0-76-Xt7" secondAttribute="trailing" id="fpB-Kg-N2A"/>
+                                                    <constraint firstItem="jw0-76-Xt7" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="leading" id="jgq-ft-kW0"/>
                                                     <constraint firstItem="elB-6J-Kks" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="leading" constant="33" id="kf0-Mw-eeO"/>
-                                                    <constraint firstAttribute="trailing" secondItem="d5n-YY-zmg" secondAttribute="trailing" id="rWt-EQ-qlO"/>
+                                                    <constraint firstItem="vsd-ct-2pc" firstAttribute="centerY" secondItem="elB-6J-Kks" secondAttribute="centerY" id="oRY-To-SkA"/>
                                                     <constraint firstItem="elB-6J-Kks" firstAttribute="centerY" secondItem="EtN-wb-IcI" secondAttribute="centerY" id="wfh-TH-mn1"/>
                                                 </constraints>
                                                 <connections>
-                                                    <outlet property="bigBtn" destination="d5n-YY-zmg" id="gvT-Dm-nEU"/>
                                                     <outlet property="imgView" destination="elB-6J-Kks" id="DsV-xZ-dei"/>
-                                                    <outlet property="thumbBtn" destination="XyK-TR-Dke" id="jk8-bT-66w"/>
+                                                    <outlet property="showImgView" destination="jw0-76-Xt7" id="w64-vG-z8p"/>
+                                                    <outlet property="thumbImgView" destination="vsd-ct-2pc" id="er5-bn-qAI"/>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-ia-a6g" customClass="FMDetailChangeView">
@@ -1223,6 +1223,16 @@
                         <action selector="rightScreenEdgePanGestureRecognizer:" destination="44l-JX-EdG" id="cRp-Hz-iM7"/>
                     </connections>
                 </screenEdgePanGestureRecognizer>
+                <tapGestureRecognizer id="9vY-Ld-L4z">
+                    <connections>
+                        <action selector="onTapThumbImgView:" destination="EtN-wb-IcI" id="qs2-W5-Tts"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="yYR-oh-3aY">
+                    <connections>
+                        <action selector="onTapShowImgView:" destination="EtN-wb-IcI" id="11A-mA-tb1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2916.796875" y="-332.03125"/>
         </scene>

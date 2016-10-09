@@ -10,8 +10,8 @@
 
 @interface FMDetailCheckView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
-@property (weak, nonatomic) IBOutlet UIButton *thumbBtn;
-@property (weak, nonatomic) IBOutlet UIButton *bigBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *thumbImgView;
+@property (weak, nonatomic) IBOutlet UIImageView *showImgView;
 @property (strong, nonatomic) NSArray *dataArr;
 
 @property (copy, nonatomic) NSString *fileNameStr;
@@ -41,7 +41,7 @@
         [btn setTitleColor:[UIColor colorWithHexString:@"#000000"] forState:UIControlStateSelected];
         [btn setTitle:str forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(onTapSelectedCheckBtn:) forControlEvents:UIControlEventTouchUpInside];
-        [self addSubview:btn];
+        [self insertSubview:btn belowSubview:self.showImgView];
         
         if (0 == index) {
             [btn sendActionsForControlEvents:UIControlEventTouchUpInside];
@@ -82,22 +82,16 @@
     NSDictionary *dic = [self.showingHotZone objectAtIndex:btn.tag];
     self.showingItemStr = [dic objectForKey:@"img"];
     
-    void (^showThumbBtnBlock)() = ^{
-        self.thumbBtn.transform = CGAffineTransformMakeTranslation(self.thumbBtn.width + 40, 0);
-        [self.thumbBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_%@_t", self.carStr, self.showingItemStr]] forState:UIControlStateNormal];
-    };
-    
-    if (self.thumbBtn.hidden) {
-        showThumbBtnBlock();
-        self.thumbBtn.hidden = NO;
-    } else {
-        [UIView animateWithDuration:.25 animations:showThumbBtnBlock completion:^(BOOL finished) {
-            [UIView animateWithDuration:.5 animations:^{
-                self.thumbBtn.transform = CGAffineTransformIdentity;
-            } completion:^(BOOL finished) {
-            }];
+    [UIView animateWithDuration:.25 animations:^{
+        self.thumbImgView.transform = CGAffineTransformMakeTranslation(self.thumbImgView.width + 40, 0);
+    } completion:^(BOOL finished) {
+        self.thumbImgView.hidden = NO;
+        self.thumbImgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_%@_t", self.carStr, self.showingItemStr]];
+        [UIView animateWithDuration:.5 animations:^{
+            self.thumbImgView.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
         }];
-    }
+    }];
 }
 
 - (void)setAllBtnNormalState {
@@ -116,13 +110,13 @@
 }
 
 #pragma mark - IBAction
-- (IBAction)onTapThumbBtn:(id)sender {
-    [self.bigBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@_%@", self.carStr, self.showingItemStr]] forState:UIControlStateNormal];
-    self.bigBtn.hidden = NO;
+- (IBAction)onTapThumbImgView:(id)sender {
+    self.showImgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_%@", self.carStr, self.showingItemStr]];
+    self.showImgView.hidden = NO;
 }
 
-- (IBAction)onTapBigBtn:(id)sender {
-    self.bigBtn.hidden = YES;
+- (IBAction)onTapShowImgView:(id)sender {
+    self.showImgView.hidden = YES;
 }
 
 /*
