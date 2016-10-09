@@ -11,4 +11,6 @@
 @interface FMDetailViewController : BaseViewController
 @property (strong, nonatomic) NSDictionary *detailDic;
 
+@property (copy, nonatomic) NSString *carName;
+@property (copy, nonatomic) NSString *carModel;
 @end

@@ -48,6 +48,19 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    
+    NSString *string = self.carName;
+    if ([self.carName isEqualToString:@"LS"]) {
+        if ([self.carModel isEqualToString:@"600hl"]) {
+            string = [string stringByAppendingString:self.carModel];
+        } else {
+            NSArray *arr = [self.carModel componentsSeparatedByString:@"("];
+            string = [string stringByAppendingFormat:@"%@4wd", arr.firstObject];
+        }
+    }
+    
+    self.checkView.carStr = string;
+    
     NSArray *checkArr = [self.detailDic objectForKey:@"check"];
     [self.checkView setupSubviewsByCheckArr:checkArr];
 }

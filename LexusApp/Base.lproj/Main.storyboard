@@ -105,7 +105,7 @@
             <objects>
                 <navigationController storyboardIdentifier="StudyNaviController" navigationBarHidden="YES" id="4tm-MQ-Zfi" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AVe-jI-wUM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AVe-jI-wUM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -648,7 +648,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="BLR-MY-wbm" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="709-za-Azb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="709-za-Azb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1060,17 +1060,44 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EtN-wb-IcI" customClass="FMDetailCheckView">
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="elB-6J-Kks"/>
+                                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="elB-6J-Kks">
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="586" id="H5b-Nu-iK9"/>
+                                                            <constraint firstAttribute="height" constant="453" id="oRy-dq-5Sf"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyK-TR-Dke">
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="428" id="Gcu-XT-FvA"/>
+                                                            <constraint firstAttribute="width" constant="354" id="iY6-Ye-t0z"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <action selector="onTapThumbBtn:" destination="EtN-wb-IcI" eventType="touchUpInside" id="UqE-He-q55"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5n-YY-zmg">
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <action selector="onTapBigBtn:" destination="EtN-wb-IcI" eventType="touchUpInside" id="bAr-lj-xoD"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="elB-6J-Kks" secondAttribute="trailing" id="GB3-Mw-2aj"/>
-                                                    <constraint firstItem="elB-6J-Kks" firstAttribute="top" secondItem="EtN-wb-IcI" secondAttribute="top" id="NCa-MH-t66"/>
-                                                    <constraint firstItem="elB-6J-Kks" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="leading" id="WWe-TC-4sD"/>
-                                                    <constraint firstAttribute="bottom" secondItem="elB-6J-Kks" secondAttribute="bottom" constant="128" id="drd-wx-Gc5"/>
+                                                    <constraint firstItem="XyK-TR-Dke" firstAttribute="centerY" secondItem="elB-6J-Kks" secondAttribute="centerY" id="GDZ-nL-Ugt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="d5n-YY-zmg" secondAttribute="bottom" id="O42-5Z-een"/>
+                                                    <constraint firstItem="d5n-YY-zmg" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="leading" id="SK8-5n-vAT"/>
+                                                    <constraint firstItem="d5n-YY-zmg" firstAttribute="top" secondItem="EtN-wb-IcI" secondAttribute="top" id="Ubn-L8-fgR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XyK-TR-Dke" secondAttribute="trailing" constant="20" id="bNY-jC-P8s"/>
+                                                    <constraint firstItem="elB-6J-Kks" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="leading" constant="33" id="kf0-Mw-eeO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="d5n-YY-zmg" secondAttribute="trailing" id="rWt-EQ-qlO"/>
+                                                    <constraint firstItem="elB-6J-Kks" firstAttribute="centerY" secondItem="EtN-wb-IcI" secondAttribute="centerY" id="wfh-TH-mn1"/>
                                                 </constraints>
                                                 <connections>
+                                                    <outlet property="bigBtn" destination="d5n-YY-zmg" id="gvT-Dm-nEU"/>
                                                     <outlet property="imgView" destination="elB-6J-Kks" id="DsV-xZ-dei"/>
+                                                    <outlet property="thumbBtn" destination="XyK-TR-Dke" id="jk8-bT-66w"/>
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ac7-ia-a6g" customClass="FMDetailChangeView">
@@ -1197,7 +1224,7 @@
                     </connections>
                 </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2917" y="-332"/>
+            <point key="canvasLocation" x="2916.796875" y="-332.03125"/>
         </scene>
         <!--Custom Tabbar View Controller-->
         <scene sceneID="pE2-0d-k6u">
@@ -1527,7 +1554,7 @@
                 <navigationController storyboardIdentifier="FMNaviController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Msa-Fr-Gls" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VIq-H6-Zht">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VIq-H6-Zht">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1545,7 +1572,7 @@
             <objects>
                 <navigationController storyboardIdentifier="EWPNaviController" navigationBarHidden="YES" id="lcZ-xP-6hA" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OCX-Xo-YPq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OCX-Xo-YPq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1666,7 +1693,7 @@
             <objects>
                 <navigationController storyboardIdentifier="HEVANaviController" navigationBarHidden="YES" id="5bg-6N-JJG" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dBI-4s-jKv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBI-4s-jKv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1801,7 +1828,7 @@
             <objects>
                 <navigationController storyboardIdentifier="DANaviController" navigationBarHidden="YES" id="DEH-gv-tvf" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0QB-gH-ajN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0QB-gH-ajN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

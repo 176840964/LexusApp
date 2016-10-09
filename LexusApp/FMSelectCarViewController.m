@@ -242,15 +242,15 @@
 }
 
 - (void)onTapSelectedCar:(UIButton *)btn {
-    NSArray *arr = @[@"RX", @"ES"];
-    if ([arr containsObject:self.selectedCarNameStr]) {
+//    NSArray *arr = @[@"RX", @"ES"];
+//    if ([arr containsObject:self.selectedCarNameStr]) {
         self.selectedCarModelStr = [self.carModelsArr objectAtIndex:btn.tag];
         [self performSegueWithIdentifier:@"showFMSelectKmViewController" sender:self];
-    } else {
-        [[CustomHintViewController getInstance] presentMessage:@"暂无此车数据信息，敬请期待" parentController:self isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
-            
-        }];
-    }
+//    } else {
+//        [[CustomHintViewController getInstance] presentMessage:@"暂无此车数据信息，敬请期待" parentController:self isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
+//            
+//        }];
+//    }
 }
 
 - (void)scrollViewEnd:(UIScrollView *)scrollView {
@@ -285,6 +285,7 @@
         vc.title = [NSString stringWithFormat:@"%@%@", self.selectedCarNameStr, self.selectedCarModelStr];
         vc.kmArr = [[CarCategoreManager shareManager] getCarKMByCarName:self.selectedCarNameStr carModel:self.selectedCarModelStr];
         vc.carName = self.selectedCarNameStr;
+        vc.carModel = self.selectedCarModelStr;
     }
 }
 

@@ -88,6 +88,8 @@
     if ([segue.identifier isEqualToString:@"showFMDetailViewController"]) {
         FMDetailViewController *vc = segue.destinationViewController;
         vc.detailDic = [self.kmArr objectAtIndex:self.selectedKM - 1];
+        vc.carName = self.carName;
+        vc.carModel = self.carModel;
     }
 }
 

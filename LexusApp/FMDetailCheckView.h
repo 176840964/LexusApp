@@ -10,6 +10,8 @@
 
 @interface FMDetailCheckView : UIView
 
+@property (copy, nonatomic) NSString *carStr;
+
 - (void)setupSubviewsByCheckArr:(NSArray *)arr;
 
 @end
