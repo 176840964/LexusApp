@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>hot_zone</key>
+	<array>
+		<dict>
+			<key>height</key>
+			<integer>64</integer>
+			<key>img</key>
+			<string>jccdlbgsqhpsq</string>
+			<key>width</key>
+			<integer>407</integer>
+			<key>x</key>
+			<integer>699</integer>
+			<key>y</key>
+			<integer>329</integer>
+		</dict>
+	</array>
+	<key>img</key>
+	<string>RX450h_1_3_5_7_9_11_13_15_dqxt</string>
+</dict>
+</plist>

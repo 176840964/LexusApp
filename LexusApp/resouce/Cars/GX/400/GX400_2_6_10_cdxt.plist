@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>img</key>
+	<string>GX400_2_6_10_cdxt</string>
+	<key>hot_zone</key>
+	<array>
+		<dict>
+			<key>x</key>
+			<integer>706</integer>
+			<key>y</key>
+			<integer>629</integer>
+			<key>width</key>
+			<integer>263</integer>
+			<key>height</key>
+			<integer>64</integer>
+			<key>img</key>
+			<string>jcqdzfct</string>
+		</dict>
+		<dict>
+			<key>x</key>
+			<integer>127</integer>
+			<key>y</key>
+			<integer>658</integer>
+			<key>width</key>
+			<integer>324</integer>
+			<key>height</key>
+			<integer>64</integer>
+			<key>img</key>
+			<string>jccdzrhzdzr</string>
+		</dict>
+		<dict>
+			<key>x</key>
+			<integer>73</integer>
+			<key>y</key>
+			<integer>818</integer>
+			<key>width</key>
+			<integer>265</integer>
+			<key>height</key>
+			<integer>64</integer>
+			<key>img</key>
+			<string>jccsqcly</string>
+		</dict>
+	</array>
+</dict>
+</plist>
