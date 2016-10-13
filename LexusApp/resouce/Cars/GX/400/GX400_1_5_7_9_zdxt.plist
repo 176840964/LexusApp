@@ -12,7 +12,7 @@
 			<key>y</key>
 			<integer>498</integer>
 			<key>width</key>
-			<integer>248</integer>
+			<integer>348</integer>
 			<key>height</key>
 			<integer>64</integer>
 			<key>img</key>
@@ -40,7 +40,7 @@
 			<key>height</key>
 			<integer>64</integer>
 			<key>img</key>
-			<string>jdzdyyl</string>
+			<string>jczdyyl</string>
 		</dict>
 	</array>
 </dict>

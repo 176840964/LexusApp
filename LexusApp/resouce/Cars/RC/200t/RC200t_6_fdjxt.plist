@@ -40,6 +40,18 @@
 			<key>y</key>
 			<integer>30</integer>
 		</dict>
+		<dict>
+			<key>height</key>
+			<integer>64</integer>
+			<key>img</key>
+			<string>jckqlqq</string>
+			<key>width</key>
+			<integer>283</integer>
+			<key>x</key>
+			<integer>67</integer>
+			<key>y</key>
+			<integer>499</integer>
+		</dict>
 	</array>
 	<key>img</key>
 	<string>RC200t_6_fdjxt</string>

@@ -8,11 +8,11 @@
 	<array>
 		<dict>
 			<key>x</key>
-			<integer>463</integer>
+			<integer>748</integer>
 			<key>y</key>
-			<integer>584</integer>
+			<integer>609</integer>
 			<key>width</key>
-			<integer>336</integer>
+			<integer>352</integer>
 			<key>height</key>
 			<integer>64</integer>
 			<key>img</key>
@@ -20,11 +20,11 @@
 		</dict>
 		<dict>
 			<key>x</key>
-			<integer>379</integer>
+			<integer>342</integer>
 			<key>y</key>
-			<integer>690</integer>
+			<integer>641</integer>
 			<key>width</key>
-			<integer>343</integer>
+			<integer>348</integer>
 			<key>height</key>
 			<integer>64</integer>
 			<key>img</key>

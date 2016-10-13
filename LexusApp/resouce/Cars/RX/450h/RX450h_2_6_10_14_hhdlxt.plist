@@ -28,6 +28,18 @@
 			<key>y</key>
 			<integer>33</integer>
 		</dict>
+		<dict>
+			<key>height</key>
+			<integer>64</integer>
+			<key>img</key>
+			<string>jckqlqq</string>
+			<key>width</key>
+			<integer>307</integer>
+			<key>x</key>
+			<integer>441</integer>
+			<key>y</key>
+			<integer>352</integer>
+		</dict>
 	</array>
 	<key>img</key>
 	<string>RX450h_2_6_10_14_hhdlxt</string>

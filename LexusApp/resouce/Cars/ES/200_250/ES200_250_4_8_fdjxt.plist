@@ -16,7 +16,7 @@
 			<key>height</key>
 			<integer>64</integer>
 			<key>img</key>
-			<string>jcqdpd</string>
+			<string>jccdpd</string>
 		</dict>
 		<dict>
 			<key>x</key>
@@ -28,7 +28,7 @@
 			<key>height</key>
 			<integer>64</integer>
 			<key>img</key>
-			<string>jcpqghanj</string>
+			<string>jcpqghazj</string>
 		</dict>
 		<dict>
 			<key>x</key>
@@ -77,6 +77,18 @@
 			<integer>64</integer>
 			<key>img</key>
 			<string>jcfdjlqyl</string>
+		</dict>
+		<dict>
+			<key>x</key>
+			<integer>217</integer>
+			<key>y</key>
+			<integer>204</integer>
+			<key>width</key>
+			<integer>547</integer>
+			<key>height</key>
+			<integer>64</integer>
+			<key>img</key>
+			<string>jcryxgrygljthrykzf</string>
 		</dict>
 	</array>
 </dict>

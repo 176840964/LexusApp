@@ -44,7 +44,7 @@
 			<key>height</key>
 			<integer>64</integer>
 			<key>img</key>
-			<string>jcfdjlqyl</string>
+			<string>jcfdjlqy</string>
 			<key>width</key>
 			<integer>301</integer>
 			<key>x</key>
@@ -87,6 +87,18 @@
 			<integer>726</integer>
 			<key>y</key>
 			<integer>481</integer>
+		</dict>
+		<dict>
+			<key>height</key>
+			<integer>64</integer>
+			<key>img</key>
+			<string>jctg</string>
+			<key>width</key>
+			<integer>168</integer>
+			<key>x</key>
+			<integer>34</integer>
+			<key>y</key>
+			<integer>83</integer>
 		</dict>
 	</array>
 	<key>img</key>

@@ -70,8 +70,9 @@
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = index;
         btn.frame = CGRectMake(x.floatValue / 2.0, y.floatValue / 2.0, width.floatValue / 2.0, height.floatValue / 2.0);
-        btn.backgroundColor = [UIColor redColor];
-        btn.alpha = .5;
+        btn.backgroundColor = [UIColor clearColor];
+//        btn.backgroundColor = [UIColor redColor];
+//        btn.alpha = .5;
         [btn addTarget:self action:@selector(onTapHotZoneBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self.imgView addSubview:btn];
         [self.hotZoneBtnsArr addObject:btn];
