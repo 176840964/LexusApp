@@ -8,6 +8,9 @@
 
 #import "FMDetailCheckView.h"
 
+#define defultWidthRatio CGRectGetWidth(self.imgView.frame) / 586.0
+#define defultHeightRatio CGRectGetHeight(self.imgView.frame) / 453.0
+
 @interface FMDetailCheckView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (weak, nonatomic) IBOutlet UIImageView *thumbImgView;
@@ -51,7 +54,7 @@
 
 #pragma mark -
 - (void)onTapSelectedCheckBtn:(UIButton*)btn {
-    [self setAllBtnNormalState];
+    [self setAllBtnNormalStateAndClearAllHotZone];
     btn.backgroundColor = [UIColor whiteColor];
     btn.selected = YES;
     
@@ -63,16 +66,16 @@
     self.showingHotZone = [dic objectForKey:@"hot_zone"];
     for (NSInteger index = 0; index < self.showingHotZone.count; index++) {
         NSDictionary *itemDic = [self.showingHotZone objectAtIndex:index];
-        NSNumber *x = [itemDic objectForKey:@"x"];
-        NSNumber *y = [itemDic objectForKey:@"y"];
-        NSNumber *width = [itemDic objectForKey:@"width"];
-        NSNumber *height = [itemDic objectForKey:@"height"];
+        CGFloat x = [[itemDic objectForKey:@"x"] floatValue] / 2.0 * defultWidthRatio;
+        CGFloat y = [[itemDic objectForKey:@"y"] floatValue] / 2.0 * defultHeightRatio;
+        CGFloat width = [[itemDic objectForKey:@"width"] floatValue] / 2.0 * defultWidthRatio;
+        CGFloat height = [[itemDic objectForKey:@"height"] floatValue] / 2.0 * defultHeightRatio;
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.tag = index;
-        btn.frame = CGRectMake(x.floatValue / 2.0, y.floatValue / 2.0, width.floatValue / 2.0, height.floatValue / 2.0);
-        btn.backgroundColor = [UIColor clearColor];
-//        btn.backgroundColor = [UIColor redColor];
-//        btn.alpha = .5;
+        btn.frame = CGRectMake(x, y, width, height);
+//        btn.backgroundColor = [UIColor clearColor];
+        btn.backgroundColor = [UIColor redColor];
+        btn.alpha = .5;
         [btn addTarget:self action:@selector(onTapHotZoneBtn:) forControlEvents:UIControlEventTouchUpInside];
         [self.imgView addSubview:btn];
         [self.hotZoneBtnsArr addObject:btn];
@@ -83,19 +86,42 @@
     NSDictionary *dic = [self.showingHotZone objectAtIndex:btn.tag];
     self.showingItemStr = [dic objectForKey:@"img"];
     
+    void (^dismissBlock)() = ^{
+        self.thumbImgView.transform = CGAffineTransformMakeTranslation(self.thumbImgView.width + 40, 0);
+    };
+    void (^dismissCompletionBlock)() = ^{
+        self.thumbImgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_%@_t", self.carStr, self.showingItemStr]];
+    };
+    void (^showBlock)() = ^() {
+        self.thumbImgView.transform = CGAffineTransformIdentity;
+    };
+    BOOL isShowing = CGAffineTransformIsIdentity(self.thumbImgView.transform);
+    [UIView animateWithDuration:.25 animations:^{
+        if (isShowing) {
+            dismissBlock();
+        } else {
+            dismissCompletionBlock();
+            showBlock();
+        }
+    } completion:^(BOOL finished) {
+        if (isShowing) {
+            dismissCompletionBlock();
+            [UIView animateWithDuration:.25 animations:showBlock];
+        }
+    }];
+}
+
+- (void)dismissThumbImgView {
     [UIView animateWithDuration:.25 animations:^{
         self.thumbImgView.transform = CGAffineTransformMakeTranslation(self.thumbImgView.width + 40, 0);
     } completion:^(BOOL finished) {
         self.thumbImgView.hidden = NO;
-        self.thumbImgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@_%@_t", self.carStr, self.showingItemStr]];
-        [UIView animateWithDuration:.5 animations:^{
-            self.thumbImgView.transform = CGAffineTransformIdentity;
-        } completion:^(BOOL finished) {
-        }];
     }];
 }
 
-- (void)setAllBtnNormalState {
+- (void)setAllBtnNormalStateAndClearAllHotZone {
+    [self dismissThumbImgView];
+    
     for (UIButton *btn in self.hotZoneBtnsArr) {
         [btn removeFromSuperview];
     }

@@ -1062,8 +1062,7 @@
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="elB-6J-Kks">
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="586" id="H5b-Nu-iK9"/>
-                                                            <constraint firstAttribute="height" constant="453" id="oRy-dq-5Sf"/>
+                                                            <constraint firstAttribute="width" secondItem="elB-6J-Kks" secondAttribute="height" multiplier="586:453" id="mCp-8j-mEd"/>
                                                         </constraints>
                                                     </imageView>
                                                     <imageView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vsd-ct-2pc">
@@ -1090,9 +1089,10 @@
                                                     <constraint firstItem="jw0-76-Xt7" firstAttribute="top" secondItem="EtN-wb-IcI" secondAttribute="top" id="bOq-78-S1J"/>
                                                     <constraint firstAttribute="trailing" secondItem="jw0-76-Xt7" secondAttribute="trailing" id="fpB-Kg-N2A"/>
                                                     <constraint firstItem="jw0-76-Xt7" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="leading" id="jgq-ft-kW0"/>
+                                                    <constraint firstItem="vsd-ct-2pc" firstAttribute="leading" secondItem="elB-6J-Kks" secondAttribute="trailing" constant="31" id="jxi-Al-Ejl"/>
                                                     <constraint firstItem="elB-6J-Kks" firstAttribute="leading" secondItem="EtN-wb-IcI" secondAttribute="leading" constant="33" id="kf0-Mw-eeO"/>
                                                     <constraint firstItem="vsd-ct-2pc" firstAttribute="centerY" secondItem="elB-6J-Kks" secondAttribute="centerY" id="oRY-To-SkA"/>
-                                                    <constraint firstItem="elB-6J-Kks" firstAttribute="centerY" secondItem="EtN-wb-IcI" secondAttribute="centerY" id="wfh-TH-mn1"/>
+                                                    <constraint firstItem="elB-6J-Kks" firstAttribute="centerY" secondItem="EtN-wb-IcI" secondAttribute="centerY" constant="-20" id="wfh-TH-mn1"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="imgView" destination="elB-6J-Kks" id="DsV-xZ-dei"/>
