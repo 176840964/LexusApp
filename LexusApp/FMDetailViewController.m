@@ -29,6 +29,7 @@
     NSArray *arr = [self.detailDic objectForKey:@"change"];
     
     self.isShowBackBtn = YES;
+    self.changeView.carNameStr = self.carName;
     [self.changeView setupSubviewsWithDataArr:arr];
     
     self.checkProjectBtn.backgroundColor = [UIColor whiteColor];

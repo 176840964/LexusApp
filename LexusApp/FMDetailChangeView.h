@@ -11,6 +11,7 @@
 @interface FMDetailChangeView : UIView
 
 @property (copy, nonatomic) void(^didSelectedChangeItem)(NSDictionary *dic);
+@property (copy, nonatomic) NSString *carNameStr;
 
 - (void)setupSubviewsWithDataArr:(NSArray*)dataArr;
 

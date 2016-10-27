@@ -28,6 +28,8 @@
     self.descriptionPriceLab.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:20];
     [self.descriptionPriceLab setAttributedNumberStringInContentString:string attributesDic:@{NSForegroundColorAttributeName:[UIColor blueColor], NSFontAttributeName:[UIFont systemFontOfSize:30]}];
     
+    self.showView.imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@ChangeDefulteBg", self.carNameStr]];
+    
     self.dataArr = dataArr;
     [self.tableView reloadData];
 }
