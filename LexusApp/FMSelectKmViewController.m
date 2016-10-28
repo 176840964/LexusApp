@@ -8,9 +8,12 @@
 
 #import "FMSelectKmViewController.h"
 #import "FMDetailViewController.h"
+#import "../Pods/YLGIFImage/YLGIFImage/YLImageView.h"
+#import "../Pods/YLGIFImage/YLGIFImage/YLGIFImage.h"
 
 @interface FMSelectKmViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *carImgView;
+@property (weak, nonatomic) IBOutlet YLImageView *gitImgView;
 @property (assign, nonatomic) NSInteger selectedKM;
 @end
 
@@ -47,6 +50,7 @@
             [self.view addSubview:pointImgView];
         }
     }
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -61,19 +65,56 @@
 
 #pragma mark - 
 - (void)showAnimation {
-    self.carImgView.transform = CGAffineTransformMakeTranslation(-self.view.center.x - self.carImgView.width, 0);
-    self.carImgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@KM", self.carName]];
-    [UIView animateWithDuration:.5 animations:^{
-        self.carImgView.transform = CGAffineTransformIdentity;
+    NSString *imgStr = [self carImageName];
+    self.gitImgView.transform = CGAffineTransformMakeTranslation(-self.view.center.x - self.gitImgView.width, 0);
+    self.gitImgView.image = [YLGIFImage imageNamed:[NSString stringWithFormat:@"%@.gif", imgStr]];
+    self.carImgView.image = [UIImage imageNamed:imgStr];
+    [UIView animateWithDuration:1 animations:^{
+        self.gitImgView.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+        self.carImgView.hidden = NO;
+        self.gitImgView.hidden = YES;
     }];
 }
 
 - (void)dismissAnimation {
-    [UIView animateWithDuration:.5 animations:^{
-        self.carImgView.transform = CGAffineTransformMakeTranslation(self.view.center.x + self.carImgView.width / 2.0, 0);
+    self.gitImgView.hidden = NO;
+    self.carImgView.hidden = YES;
+    [UIView animateWithDuration:1 animations:^{
+        self.gitImgView.transform = CGAffineTransformMakeTranslation(self.view.center.x + self.carImgView.width / 2.0, 0);
     } completion:^(BOOL finished) {
         [self performSegueWithIdentifier:@"showFMDetailViewController" sender:self];
     }];
+}
+
+- (NSString *)carImageName {
+    if ([self.carName isEqualToString:@"GS"]) {
+        if ([self.carModel isEqualToString:@"350h"] || [self.carModel isEqualToString:@"450h"]) {
+            return @"GS450h-300h";
+        } else {
+            return @"GS-200t-250-350-350(AWD)";
+        }
+    } else if ([self.carName isEqualToString:@"LS"]) {
+        if ([self.carModel isEqualToString:@"600hl"]) {
+            return @"LS600hl";
+        } else {
+            return @"LS460(4wd)";
+        }
+    } else if ([self.carName isEqualToString:@"NX"]) {
+        if ([self.carModel isEqualToString:@"300h(4wd)"]) {
+            return @"NX300h";
+        } else {
+            return @"NX200t、200（4WD)";
+        }
+    } else if ([self.carName isEqualToString:@"RX"]) {
+        if ([self.carModel isEqualToString:@"450h"]) {
+            return @"RX450h";
+        } else {
+            return @"RX200t、RX270、350";
+        }
+    } else {
+        return [NSString stringWithFormat:@"%@KM", self.carName];
+    }
 }
 
 - (void)onTapSelectedKmBtn:(UIButton *)sender {

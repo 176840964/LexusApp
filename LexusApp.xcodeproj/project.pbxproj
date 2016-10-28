@@ -12,6 +12,32 @@
 		D71A4FCE1D8AF02F0053E98C /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A4FCD1D8AF02F0053E98C /* BaseModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D71A4FD11D8AF4930053E98C /* HintView.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A4FD01D8AF4930053E98C /* HintView.m */; };
 		D71A4FD61D8E91B70053E98C /* LocalUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D71A4FD51D8E91B70053E98C /* LocalUserManager.m */; };
+		D71DB0FC1DC3BCAC0020956F /* CTKM.gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0E21DC3BCAC0020956F /* CTKM.gif */; };
+		D71DB0FD1DC3BCAC0020956F /* CTKM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0E31DC3BCAC0020956F /* CTKM@2x.png */; };
+		D71DB0FE1DC3BCAC0020956F /* ESKM.gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0E41DC3BCAC0020956F /* ESKM.gif */; };
+		D71DB0FF1DC3BCAC0020956F /* ESKM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0E51DC3BCAC0020956F /* ESKM@2x.png */; };
+		D71DB1001DC3BCAC0020956F /* GS-200t-250-350-350(AWD).gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0E61DC3BCAC0020956F /* GS-200t-250-350-350(AWD).gif */; };
+		D71DB1011DC3BCAC0020956F /* GS-200t-250-350-350(AWD)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0E71DC3BCAC0020956F /* GS-200t-250-350-350(AWD)@2x.png */; };
+		D71DB1021DC3BCAC0020956F /* GS450h-300h.gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0E81DC3BCAC0020956F /* GS450h-300h.gif */; };
+		D71DB1031DC3BCAC0020956F /* GS450h-300h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0E91DC3BCAC0020956F /* GS450h-300h@2x.png */; };
+		D71DB1041DC3BCAC0020956F /* GXKM.gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0EA1DC3BCAC0020956F /* GXKM.gif */; };
+		D71DB1051DC3BCAC0020956F /* GXKM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0EB1DC3BCAC0020956F /* GXKM@2x.png */; };
+		D71DB1061DC3BCAC0020956F /* ISKM.gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0EC1DC3BCAC0020956F /* ISKM.gif */; };
+		D71DB1071DC3BCAC0020956F /* ISKM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0ED1DC3BCAC0020956F /* ISKM@2x.png */; };
+		D71DB1081DC3BCAC0020956F /* LS460(4wd).gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0EE1DC3BCAC0020956F /* LS460(4wd).gif */; };
+		D71DB1091DC3BCAC0020956F /* LS460(4wd)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0EF1DC3BCAC0020956F /* LS460(4wd)@2x.png */; };
+		D71DB10A1DC3BCAC0020956F /* LS600hl.gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0F01DC3BCAC0020956F /* LS600hl.gif */; };
+		D71DB10B1DC3BCAC0020956F /* LS600hl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0F11DC3BCAC0020956F /* LS600hl@2x.png */; };
+		D71DB10C1DC3BCAC0020956F /* LXKM.gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0F21DC3BCAC0020956F /* LXKM.gif */; };
+		D71DB10D1DC3BCAC0020956F /* LXKM@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0F31DC3BCAC0020956F /* LXKM@2x.png */; };
+		D71DB10E1DC3BCAC0020956F /* NX200t、200（4WD).gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0F41DC3BCAC0020956F /* NX200t、200（4WD).gif */; };
+		D71DB10F1DC3BCAC0020956F /* NX200t、200（4WD)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0F51DC3BCAC0020956F /* NX200t、200（4WD)@2x.png */; };
+		D71DB1101DC3BCAC0020956F /* NX300h.gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0F61DC3BCAC0020956F /* NX300h.gif */; };
+		D71DB1111DC3BCAC0020956F /* NX300h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0F71DC3BCAC0020956F /* NX300h@2x.png */; };
+		D71DB1121DC3BCAC0020956F /* RX200t、RX270、350.gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0F81DC3BCAC0020956F /* RX200t、RX270、350.gif */; };
+		D71DB1131DC3BCAC0020956F /* RX200t、RX270、350@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0F91DC3BCAC0020956F /* RX200t、RX270、350@2x.png */; };
+		D71DB1141DC3BCAC0020956F /* RX450h.gif in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0FA1DC3BCAC0020956F /* RX450h.gif */; };
+		D71DB1151DC3BCAC0020956F /* RX450h.png in Resources */ = {isa = PBXBuildFile; fileRef = D71DB0FB1DC3BCAC0020956F /* RX450h.png */; };
 		D728D6281D8FF577000C2203 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D728D6271D8FF577000C2203 /* testVideo.mp4 */; };
 		D728D62C1D9043DC000C2203 /* CustomHintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D728D62A1D9043DC000C2203 /* CustomHintViewController.m */; };
 		D728D62D1D9043DC000C2203 /* CustomHintViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D728D62B1D9043DC000C2203 /* CustomHintViewController.xib */; };
@@ -234,6 +260,32 @@
 		D71A4FD01D8AF4930053E98C /* HintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HintView.m; sourceTree = "<group>"; };
 		D71A4FD41D8E91B70053E98C /* LocalUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalUserManager.h; sourceTree = "<group>"; };
 		D71A4FD51D8E91B70053E98C /* LocalUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalUserManager.m; sourceTree = "<group>"; };
+		D71DB0E21DC3BCAC0020956F /* CTKM.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = CTKM.gif; sourceTree = "<group>"; };
+		D71DB0E31DC3BCAC0020956F /* CTKM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CTKM@2x.png"; sourceTree = "<group>"; };
+		D71DB0E41DC3BCAC0020956F /* ESKM.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ESKM.gif; sourceTree = "<group>"; };
+		D71DB0E51DC3BCAC0020956F /* ESKM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ESKM@2x.png"; sourceTree = "<group>"; };
+		D71DB0E61DC3BCAC0020956F /* GS-200t-250-350-350(AWD).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "GS-200t-250-350-350(AWD).gif"; sourceTree = "<group>"; };
+		D71DB0E71DC3BCAC0020956F /* GS-200t-250-350-350(AWD)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GS-200t-250-350-350(AWD)@2x.png"; sourceTree = "<group>"; };
+		D71DB0E81DC3BCAC0020956F /* GS450h-300h.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "GS450h-300h.gif"; sourceTree = "<group>"; };
+		D71DB0E91DC3BCAC0020956F /* GS450h-300h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GS450h-300h@2x.png"; sourceTree = "<group>"; };
+		D71DB0EA1DC3BCAC0020956F /* GXKM.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GXKM.gif; sourceTree = "<group>"; };
+		D71DB0EB1DC3BCAC0020956F /* GXKM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GXKM@2x.png"; sourceTree = "<group>"; };
+		D71DB0EC1DC3BCAC0020956F /* ISKM.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = ISKM.gif; sourceTree = "<group>"; };
+		D71DB0ED1DC3BCAC0020956F /* ISKM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ISKM@2x.png"; sourceTree = "<group>"; };
+		D71DB0EE1DC3BCAC0020956F /* LS460(4wd).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "LS460(4wd).gif"; sourceTree = "<group>"; };
+		D71DB0EF1DC3BCAC0020956F /* LS460(4wd)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LS460(4wd)@2x.png"; sourceTree = "<group>"; };
+		D71DB0F01DC3BCAC0020956F /* LS600hl.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LS600hl.gif; sourceTree = "<group>"; };
+		D71DB0F11DC3BCAC0020956F /* LS600hl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LS600hl@2x.png"; sourceTree = "<group>"; };
+		D71DB0F21DC3BCAC0020956F /* LXKM.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LXKM.gif; sourceTree = "<group>"; };
+		D71DB0F31DC3BCAC0020956F /* LXKM@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LXKM@2x.png"; sourceTree = "<group>"; };
+		D71DB0F41DC3BCAC0020956F /* NX200t、200（4WD).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "NX200t、200（4WD).gif"; sourceTree = "<group>"; };
+		D71DB0F51DC3BCAC0020956F /* NX200t、200（4WD)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NX200t、200（4WD)@2x.png"; sourceTree = "<group>"; };
+		D71DB0F61DC3BCAC0020956F /* NX300h.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NX300h.gif; sourceTree = "<group>"; };
+		D71DB0F71DC3BCAC0020956F /* NX300h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NX300h@2x.png"; sourceTree = "<group>"; };
+		D71DB0F81DC3BCAC0020956F /* RX200t、RX270、350.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "RX200t、RX270、350.gif"; sourceTree = "<group>"; };
+		D71DB0F91DC3BCAC0020956F /* RX200t、RX270、350@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RX200t、RX270、350@2x.png"; sourceTree = "<group>"; };
+		D71DB0FA1DC3BCAC0020956F /* RX450h.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = RX450h.gif; sourceTree = "<group>"; };
+		D71DB0FB1DC3BCAC0020956F /* RX450h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RX450h.png; sourceTree = "<group>"; };
 		D728D6271D8FF577000C2203 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		D728D6291D9043DC000C2203 /* CustomHintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHintViewController.h; sourceTree = "<group>"; };
 		D728D62A1D9043DC000C2203 /* CustomHintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHintViewController.m; sourceTree = "<group>"; };
@@ -539,6 +591,39 @@
 			name = LocalUserManager;
 			sourceTree = "<group>";
 		};
+		D71DB0DD1DC2611A0020956F /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				D71DB0E21DC3BCAC0020956F /* CTKM.gif */,
+				D71DB0E31DC3BCAC0020956F /* CTKM@2x.png */,
+				D71DB0E41DC3BCAC0020956F /* ESKM.gif */,
+				D71DB0E51DC3BCAC0020956F /* ESKM@2x.png */,
+				D71DB0E61DC3BCAC0020956F /* GS-200t-250-350-350(AWD).gif */,
+				D71DB0E71DC3BCAC0020956F /* GS-200t-250-350-350(AWD)@2x.png */,
+				D71DB0E81DC3BCAC0020956F /* GS450h-300h.gif */,
+				D71DB0E91DC3BCAC0020956F /* GS450h-300h@2x.png */,
+				D71DB0EA1DC3BCAC0020956F /* GXKM.gif */,
+				D71DB0EB1DC3BCAC0020956F /* GXKM@2x.png */,
+				D71DB0EC1DC3BCAC0020956F /* ISKM.gif */,
+				D71DB0ED1DC3BCAC0020956F /* ISKM@2x.png */,
+				D71DB0EE1DC3BCAC0020956F /* LS460(4wd).gif */,
+				D71DB0EF1DC3BCAC0020956F /* LS460(4wd)@2x.png */,
+				D71DB0F01DC3BCAC0020956F /* LS600hl.gif */,
+				D71DB0F11DC3BCAC0020956F /* LS600hl@2x.png */,
+				D71DB0F21DC3BCAC0020956F /* LXKM.gif */,
+				D71DB0F31DC3BCAC0020956F /* LXKM@2x.png */,
+				D71DB0F41DC3BCAC0020956F /* NX200t、200（4WD).gif */,
+				D71DB0F51DC3BCAC0020956F /* NX200t、200（4WD)@2x.png */,
+				D71DB0F61DC3BCAC0020956F /* NX300h.gif */,
+				D71DB0F71DC3BCAC0020956F /* NX300h@2x.png */,
+				D71DB0F81DC3BCAC0020956F /* RX200t、RX270、350.gif */,
+				D71DB0F91DC3BCAC0020956F /* RX200t、RX270、350@2x.png */,
+				D71DB0FA1DC3BCAC0020956F /* RX450h.gif */,
+				D71DB0FB1DC3BCAC0020956F /* RX450h.png */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
 		D728D6261D8FF577000C2203 /* Video */ = {
 			isa = PBXGroup;
 			children = (
@@ -759,6 +844,7 @@
 		D75AE07F1D7E913B006685AE /* resouce */ = {
 			isa = PBXGroup;
 			children = (
+				D71DB0DD1DC2611A0020956F /* Gif */,
 				D774C8AE1DAAC296004CF567 /* CheckItems */,
 				D7ECB1531D97BEF6004BD11F /* Cars */,
 				D728D6261D8FF577000C2203 /* Video */,
@@ -1083,13 +1169,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D73550F11DB00F8300944CE4 /* CT_jckqlqq_t@2x.png in Resources */,
+				D71DB1111DC3BCAC0020956F /* NX300h@2x.png in Resources */,
+				D71DB1041DC3BCAC0020956F /* GXKM.gif in Resources */,
+				D71DB1051DC3BCAC0020956F /* GXKM@2x.png in Resources */,
 				D73556CE1DB00F9200944CE4 /* CT200h_12_zdxt.plist in Resources */,
 				D73556EA1DB00F9200944CE4 /* CT200h_1_5_7_11_13_zdxt.plist in Resources */,
 				D73557121DB00F9200944CE4 /* CT200h_6_hhdlxt.plist in Resources */,
 				D73557031DB00F9200944CE4 /* CT200h_4_8_dqxt@2x.png in Resources */,
+				D71DB10F1DC3BCAC0020956F /* NX200t、200（4WD)@2x.png in Resources */,
 				D73550FD1DB00F8300944CE4 /* CT_jcqdzfct_t@2x.png in Resources */,
+				D71DB1061DC3BCAC0020956F /* ISKM.gif in Resources */,
 				D73550E81DB00F8300944CE4 /* CT_jccdpd@2x.png in Resources */,
 				D73556DA1DB00F9200944CE4 /* CT200h_14_xjxt.plist in Resources */,
+				D71DB1001DC3BCAC0020956F /* GS-200t-250-350-350(AWD).gif in Resources */,
 				D73556D81DB00F9200944CE4 /* CT200h_14_lt.plist in Resources */,
 				D735570E1DB00F9200944CE4 /* CT200h_6_cdxt.plist in Resources */,
 				D73556FA1DB00F9200944CE4 /* CT200h_3_9_dqxt.plist in Resources */,
@@ -1098,6 +1190,7 @@
 				D73550E31DB00F8300944CE4 /* CT_jc12vxdc_t@2x.png in Resources */,
 				D75AE09F1D7EAA3C006685AE /* Lexus_jianzhonghei.TTF in Resources */,
 				D7ECB1551D97C618004BD11F /* ChangeImageList.plist in Resources */,
+				D71DB10B1DC3BCAC0020956F /* LS600hl@2x.png in Resources */,
 				D73557081DB00F9200944CE4 /* CT200h_4_8_xjxt.plist in Resources */,
 				D73556FE1DB00F9200944CE4 /* CT200h_3_9_zdxt.plist in Resources */,
 				D73556EB1DB00F9200944CE4 /* CT200h_1_5_7_11_13_zdxt@2x.png in Resources */,
@@ -1110,9 +1203,12 @@
 				D73550F81DB00F8300944CE4 /* CT_jclthbthcqyl@2x.png in Resources */,
 				D73551061DB00F8300944CE4 /* CT_jczdcbhzdp@2x.png in Resources */,
 				D73550F21DB00F8300944CE4 /* CT_jcktlqqqj@2x.png in Resources */,
+				D71DB1011DC3BCAC0020956F /* GS-200t-250-350-350(AWD)@2x.png in Resources */,
+				D71DB0FE1DC3BCAC0020956F /* ESKM.gif in Resources */,
 				D7DFC1B61D754A3B007A6D0C /* LaunchScreen.storyboard in Resources */,
 				D73556FC1DB00F9200944CE4 /* CT200h_3_9_lt.plist in Resources */,
 				D73556C21DB00F9200944CE4 /* CT200h_10_zxxt.plist in Resources */,
+				D71DB10E1DC3BCAC0020956F /* NX200t、200（4WD).gif in Resources */,
 				D73550F31DB00F8300944CE4 /* CT_jcktlqqqj_t@2x.png in Resources */,
 				D735570A1DB00F9200944CE4 /* CT200h_4_8_zdxt.plist in Resources */,
 				D73556C61DB00F9200944CE4 /* CT200h_12_dqxt.plist in Resources */,
@@ -1121,9 +1217,12 @@
 				D73550EC1DB00F8300944CE4 /* CT_jcfdjlqyl@2x.png in Resources */,
 				D73557041DB00F9200944CE4 /* CT200h_4_8_hhdlxt.plist in Resources */,
 				D73556CD1DB00F9200944CE4 /* CT200h_12_xjxt@2x.png in Resources */,
+				D71DB1121DC3BCAC0020956F /* RX200t、RX270、350.gif in Resources */,
+				D71DB1131DC3BCAC0020956F /* RX200t、RX270、350@2x.png in Resources */,
 				D73557011DB00F9200944CE4 /* CT200h_4_8_cdxt@2x.png in Resources */,
 				D73550F61DB00F8300944CE4 /* CT_jclqhjrxt@2x.png in Resources */,
 				D73557021DB00F9200944CE4 /* CT200h_4_8_dqxt.plist in Resources */,
+				D71DB10A1DC3BCAC0020956F /* LS600hl.gif in Resources */,
 				D73556DE1DB00F9200944CE4 /* CT200h_14_zxxt.plist in Resources */,
 				D73556C41DB00F9200944CE4 /* CT200h_12_cdxt.plist in Resources */,
 				D73556E01DB00F9200944CE4 /* CT200h_15_dqxt.plist in Resources */,
@@ -1134,14 +1233,17 @@
 				D73556C51DB00F9200944CE4 /* CT200h_12_cdxt@2x.png in Resources */,
 				D73551051DB00F8300944CE4 /* CT_jcxjqjhfcz_t@2x.png in Resources */,
 				D73556E61DB00F9200944CE4 /* CT200h_1_5_7_11_13_dqxt.plist in Resources */,
+				D71DB0FD1DC3BCAC0020956F /* CTKM@2x.png in Resources */,
 				D75AE0C81D80634F006685AE /* StudyListTableViewCell.xib in Resources */,
 				D73556F41DB00F9200944CE4 /* CT200h_2_xjxt.plist in Resources */,
+				D71DB0FF1DC3BCAC0020956F /* ESKM@2x.png in Resources */,
 				D73550FC1DB00F8300944CE4 /* CT_jcqdzfct@2x.png in Resources */,
 				D73556E51DB00F9200944CE4 /* CT200h_15_zdxt@2x.png in Resources */,
 				D73556F51DB00F9200944CE4 /* CT200h_2_xjxt@2x.png in Resources */,
 				D73556CB1DB00F9200944CE4 /* CT200h_12_lt@2x.png in Resources */,
 				D73556F31DB00F9200944CE4 /* CT200h_2_lt@2x.png in Resources */,
 				D73550E51DB00F8300944CE4 /* CT_jcbsqybkqcsq_t@2x.png in Resources */,
+				D71DB1151DC3BCAC0020956F /* RX450h.png in Resources */,
 				D73556D41DB00F9200944CE4 /* CT200h_14_dqxt.plist in Resources */,
 				D73556D21DB00F9200944CE4 /* CT200h_14_cdxt.plist in Resources */,
 				D73556DF1DB00F9200944CE4 /* CT200h_14_zxxt@2x.png in Resources */,
@@ -1150,7 +1252,9 @@
 				D73556DB1DB00F9200944CE4 /* CT200h_14_xjxt@2x.png in Resources */,
 				D73556FB1DB00F9200944CE4 /* CT200h_3_9_dqxt@2x.png in Resources */,
 				D73556FF1DB00F9200944CE4 /* CT200h_3_9_zdxt@2x.png in Resources */,
+				D71DB1031DC3BCAC0020956F /* GS450h-300h@2x.png in Resources */,
 				D73556E21DB00F9200944CE4 /* CT200h_15_lt.plist in Resources */,
+				D71DB10C1DC3BCAC0020956F /* LXKM.gif in Resources */,
 				D73557051DB00F9200944CE4 /* CT200h_4_8_hhdlxt@2x.png in Resources */,
 				D73556E71DB00F9200944CE4 /* CT200h_1_5_7_11_13_dqxt@2x.png in Resources */,
 				D73556C31DB00F9200944CE4 /* CT200h_10_zxxt@2x.png in Resources */,
@@ -1164,14 +1268,17 @@
 				D728D6281D8FF577000C2203 /* testVideo.mp4 in Resources */,
 				D73550FA1DB00F8300944CE4 /* CT_jcpqghazj@2x.png in Resources */,
 				D73556DD1DB00F9200944CE4 /* CT200h_14_zdxt@2x.png in Resources */,
+				D71DB1141DC3BCAC0020956F /* RX450h.gif in Resources */,
 				D73550F71DB00F8300944CE4 /* CT_jclqhjrxt_t@2x.png in Resources */,
 				D73557151DB00F9200944CE4 /* CT200h_6_lt@2x.png in Resources */,
 				D73556F21DB00F9200944CE4 /* CT200h_2_lt.plist in Resources */,
 				D73557091DB00F9200944CE4 /* CT200h_4_8_xjxt@2x.png in Resources */,
+				D71DB1091DC3BCAC0020956F /* LS460(4wd)@2x.png in Resources */,
 				D735570C1DB00F9200944CE4 /* CT200h_4_8_zxxt.plist in Resources */,
 				D73550F01DB00F8300944CE4 /* CT_jckqlqq@2x.png in Resources */,
 				D73556EE1DB00F9200944CE4 /* CT200h_2_dqxt.plist in Resources */,
 				D73556BE1DB00F9200944CE4 /* CT200h_10_xjxt.plist in Resources */,
+				D71DB1101DC3BCAC0020956F /* NX300h.gif in Resources */,
 				D73556E91DB00F9200944CE4 /* CT200h_1_5_7_11_13_lt@2x.png in Resources */,
 				D73550E21DB00F8300944CE4 /* CT_jc12vxdc@2x.png in Resources */,
 				D73556BA1DB00F9200944CE4 /* CT200h_10_hhdlxt.plist in Resources */,
@@ -1183,6 +1290,9 @@
 				D73550E71DB00F8300944CE4 /* CT_jccdlbgsqhpsq_t@2x.png in Resources */,
 				D73550FF1DB00F8300944CE4 /* CT_jcqxjhhxj_t@2x.png in Resources */,
 				D735570D1DB00F9200944CE4 /* CT200h_4_8_zxxt@2x.png in Resources */,
+				D71DB10D1DC3BCAC0020956F /* LXKM@2x.png in Resources */,
+				D71DB1021DC3BCAC0020956F /* GS450h-300h.gif in Resources */,
+				D71DB0FC1DC3BCAC0020956F /* CTKM.gif in Resources */,
 				D7ECB1571D9A9CFD004BD11F /* CarPosition.plist in Resources */,
 				D73556F91DB00F9200944CE4 /* CT200h_2_zxxt@2x.png in Resources */,
 				D73556C81DB00F9200944CE4 /* CT200h_12_hhdlxt.plist in Resources */,
@@ -1191,6 +1301,7 @@
 				D7DFC1B11D754A3B007A6D0C /* Main.storyboard in Resources */,
 				D73557001DB00F9200944CE4 /* CT200h_4_8_cdxt.plist in Resources */,
 				D73557161DB00F9200944CE4 /* CT200h_6_xjxt.plist in Resources */,
+				D71DB1071DC3BCAC0020956F /* ISKM@2x.png in Resources */,
 				D73556F11DB00F9200944CE4 /* CT200h_2_hhdlxt@2x.png in Resources */,
 				D73557191DB00F9200944CE4 /* CT200h_6_zdxt@2x.png in Resources */,
 				D735510B1DB00F8300944CE4 /* CT_jczdyyl_t@2x.png in Resources */,
@@ -1203,6 +1314,7 @@
 				D73556B91DB00F9200944CE4 /* CT200h_10_dqxt@2x.png in Resources */,
 				D73550ED1DB00F8300944CE4 /* CT_jcfdjlqyl_t@2x.png in Resources */,
 				D73550E91DB00F8300944CE4 /* CT_jccdpd_t@2x.png in Resources */,
+				D71DB1081DC3BCAC0020956F /* LS460(4wd).gif in Resources */,
 				D73556E11DB00F9200944CE4 /* CT200h_15_dqxt@2x.png in Resources */,
 				D73556B81DB00F9200944CE4 /* CT200h_10_dqxt.plist in Resources */,
 				D73550EA1DB00F8300944CE4 /* CT_jcdlkzdylqy@2x.png in Resources */,

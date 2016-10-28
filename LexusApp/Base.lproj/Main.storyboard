@@ -105,7 +105,7 @@
             <objects>
                 <navigationController storyboardIdentifier="StudyNaviController" navigationBarHidden="YES" id="4tm-MQ-Zfi" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AVe-jI-wUM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AVe-jI-wUM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -648,7 +648,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="BLR-MY-wbm" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="709-za-Azb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="709-za-Azb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -971,21 +971,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XxC-RM-NqZ">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XxC-RM-NqZ">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="866" id="7ea-zP-QF6"/>
                                     <constraint firstAttribute="height" constant="350" id="NN4-oo-fYf"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YDC-Za-N9l" customClass="YLImageView">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="866" id="fkS-hS-KEk"/>
+                                    <constraint firstAttribute="height" constant="350" id="jDQ-vp-qxn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YDC-Za-N9l" firstAttribute="centerY" secondItem="JKU-W3-Cte" secondAttribute="centerY" id="5x4-1B-9Db"/>
                             <constraint firstItem="XxC-RM-NqZ" firstAttribute="centerX" secondItem="JKU-W3-Cte" secondAttribute="centerX" id="Eub-Fh-YRP"/>
                             <constraint firstItem="XxC-RM-NqZ" firstAttribute="centerY" secondItem="JKU-W3-Cte" secondAttribute="centerY" id="Mqy-UA-vYL"/>
+                            <constraint firstItem="YDC-Za-N9l" firstAttribute="centerX" secondItem="JKU-W3-Cte" secondAttribute="centerX" id="Muf-CN-vzM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="carImgView" destination="XxC-RM-NqZ" id="eXf-Yx-KPf"/>
+                        <outlet property="gitImgView" destination="YDC-Za-N9l" id="eEh-s5-bbt"/>
                         <segue destination="44l-JX-EdG" kind="show" identifier="showFMDetailViewController" id="9va-Kz-Kr6"/>
                     </connections>
                 </viewController>
@@ -1564,7 +1573,7 @@
                 <navigationController storyboardIdentifier="FMNaviController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Msa-Fr-Gls" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VIq-H6-Zht">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VIq-H6-Zht">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1582,7 +1591,7 @@
             <objects>
                 <navigationController storyboardIdentifier="EWPNaviController" navigationBarHidden="YES" id="lcZ-xP-6hA" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OCX-Xo-YPq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OCX-Xo-YPq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1703,7 +1712,7 @@
             <objects>
                 <navigationController storyboardIdentifier="HEVANaviController" navigationBarHidden="YES" id="5bg-6N-JJG" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dBI-4s-jKv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBI-4s-jKv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1838,7 +1847,7 @@
             <objects>
                 <navigationController storyboardIdentifier="DANaviController" navigationBarHidden="YES" id="DEH-gv-tvf" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0QB-gH-ajN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0QB-gH-ajN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

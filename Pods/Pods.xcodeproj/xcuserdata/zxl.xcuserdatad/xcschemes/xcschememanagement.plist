@@ -19,20 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YLGIFImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>08DF642F2CE7747634B30F2793AA0B4A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8E78775ACC60EEDE7A8F310FC2180E08</key>
+		<key>35CC8B899790C309B13BEBC7B5F99D64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DDB98E8800DA460DC852D7A2063A2039</key>
+		<key>4A3D9A7CD5ADD7C13775263545DC8CB4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
