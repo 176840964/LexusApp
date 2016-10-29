@@ -11,7 +11,6 @@
 #import "FMDetailChangeTableViewCell.h"
 
 @interface FMDetailChangeView () <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UILabel *descriptionPriceLab;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet FMDetailChangeShowView *showView;
@@ -23,10 +22,6 @@
 
 - (void)setupSubviewsWithDataArr:(NSArray*)dataArr {
     [self.tableView registerNib:[UINib nibWithNibName:@"FMDetailChangeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FMDetailChangeTableViewCell"];
-    
-    NSString *string = @"3万公里保养，共检查3个项目，更换8种零件！ 零件费：80000元   工时费：53626元";
-    self.descriptionPriceLab.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:20];
-    [self.descriptionPriceLab setAttributedNumberStringInContentString:string attributesDic:@{NSForegroundColorAttributeName:[UIColor blueColor], NSFontAttributeName:[UIFont systemFontOfSize:30]}];
     
     self.showView.imgView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@ChangeDefulteBg", self.carNameStr]];
     

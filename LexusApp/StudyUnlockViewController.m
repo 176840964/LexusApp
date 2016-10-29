@@ -39,6 +39,12 @@
 - (void)gestureViewUnlockSuccess:(GestureUnlockView *)gestureView {
     [UserManager shareUserManager].isLoginStudy = YES;
     [self dismissViewControllerAnimated:YES completion:^{
+        [[NetworkingManager shareManager] networkingNotAnalysisWithGetMethodPath:@"learn/addLearnLogin" params:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid} success:^(id responseObject) {
+            NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            NSLog(@"dic:%@", dic);
+            dispatch_async(dispatch_get_main_queue(), ^{
+            });
+        }];
     }];
 }
 

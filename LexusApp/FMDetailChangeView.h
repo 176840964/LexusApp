@@ -10,6 +10,8 @@
 
 @interface FMDetailChangeView : UIView
 
+@property (weak, nonatomic) IBOutlet UILabel *descriptionPriceLab;
+
 @property (copy, nonatomic) void(^didSelectedChangeItem)(NSDictionary *dic);
 @property (copy, nonatomic) NSString *carNameStr;
 

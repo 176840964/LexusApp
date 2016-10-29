@@ -14,19 +14,22 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - MJRefresh (3.1.12)
   - PureLayout (3.0.2)
   - YLGIFImage (0.11)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - MJRefresh (~> 3.1.12)
   - PureLayout (~> 3.0.2)
   - YLGIFImage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
 
-PODFILE CHECKSUM: b44a5c445ada1888581773d0ab97f3f999859322
+PODFILE CHECKSUM: e2cda2828f43736839898079cee949f65664e794
 
 COCOAPODS: 1.0.1

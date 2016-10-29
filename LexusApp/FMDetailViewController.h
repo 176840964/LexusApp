@@ -13,4 +13,5 @@
 
 @property (copy, nonatomic) NSString *carName;
 @property (copy, nonatomic) NSString *carModel;
+@property (copy, nonatomic) NSString *carKM;
 @end

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LexusApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08DF642F2CE7747634B30F2793AA0B4A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>1C3436CEA5C3D39764C5F54374794ECB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>35CC8B899790C309B13BEBC7B5F99D64</key>
+		<key>29DD99664D189A7CA206368F493B1E0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4A3D9A7CD5ADD7C13775263545DC8CB4</key>
+		<key>3AB686244B42284219F23F9B236ECF29</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>99E0A2BD9004911C304C089FDD01C65C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D656A4F87E0EBB893096B00BB717D220</key>
 		<dict>
 			<key>primary</key>
 			<true/>

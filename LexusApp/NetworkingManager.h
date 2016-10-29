@@ -18,7 +18,7 @@
 - (NSURLSessionDataTask *)networkingWithGetMethodPath:(NSString *)path
                                                params:(NSDictionary *)parames
                                               success:(void (^)(id responseObject))success;
-- (NSURLSessionDataTask *)testNetworkingWithGetMethodPath:(NSString *)path
+- (NSURLSessionDataTask *)networkingNotAnalysisWithGetMethodPath:(NSString *)path
                                                params:(NSDictionary *)parames
                                               success:(void (^)(id responseObject))success;
 

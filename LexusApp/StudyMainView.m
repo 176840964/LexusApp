@@ -226,10 +226,12 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
 #pragma mark - IBAction
 - (IBAction)onTapRecordBtn:(id)sender {
     if (![self.audioRecorder isRecording]) {
+        self.recordBtn.selected = YES;
         [self.audioRecorder record];//首次使用应用时如果调用record方法会询问用户是否允许使用麦克风
         self.timer.fireDate = [NSDate distantPast];
         self.recordType = StudyMainViewRecorderTypeRecording;
     } else {
+        self.recordBtn.selected = NO;
         [self.audioRecorder pause];
         self.timer.fireDate = [NSDate distantFuture];
         self.recordType = StudyMainViewRecorderTypePause;
@@ -237,6 +239,7 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
 }
 
 - (IBAction)onTapRecordCompleteBtn:(id)sender {
+    self.recordBtn.selected = NO;
     [self.audioRecorder stop];
     self.timer.fireDate = [NSDate distantFuture];
     self.recordType = StudyMainViewRecorderTypeComplete;

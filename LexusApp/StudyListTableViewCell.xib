@@ -72,6 +72,7 @@
                         </connections>
                     </button>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="ESn-Od-bk5" firstAttribute="leading" secondItem="16G-d0-o3d" secondAttribute="trailing" constant="31" id="BFR-bK-VFG"/>
                     <constraint firstItem="ESn-Od-bk5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BZT-8S-5Vg"/>
@@ -85,6 +86,7 @@
                     <constraint firstItem="16G-d0-o3d" firstAttribute="leading" secondItem="kQU-86-aeK" secondAttribute="trailing" constant="29" id="xT0-vW-1U2"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="numImageView" destination="kQU-86-aeK" id="lEO-Xq-iKT"/>
                 <outlet property="numLab" destination="Unl-pm-x3K" id="vZj-d2-2Hk"/>

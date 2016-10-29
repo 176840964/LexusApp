@@ -42,7 +42,7 @@
     }];
 }
 
-- (NSURLSessionDataTask *)testNetworkingWithGetMethodPath:(NSString *)path
+- (NSURLSessionDataTask *)networkingNotAnalysisWithGetMethodPath:(NSString *)path
                                                    params:(NSDictionary *)parames
                                                   success:(void (^)(id responseObject))success {
     

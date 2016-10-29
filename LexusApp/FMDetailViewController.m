@@ -34,6 +34,8 @@
     
     self.checkProjectBtn.backgroundColor = [UIColor whiteColor];
     self.changeProjectBtn.backgroundColor = [UIColor clearColor];
+    
+    [self getPriceDetail];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +66,26 @@
     
     NSArray *checkArr = [self.detailDic objectForKey:@"check"];
     [self.checkView setupSubviewsByCheckArr:checkArr];
+}
+
+#pragma mark - NetWorking
+- (void)getPriceDetail {
+    NSString *carAllName = [NSString stringWithFormat:@"%@%@", self.carName, self.carModel];
+    [[NetworkingManager shareManager] networkingNotAnalysisWithGetMethodPath:@"user/getChangeData" params:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"car_type" : carAllName, @"car_distance" : self.carKM} success:^(id responseObject) {
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"dic:%@", dic);
+        NSDictionary *changeVO = [dic objectForKey:@"changeVO"];
+        NSString *distince = [changeVO objectForKey:@"car_distince"];
+        NSString *project = [changeVO objectForKey:@"change_project"];
+        NSString *component = [changeVO objectForKey:@"change_component"];
+        NSString *money = [changeVO objectForKey:@"change_component_money"];
+        NSString *sum = [changeVO objectForKey:@"change_sum_money"];
+        NSString *string = [NSString stringWithFormat:@"%@公里保养，共检查%@个项目，更换%@种零件！ 零件费：%@元   工时费：%@元", distince, project, component, money, sum];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.changeView.descriptionPriceLab.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:20];
+            [self.changeView.descriptionPriceLab setAttributedNumberStringInContentString:string attributesDic:@{NSForegroundColorAttributeName:[UIColor blueColor], NSFontAttributeName:[UIFont systemFontOfSize:30]}];
+        });
+    }];
 }
 
 #pragma mark - IBAction
