@@ -108,6 +108,8 @@
 		D7ED6ABC1D944847003C5E20 /* EWPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6ABB1D944847003C5E20 /* EWPViewController.m */; };
 		D7ED6ABF1D944858003C5E20 /* HEVAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6ABE1D944858003C5E20 /* HEVAViewController.m */; };
 		D7ED6AC21D944869003C5E20 /* DAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7ED6AC11D944869003C5E20 /* DAViewController.m */; };
+		D7FF4A8F1DC5AD600003AC3F /* StudyUpdateListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FF4A8D1DC5AD600003AC3F /* StudyUpdateListTableViewCell.m */; };
+		D7FF4A901DC5AD600003AC3F /* StudyUpdateListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FF4A8E1DC5AD600003AC3F /* StudyUpdateListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -265,6 +267,9 @@
 		D7ED6ABE1D944858003C5E20 /* HEVAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEVAViewController.m; sourceTree = "<group>"; };
 		D7ED6AC01D944869003C5E20 /* DAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAViewController.h; sourceTree = "<group>"; };
 		D7ED6AC11D944869003C5E20 /* DAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAViewController.m; sourceTree = "<group>"; };
+		D7FF4A8C1DC5AD600003AC3F /* StudyUpdateListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudyUpdateListTableViewCell.h; sourceTree = "<group>"; };
+		D7FF4A8D1DC5AD600003AC3F /* StudyUpdateListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudyUpdateListTableViewCell.m; sourceTree = "<group>"; };
+		D7FF4A8E1DC5AD600003AC3F /* StudyUpdateListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StudyUpdateListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -457,6 +462,9 @@
 				D75AE0C41D80634F006685AE /* StudyListTableViewCell.h */,
 				D75AE0C51D80634F006685AE /* StudyListTableViewCell.m */,
 				D75AE0C61D80634F006685AE /* StudyListTableViewCell.xib */,
+				D7FF4A8C1DC5AD600003AC3F /* StudyUpdateListTableViewCell.h */,
+				D7FF4A8D1DC5AD600003AC3F /* StudyUpdateListTableViewCell.m */,
+				D7FF4A8E1DC5AD600003AC3F /* StudyUpdateListTableViewCell.xib */,
 			);
 			name = 6.StudyViewController;
 			sourceTree = "<group>";
@@ -754,6 +762,7 @@
 				D71DB10B1DC3BCAC0020956F /* LS600hl@2x.png in Resources */,
 				D769FB9D1DC4EE6D002C0929 /* RCKM.gif in Resources */,
 				D71DB1011DC3BCAC0020956F /* GS-200t-250-350-350(AWD)@2x.png in Resources */,
+				D7FF4A901DC5AD600003AC3F /* StudyUpdateListTableViewCell.xib in Resources */,
 				D71DB0FE1DC3BCAC0020956F /* ESKM.gif in Resources */,
 				D7DFC1B61D754A3B007A6D0C /* LaunchScreen.storyboard in Resources */,
 				D71DB10E1DC3BCAC0020956F /* NX200t、200（4WD).gif in Resources */,
@@ -855,6 +864,7 @@
 				D75AE0651D7BE5DA006685AE /* FMSelectKmViewController.m in Sources */,
 				D75AE0C71D80634F006685AE /* StudyListTableViewCell.m in Sources */,
 				D77C9CCB1D89354A00DE0C32 /* CarSelectedItemView.m in Sources */,
+				D7FF4A8F1DC5AD600003AC3F /* StudyUpdateListTableViewCell.m in Sources */,
 				D7DFC1AE1D754A3B007A6D0C /* ViewController.m in Sources */,
 				D75AE0B71D7FE89C006685AE /* GestureModel.m in Sources */,
 				D728D6801D90E501000C2203 /* CarCategoreManager.m in Sources */,

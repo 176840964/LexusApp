@@ -8,6 +8,7 @@
 
 #import "StudyDetailViewController.h"
 #import "StudyListTableViewCell.h"
+#import "StudyUpdateListTableViewCell.h"
 #import "StudyMainView.h"
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
@@ -33,6 +34,7 @@
 @property (strong, nonatomic) NSMutableArray *listDataArr;
 @property (strong, nonatomic) AVPlayerViewController *playerController;
 @property (strong, nonatomic) AVPlayer *songPlayer;
+@property (assign, nonatomic) NSInteger listeningIndex;
 
 @end
 
@@ -41,12 +43,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.listeningIndex = -1;
+    
     [self.studyMainView sutupSubviews];
     self.titleLab.text = @"学习平台";
     
     self.page = 0;
     self.listDataArr = [[NSMutableArray alloc] init];
-    [self.listTableView registerNib:[UINib nibWithNibName:@"StudyListTableViewCell" bundle:nil] forCellReuseIdentifier:@"StudyListTableViewCell"];
     
     self.listTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         self.page = 0;
@@ -124,6 +127,7 @@
 - (void)notificationForPlayeDidEnd:(NSNotification*)notify {
     NSLog(@"play did end");
     self.songPlayer = nil;
+    self.listeningIndex = -1;
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
 }
 
@@ -181,12 +185,14 @@
 
 - (IBAction)onTapBestListCtrl:(id)sender {
     self.isShowBestList = YES;
+    [self.listTableView registerNib:[UINib nibWithNibName:@"StudyListTableViewCell" bundle:nil] forCellReuseIdentifier:@"StudyListTableViewCell"];
     self.listTitleLab.text = @"优 秀 榜";
     [self getNetworkData];
 }
 
 - (IBAction)onTapUpdateListCtrl:(id)sender {
     self.isShowBestList = NO;
+    [self.listTableView registerNib:[UINib nibWithNibName:@"StudyUpdateListTableViewCell" bundle:nil] forCellReuseIdentifier:@"StudyUpdateListTableViewCell"];
     self.listTitleLab.text = @"更 新 榜";
     
     [self getNetworkData];
@@ -204,24 +210,39 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    StudyListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StudyListTableViewCell"];
     StudyListModel *model = [self.listDataArr objectAtIndex:indexPath.row];
+    __weak typeof(self) weakSelf = self;
     
-    [cell layoutSubViewsByStudyListModel:model andIndex:indexPath.row];
-    
-    return cell;
+    if (self.isShowBestList) {
+        StudyListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StudyListTableViewCell"];
+        [cell layoutSubViewsByStudyListModel:model index:indexPath.row listeningIndex:self.listeningIndex];
+        cell.tapListenBtnHandle = ^(StudyListModel *model) {
+            weakSelf.listeningIndex = indexPath.row;
+            NSString *urlStr = [NSString stringWithFormat:@"http://114.55.235.176/lkss/%@", model.song_url];
+            [weakSelf createSondPlayerWithResource:urlStr];
+        };
+        
+        return cell;
+    } else {
+        StudyUpdateListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StudyUpdateListTableViewCell"];
+        [cell layoutSubViewsByStudyListModel:model index:indexPath.row];
+        
+        cell.tapListenBtnHandle = ^(StudyListModel *model) {
+            weakSelf.listeningIndex = indexPath.row;
+            NSString *urlStr = [NSString stringWithFormat:@"http://114.55.235.176/lkss/%@", model.song_url];
+            [weakSelf createSondPlayerWithResource:urlStr];
+        };
+        
+        cell.tapGoodBtnHandle = ^(StudyListModel *model) {
+            [weakSelf updateSongByCsid:model.csid];
+        };
+        
+        return cell;
+    }
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (self.isShowBestList) {
-        StudyListTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        NSString *urlStr = [NSString stringWithFormat:@"http://114.55.235.176/lkss/%@", cell.studyModel.song_url];
-        [self createSondPlayerWithResource:urlStr];
-    } else {
-        StudyListModel *model = [self.listDataArr objectAtIndex:indexPath.row];
-        [self updateSongByCsid:model.csid];
-    }
 }
 @end

@@ -1,23 +1,23 @@
 //
-//  StudyListTableViewCell.m
+//  StudyUpdateListTableViewCell.m
 //  LexusApp
 //
-//  Created by Dragonet on 16/9/7.
+//  Created by Dragonet on 2016/10/30.
 //  Copyright © 2016年 zxl. All rights reserved.
 //
 
-#import "StudyListTableViewCell.h"
+#import "StudyUpdateListTableViewCell.h"
 
-@interface StudyListTableViewCell ()
-@property (weak, nonatomic) IBOutlet UIImageView *numImageView;
+@interface StudyUpdateListTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *numLab;
 @property (weak, nonatomic) IBOutlet UIImageView *userIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLab;
 @property (weak, nonatomic) IBOutlet UIButton *playBtn;
+@property (weak, nonatomic) IBOutlet UIButton *goodBtn;
 
 @end
 
-@implementation StudyListTableViewCell
+@implementation StudyUpdateListTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -30,25 +30,23 @@
     // Configure the view for the selected state
 }
 
-- (void)layoutSubViewsByStudyListModel:(StudyListModel*)model index:(NSInteger)index listeningIndex:(NSInteger)listeningIndex{
+- (void)layoutSubViewsByStudyListModel:(StudyListModel*)model index:(NSInteger)index {
     self.studyModel = model;
-    if (index < 3) {
-        self.numImageView.hidden = NO;
-        self.numLab.hidden = YES;
-        self.numImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"study_num%zd", index + 1]];
-    } else {
-        self.numImageView.hidden = YES;
-        self.numLab.hidden = NO;
-        self.numLab.text = [NSString stringWithFormat:@"%zd", index + 1];
-    }
     self.userIconImageView.image = [UIImage imageNamed:@"manIcon"];
     self.userNameLab.text = model.username;
+    self.numLab.text = [NSString stringWithFormat:@"%zd", index + 1];
 }
 
-#pragma mark - IBAciton
+#pragma mark - IBAction
 - (IBAction)onTapPlayBtn:(id)sender {
     if (self.tapListenBtnHandle) {
         self.tapListenBtnHandle(self.studyModel);
+    }
+}
+
+- (IBAction)onTapGoodBtn:(id)sender {
+    if (self.tapGoodBtnHandle) {
+        self.tapGoodBtnHandle(self.studyModel);
     }
 }
 
