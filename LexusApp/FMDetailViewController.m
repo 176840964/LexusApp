@@ -36,6 +36,7 @@
     self.changeProjectBtn.backgroundColor = [UIColor clearColor];
     
     [self getPriceDetail];
+    [self watchFMViewController];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,6 +85,16 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             self.changeView.descriptionPriceLab.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:20];
             [self.changeView.descriptionPriceLab setAttributedNumberStringInContentString:string attributesDic:@{NSForegroundColorAttributeName:[UIColor blueColor], NSFontAttributeName:[UIFont systemFontOfSize:30]}];
+        });
+    }];
+}
+
+- (void)watchFMViewController {//3.免费保养打点
+    NSString *carFullName = [NSString stringWithFormat:@"%@%@", self.carName, self.carModel];
+    [[NetworkingManager shareManager] networkingNotAnalysisWithGetMethodPath:@"fm/addRepareUse" params:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"car_type": carFullName,@"car_oper": self.carKM} success:^(id responseObject) {
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"免费保养打点 dic:%@", dic);
+        dispatch_async(dispatch_get_main_queue(), ^{
         });
     }];
 }

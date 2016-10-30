@@ -125,9 +125,8 @@
 }
 
 - (void)notificationForPlayeDidEnd:(NSNotification*)notify {
-    NSLog(@"play did end");
     self.songPlayer = nil;
-    self.listeningIndex = -1;
+    [self endListeningRecordByIndex:self.listeningIndex];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
 }
 
@@ -165,12 +164,23 @@
     }];
 }
 
-- (void)updateSongByCsid:(NSNumber *)csid {
+- (void)updateSongByCsid:(NSNumber *)csid {//点赞
     [[NetworkingManager shareManager] networkingNotAnalysisWithGetMethodPath:@"song/updateSongNum" params:@{@"csid": csid} success:^(id responseObject) {
         NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-        NSLog(@"dic:%@", dic);
+        NSLog(@"点赞 dic:%@", dic);
         dispatch_async(dispatch_get_main_queue(), ^{
         }); 
+    }];
+}
+
+- (void)endListeningRecordByIndex:(NSInteger)index {//声音播放完打点
+    StudyListModel *model = [self.listDataArr objectAtIndex:index];
+    [[NetworkingManager shareManager] networkingNotAnalysisWithGetMethodPath:@"song/addSongUse" params:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"learnid" : model.csid} success:^(id responseObject) {
+        NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"声音播放完打点 dic:%@", dic);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.listeningIndex = -1;
+        });
     }];
 }
 
