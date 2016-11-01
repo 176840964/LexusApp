@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "DAType3Model.h"
+
 @interface DAType3View : UIView
 
+- (void)setupSubviewsByType1Model:(DAType3Model*)model;
 @end

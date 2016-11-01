@@ -10,6 +10,7 @@
 
 @interface UserManager : NSObject
 @property (assign, nonatomic) BOOL isLoginStudy;
+@property (assign, nonatomic) BOOL isShowVideo;
 
 + (UserManager *) shareUserManager;
 

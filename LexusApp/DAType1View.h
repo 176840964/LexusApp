@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DAType1Model.h"
 
 @interface DAType1View : UIView
+
+- (void)setupSubviewsByType1Model:(DAType1Model*)model;
 
 @end

@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *numLab;
 @property (weak, nonatomic) IBOutlet UIImageView *userIconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLab;
-@property (weak, nonatomic) IBOutlet UIButton *playBtn;
 
 @end
 
@@ -43,12 +42,14 @@
     }
     self.userIconImageView.image = [UIImage imageNamed:@"manIcon"];
     self.userNameLab.text = model.username;
+    self.playBtn.selected = (index == listeningIndex);
 }
 
 #pragma mark - IBAciton
 - (IBAction)onTapPlayBtn:(id)sender {
+    self.playBtn.selected = !self.playBtn.selected;
     if (self.tapListenBtnHandle) {
-        self.tapListenBtnHandle(self.studyModel);
+        self.tapListenBtnHandle(self.studyModel, self.playBtn.selected);
     }
 }
 

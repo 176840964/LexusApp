@@ -60,13 +60,14 @@
                         <color key="textColor" red="0.37251365184783936" green="0.37257164716720581" blue="0.37250098586082458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgB-zb-0Ce">
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgB-zb-0Ce">
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="22" id="66f-NG-nSb"/>
-                            <constraint firstAttribute="width" constant="25" id="fjc-VK-eow"/>
+                            <constraint firstAttribute="height" constant="25" id="66f-NG-nSb"/>
+                            <constraint firstAttribute="width" constant="22" id="fjc-VK-eow"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" image="listen_play"/>
+                        <state key="selected" image="listen_pause"/>
                         <connections>
                             <action selector="onTapPlayBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="k6q-bF-9cx"/>
                         </connections>
@@ -98,6 +99,8 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="listen_pause" width="22" height="25"/>
+        <image name="listen_play" width="22" height="25"/>
         <image name="manIcon" width="120" height="120"/>
         <image name="study_num1" width="40" height="40"/>
     </resources>

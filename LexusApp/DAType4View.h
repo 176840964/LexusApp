@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DAType4Model.h"
 
 @interface DAType4View : UIView
 
+@property (copy, nonatomic) void (^playVideo)(NSString *);
+
+- (void)setupSubviewsByType1Model:(DAType4Model*)model;
 @end

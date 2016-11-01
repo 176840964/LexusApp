@@ -990,7 +990,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bCO-zr-z1V" secondAttribute="trailing" constant="30" id="6Mb-JF-AUf"/>
-                            <constraint firstItem="1yh-l9-xTk" firstAttribute="centerY" secondItem="vA3-m8-oCn" secondAttribute="centerY" id="NsA-57-r8d"/>
+                            <constraint firstItem="1yh-l9-xTk" firstAttribute="centerY" secondItem="vA3-m8-oCn" secondAttribute="centerY" constant="-50" id="NsA-57-r8d"/>
                             <constraint firstItem="bCO-zr-z1V" firstAttribute="centerY" secondItem="vA3-m8-oCn" secondAttribute="centerY" constant="280" id="Pg6-8c-AIt"/>
                             <constraint firstItem="1yh-l9-xTk" firstAttribute="centerX" secondItem="vA3-m8-oCn" secondAttribute="centerX" id="aAA-ql-l8a"/>
                             <constraint firstItem="bCO-zr-z1V" firstAttribute="leading" secondItem="vA3-m8-oCn" secondAttribute="leading" constant="30" id="mtZ-zb-wGC"/>
@@ -1620,7 +1620,7 @@
                 <navigationController storyboardIdentifier="FMNaviController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Msa-Fr-Gls" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VIq-H6-Zht">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VIq-H6-Zht">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

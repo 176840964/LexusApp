@@ -52,6 +52,10 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    if ([UserManager shareUserManager].isShowVideo) {
+        [UserManager shareUserManager].isShowVideo = NO;
+        return;
+    }
     
     if ([UserManager shareUserManager].isLoginStudy) {
         [self setSelectedIndex:4 isAnimated:NO];

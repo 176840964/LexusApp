@@ -14,6 +14,7 @@
 @property (copy, nonatomic) NSString *car_type;
 @property (strong, nonatomic) NSNumber *csid;
 @property (strong, nonatomic) NSNumber *date;
+@property (strong, nonatomic) NSNumber *hasupdate;
 @property (strong, nonatomic) NSNumber *num;
 @property (copy, nonatomic) NSString *song_url;
 @property (strong, nonatomic) NSNumber *status;

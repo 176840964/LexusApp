@@ -29,6 +29,7 @@
 #import "NSString+Valid.h"
 #import "UIColor+Custom.h"
 #import "NSArray+sortBy.h"
+#import "UIImageView+AFNetworking.h"
 
 #import "PureLayout.h"
 

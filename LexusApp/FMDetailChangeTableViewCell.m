@@ -22,7 +22,7 @@
 }
 
 - (void)layoutChangeTableViewCellWithDataDic:(NSDictionary *)dic {
-    NSString *thumbnailStr = [NSString stringWithFormat:@"changeThumb%@", [dic objectForKey:@"thumbnail"]];
+    NSString *thumbnailStr = [NSString stringWithFormat:@"change%@_t", [dic objectForKey:@"thumbnail"]];
     self.imageView.image = [UIImage imageNamed:thumbnailStr];
 }
 

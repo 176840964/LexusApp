@@ -54,22 +54,24 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcN-K9-ClU">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcN-K9-ClU">
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="Vxd-Nd-ef7"/>
-                            <constraint firstAttribute="height" constant="30" id="u5l-9j-WVo"/>
+                            <constraint firstAttribute="width" constant="22" id="Vxd-Nd-ef7"/>
+                            <constraint firstAttribute="height" constant="25" id="u5l-9j-WVo"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" image="listen_play"/>
+                        <state key="selected" image="listen_pause"/>
                         <connections>
                             <action selector="onTapPlayBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="B51-Hb-4u1"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd4-Ne-jHM">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd4-Ne-jHM">
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="fmA-Hj-3VX"/>
-                            <constraint firstAttribute="width" constant="40" id="u5h-5F-2Ee"/>
+                            <constraint firstAttribute="height" constant="25" id="fmA-Hj-3VX"/>
+                            <constraint firstAttribute="width" constant="22" id="u5h-5F-2Ee"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" image="listen_good_n"/>
+                        <state key="selected" image="listen_good_h"/>
                         <connections>
                             <action selector="onTapGoodBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rDF-ja-gOQ"/>
                         </connections>
@@ -81,7 +83,7 @@
                     <constraint firstItem="tID-Xm-JOO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9fP-fM-q2K"/>
                     <constraint firstItem="yso-ts-KS5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JZX-sK-5zU"/>
                     <constraint firstItem="IJ0-Pp-Tca" firstAttribute="leading" secondItem="tID-Xm-JOO" secondAttribute="trailing" constant="20" id="SoM-s6-9tR"/>
-                    <constraint firstItem="Nd4-Ne-jHM" firstAttribute="leading" secondItem="XcN-K9-ClU" secondAttribute="trailing" constant="8" id="Swf-u3-523"/>
+                    <constraint firstItem="Nd4-Ne-jHM" firstAttribute="leading" secondItem="XcN-K9-ClU" secondAttribute="trailing" constant="20" id="Swf-u3-523"/>
                     <constraint firstItem="IJ0-Pp-Tca" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Xan-ZS-B3S"/>
                     <constraint firstItem="XcN-K9-ClU" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="auC-0f-Xva"/>
                     <constraint firstItem="Nd4-Ne-jHM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rs6-cA-bHa"/>
@@ -101,6 +103,10 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="listen_good_h" width="22" height="25"/>
+        <image name="listen_good_n" width="22" height="25"/>
+        <image name="listen_pause" width="22" height="25"/>
+        <image name="listen_play" width="22" height="25"/>
         <image name="manIcon" width="120" height="120"/>
     </resources>
 </document>

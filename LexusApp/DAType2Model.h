@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DAType2Model : BaseModell
+@interface DAType2Model : BaseModel
 
+@property (copy, nonatomic) NSString *str1;
+@property (copy, nonatomic) NSString *str2;
 @end

@@ -81,7 +81,7 @@
         NSString *component = [changeVO objectForKey:@"change_component"];
         NSString *money = [changeVO objectForKey:@"change_component_money"];
         NSString *sum = [changeVO objectForKey:@"change_sum_money"];
-        NSString *string = [NSString stringWithFormat:@"%@公里保养，共检查%@个项目，更换%@种零件！ 零件费：%@元   工时费：%@元", distince, project, component, money, sum];
+        NSString *string = [NSString stringWithFormat:@"%@公里保养，共检查%@个项目，更换%@种零件！ 建议零件费：%@元   建议工时费：%@元", distince, project, component, money, sum];
         dispatch_async(dispatch_get_main_queue(), ^{
             self.changeView.descriptionPriceLab.font = [UIFont fontWithName:@"LEXUS-HeiS-Xbold-U" size:20];
             [self.changeView.descriptionPriceLab setAttributedNumberStringInContentString:string attributesDic:@{NSForegroundColorAttributeName:[UIColor blueColor], NSFontAttributeName:[UIFont systemFontOfSize:30]}];

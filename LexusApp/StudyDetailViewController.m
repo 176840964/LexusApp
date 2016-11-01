@@ -126,8 +126,18 @@
 
 - (void)notificationForPlayeDidEnd:(NSNotification*)notify {
     self.songPlayer = nil;
-    [self endListeningRecordByIndex:self.listeningIndex];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    
+    UITableViewCell *cell = [self.listTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:self.listeningIndex inSection:0]];
+    if (self.isShowBestList) {
+        StudyListTableViewCell *bestCell = (StudyListTableViewCell*)cell;
+        bestCell.playBtn.selected = NO;
+    } else {
+        StudyUpdateListTableViewCell *updateCell = (StudyUpdateListTableViewCell*)cell;
+        updateCell.playBtn.selected = NO;
+    }
+    
+    [self endListeningRecordByIndex:self.listeningIndex];
 }
 
 #pragma mark - Networking
@@ -165,7 +175,7 @@
 }
 
 - (void)updateSongByCsid:(NSNumber *)csid {//点赞
-    [[NetworkingManager shareManager] networkingNotAnalysisWithGetMethodPath:@"song/updateSongNum" params:@{@"csid": csid} success:^(id responseObject) {
+    [[NetworkingManager shareManager] networkingNotAnalysisWithGetMethodPath:@"song/updateSongNum" params:@{@"csid": csid, @"userid": [LocalUserManager shareManager].curLoginUserModel.uid} success:^(id responseObject) {
         NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"点赞 dic:%@", dic);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -226,21 +236,29 @@
     if (self.isShowBestList) {
         StudyListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StudyListTableViewCell"];
         [cell layoutSubViewsByStudyListModel:model index:indexPath.row listeningIndex:self.listeningIndex];
-        cell.tapListenBtnHandle = ^(StudyListModel *model) {
-            weakSelf.listeningIndex = indexPath.row;
-            NSString *urlStr = [NSString stringWithFormat:@"http://114.55.235.176/lkss/%@", model.song_url];
-            [weakSelf createSondPlayerWithResource:urlStr];
+        cell.tapListenBtnHandle = ^(StudyListModel *model, BOOL isPlay) {
+            if (isPlay) {
+                weakSelf.listeningIndex = indexPath.row;
+                NSString *urlStr = [NSString stringWithFormat:@"http://114.55.235.176/lkss/%@", model.song_url];
+                [weakSelf createSondPlayerWithResource:urlStr];
+            } else {
+                [self.songPlayer pause];
+            }
         };
         
         return cell;
     } else {
         StudyUpdateListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StudyUpdateListTableViewCell"];
-        [cell layoutSubViewsByStudyListModel:model index:indexPath.row];
+        [cell layoutSubViewsByStudyListModel:model index:indexPath.row listeningIndex:self.listeningIndex];
         
-        cell.tapListenBtnHandle = ^(StudyListModel *model) {
-            weakSelf.listeningIndex = indexPath.row;
-            NSString *urlStr = [NSString stringWithFormat:@"http://114.55.235.176/lkss/%@", model.song_url];
-            [weakSelf createSondPlayerWithResource:urlStr];
+        cell.tapListenBtnHandle = ^(StudyListModel *model, BOOL isPlay) {
+            if (isPlay) {
+                weakSelf.listeningIndex = indexPath.row;
+                NSString *urlStr = [NSString stringWithFormat:@"http://114.55.235.176/lkss/%@", model.song_url];
+                [weakSelf createSondPlayerWithResource:urlStr];
+            } else {
+                [self.songPlayer pause];
+            }
         };
         
         cell.tapGoodBtnHandle = ^(StudyListModel *model) {
