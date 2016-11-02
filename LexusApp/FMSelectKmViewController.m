@@ -65,6 +65,12 @@
 
 #pragma mark - 
 - (void)showAnimation {
+    for (UIButton *btn in self.view.subviews) {
+        if ([btn isKindOfClass:[UIButton class]]) {
+            btn.enabled = NO;
+        }
+    }
+    
     NSString *imgStr = [self carImageName];
     self.gitImgView.transform = CGAffineTransformMakeTranslation(-self.view.center.x - self.gitImgView.width, 0);
     self.gitImgView.image = [YLGIFImage imageNamed:[NSString stringWithFormat:@"%@.gif", imgStr]];
@@ -74,10 +80,21 @@
     } completion:^(BOOL finished) {
         self.carImgView.hidden = NO;
         self.gitImgView.hidden = YES;
+        
+        for (UIButton *btn in self.view.subviews) {
+            if ([btn isKindOfClass:[UIButton class]]) {
+                btn.enabled = YES;
+            }
+        }
     }];
 }
 
 - (void)dismissAnimation {
+    for (UIButton *btn in self.view.subviews) {
+        if ([btn isKindOfClass:[UIButton class]]) {
+            btn.enabled = NO;
+        }
+    }
     self.gitImgView.hidden = NO;
     self.carImgView.hidden = YES;
     [UIView animateWithDuration:1 animations:^{

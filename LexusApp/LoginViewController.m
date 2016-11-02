@@ -183,6 +183,7 @@ typedef NS_ENUM(NSUInteger, LoginViewControllerType) {
             }
         }
     } else {
+        self.loginBtn.enabled = NO;
         [self.usernameTextField resignFirstResponder];
         [self.passwordTextField resignFirstResponder];
         
@@ -207,6 +208,7 @@ typedef NS_ENUM(NSUInteger, LoginViewControllerType) {
             } else if ([status isEqualToString:@"0"]) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [[CustomHintViewController getInstance] presentMessage:@"密码错误" parentController:self isAutoDismiss:NO dismissTimeInterval:1 dismissBlock:^{
+                        self.loginBtn.enabled = YES;
                     }];
                 });
             }
@@ -226,6 +228,8 @@ typedef NS_ENUM(NSUInteger, LoginViewControllerType) {
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if ([textField isEqual:self.passwordTextField]) {
         [self onTapLoginBtn:nil];
+    } else {
+        [self.passwordTextField becomeFirstResponder];
     }
     
     return YES;

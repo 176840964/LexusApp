@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vDF-Wx-wud">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vDF-Wx-wud">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -105,7 +105,7 @@
             <objects>
                 <navigationController storyboardIdentifier="StudyNaviController" navigationBarHidden="YES" id="4tm-MQ-Zfi" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AVe-jI-wUM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AVe-jI-wUM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -161,7 +161,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="O7R-Hz-M9S" secondAttribute="trailing" id="kop-X4-lFr"/>
                                                     <constraint firstItem="dnA-z3-3YN" firstAttribute="leading" secondItem="Vq4-Wd-ws5" secondAttribute="leading" constant="150" id="nYu-ZP-Ibo"/>
                                                     <constraint firstItem="O7R-Hz-M9S" firstAttribute="leading" secondItem="Vq4-Wd-ws5" secondAttribute="leading" id="vLs-01-5Mk"/>
-                                                    <constraint firstItem="dnA-z3-3YN" firstAttribute="centerY" secondItem="Vq4-Wd-ws5" secondAttribute="centerY" constant="-40" id="y19-lc-djN"/>
+                                                    <constraint firstItem="dnA-z3-3YN" firstAttribute="centerY" secondItem="Vq4-Wd-ws5" secondAttribute="centerY" constant="-50" id="y19-lc-djN"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="carImageView" destination="dnA-z3-3YN" id="0gZ-Ze-cfb"/>
@@ -695,7 +695,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="BLR-MY-wbm" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="709-za-Azb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="709-za-Azb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1161,7 +1161,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3万公里保养，共检查3个项目，更换8种零件！ 零件费：80000元   工时费：53626元" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAS-XY-ggZ">
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="380" id="S8S-PP-JPA"/>
-                                                            <constraint firstAttribute="height" constant="21" id="WgO-zs-ZQS"/>
+                                                            <constraint firstAttribute="height" constant="30" id="WgO-zs-ZQS"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" red="0.37251365184783936" green="0.37257164716720581" blue="0.37250098586082458" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1205,7 +1205,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="IAS-XY-ggZ" secondAttribute="trailing" id="FEQ-wc-dVV"/>
                                                     <constraint firstItem="D9t-mu-lfG" firstAttribute="leading" secondItem="Ac7-ia-a6g" secondAttribute="leading" id="QxX-7r-DSs"/>
                                                     <constraint firstItem="D9t-mu-lfG" firstAttribute="top" secondItem="IAS-XY-ggZ" secondAttribute="bottom" constant="10" id="UgV-1y-svx"/>
-                                                    <constraint firstItem="IAS-XY-ggZ" firstAttribute="top" secondItem="Ac7-ia-a6g" secondAttribute="top" constant="70" id="Zkl-9d-ly8"/>
+                                                    <constraint firstItem="IAS-XY-ggZ" firstAttribute="top" secondItem="Ac7-ia-a6g" secondAttribute="top" constant="60" id="Zkl-9d-ly8"/>
                                                     <constraint firstAttribute="bottom" secondItem="D9t-mu-lfG" secondAttribute="bottom" constant="140" id="hye-7d-bqg"/>
                                                     <constraint firstItem="93x-3V-y8g" firstAttribute="leading" secondItem="D9t-mu-lfG" secondAttribute="trailing" id="ivr-8V-dbI"/>
                                                     <constraint firstAttribute="trailing" secondItem="93x-3V-y8g" secondAttribute="trailing" id="s7M-f7-L1g"/>
@@ -1620,7 +1620,7 @@
                 <navigationController storyboardIdentifier="FMNaviController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Msa-Fr-Gls" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VIq-H6-Zht">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VIq-H6-Zht">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1638,7 +1638,7 @@
             <objects>
                 <navigationController storyboardIdentifier="EWPNaviController" navigationBarHidden="YES" id="lcZ-xP-6hA" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OCX-Xo-YPq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OCX-Xo-YPq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1759,7 +1759,7 @@
             <objects>
                 <navigationController storyboardIdentifier="HEVANaviController" navigationBarHidden="YES" id="5bg-6N-JJG" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dBI-4s-jKv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dBI-4s-jKv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1894,7 +1894,7 @@
             <objects>
                 <navigationController storyboardIdentifier="DANaviController" navigationBarHidden="YES" id="DEH-gv-tvf" sceneMemberID="viewController">
                     <nil key="simulatedStatusBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="0QB-gH-ajN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0QB-gH-ajN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
