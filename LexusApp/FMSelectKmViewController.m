@@ -112,7 +112,7 @@
             return @"GS-200t-250-350-350(AWD)";
         }
     } else if ([self.carName isEqualToString:@"LS"]) {
-        if ([self.carModel isEqualToString:@"600hl"]) {
+        if ([self.carModel isEqualToString:@"600hL"]) {
             return @"LS600hl";
         } else {
             return @"LS460(4wd)";

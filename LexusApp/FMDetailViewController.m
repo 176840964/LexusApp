@@ -55,12 +55,7 @@
     
     NSString *string = self.carName;
     if ([self.carName isEqualToString:@"LS"]) {
-        if ([self.carModel isEqualToString:@"600hl"]) {
-            string = [string stringByAppendingString:self.carModel];
-        } else {
-            NSArray *arr = [self.carModel componentsSeparatedByString:@"("];
-            string = [string stringByAppendingFormat:@"%@4wd", arr.firstObject];
-        }
+        string = [string stringByAppendingString:self.carModel];
     }
     
     self.checkView.carStr = string;

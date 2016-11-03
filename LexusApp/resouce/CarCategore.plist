@@ -2887,7 +2887,7 @@
 					</array>
 				</dict>
 			</array>
-			<key>250c</key>
+			<key>250C</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -12704,7 +12704,7 @@
 		<string>LS</string>
 		<key>models</key>
 		<dict>
-			<key>460(4WD)</key>
+			<key>460L</key>
 			<array>
 				<dict>
 					<key>check</key>
@@ -13621,7 +13621,7 @@
 					</array>
 				</dict>
 			</array>
-			<key>600hl</key>
+			<key>600hL</key>
 			<array>
 				<dict>
 					<key>check</key>
