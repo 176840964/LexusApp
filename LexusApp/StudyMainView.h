@@ -11,6 +11,8 @@
 @interface StudyMainView : UIView
 
 @property (weak, nonatomic) IBOutlet UIView *videoView;
+@property (copy, nonatomic) NSString *carNameStr;
+@property (copy, nonatomic) NSString *carKMStr;
 
 - (void)sutupSubviews;
 

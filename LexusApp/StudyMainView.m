@@ -261,17 +261,18 @@ typedef NS_ENUM(NSInteger, StudyMainViewRecorderType) {
 
 - (IBAction)onTapUploadRecordBtn:(id)sender {
     NSData *data = [NSData dataWithContentsOfURL:[self getSavePath]];
-    [[NetworkingManager shareManager] networkingWithPostMethodPath:@"song/addSong?" paramsDic:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"car_type": @"ext220", @"car_distince": @"1000"} soundDate:data success:^(id responseObject) {
+    [[NetworkingManager shareManager] networkingWithPostMethodPath:@"song/addSong?" paramsDic:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"car_type": self.carNameStr, @"car_distince": self.carKMStr} soundDate:data success:^(id responseObject) {
         NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         NSString *status = [dic objectForKey:@"status"];
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([status isEqualToString:@"1"]) {
+                NSLog(@"上传成功");
                 [[CustomHintViewController getInstance] presentMessage:@"上传成功" parentController:self.parentController isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
                     [self onTapDelRecordBtn:nil];
                 }];
             } else {
+                NSLog(@"上传失败:%@", [dic objectForKey:@"message"]);
                 [[CustomHintViewController getInstance] presentMessage:@"上传失败" parentController:self.parentController isAutoDismiss:YES dismissTimeInterval:1 dismissBlock:^{
-                    [self onTapDelRecordBtn:nil];
                 }];
             }
         });

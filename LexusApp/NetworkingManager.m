@@ -63,10 +63,12 @@
                                             paramsDic:(NSDictionary *)paramsDic
                                             soundDate:(NSData *)soundDate
                                               success:(void (^)(id responseObject))success {
-    self.requestSerializer = [AFJSONRequestSerializer serializer];//申明请求的数据是json类型
+//    self.requestSerializer = [AFJSONRequestSerializer serializer];//申明请求的数据是json类型
     self.responseSerializer = [AFHTTPResponseSerializer serializer];
     return [self POST:path parameters:paramsDic constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-        [formData appendPartWithFormData:soundDate name:@"song"];
+//        [formData appendPartWithFormData:soundDate name:@"song"];
+        [formData appendPartWithFileData:soundDate name:@"song" fileName:@"myRecord.caf" mimeType:@"video/mpeg4"];
+        
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

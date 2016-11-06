@@ -73,6 +73,9 @@
         [weakSelf.mainScrollView setContentOffset:CGPointZero animated:YES];
     };
     self.studySelectKMView.selectedKMHandle = ^(NSString *km, NSString *carAllName) {
+        weakSelf.studyMainView.carNameStr = carAllName;
+        weakSelf.studyMainView.carKMStr = km;
+        
         [weakSelf.mainScrollView setContentOffset:CGPointMake(CGRectGetMaxX(weakSelf.studySelectKMView.frame), 0) animated:YES];
         [[NetworkingManager shareManager] networkingNotAnalysisWithGetMethodPath:@"learn/addLearnPlatUse" params:@{@"userid": [LocalUserManager shareManager].curLoginUserModel.uid, @"car_type" : carAllName, @"car_oper" : km} success:^(id responseObject) {
             NSDictionary* dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
